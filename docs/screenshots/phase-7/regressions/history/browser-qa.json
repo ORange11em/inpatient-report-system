@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "checks": [
+    "original month-to-date/manual search retained",
+    "pending auto-load remains all dates and grouped without reordering",
+    "edit opens actual phase-3 form with non-default ward/old date/primary shift 73 and existing values",
+    "one mobile view toggle controls all date groups",
+    "filter bottom sheet Escape/scroll-lock/resize close",
+    "invalid range text stays in picker; cancel does not block valid search",
+    "Buddhist range preset sends ISO, filters sync query and active menu",
+    "return requires trimmed reason, conflict retains it, manual refresh sends no retry write",
+    "admin return keeps POST/version/reason/CSRF contract",
+    "reader only views; no edit/confirm/return controls",
+    "ward writer can confirm, cancel preserves detail, badge refreshes",
+    "51 lookahead/50 visible, offset paging and last-row fallback retained",
+    "read error has retry and retains pending filter",
+    "positive empty state and zero badge hidden",
+    "loading skeleton before results",
+    "catalog failure hides actions until successful retry"
+  ],
+  "sizes": [
+    {
+      "page": "history",
+      "width": 360,
+      "client": 360,
+      "scroll": 360
+    },
+    {
+      "page": "history",
+      "width": 768,
+      "client": 768,
+      "scroll": 768
+    },
+    {
+      "page": "history",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024
+    },
+    {
+      "page": "history",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440
+    },
+    {
+      "page": "pending",
+      "width": 360,
+      "client": 360,
+      "scroll": 360
+    },
+    {
+      "page": "pending",
+      "width": 768,
+      "client": 768,
+      "scroll": 768
+    },
+    {
+      "page": "pending",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024
+    },
+    {
+      "page": "pending",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440
+    }
+  ],
+  "reads": [
+    "/wards",
+    "/shifts?include_inactive=true",
+    "/auth/me",
+    "/auth/csrf",
+    "/entries/pending-count",
+    "/entries?date_from=2026-11-01&date_to=2026-11-19&offset=0&limit=51",
+    "/entries?status=unconfirmed&offset=0&limit=51",
+    "/entry-form?ward_id=example-b&service_date=2026-10-31&shift_type_id=73",
+    "/entries?date_from=2026-11-13&date_to=2026-11-19&status=confirmed&offset=0&limit=51",
+    "/entries?status=unconfirmed&offset=50&limit=51"
+  ],
+  "writes": [
+    {
+      "path": "/entries/example-confirmed/return",
+      "method": "POST",
+      "body": {
+        "expected_version": 7,
+        "reason": "เหตุผลทดสอบสมมติ"
+      },
+      "csrf": "synthetic-csrf"
+    },
+    {
+      "path": "/entries/example-confirmed/return",
+      "method": "POST",
+      "body": {
+        "expected_version": 8,
+        "reason": "ส่งกลับตัวอย่าง"
+      },
+      "csrf": "synthetic-csrf"
+    },
+    {
+      "path": "/entries/example-recent/confirm",
+      "method": "POST",
+      "body": {
+        "expected_version": 7
+      },
+      "csrf": "synthetic-csrf"
+    },
+    {
+      "path": "/entries/page-50/confirm",
+      "method": "POST",
+      "body": {
+        "expected_version": 7
+      },
+      "csrf": "synthetic-csrf"
+    }
+  ],
+  "errors": []
+}

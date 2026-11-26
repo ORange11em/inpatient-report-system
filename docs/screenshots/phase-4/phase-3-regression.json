@@ -1,0 +1,592 @@
+{
+  "passed": true,
+  "checks": [
+    "monthly pair validation focuses missing field without losing values",
+    "select-all / Enter / Tab / Shift+Enter without submitting",
+    "wheel/changed highlight/persist raw counts",
+    "undo to baseline clears local draft and highlight",
+    "save hotkey is suppressed while a dialog is open",
+    "context cancel keeps data and makes no request",
+    "cancel date change restores Buddhist date text",
+    "navigation cancel",
+    "confirmed context change keeps prior shift draft isolated",
+    "reload offers draft without applying, explicit restore",
+    "warnings/totals/four widths retain values",
+    "Ctrl+S uses original request; conflict keeps input and draft",
+    "Cmd+S success clears drafts and shows shortcuts/toast",
+    "new server version does not restore old draft",
+    "shared monthly change prevents restore at same entry version",
+    "another account cannot restore",
+    "confirmed data stays disabled and ignores drafts",
+    "related page prefilled without auto-load",
+    "logout guarded and original request resumes",
+    "storage unavailable warns but does not block saving"
+  ],
+  "windows": [
+    {
+      "width": 360,
+      "client": 360,
+      "scroll": 360
+    },
+    {
+      "width": 768,
+      "client": 768,
+      "scroll": 768
+    },
+    {
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024
+    },
+    {
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440
+    }
+  ],
+  "dialogs": [
+    "confirm",
+    "confirm",
+    "beforeunload",
+    "beforeunload",
+    "beforeunload",
+    "confirm"
+  ],
+  "reads": [
+    "/wards",
+    "/shifts?include_inactive=true",
+    "/auth/me",
+    "/entry-form?ward_id=example-ward&service_date=2026-11-19&shift_type_id=13",
+    "/auth/csrf",
+    "/entries/pending-count",
+    "/entry-form?ward_id=example-ward&service_date=2026-11-19&shift_type_id=12"
+  ],
+  "writes": [
+    {
+      "path": "/entries",
+      "method": "POST",
+      "body": {
+        "pt_on": 25,
+        "pt_in": 0,
+        "pt_move": 0,
+        "pt_home": 0,
+        "pt_move_b": 0,
+        "pt_send": 0,
+        "pt_dead": 0,
+        "pt_non_voluntary": 0,
+        "pt_ad": 0,
+        "nb_on": 1,
+        "nb_in": 0,
+        "nb_move": 0,
+        "nb_home": 0,
+        "nb_move_b": 0,
+        "nb_send": 0,
+        "nb_dead": 0,
+        "nb_non_voluntary": 0,
+        "nb_ad": 0,
+        "patient_type5": 0,
+        "patient_type4": 0,
+        "patient_type3": 0,
+        "patient_type2": 0,
+        "patient_type1": 0,
+        "em_hn": 0,
+        "em_rn": 0,
+        "em_tn": 0,
+        "em_pn": 0,
+        "em_aid": 0,
+        "amount_bed": 20,
+        "specialties": [
+          {
+            "specialty_code": "obs",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "obs",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "nb",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "nb",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "gyn",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "gyn",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "surg",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "surg",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "med",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "med",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "psych",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "psych",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "skin",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "skin",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ped",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ped",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ortho",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ortho",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "eye",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "eye",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ent",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ent",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "dent",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "dent",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "neuro_surg",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "neuro_surg",
+            "category_code": "s",
+            "count_value": 0
+          }
+        ],
+        "pressure": {
+          "stage2_4_cases": 0,
+          "at_risk_patient_days": 0
+        },
+        "ward_id": "example-ward",
+        "service_date": "2026-11-19",
+        "shift_type_id": 13
+      }
+    },
+    {
+      "path": "/entries",
+      "method": "POST",
+      "body": {
+        "pt_on": 25,
+        "pt_in": 0,
+        "pt_move": 0,
+        "pt_home": 0,
+        "pt_move_b": 0,
+        "pt_send": 0,
+        "pt_dead": 0,
+        "pt_non_voluntary": 0,
+        "pt_ad": 0,
+        "nb_on": 1,
+        "nb_in": 0,
+        "nb_move": 0,
+        "nb_home": 0,
+        "nb_move_b": 0,
+        "nb_send": 0,
+        "nb_dead": 0,
+        "nb_non_voluntary": 0,
+        "nb_ad": 0,
+        "patient_type5": 0,
+        "patient_type4": 0,
+        "patient_type3": 0,
+        "patient_type2": 0,
+        "patient_type1": 0,
+        "em_hn": 0,
+        "em_rn": 0,
+        "em_tn": 0,
+        "em_pn": 0,
+        "em_aid": 0,
+        "amount_bed": 20,
+        "specialties": [
+          {
+            "specialty_code": "obs",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "obs",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "nb",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "nb",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "gyn",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "gyn",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "surg",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "surg",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "med",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "med",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "psych",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "psych",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "skin",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "skin",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ped",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ped",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ortho",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ortho",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "eye",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "eye",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ent",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ent",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "dent",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "dent",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "neuro_surg",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "neuro_surg",
+            "category_code": "s",
+            "count_value": 0
+          }
+        ],
+        "pressure": {
+          "stage2_4_cases": 0,
+          "at_risk_patient_days": 0
+        },
+        "ward_id": "example-ward",
+        "service_date": "2026-11-19",
+        "shift_type_id": 13
+      }
+    },
+    {
+      "path": "/auth/logout",
+      "method": "POST",
+      "body": null
+    },
+    {
+      "path": "/entries/example-entry",
+      "method": "PATCH",
+      "body": {
+        "pt_on": 33,
+        "pt_in": 0,
+        "pt_move": 0,
+        "pt_home": 0,
+        "pt_move_b": 0,
+        "pt_send": 0,
+        "pt_dead": 0,
+        "pt_non_voluntary": 0,
+        "pt_ad": 0,
+        "nb_on": 1,
+        "nb_in": 0,
+        "nb_move": 0,
+        "nb_home": 0,
+        "nb_move_b": 0,
+        "nb_send": 0,
+        "nb_dead": 0,
+        "nb_non_voluntary": 0,
+        "nb_ad": 0,
+        "patient_type5": 0,
+        "patient_type4": 0,
+        "patient_type3": 0,
+        "patient_type2": 0,
+        "patient_type1": 0,
+        "em_hn": 0,
+        "em_rn": 0,
+        "em_tn": 0,
+        "em_pn": 0,
+        "em_aid": 0,
+        "amount_bed": 20,
+        "specialties": [
+          {
+            "specialty_code": "obs",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "obs",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "nb",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "nb",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "gyn",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "gyn",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "surg",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "surg",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "med",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "med",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "psych",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "psych",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "skin",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "skin",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ped",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ped",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ortho",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ortho",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "eye",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "eye",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ent",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ent",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "dent",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "dent",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "neuro_surg",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "neuro_surg",
+            "category_code": "s",
+            "count_value": 0
+          }
+        ],
+        "pressure": {
+          "stage2_4_cases": 0,
+          "at_risk_patient_days": 0
+        },
+        "expected_version": 3
+      }
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,223 @@
+{
+  "before": [
+    {
+      "path": "/reports/summary/daily",
+      "query": {
+        "selected": "2026-11-19",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/daily-all",
+      "query": {
+        "selected": "2026-11-19",
+        "status": "all",
+        "shift_type_id": "73"
+      }
+    },
+    {
+      "path": "/reports/summary/monthly",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/census-day",
+      "query": {
+        "selected": "2026-11-19",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/census-month",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "through": "2026-11-01"
+      }
+    },
+    {
+      "path": "/reports/summary/turnover",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/los",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/occupancy",
+      "query": {
+        "fiscal_year_end": "2027",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/productivity",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/specialty",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "through": "2026-11-01"
+      }
+    },
+    {
+      "path": "/reports/summary/skill-mix",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/nursing-hours",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/pressure",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/pressure-detail",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/readmission",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    }
+  ],
+  "after": [
+    {
+      "path": "/reports/summary/daily",
+      "query": {
+        "selected": "2026-11-19",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/daily-all",
+      "query": {
+        "selected": "2026-11-19",
+        "status": "all",
+        "shift_type_id": "73"
+      }
+    },
+    {
+      "path": "/reports/summary/monthly",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/census-day",
+      "query": {
+        "selected": "2026-11-19",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/census-month",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "through": "2026-11-01"
+      }
+    },
+    {
+      "path": "/reports/summary/turnover",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/los",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/occupancy",
+      "query": {
+        "fiscal_year_end": "2027",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/productivity",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/specialty",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "through": "2026-11-01"
+      }
+    },
+    {
+      "path": "/reports/summary/skill-mix",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/nursing-hours",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/pressure",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/pressure-detail",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all"
+      }
+    },
+    {
+      "path": "/reports/summary/readmission",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    }
+  ],
+  "equal": true
+}

@@ -1,0 +1,18 @@
+{
+  "baseline": 497,
+  "unchanged": 490,
+  "changed": [
+    "new-system\\INPATIENT_PARITY_TH.md",
+    "new-system\\docs\\ui-progress.md",
+    "new-system\\frontend\\app\\globals.css",
+    "new-system\\frontend\\app\\layout.js",
+    "new-system\\frontend\\components\\entries\\useEntryEditing.js",
+    "new-system\\frontend\\styles\\entries.css",
+    "new-system\\frontend\\styles\\tokens.css"
+  ],
+  "added_count": 74,
+  "removed": [],
+  "local_links": 71,
+  "protected_business_sources_unchanged": true,
+  "print_css_unchanged": true
+}

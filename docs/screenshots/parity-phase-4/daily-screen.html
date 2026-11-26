@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>รายงานประจำวัน</title>
+<link rel="stylesheet" type="text/css" href="css/mycss.css"/>
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top"></td>
+  </tr>
+  <tr>
+    <td height="25" align="left">&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="10%" align="left" valign="top"></td>
+        <td width="90%" align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="25" class="textBlackBold" bgcolor="#FAE9F1" style="border-bottom:1px solid #F3CDDF; border-top:1px solid #F3CDDF;">รายงานประจำวัน</td>
+          </tr
+          ><tr>
+            <td height="25" align="left"><table width="1580" border="0" cellspacing="0" cellpadding="0">
+<script>
+function chkData() {
+	if (document.frm1.ward.value == "0") {
+		alert('กรุณาเลือก ward');
+		document.frm1.ward.focus();
+		return false;
+	}
+}
+</script>
+<form method="post" name="frm1" action="" onsubmit="return chkData()">
+              <tr>
+                <td height="25" align="left">Ward</td>
+                <td height="25" colspan="3" align="left"><select name="ward" id="ward">
+                  <option value="0" selected="selected">--เลือก--</option>
+                  <option value='10' selected>หอสมมติ A</option><option value='11'>หอสมมติ B</option>                </select></td>
+                </tr>
+              <tr>
+                <td width="66" height="25" align="left">ประจำวันที่</td>
+                <td width="140" height="25" align="left">
+                  <link type="text/css" href="css/ui-lightness/jquery-ui-1.8.10.custom.css" rel="stylesheet" />
+                  <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+                  <script type="text/javascript" src="js/jquery-ui-1.8.10.offset.datepicker.min.js"></script>
+                  <script type="text/javascript" src="js/dp.js"></script>
+                  <style type="text/css">
+			/*demo page css
+			body{ font: 80% "Trebuchet MS", sans-serif; margin: 50px;}*/
+			.demoHeaders { margin-top: 2em; }
+			#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+			#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+			ul#icons {margin: 0; padding: 0;}
+			ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+			ul#icons span.ui-icon {float: left; margin: 0 4px;}
+			ul.test {list-style:none; line-height:30px;}
+		      </style>
+                  <input name="idate" type="text" id="datepicker-th-1" size="15" maxlength="30" readonly="readonly" value="01/11/2569" /></td>
+                <td width="682" height="25" align="left"><input type="submit" name="button" id="button" value="  ตกลง  " /></td>
+                <td width="692" align="left">&nbsp;</td>
+              </tr>
+</form>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="25"><img src="images/printer.png" width="23" height="23" border="0" align="absmiddle" /> <a href="report/report_day_r.php?ward=10&dmy=01/11/2569&ac=p" target="_blank" id="k1">พิมพ์</a>&nbsp;&nbsp;&nbsp;<img src="images/excel.png" width="25" height="25" align="absmiddle" /> <a href="report/report_day_r.php?ward=10&dmy=01/11/2569&ac=e" target="_blank" id="k1">ส่งออกเป็น Excel</a></td>
+          </tr>
+          <tr>
+            <td>INPATIENT CENSUS AND INPATIENT SERVICE DAYS ประจำวันที่ 01 พฤศจิกายน 2569&nbsp;หอสมมติ A</td>
+          </tr>
+          <tr>
+            <td align="left"><table width="1644" border="1" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="26" rowspan="3" align="center" bgcolor="#CCFFE6">วันที่</td>
+                <td width="25" rowspan="3" align="center" bgcolor="#B9FFFF">เวร</td>
+                <td colspan="2" align="center" bgcolor="#FFE1D2">คงพยาบาล</td>
+                <td colspan="4" align="center" bgcolor="#CCFFE6">การรับ</td>
+                <td height="25" colspan="10" align="center" bgcolor="#B9FFFF">จำหน่าย</td>
+                <td colspan="2" rowspan="2" align="center" bgcolor="#CCFFE6">รวมจำหน่าย</td>
+                <td colspan="2" rowspan="2" align="center" bgcolor="#FFE1D2">คงเหลือ</td>
+                <td colspan="2" rowspan="2" align="center" bgcolor="#CCFFE6">A&amp;D<br />
+                  Same day</td>
+                <td colspan="2" rowspan="2" align="center" bgcolor="#FFE1D2">Patient Day</td>
+                <td colspan="5" rowspan="2" align="center" bgcolor="#FFE1D2">ประเภทผู้ป่วย</td>
+                <td width="35" rowspan="3" align="center" bgcolor="#B9FFFF">รวมให้<br />
+                  การพยาบาล</td>
+                <td width="35" rowspan="3" align="center" bgcolor="#B9FFFF">จำนวน<br />
+                  เตียง</td>
+                <td colspan="2" rowspan="2" align="center" bgcolor="#CCFFE6">เฉลี่ยนอนรพ.<br />
+                  (คน)</td>
+                <td width="60" rowspan="3" align="center" bgcolor="#FFE1D2">อัตราการ<br />
+                  ครองเตียง</td>
+                <td width="160" rowspan="3" align="center" bgcolor="#B9FFFF">turnover interval (T)<br />
+                  ช่วงเวลาว่างของเตียง (วัน)</td>
+                <td width="178" rowspan="3" align="center" bgcolor="#FFE1D2">Bed Turnover Rate (B)<br />
+                  ผู้ป่วยจำหน่ายเฉลี่ยต่อเตียง(คน)</td>
+                <td colspan="5" rowspan="2" align="center" bgcolor="#FFFF00">จนท.ปฏิบัติงาน</td>
+                </tr>
+              <tr>
+                <td height="25" colspan="2" align="center" bgcolor="#FFE1D2">วานนี้</td>
+                <td height="25" colspan="2" align="center" bgcolor="#CCFFE6">รับใหม่</td>
+                <td height="25" colspan="2" align="center" bgcolor="#CCFFE6">รับย้าย</td>
+                <td colspan="2" align="center" bgcolor="#B9FFFF">กลับบ้าน</td>
+                <td colspan="2" align="center" bgcolor="#B9FFFF">ย้ายตึก</td>
+                <td colspan="2" align="center" bgcolor="#B9FFFF">ส่งต่อ</td>
+                <td colspan="2" align="center" bgcolor="#B9FFFF">ตาย</td>
+                <td colspan="2" align="center" bgcolor="#B9FFFF">ไม่สมัครใจอยู่</td>
+                </tr>
+              <tr>
+                <td width="30" height="25" align="center" bgcolor="#FFE1D2">PT</td>
+                <td width="30" align="center" bgcolor="#FFE1D2">NB</td>
+                <td width="28" align="center" bgcolor="#CCFFE6">PT</td>
+                <td width="28"  align="center" bgcolor="#CCFFE6">NB</td>
+                <td width="28" align="center" bgcolor="#CCFFE6">PT</td>
+                <td width="28" align="center" bgcolor="#CCFFE6">NB</td>
+                <td width="28" align="center" bgcolor="#B9FFFF">PT</td>
+                <td width="28" align="center" bgcolor="#B9FFFF">NB</td>
+                <td width="28" align="center" bgcolor="#B9FFFF">PT</td>
+                <td width="28" align="center" bgcolor="#B9FFFF">NB</td>
+                <td width="28" align="center" bgcolor="#B9FFFF">PT</td>
+                <td width="28" align="center" bgcolor="#B9FFFF">NB</td>
+                <td width="28" align="center" bgcolor="#B9FFFF">PT</td>
+                <td width="28" align="center" bgcolor="#B9FFFF">NB</td>
+                <td width="37" align="center" bgcolor="#B9FFFF">PT</td>
+                <td width="37" align="center" bgcolor="#B9FFFF">NB</td>
+                <td width="35" align="center" bgcolor="#CCFFE6">PT</td>
+                <td width="35" align="center" bgcolor="#CCFFE6">NB</td>
+                <td width="25" align="center" bgcolor="#FFE1D2">PT</td>
+                <td width="25" align="center" bgcolor="#FFE1D2">NB</td>
+                <td width="32" align="center" bgcolor="#CCFFE6">PT</td>
+                <td width="32" align="center" bgcolor="#CCFFE6">NB</td>
+                <td width="26" align="center" bgcolor="#FFE1D2">PT</td>
+                <td width="26" align="center" bgcolor="#FFE1D2">NB</td>
+                <td width="25" align="center" bgcolor="#FFE1D2">วิกฤต</td>
+                <td width="25" align="center" bgcolor="#FFE1D2">4</td>
+                <td width="25" align="center" bgcolor="#FFE1D2">3</td>
+                <td width="26" align="center" bgcolor="#FFE1D2">2</td>
+                <td width="25" align="center" bgcolor="#FFE1D2">1</td>
+                <td width="40" align="center" bgcolor="#CCFFE6">PT</td>
+                <td width="40" align="center" bgcolor="#CCFFE6">NB</td>
+                <td width="25" align="center" bgcolor="#FFFF00">HN</td>
+                <td width="25" align="center" bgcolor="#FFFF00">RN</td>
+                <td width="25" align="center" bgcolor="#FFFF00">TN</td>
+                <td width="25" align="center" bgcolor="#FFFF00">PN</td>
+                <td width="25" align="center" bgcolor="#FFFF00">AID</td>
+              </tr>
+              <tr bgcolor="#00CC66">
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">ด</td>
+                <td height="25" align="center">10</td>
+                <td height="25" align="center">2</td>
+                <td height="25" align="center">2</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">12</td>
+                <td height="25" align="center">3</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center">13</td>
+                <td height="25" align="center">3</td>
+                <td align="center">3</td>
+                <td height="25" align="center">3</td>
+                <td height="25" align="center">3</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">2</td>
+                <td align="center">13</td>
+                <td height="25" align="center">20</td>
+                <td height="25" align="center">13</td>
+                <td height="25" align="center">3</td>
+                <td height="25" align="center">60.00</td>
+                <td height="25" align="center">7.00</td>
+                <td height="25" align="center">0.05</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">2</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">1</td>
+              </tr>
+              <tr bgcolor="#FFA4A4">
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">ช</td>
+                <td height="25" align="center">12</td>
+                <td height="25" align="center">3</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center">2</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center">2</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">11</td>
+                <td height="25" align="center">2</td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center">11</td>
+                <td height="25" align="center">2</td>
+                <td align="center">3</td>
+                <td height="25" align="center">3</td>
+                <td height="25" align="center">3</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">1</td>
+                <td align="center">13</td>
+                <td height="25" align="center">20</td>
+                <td height="25" align="center">11</td>
+                <td height="25" align="center">2</td>
+                <td height="25" align="center">55.00</td>
+                <td height="25" align="center">4.50</td>
+                <td height="25" align="center">0.10</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">2</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">1</td>
+              </tr>
+              <tr bgcolor="#00CC66">
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">บ</td>
+                <td height="25" align="center">11</td>
+                <td height="25" align="center">2</td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">10</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center"></td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">10</td>
+                <td height="25" align="center">2</td>
+                <td align="center">3</td>
+                <td height="25" align="center">3</td>
+                <td height="25" align="center">3</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center"></td>
+                <td align="center">11</td>
+                <td height="25" align="center">25</td>
+                <td height="25" align="center">10</td>
+                <td height="25" align="center">2</td>
+                <td height="25" align="center">40.00</td>
+                <td height="25" align="center">15.00</td>
+                <td height="25" align="center">0.04</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">2</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">1</td>
+              </tr>
+              <tr>
+                <td height="25" colspan="2" align="center" bgcolor="#CCCCCC">รวม</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">10</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">2</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">3</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">1</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">1</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">0</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">4</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">1</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">0</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">1</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">0</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">0</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">0</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">0</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">0</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">0</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">4</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">2</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">10</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">1</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">1</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">1</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">11</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">2</td>
+                <td align="center" bgcolor="#CCCCCC">9</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">9</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">9</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">3</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">3</td>
+                <td align="center" bgcolor="#CCCCCC">14</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">25</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">11</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">2</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">44.00</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">3.50</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">0.16</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">3</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">6</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">3</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">3</td>
+                <td height="25" align="center" bgcolor="#CCCCCC">3</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td align="left">รวมให้การพยาบาล = (คงพยาบาล + รับใหม่ + รับย้าย) PT</td>
+          </tr>
+          <tr>
+            <td align="left"><table width="500" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="20" height="25" align="left" bgcolor="#00CC66">&nbsp;</td>
+                <td width="11" height="25" align="left">&nbsp;</td>
+                <td width="469" height="25" align="left">ยืนยันข้อมูลแล้ว</td>
+              </tr>
+              <tr>
+                <td align="left">&nbsp;</td>
+                <td align="left">&nbsp;</td>
+                <td align="left">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="25" align="left" bgcolor="#FFA4A4">&nbsp;</td>
+                <td height="25" align="left">&nbsp;</td>
+                <td height="25" align="left">ยังไม่ยืนยัน</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+  </tr>
+</table>
+</body>
+</html>

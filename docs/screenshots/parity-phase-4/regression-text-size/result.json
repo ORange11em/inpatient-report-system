@@ -1,0 +1,2120 @@
+{
+  "checks": [
+    "7 routes × 4 widths × 2 levels: no page overflow, measured fonts grow 25%",
+    "keyboard Enter/Space, focus outline, min/max disabled, live level, reset, navigation/reload and invalid storage",
+    "login alert text grows 16→20px with fictitious rejected credentials",
+    "360px both sizes: saved via original request; toast above measured action bar and save button hit-test passes",
+    "dialog input font grows 16→20px; Escape closes dialog",
+    "all 15 reports: exported XML/name byte-identical and print font/geometry identical between 100% and 125%",
+    "360px occupancy table scrolls inside its container at 125%",
+    "unavailable storage falls back to 100% and controls still work"
+  ],
+  "sizes": [
+    {
+      "100": {
+        "width": 360,
+        "scroll": 360,
+        "client": 360,
+        "input": 16,
+        "entryInput": null,
+        "table": null,
+        "heading": 32,
+        "label": 13,
+        "button": 13,
+        "menu": null,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 61,
+          "top": 0,
+          "right": 360,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 360,
+        "scroll": 360,
+        "client": 360,
+        "input": 20,
+        "entryInput": null,
+        "table": null,
+        "heading": 40,
+        "label": 16.25,
+        "button": 16.25,
+        "menu": null,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 63.875,
+          "top": 0,
+          "right": 360,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/login",
+      "width": 360
+    },
+    {
+      "100": {
+        "width": 360,
+        "scroll": 360,
+        "client": 360,
+        "input": null,
+        "entryInput": null,
+        "table": null,
+        "heading": 24,
+        "label": null,
+        "button": 16,
+        "menu": 14,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 61,
+          "top": 0,
+          "right": 360,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 360,
+        "scroll": 360,
+        "client": 360,
+        "input": null,
+        "entryInput": null,
+        "table": null,
+        "heading": 30,
+        "label": null,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 63.875,
+          "top": 0,
+          "right": 360,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/",
+      "width": 360
+    },
+    {
+      "100": {
+        "width": 360,
+        "scroll": 360,
+        "client": 360,
+        "input": 16,
+        "entryInput": 16,
+        "table": null,
+        "heading": 24,
+        "label": 16,
+        "button": 16,
+        "menu": 14,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 61,
+          "top": 0,
+          "right": 360,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 360,
+        "scroll": 360,
+        "client": 360,
+        "input": 20,
+        "entryInput": 20,
+        "table": null,
+        "heading": 30,
+        "label": 20,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 63.875,
+          "top": 0,
+          "right": 360,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/entries?ward=example-0&date=2026-11-20&shift=73",
+      "width": 360
+    },
+    {
+      "100": {
+        "width": 360,
+        "scroll": 360,
+        "client": 360,
+        "input": null,
+        "entryInput": null,
+        "table": null,
+        "heading": 24,
+        "label": null,
+        "button": 16,
+        "menu": 14,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 61,
+          "top": 0,
+          "right": 360,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 360,
+        "scroll": 360,
+        "client": 360,
+        "input": null,
+        "entryInput": null,
+        "table": null,
+        "heading": 30,
+        "label": null,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 63.875,
+          "top": 0,
+          "right": 360,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/history",
+      "width": 360
+    },
+    {
+      "100": {
+        "width": 360,
+        "scroll": 360,
+        "client": 360,
+        "input": 16,
+        "entryInput": null,
+        "table": null,
+        "heading": 24,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 61,
+          "top": 0,
+          "right": 360,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 360,
+        "scroll": 360,
+        "client": 360,
+        "input": 20,
+        "entryInput": null,
+        "table": null,
+        "heading": 30,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 63.875,
+          "top": 0,
+          "right": 360,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/indicators",
+      "width": 360
+    },
+    {
+      "100": {
+        "width": 360,
+        "scroll": 360,
+        "client": 360,
+        "input": null,
+        "entryInput": null,
+        "table": null,
+        "heading": 24,
+        "label": null,
+        "button": 16,
+        "menu": 14,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 61,
+          "top": 0,
+          "right": 360,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 360,
+        "scroll": 360,
+        "client": 360,
+        "input": null,
+        "entryInput": null,
+        "table": null,
+        "heading": 30,
+        "label": null,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 63.875,
+          "top": 0,
+          "right": 360,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/reports",
+      "width": 360
+    },
+    {
+      "100": {
+        "width": 360,
+        "scroll": 360,
+        "client": 360,
+        "input": null,
+        "entryInput": null,
+        "table": null,
+        "heading": 24,
+        "label": null,
+        "button": 16,
+        "menu": 14,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 61,
+          "top": 0,
+          "right": 360,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 360,
+        "scroll": 360,
+        "client": 360,
+        "input": null,
+        "entryInput": null,
+        "table": null,
+        "heading": 30,
+        "label": null,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 63.875,
+          "top": 0,
+          "right": 360,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/occupancy",
+      "width": 360
+    },
+    {
+      "100": {
+        "width": 768,
+        "scroll": 768,
+        "client": 768,
+        "input": 16,
+        "entryInput": null,
+        "table": null,
+        "heading": 38.4,
+        "label": 13,
+        "button": 13,
+        "menu": null,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 61,
+          "top": 0,
+          "right": 768,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 768,
+        "scroll": 768,
+        "client": 768,
+        "input": 20,
+        "entryInput": null,
+        "table": null,
+        "heading": 48,
+        "label": 16.25,
+        "button": 16.25,
+        "menu": null,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 63.875,
+          "top": 0,
+          "right": 768,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/login",
+      "width": 768
+    },
+    {
+      "100": {
+        "width": 768,
+        "scroll": 768,
+        "client": 768,
+        "input": null,
+        "entryInput": null,
+        "table": null,
+        "heading": 24,
+        "label": null,
+        "button": 16,
+        "menu": 14,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 61,
+          "top": 0,
+          "right": 768,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 768,
+        "scroll": 768,
+        "client": 768,
+        "input": null,
+        "entryInput": null,
+        "table": null,
+        "heading": 30,
+        "label": null,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 63.875,
+          "top": 0,
+          "right": 768,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/",
+      "width": 768
+    },
+    {
+      "100": {
+        "width": 768,
+        "scroll": 768,
+        "client": 768,
+        "input": 16,
+        "entryInput": 16,
+        "table": null,
+        "heading": 24,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 61,
+          "top": 0,
+          "right": 768,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 768,
+        "scroll": 768,
+        "client": 768,
+        "input": 20,
+        "entryInput": 20,
+        "table": null,
+        "heading": 30,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 63.875,
+          "top": 0,
+          "right": 768,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/entries?ward=example-0&date=2026-11-20&shift=73",
+      "width": 768
+    },
+    {
+      "100": {
+        "width": 768,
+        "scroll": 768,
+        "client": 768,
+        "input": null,
+        "entryInput": null,
+        "table": 14,
+        "heading": 24,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [
+          {
+            "client": 638,
+            "scroll": 1040,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 61,
+          "top": 0,
+          "right": 768,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 768,
+        "scroll": 768,
+        "client": 768,
+        "input": null,
+        "entryInput": null,
+        "table": 17.5,
+        "heading": 30,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [
+          {
+            "client": 638,
+            "scroll": 1040,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 63.875,
+          "top": 0,
+          "right": 768,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/history",
+      "width": 768
+    },
+    {
+      "100": {
+        "width": 768,
+        "scroll": 768,
+        "client": 768,
+        "input": 16,
+        "entryInput": null,
+        "table": null,
+        "heading": 24,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 61,
+          "top": 0,
+          "right": 768,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 768,
+        "scroll": 768,
+        "client": 768,
+        "input": 20,
+        "entryInput": null,
+        "table": null,
+        "heading": 30,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 63.875,
+          "top": 0,
+          "right": 768,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/indicators",
+      "width": 768
+    },
+    {
+      "100": {
+        "width": 768,
+        "scroll": 768,
+        "client": 768,
+        "input": 16,
+        "entryInput": null,
+        "table": 14,
+        "heading": 24,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [
+          {
+            "client": 588,
+            "scroll": 2853,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 61,
+          "top": 0,
+          "right": 768,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 768,
+        "scroll": 768,
+        "client": 768,
+        "input": 20,
+        "entryInput": null,
+        "table": 17.5,
+        "heading": 30,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [
+          {
+            "client": 588,
+            "scroll": 2863,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 63.875,
+          "top": 0,
+          "right": 768,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/reports",
+      "width": 768
+    },
+    {
+      "100": {
+        "width": 768,
+        "scroll": 768,
+        "client": 768,
+        "input": null,
+        "entryInput": null,
+        "table": 14,
+        "heading": 24,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [
+          {
+            "client": 588,
+            "scroll": 1360,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 61,
+          "top": 0,
+          "right": 768,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 768,
+        "scroll": 768,
+        "client": 768,
+        "input": null,
+        "entryInput": null,
+        "table": 17.5,
+        "heading": 30,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [
+          {
+            "client": 588,
+            "scroll": 1360,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 63.875,
+          "top": 0,
+          "right": 768,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/occupancy",
+      "width": 768
+    },
+    {
+      "100": {
+        "width": 1024,
+        "scroll": 1024,
+        "client": 1024,
+        "input": 16,
+        "entryInput": null,
+        "table": null,
+        "heading": 50,
+        "label": 13,
+        "button": 13,
+        "menu": null,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 61,
+          "top": 0,
+          "right": 1024,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 1024,
+        "scroll": 1024,
+        "client": 1024,
+        "input": 20,
+        "entryInput": null,
+        "table": null,
+        "heading": 62.5,
+        "label": 16.25,
+        "button": 16.25,
+        "menu": null,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 63.875,
+          "top": 0,
+          "right": 1024,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/login",
+      "width": 1024
+    },
+    {
+      "100": {
+        "width": 1024,
+        "scroll": 1024,
+        "client": 1024,
+        "input": null,
+        "entryInput": null,
+        "table": null,
+        "heading": 28,
+        "label": null,
+        "button": 16,
+        "menu": 14,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 61,
+          "top": 0,
+          "right": 1024,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 1024,
+        "scroll": 1024,
+        "client": 1024,
+        "input": null,
+        "entryInput": null,
+        "table": null,
+        "heading": 35,
+        "label": null,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 63.875,
+          "top": 0,
+          "right": 1024,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/",
+      "width": 1024
+    },
+    {
+      "100": {
+        "width": 1024,
+        "scroll": 1024,
+        "client": 1024,
+        "input": 16,
+        "entryInput": 16,
+        "table": null,
+        "heading": 28,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 61,
+          "top": 0,
+          "right": 1024,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 1024,
+        "scroll": 1024,
+        "client": 1024,
+        "input": 20,
+        "entryInput": 20,
+        "table": null,
+        "heading": 35,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 63.875,
+          "top": 0,
+          "right": 1024,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/entries?ward=example-0&date=2026-11-20&shift=73",
+      "width": 1024
+    },
+    {
+      "100": {
+        "width": 1024,
+        "scroll": 1024,
+        "client": 1024,
+        "input": null,
+        "entryInput": null,
+        "table": 14,
+        "heading": 28,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [
+          {
+            "client": 726,
+            "scroll": 1040,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 61,
+          "top": 0,
+          "right": 1024,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 1024,
+        "scroll": 1024,
+        "client": 1024,
+        "input": null,
+        "entryInput": null,
+        "table": 17.5,
+        "heading": 35,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [
+          {
+            "client": 726,
+            "scroll": 1040,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 63.875,
+          "top": 0,
+          "right": 1024,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/history",
+      "width": 1024
+    },
+    {
+      "100": {
+        "width": 1024,
+        "scroll": 1024,
+        "client": 1024,
+        "input": 16,
+        "entryInput": null,
+        "table": null,
+        "heading": 28,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 61,
+          "top": 0,
+          "right": 1024,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 1024,
+        "scroll": 1024,
+        "client": 1024,
+        "input": 20,
+        "entryInput": null,
+        "table": null,
+        "heading": 35,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 63.875,
+          "top": 0,
+          "right": 1024,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/indicators",
+      "width": 1024
+    },
+    {
+      "100": {
+        "width": 1024,
+        "scroll": 1024,
+        "client": 1024,
+        "input": 16,
+        "entryInput": null,
+        "table": 14,
+        "heading": 28,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [
+          {
+            "client": 676,
+            "scroll": 2853,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 61,
+          "top": 0,
+          "right": 1024,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 1024,
+        "scroll": 1024,
+        "client": 1024,
+        "input": 20,
+        "entryInput": null,
+        "table": 17.5,
+        "heading": 35,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [
+          {
+            "client": 676,
+            "scroll": 2863,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 63.875,
+          "top": 0,
+          "right": 1024,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/reports",
+      "width": 1024
+    },
+    {
+      "100": {
+        "width": 1024,
+        "scroll": 1024,
+        "client": 1024,
+        "input": null,
+        "entryInput": null,
+        "table": 14,
+        "heading": 28,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [
+          {
+            "client": 676,
+            "scroll": 1360,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 61,
+          "top": 0,
+          "right": 1024,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 1024,
+        "scroll": 1024,
+        "client": 1024,
+        "input": null,
+        "entryInput": null,
+        "table": 17.5,
+        "heading": 35,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [
+          {
+            "client": 676,
+            "scroll": 1360,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 63.875,
+          "top": 0,
+          "right": 1024,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/occupancy",
+      "width": 1024
+    },
+    {
+      "100": {
+        "width": 1440,
+        "scroll": 1440,
+        "client": 1440,
+        "input": 16,
+        "entryInput": null,
+        "table": null,
+        "heading": 50,
+        "label": 13,
+        "button": 13,
+        "menu": null,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 61,
+          "top": 0,
+          "right": 1440,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 1440,
+        "scroll": 1440,
+        "client": 1440,
+        "input": 20,
+        "entryInput": null,
+        "table": null,
+        "heading": 62.5,
+        "label": 16.25,
+        "button": 16.25,
+        "menu": null,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 63.875,
+          "top": 0,
+          "right": 1440,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/login",
+      "width": 1440
+    },
+    {
+      "100": {
+        "width": 1440,
+        "scroll": 1440,
+        "client": 1440,
+        "input": null,
+        "entryInput": null,
+        "table": null,
+        "heading": 28,
+        "label": null,
+        "button": 16,
+        "menu": 14,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 61,
+          "top": 0,
+          "right": 1440,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 1440,
+        "scroll": 1440,
+        "client": 1440,
+        "input": null,
+        "entryInput": null,
+        "table": null,
+        "heading": 35,
+        "label": null,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 63.875,
+          "top": 0,
+          "right": 1440,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/",
+      "width": 1440
+    },
+    {
+      "100": {
+        "width": 1440,
+        "scroll": 1440,
+        "client": 1440,
+        "input": 16,
+        "entryInput": 16,
+        "table": null,
+        "heading": 28,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 61,
+          "top": 0,
+          "right": 1440,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 1440,
+        "scroll": 1440,
+        "client": 1440,
+        "input": 20,
+        "entryInput": 20,
+        "table": null,
+        "heading": 35,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 63.875,
+          "top": 0,
+          "right": 1440,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/entries?ward=example-0&date=2026-11-20&shift=73",
+      "width": 1440
+    },
+    {
+      "100": {
+        "width": 1440,
+        "scroll": 1440,
+        "client": 1440,
+        "input": null,
+        "entryInput": null,
+        "table": 14,
+        "heading": 28,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [
+          {
+            "client": 1142,
+            "scroll": 1142,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 61,
+          "top": 0,
+          "right": 1440,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 1440,
+        "scroll": 1440,
+        "client": 1440,
+        "input": null,
+        "entryInput": null,
+        "table": 17.5,
+        "heading": 35,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [
+          {
+            "client": 1142,
+            "scroll": 1142,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 63.875,
+          "top": 0,
+          "right": 1440,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/history",
+      "width": 1440
+    },
+    {
+      "100": {
+        "width": 1440,
+        "scroll": 1440,
+        "client": 1440,
+        "input": 16,
+        "entryInput": null,
+        "table": null,
+        "heading": 28,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 61,
+          "top": 0,
+          "right": 1440,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 1440,
+        "scroll": 1440,
+        "client": 1440,
+        "input": 20,
+        "entryInput": null,
+        "table": null,
+        "heading": 35,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 63.875,
+          "top": 0,
+          "right": 1440,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/indicators",
+      "width": 1440
+    },
+    {
+      "100": {
+        "width": 1440,
+        "scroll": 1440,
+        "client": 1440,
+        "input": 16,
+        "entryInput": null,
+        "table": 14,
+        "heading": 28,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [
+          {
+            "client": 1092,
+            "scroll": 2853,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 61,
+          "top": 0,
+          "right": 1440,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 1440,
+        "scroll": 1440,
+        "client": 1440,
+        "input": 20,
+        "entryInput": null,
+        "table": 17.5,
+        "heading": 35,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [
+          {
+            "client": 1092,
+            "scroll": 2863,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 63.875,
+          "top": 0,
+          "right": 1440,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/reports",
+      "width": 1440
+    },
+    {
+      "100": {
+        "width": 1440,
+        "scroll": 1440,
+        "client": 1440,
+        "input": null,
+        "entryInput": null,
+        "table": 14,
+        "heading": 28,
+        "label": 14,
+        "button": 16,
+        "menu": 14,
+        "tables": [
+          {
+            "client": 1092,
+            "scroll": 1360,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 61,
+          "top": 0,
+          "right": 1440,
+          "bottom": 61,
+          "left": 0
+        }
+      },
+      "125": {
+        "width": 1440,
+        "scroll": 1440,
+        "client": 1440,
+        "input": null,
+        "entryInput": null,
+        "table": 17.5,
+        "heading": 35,
+        "label": 17.5,
+        "button": 20,
+        "menu": 17.5,
+        "tables": [
+          {
+            "client": 1092,
+            "scroll": 1360,
+            "overflow": "auto"
+          }
+        ],
+        "control": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 63.875,
+          "top": 0,
+          "right": 1440,
+          "bottom": 63.875,
+          "left": 0
+        }
+      },
+      "route": "/occupancy",
+      "width": 1440
+    }
+  ],
+  "saves": [
+    {
+      "level": 100,
+      "action": {
+        "x": 16,
+        "y": 719.03125,
+        "width": 328,
+        "height": 192.96875,
+        "top": 719.03125,
+        "right": 344,
+        "bottom": 912,
+        "left": 16
+      },
+      "toast": {
+        "x": 16,
+        "y": 617.03125,
+        "width": 328,
+        "height": 78,
+        "top": 617.03125,
+        "right": 344,
+        "bottom": 695.03125,
+        "left": 16
+      },
+      "button": {
+        "x": 33,
+        "y": 798.21875,
+        "width": 294,
+        "height": 44.390625,
+        "top": 798.21875,
+        "right": 327,
+        "bottom": 842.609375,
+        "left": 33
+      },
+      "hit": true,
+      "height": 1000
+    },
+    {
+      "level": 125,
+      "action": {
+        "x": 16,
+        "y": 661.375,
+        "width": 328,
+        "height": 250.625,
+        "top": 661.375,
+        "right": 344,
+        "bottom": 912,
+        "left": 16
+      },
+      "toast": {
+        "x": 16,
+        "y": 559.375,
+        "width": 328,
+        "height": 78,
+        "top": 559.375,
+        "right": 344,
+        "bottom": 637.375,
+        "left": 16
+      },
+      "button": {
+        "x": 33,
+        "y": 785,
+        "width": 294,
+        "height": 51,
+        "top": 785,
+        "right": 327,
+        "bottom": 836,
+        "left": 33
+      },
+      "hit": true,
+      "height": 1000
+    }
+  ],
+  "alertFonts": [
+    16,
+    20
+  ],
+  "dialogFonts": [
+    16,
+    20
+  ],
+  "exportsChecked": [
+    {
+      "kind": "daily",
+      "name": "รายงานประจำวัน_20-11-2569.xml",
+      "bytes": 149490
+    },
+    {
+      "kind": "daily-all",
+      "name": "รายงานประจำวันรวมทุกตึก_20-11-2569.xml",
+      "bytes": 38662
+    },
+    {
+      "kind": "monthly",
+      "name": "รายงานประจำเดือน_11-2569.xml",
+      "bytes": 149425
+    },
+    {
+      "kind": "census-day",
+      "name": "ยอดคงพยาบาลประจำวัน_20-11-2569.xml",
+      "bytes": 168243
+    },
+    {
+      "kind": "census-month",
+      "name": "ยอดคงพยาบาลประจำเดือน_11-2569_ถึง_11-2569.xml",
+      "bytes": 169437
+    },
+    {
+      "kind": "turnover",
+      "name": "อัตราหมุนเวียนเตียง_ปีงบ2570.xml",
+      "bytes": 32683
+    },
+    {
+      "kind": "los",
+      "name": "ระยะเวลานอนเฉลี่ย (LOS)_ปีงบ2570.xml",
+      "bytes": 29123
+    },
+    {
+      "kind": "occupancy",
+      "name": "อัตราการครองเตียง_ปีงบ2570.xml",
+      "bytes": 30834
+    },
+    {
+      "kind": "productivity",
+      "name": "ผลผลิตทางการพยาบาล (Productivity)_11-2569.xml",
+      "bytes": 56819
+    },
+    {
+      "kind": "specialty",
+      "name": "แยกผู้ป่วยตามสาขา_11-2569_ถึง_11-2569.xml",
+      "bytes": 18510
+    },
+    {
+      "kind": "skill-mix",
+      "name": "การผสมผสานอัตรากำลัง (%)_ปีงบ2570.xml",
+      "bytes": 29121
+    },
+    {
+      "kind": "nursing-hours",
+      "name": "จำนวนชั่วโมงการพยาบาลต่อวันนอน_ปีงบ2570.xml",
+      "bytes": 29147
+    },
+    {
+      "kind": "pressure",
+      "name": "อัตราการเกิดแผลกดทับต่อ 1,000 วันนอนเสี่ยง_ปีงบ2570.xml",
+      "bytes": 29169
+    },
+    {
+      "kind": "pressure-detail",
+      "name": "รายละเอียดแผลกดทับรายวัน_11-2569.xml",
+      "bytes": 13359
+    },
+    {
+      "kind": "readmission",
+      "name": "อัตราการกลับมารักษาซ้ำภายใน 28 วัน (%)_ปีงบ2570.xml",
+      "bytes": 29155
+    }
+  ],
+  "printChecked": [
+    {
+      "kind": "daily",
+      "cells": 3884,
+      "font": "12px"
+    },
+    {
+      "kind": "daily-all",
+      "cells": 817,
+      "font": "12px"
+    },
+    {
+      "kind": "monthly",
+      "cells": 3884,
+      "font": "12px"
+    },
+    {
+      "kind": "census-day",
+      "cells": 4509,
+      "font": "12px"
+    },
+    {
+      "kind": "census-month",
+      "cells": 4509,
+      "font": "12px"
+    },
+    {
+      "kind": "turnover",
+      "cells": 580,
+      "font": "12px"
+    },
+    {
+      "kind": "los",
+      "cells": 508,
+      "font": "12px"
+    },
+    {
+      "kind": "occupancy",
+      "cells": 581,
+      "font": "12px"
+    },
+    {
+      "kind": "productivity",
+      "cells": 1241,
+      "font": "12px"
+    },
+    {
+      "kind": "specialty",
+      "cells": 284,
+      "font": "12px"
+    },
+    {
+      "kind": "skill-mix",
+      "cells": 508,
+      "font": "12px"
+    },
+    {
+      "kind": "nursing-hours",
+      "cells": 508,
+      "font": "12px"
+    },
+    {
+      "kind": "pressure",
+      "cells": 508,
+      "font": "12px"
+    },
+    {
+      "kind": "pressure-detail",
+      "cells": 179,
+      "font": "12px"
+    },
+    {
+      "kind": "readmission",
+      "cells": 508,
+      "font": "12px"
+    }
+  ],
+  "writes": [
+    {
+      "path": "/auth/login",
+      "method": "POST",
+      "body": {
+        "username": "synthetic-only",
+        "password": "synthetic-only"
+      }
+    },
+    {
+      "path": "/auth/login",
+      "method": "POST",
+      "body": {
+        "username": "synthetic-only",
+        "password": "synthetic-only"
+      }
+    },
+    {
+      "path": "/entries/synthetic-entry",
+      "method": "PATCH",
+      "body": {
+        "pt_on": 10,
+        "pt_in": 0,
+        "pt_move": 0,
+        "pt_home": 0,
+        "pt_move_b": 0,
+        "pt_send": 0,
+        "pt_dead": 0,
+        "pt_non_voluntary": 0,
+        "pt_ad": 0,
+        "nb_on": 0,
+        "nb_in": 0,
+        "nb_move": 0,
+        "nb_home": 0,
+        "nb_move_b": 0,
+        "nb_send": 0,
+        "nb_dead": 0,
+        "nb_non_voluntary": 0,
+        "nb_ad": 0,
+        "patient_type5": 0,
+        "patient_type4": 0,
+        "patient_type3": 0,
+        "patient_type2": 0,
+        "patient_type1": 10,
+        "em_hn": 1,
+        "em_rn": 1,
+        "em_tn": 1,
+        "em_pn": 1,
+        "em_aid": 1,
+        "amount_bed": 30,
+        "specialties": [
+          {
+            "specialty_code": "obs",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "obs",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "nb",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "nb",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "gyn",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "gyn",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "surg",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "surg",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "med",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "med",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "psych",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "psych",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "skin",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "skin",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ped",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ped",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ortho",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ortho",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "eye",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "eye",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ent",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ent",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "dent",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "dent",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "neuro_surg",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "neuro_surg",
+            "category_code": "s",
+            "count_value": 0
+          }
+        ],
+        "pressure": {
+          "stage2_4_cases": 1,
+          "at_risk_patient_days": 10
+        },
+        "expected_version": 1
+      }
+    },
+    {
+      "path": "/entries/synthetic-entry",
+      "method": "PATCH",
+      "body": {
+        "pt_on": 10,
+        "pt_in": 0,
+        "pt_move": 0,
+        "pt_home": 0,
+        "pt_move_b": 0,
+        "pt_send": 0,
+        "pt_dead": 0,
+        "pt_non_voluntary": 0,
+        "pt_ad": 0,
+        "nb_on": 0,
+        "nb_in": 0,
+        "nb_move": 0,
+        "nb_home": 0,
+        "nb_move_b": 0,
+        "nb_send": 0,
+        "nb_dead": 0,
+        "nb_non_voluntary": 0,
+        "nb_ad": 0,
+        "patient_type5": 0,
+        "patient_type4": 0,
+        "patient_type3": 0,
+        "patient_type2": 0,
+        "patient_type1": 10,
+        "em_hn": 1,
+        "em_rn": 1,
+        "em_tn": 1,
+        "em_pn": 1,
+        "em_aid": 1,
+        "amount_bed": 30,
+        "specialties": [
+          {
+            "specialty_code": "obs",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "obs",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "nb",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "nb",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "gyn",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "gyn",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "surg",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "surg",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "med",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "med",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "psych",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "psych",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "skin",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "skin",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ped",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ped",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ortho",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ortho",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "eye",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "eye",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ent",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "ent",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "dent",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "dent",
+            "category_code": "s",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "neuro_surg",
+            "category_code": "n",
+            "count_value": 0
+          },
+          {
+            "specialty_code": "neuro_surg",
+            "category_code": "s",
+            "count_value": 0
+          }
+        ],
+        "pressure": {
+          "stage2_4_cases": 1,
+          "at_risk_patient_days": 10
+        },
+        "expected_version": 1
+      }
+    }
+  ],
+  "errors": [],
+  "unexpected": []
+}

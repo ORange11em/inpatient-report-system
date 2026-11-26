@@ -1,0 +1,48 @@
+{
+  "source": "inpatient/db/db_inpatient.sql",
+  "sha256": "6178c0fbeefdffc02dc3d00b5b7bb457900d9f1c5308945cedee9106ba1da78c",
+  "method": "read-only inspection of this SQL dump; no SQL executed; operational record sections empty",
+  "hospital_server_checked": false,
+  "tables": {
+    "data_all": {
+      "rows": 0,
+      "first_date": null,
+      "last_date": null
+    },
+    "data_confirm": {
+      "rows": 0,
+      "first_date": null,
+      "last_date": null
+    },
+    "data_split_patient": {
+      "rows": 0,
+      "first_date": null,
+      "last_date": null
+    },
+    "pressure": {
+      "rows": 0,
+      "first_date": null,
+      "last_date": null
+    },
+    "readmit": {
+      "rows": 0,
+      "first_date": null,
+      "last_date": null
+    },
+    "tb_news": {
+      "rows": 0,
+      "first_date": null,
+      "last_date": null
+    }
+  },
+  "reference_rows": {
+    "ward": 19,
+    "wage_type": 3,
+    "tb_month": 12
+  },
+  "shifts": {
+    "1": "ดึก",
+    "2": "เช้า",
+    "3": "บ่าย"
+  }
+}

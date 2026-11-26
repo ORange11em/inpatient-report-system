@@ -1,0 +1,29 @@
+{
+  "FilesCompared": 59,
+  "Unchanged": 55,
+  "Changed": [
+    "new-system\\frontend\\app\\globals.css",
+    "new-system\\frontend\\app\\login\\page.js",
+    "new-system\\frontend\\components\\shell\\ShellFrame.jsx",
+    "new-system\\frontend\\styles\\shell.css"
+  ],
+  "GitAvailable": false,
+  "AssetPreparation": {
+    "HorizontalCrop": {
+      "Top": 148,
+      "Height": 106,
+      "Left": 0,
+      "Width": 400
+    },
+    "Seal": "Original PNG copied without modification",
+    "HorizontalDecodedPixelsIdentical": true,
+    "SealFileIdentical": true
+  },
+  "Review": "Only Image import, branding markup and layout CSS changed; login submit, authentication, permissions, routes, API calls and models unchanged",
+  "Checks": {
+    "UnitTests": "41/41 passed",
+    "Build": "Passed",
+    "Typecheck": "No local TypeScript compiler; npx --no-install tsc --noEmit exit 1",
+    "Lint": "Missing existing lint script; exit 1"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "synthetic_only": true,
+  "stage": "import",
+  "checks": [
+    {
+      "actor": "reader",
+      "width": 360,
+      "totalPT": 12,
+      "pageOverflow": false
+    },
+    {
+      "actor": "reader",
+      "width": 768,
+      "totalPT": 12,
+      "pageOverflow": false
+    },
+    {
+      "actor": "reader",
+      "width": 1024,
+      "totalPT": 12,
+      "pageOverflow": false
+    },
+    {
+      "actor": "reader",
+      "width": 1440,
+      "totalPT": 12,
+      "pageOverflow": false
+    },
+    {
+      "actor": "reader",
+      "xmlTotalPT": 12,
+      "xmlNumeric": true,
+      "printScopeCorrect": true
+    },
+    {
+      "actor": "admin",
+      "width": 360,
+      "totalPT": 18,
+      "pageOverflow": false
+    },
+    {
+      "actor": "admin",
+      "width": 768,
+      "totalPT": 18,
+      "pageOverflow": false
+    },
+    {
+      "actor": "admin",
+      "width": 1024,
+      "totalPT": 18,
+      "pageOverflow": false
+    },
+    {
+      "actor": "admin",
+      "width": 1440,
+      "totalPT": 18,
+      "pageOverflow": false
+    },
+    {
+      "actor": "admin",
+      "xmlTotalPT": 18,
+      "xmlNumeric": true,
+      "printScopeCorrect": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

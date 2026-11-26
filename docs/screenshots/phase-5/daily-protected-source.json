@@ -1,0 +1,20 @@
+[
+  {
+    "name": "initialValues",
+    "identical": true,
+    "beforeSha256": "5585f92ecd3f392cc8cd00b2e25aa4d6c1b5d130647c4e215c88c099379f9d12",
+    "afterSha256": "5585f92ecd3f392cc8cd00b2e25aa4d6c1b5d130647c4e215c88c099379f9d12"
+  },
+  {
+    "name": "save body and request",
+    "identical": true,
+    "beforeSha256": "def2e16ffebae6d6c8796c4c5bbf33b4cc65397476e8c93ec47ccc614a3b7844",
+    "afterSha256": "def2e16ffebae6d6c8796c4c5bbf33b4cc65397476e8c93ec47ccc614a3b7844"
+  },
+  {
+    "name": "confirmEntry",
+    "identical": true,
+    "beforeSha256": "6a95165dbcefff1144657b63079a33c74e40924df1c34e810694399ffa56e2cf",
+    "afterSha256": "6a95165dbcefff1144657b63079a33c74e40924df1c34e810694399ffa56e2cf"
+  }
+]

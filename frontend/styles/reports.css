@@ -1,0 +1,89 @@
+.reports-page { display: grid; gap: var(--space-5); min-width: 0; max-width: var(--content-wide); margin-inline: auto; }
+.reports-page .ui-page-header { margin: 0; }
+.reports-filters .ui-filter-fields { grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--field-min-width)), 1fr)); align-items: start; min-height: calc(var(--control-height) + var(--space-12)); }
+.reports-filters .ui-filter-fields > * { min-width: 0; }
+.report-heading { display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: var(--space-4); margin-bottom: var(--space-5); }
+.report-heading h2, .report-heading p { margin: 0; }
+.report-heading > div { min-width: 0; }
+.report-actions { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+.report-screen { min-width: 0; display: grid; gap: var(--space-4); }
+.report-screen > *, .generic-report-table, .generic-report-table .ui-data-table { min-width: 0; max-width: 100%; }
+.report-screen .ui-table-scroll { min-width: 0; width: 100%; max-width: 100%; }
+.report-screen .ui-table { background: var(--color-surface); }
+.generic-report-table .ui-table { min-width: max(var(--table-min-width), calc(var(--report-column-count) * var(--space-16))); }
+.report-screen .ui-table th, .report-screen .ui-table td { font-size: var(--text-sm); padding: var(--space-2); }
+.report-screen .ui-table tbody th, .report-screen .ui-table tfoot th { vertical-align: middle; }
+.report-screen .ui-table tfoot th { background: var(--color-subtle); }
+.report-screen .ui-table tbody tr:nth-child(even) td { background: var(--color-canvas); }
+.report-screen .ui-table tfoot { font-weight: var(--weight-semibold); background: var(--color-subtle); }
+.report-view-toggle { margin-bottom: var(--space-4); }
+.report-daily-overview { display: grid; gap: var(--space-3); margin-bottom: var(--space-4); }
+.report-daily-overview > p { margin: 0; }
+.report-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--compact-column-width)), 1fr)); gap: var(--space-3); }
+.report-kpis > div { display: grid; gap: var(--space-2); padding: var(--space-4); border: var(--border-width) solid var(--color-border); border-radius: var(--radius-control); }
+.report-kpis strong { font-size: var(--text-xl); font-variant-numeric: tabular-nums; }
+.occupancy-report { display: grid; gap: var(--space-4); min-width: 0; }
+.report-legend { display: grid; gap: var(--space-2); font-size: var(--text-sm); color: var(--color-muted); }
+.report-legend p { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); margin: 0; }
+.occupancy-table { width: 100%; table-layout: fixed; min-width: calc(var(--compact-column-width) + 15 * var(--rail-width)); }
+.occupancy-ward-col { width: var(--compact-column-width); }
+.occupancy-table th, .occupancy-table td { text-align: right; font-variant-numeric: tabular-nums; }
+.occupancy-table th:first-child { text-align: left; }
+.report-ward-name { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.report-ward-short { display: none; text-decoration: none; }
+.report-drilldown-link { color: var(--color-primary); font-weight: var(--weight-semibold); text-decoration: underline; text-underline-offset: var(--space-1); border-radius: var(--space-1); }
+.report-drilldown-link:hover { color: var(--color-primary-hover); }
+.report-drilldown-link:focus-visible { outline: var(--focus-width) solid var(--color-focus); outline-offset: var(--space-1); }
+.occupancy-complete { display: inline-flex; gap: var(--space-1); align-items: center; white-space: nowrap; color: var(--color-neutral); }
+.occupancy-complete .ui-icon { width: var(--space-3); height: var(--space-3); }
+.occupancy-incomplete { display: block; color: var(--color-muted); font-weight: var(--weight-normal); }
+.occupancy-incomplete .ui-popover { display: block; }
+.occupancy-incomplete .ui-popover-trigger { width: 100%; padding: 0; color: var(--color-muted); font: inherit; font-variant-numeric: tabular-nums; }
+.occupancy-incomplete .ui-popover-trigger > span { width: 100%; display: grid; gap: var(--space-1); }
+.occupancy-report progress { display: block; width: 100%; height: var(--space-1); border: 0; appearance: none; background: var(--color-disabled); accent-color: var(--color-muted); border-radius: var(--radius-pill); overflow: hidden; }
+.occupancy-report progress::-webkit-progress-bar { background: var(--color-disabled); }
+.occupancy-report progress::-webkit-progress-value { background: var(--color-muted); }
+.occupancy-report progress::-moz-progress-bar { background: var(--color-muted); }
+.occupancy-delta { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.occupancy-card-summary, .occupancy-card-months { margin: 0; }
+.occupancy-card-summary > div, .occupancy-card-months > div { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); padding-block: var(--space-2); }
+.occupancy-card-summary dd, .occupancy-card-months dd { min-width: var(--space-16); margin: 0; text-align: right; }
+.occupancy-card-months > div { border-bottom: var(--border-width) solid var(--color-border); }
+.occupancy-ward-card > progress { margin-bottom: var(--space-3); }
+.report-screen .ui-record-card summary { width: 100%; white-space: normal; text-align: left; }
+.report-screen .ui-record-card dl > div { gap: var(--space-3); align-items: start; }
+.report-screen .ui-record-card dd { overflow-wrap: anywhere; }
+.report-export-note { margin: var(--space-2) 0 0; }
+.report-print-only { display: none; }
+@media (max-width: 767px) {
+  .reports-filters .ui-filter-fields { grid-template-columns: minmax(0, 1fr); }
+  .report-actions { width: 100%; }
+  .report-actions .ui-button { flex: 1; }
+  .reports-page .ui-filter-bar > .ui-button, .reports-page .ui-filter-form .ui-actions .ui-button { width: 100%; }
+  .report-screen .ui-table .report-ward-name--has-short .report-ward-full { display: none; }
+  .report-screen .ui-table .report-ward-name--has-short .report-ward-short { display: inline; }
+}
+@media print {
+  @page { size: A4 landscape; margin: 12mm 10mm; }
+  .reports-page { display: block; max-width: none; gap: 0; }
+  .reports-page > .ui-page-header, .reports-filters, .report-screen, .reports-page .ui-toast-region { display: none !important; }
+  .reports-page .report-output { display: block; border: 0; padding: 0; margin: 0; border-radius: 0; box-shadow: none; container-type: normal; }
+  .report-print-only { display: block; color: var(--color-text); }
+  .report-print-panel { break-before: page; }
+  .report-print-panel:first-child { break-before: auto; }
+  .report-print-only table { width: 100%; min-width: 0; border-collapse: collapse; table-layout: fixed; font-size: var(--report-print-text); }
+  .report-print-ward-col { width: 15%; }
+  .report-print-only th, .report-print-only td { border: var(--border-width) solid var(--color-control-border); padding: var(--space-1); font-size: inherit; overflow-wrap: anywhere; line-height: var(--leading-body); text-align: right; vertical-align: middle; font-variant-numeric: tabular-nums; }
+  .report-print-only tr > :first-child { text-align: left; }
+  .report-print-only thead { display: table-header-group; }
+  .report-print-only tr { break-inside: avoid; page-break-inside: avoid; }
+  .report-print-only thead tr:first-child > th { border: 0; padding: 0 0 var(--space-3); }
+  .report-print-only thead tr:last-child { background: var(--color-subtle); }
+  .report-print-header { color: var(--color-text); text-align: left; font-size: var(--report-print-meta); font-weight: var(--weight-normal); }
+  .report-print-header strong { font-size: var(--report-print-heading); }
+  .report-print-header h2 { font-size: var(--report-print-text); margin: var(--space-1) 0; }
+  .report-print-header p { margin: 0; }
+  .shell-frame:has(.reports-page) { min-height: 0; }
+  .shell-frame:has(.reports-page) > .ui-skip-link { display: none !important; }
+  .shell-frame:has(.reports-page) .shell-content { max-width: none; padding: 0; }
+}

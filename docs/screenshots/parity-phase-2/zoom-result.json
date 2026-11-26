@@ -1,0 +1,18 @@
+{
+  "before": {
+    "width": 1416,
+    "dpr": 1,
+    "scale": 1
+  },
+  "after": {
+    "width": 708,
+    "dpr": 2,
+    "scale": 1,
+    "scroll": 700
+  },
+  "checks": [
+    "native browser zoom 200% with text level 125%, no page overflow, save succeeded"
+  ],
+  "errors": [],
+  "unexpected": []
+}

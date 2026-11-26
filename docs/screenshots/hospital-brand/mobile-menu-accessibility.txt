@@ -1,0 +1,26 @@
+- dialog "เมนูทั้งหมด":
+  - heading "เมนูทั้งหมด" [level=2]
+  - button "ปิดหน้าต่าง": ปิด
+  - strong: โรงพยาบาลอากาศอำนวย
+  - navigation "เมนูทั้งหมด":
+    - paragraph: งานประจำวัน
+    - link "หน้าแรก":
+      - /url: /
+    - link "บันทึกข้อมูลประจำวัน":
+      - /url: /entries
+    - link "ตรวจสอบและยืนยันข้อมูล":
+      - /url: /history
+    - link "1 รายการรอยืนยัน รอยืนยันการส่งข้อมูล":
+      - /url: /history?status=unconfirmed
+      - text: 1 รอยืนยันการส่งข้อมูล
+    - paragraph: ข้อมูลและรายงาน
+    - link "ตัวชี้วัดเสริม":
+      - /url: /indicators
+    - link "รายงานผู้ป่วยใน":
+      - /url: /reports
+    - link "อัตราการครองเตียง":
+      - /url: /occupancy
+  - strong: บัญชีทดสอบ
+  - paragraph: ผู้ใช้งานตามสิทธิ์ที่ได้รับ
+  - button "โปรไฟล์"
+  - button "ออกจากระบบ"

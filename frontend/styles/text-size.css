@@ -1,0 +1,13 @@
+/* Screen text preference: layout spacing and the browser's zoom stay independent. */
+:root { --text-scale: 1; }
+:root[data-text-size="112.5"] { --text-scale: 1.125; }
+:root[data-text-size="125"] { --text-scale: 1.25; }
+.text-size-control { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: var(--space-2) var(--space-4); padding: var(--space-2) var(--space-4); background: var(--color-surface); border-bottom: var(--border-width) solid var(--color-border); font-size: var(--text-sm); }
+.text-size-caption { display: inline-flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.text-size-caption strong { font-variant-numeric: tabular-nums; }
+.text-size-buttons { display: flex; align-items: center; gap: var(--space-2); }
+.text-size-buttons .ui-button { padding-inline: var(--space-2); }
+@media print {
+  :root { --text-scale: 1 !important; }
+  .text-size-control { display: none !important; }
+}

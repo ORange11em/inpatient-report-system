@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "before": [
+    {
+      "kind": "confirm",
+      "writes": [
+        {
+          "path": "/entries/example-entry/confirm",
+          "method": "POST",
+          "body": {
+            "expected_version": 7
+          },
+          "csrf": "synthetic-csrf"
+        }
+      ],
+      "reads": [
+        "/wards",
+        "/shifts?include_inactive=true",
+        "/entries?status=unconfirmed&offset=0&limit=51",
+        "/auth/me",
+        "/auth/csrf",
+        "/entries/pending-count"
+      ]
+    },
+    {
+      "kind": "return",
+      "writes": [
+        {
+          "path": "/entries/example-entry/return",
+          "method": "POST",
+          "body": {
+            "expected_version": 7,
+            "reason": "เหตุผลตัวอย่าง"
+          },
+          "csrf": "synthetic-csrf"
+        }
+      ],
+      "reads": [
+        "/wards",
+        "/shifts?include_inactive=true",
+        "/auth/me",
+        "/auth/csrf",
+        "/entries/pending-count",
+        "/entries?date_from=2026-11-01&date_to=2026-11-19&offset=0&limit=51"
+      ]
+    }
+  ],
+  "after": [
+    {
+      "kind": "confirm",
+      "writes": [
+        {
+          "path": "/entries/example-entry/confirm",
+          "method": "POST",
+          "body": {
+            "expected_version": 7
+          },
+          "csrf": "synthetic-csrf"
+        }
+      ],
+      "reads": [
+        "/wards",
+        "/shifts?include_inactive=true",
+        "/entries?status=unconfirmed&offset=0&limit=51",
+        "/auth/me",
+        "/auth/csrf",
+        "/entries/pending-count"
+      ]
+    },
+    {
+      "kind": "return",
+      "writes": [
+        {
+          "path": "/entries/example-entry/return",
+          "method": "POST",
+          "body": {
+            "expected_version": 7,
+            "reason": "เหตุผลตัวอย่าง"
+          },
+          "csrf": "synthetic-csrf"
+        }
+      ],
+      "reads": [
+        "/wards",
+        "/shifts?include_inactive=true",
+        "/auth/me",
+        "/auth/csrf",
+        "/entries/pending-count",
+        "/entries?date_from=2026-11-01&date_to=2026-11-19&offset=0&limit=51"
+      ]
+    }
+  ]
+}

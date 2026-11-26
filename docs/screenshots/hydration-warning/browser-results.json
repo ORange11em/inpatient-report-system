@@ -1,0 +1,155 @@
+[
+  {
+    "url": "/login",
+    "width": 360,
+    "mode": "clean",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/login",
+    "width": 360,
+    "mode": "body",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/login",
+    "width": 768,
+    "mode": "clean",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/login",
+    "width": 768,
+    "mode": "body",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/login",
+    "width": 1024,
+    "mode": "clean",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/login",
+    "width": 1024,
+    "mode": "body",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/login",
+    "width": 1440,
+    "mode": "clean",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/login",
+    "width": 1440,
+    "mode": "body",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/",
+    "width": 360,
+    "mode": "clean",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/",
+    "width": 360,
+    "mode": "body",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/",
+    "width": 768,
+    "mode": "clean",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/",
+    "width": 768,
+    "mode": "body",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/",
+    "width": 1024,
+    "mode": "clean",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/",
+    "width": 1024,
+    "mode": "body",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/",
+    "width": 1440,
+    "mode": "clean",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/",
+    "width": 1440,
+    "mode": "body",
+    "hydrationWarnings": 0,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "passed"
+  },
+  {
+    "url": "/login",
+    "width": 1440,
+    "mode": "child",
+    "hydrationWarnings": 1,
+    "pageErrors": 0,
+    "overflow": false,
+    "interaction": "not-tested: warning detection only"
+  }
+]

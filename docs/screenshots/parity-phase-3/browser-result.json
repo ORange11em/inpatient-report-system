@@ -1,0 +1,293 @@
+{
+  "passed": true,
+  "checks": [
+    "real login and ward scoping for 8 accounts, including read-only/multi-ward/mixed/admin/auditor",
+    "all 13 specialties × 2 categories saved through actual form, distinct GYN/SKIN values preserved",
+    "select ward/day/shift; carry beds; zero saved; blank required values and incomplete monthly pair stop submission without mutation",
+    "confirmed entry read-only in UI and rejects direct write",
+    "UI complete cycle with real persisted status/version/actors/reason; ward can see the actual return reason",
+    "single-ward daily-all=12 versus multi-ward/admin=18; multi-ward read-only form and event permission boundaries",
+    "UI news create/draft/publish/edit/delete with second writer; reader sees actual author; unknown legacy author is not fabricated",
+    "missing external satisfaction configuration produces no fabricated endpoint; backfill form shows actual same-day source"
+  ],
+  "lifecycle": [
+    {
+      "step": "บันทึก",
+      "actor": "phase3_rec_a",
+      "status": "unconfirmed",
+      "version": 1
+    },
+    {
+      "step": "ยืนยัน",
+      "actor": "phase3_rec_a",
+      "status": "confirmed",
+      "version": 2
+    },
+    {
+      "step": "ส่งกลับพร้อมเหตุผล",
+      "actor": "phase3_admin",
+      "status": "unconfirmed",
+      "version": 3
+    },
+    {
+      "step": "แก้ไขหลังส่งกลับ",
+      "actor": "phase3_rec_a",
+      "status": "unconfirmed",
+      "version": 4
+    },
+    {
+      "step": "ยืนยันซ้ำ",
+      "actor": "phase3_rec_a",
+      "status": "confirmed",
+      "version": 5
+    }
+  ],
+  "events": [
+    {
+      "id": "c68aaf59-c6a8-4462-b0e6-3b5a988504cb",
+      "action_code": "created",
+      "from_status": null,
+      "to_status": "unconfirmed",
+      "actor_username": "phase3_rec_a",
+      "reason": null,
+      "occurred_at": "2026-11-23T03:22:31.962210Z"
+    },
+    {
+      "id": "06169f9b-7f45-4732-ac7f-61586ad7865c",
+      "action_code": "confirmed",
+      "from_status": "unconfirmed",
+      "to_status": "confirmed",
+      "actor_username": "phase3_rec_a",
+      "reason": null,
+      "occurred_at": "2026-11-23T03:22:32.095533Z"
+    },
+    {
+      "id": "b4f220ea-0b18-451d-9d01-97b55a8c85ee",
+      "action_code": "returned",
+      "from_status": "confirmed",
+      "to_status": "unconfirmed",
+      "actor_username": "phase3_admin",
+      "reason": "ตรวจยอดรับใหม่จากชุดสมมติ",
+      "occurred_at": "2026-11-23T03:22:33.492225Z"
+    },
+    {
+      "id": "088f15d2-4851-4093-9e2b-b0db9335ed05",
+      "action_code": "updated",
+      "from_status": "unconfirmed",
+      "to_status": "unconfirmed",
+      "actor_username": "phase3_rec_a",
+      "reason": null,
+      "occurred_at": "2026-11-23T03:22:34.213646Z"
+    },
+    {
+      "id": "45cc1ccb-debf-4d9b-ac2a-16cc688d93f9",
+      "action_code": "confirmed",
+      "from_status": "unconfirmed",
+      "to_status": "confirmed",
+      "actor_username": "phase3_rec_a",
+      "reason": null,
+      "occurred_at": "2026-11-23T03:22:34.332458Z"
+    }
+  ],
+  "responsive": [
+    {
+      "route": "/",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360
+    },
+    {
+      "route": "/",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768
+    },
+    {
+      "route": "/",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024
+    },
+    {
+      "route": "/",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440
+    },
+    {
+      "route": "/login",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360
+    },
+    {
+      "route": "/entries?ward=51cac8d2-551d-481f-a5f8-9c7ecef525c1&date=2026-12-04&shift=72",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360
+    },
+    {
+      "route": "/history?status=unconfirmed",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360
+    },
+    {
+      "route": "/login",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768
+    },
+    {
+      "route": "/entries?ward=51cac8d2-551d-481f-a5f8-9c7ecef525c1&date=2026-12-04&shift=72",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768
+    },
+    {
+      "route": "/history?status=unconfirmed",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768
+    },
+    {
+      "route": "/login",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024
+    },
+    {
+      "route": "/entries?ward=51cac8d2-551d-481f-a5f8-9c7ecef525c1&date=2026-12-04&shift=72",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024
+    },
+    {
+      "route": "/history?status=unconfirmed",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024
+    },
+    {
+      "route": "/login",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440
+    },
+    {
+      "route": "/entries?ward=51cac8d2-551d-481f-a5f8-9c7ecef525c1&date=2026-12-04&shift=72",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440
+    },
+    {
+      "route": "/history?status=unconfirmed",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440
+    }
+  ],
+  "writes": [
+    {
+      "actor": "rec_a",
+      "method": "PATCH",
+      "path": "/api/v1/entries/71de3175-d3d7-4ab0-8775-2ae23f542295"
+    },
+    {
+      "actor": "rec_a",
+      "method": "POST",
+      "path": "/api/v1/entries"
+    },
+    {
+      "actor": "rec_a",
+      "method": "POST",
+      "path": "/api/v1/entries/0488dfe2-9e16-4bf1-8fb5-a8d3547d0c37/confirm"
+    },
+    {
+      "actor": "rec_a",
+      "method": "PATCH",
+      "path": "/api/v1/entries/0488dfe2-9e16-4bf1-8fb5-a8d3547d0c37"
+    },
+    {
+      "actor": "admin",
+      "method": "POST",
+      "path": "/api/v1/entries/0488dfe2-9e16-4bf1-8fb5-a8d3547d0c37/return"
+    },
+    {
+      "actor": "rec_a",
+      "method": "PATCH",
+      "path": "/api/v1/entries/0488dfe2-9e16-4bf1-8fb5-a8d3547d0c37"
+    },
+    {
+      "actor": "rec_a",
+      "method": "POST",
+      "path": "/api/v1/entries/0488dfe2-9e16-4bf1-8fb5-a8d3547d0c37/confirm"
+    },
+    {
+      "actor": "admin",
+      "method": "POST",
+      "path": "/api/v1/news"
+    },
+    {
+      "actor": "editor",
+      "method": "PUT",
+      "path": "/api/v1/news/86ccdd5d-dd09-495e-a8c4-26af306a9e19"
+    },
+    {
+      "actor": "editor",
+      "method": "PUT",
+      "path": "/api/v1/news/86ccdd5d-dd09-495e-a8c4-26af306a9e19"
+    },
+    {
+      "actor": "admin",
+      "method": "DELETE",
+      "path": "/api/v1/news/86ccdd5d-dd09-495e-a8c4-26af306a9e19"
+    }
+  ],
+  "errors": [],
+  "satisfaction": "No configured endpoint; URL construction covered by unit tests. External authentication not tested."
+}

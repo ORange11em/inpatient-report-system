@@ -1,0 +1,2290 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "key": "daily",
+      "kind": "daily",
+      "screenRows": 4,
+      "screenColumns": 45,
+      "printPanels": 5,
+      "xmlRows": 4,
+      "xmlNumericCells": 164,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/daily.pdf"
+    },
+    {
+      "key": "daily-all",
+      "kind": "daily-all",
+      "screenRows": 3,
+      "screenColumns": 22,
+      "printPanels": 3,
+      "xmlRows": 3,
+      "xmlNumericCells": 57,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/daily-all.pdf"
+    },
+    {
+      "key": "monthly",
+      "kind": "monthly",
+      "screenRows": 11,
+      "screenColumns": 45,
+      "printPanels": 5,
+      "xmlRows": 11,
+      "xmlNumericCells": 450,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/monthly.pdf"
+    },
+    {
+      "key": "census-day",
+      "kind": "census-day",
+      "screenRows": 3,
+      "screenColumns": 49,
+      "printPanels": 6,
+      "xmlRows": 3,
+      "xmlNumericCells": 135,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/census-day.pdf"
+    },
+    {
+      "key": "census-month",
+      "kind": "census-month",
+      "screenRows": 4,
+      "screenColumns": 49,
+      "printPanels": 6,
+      "xmlRows": 4,
+      "xmlNumericCells": 180,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/census-month.pdf"
+    },
+    {
+      "key": "turnover",
+      "kind": "turnover",
+      "screenRows": 3,
+      "screenColumns": 16,
+      "printPanels": 1,
+      "xmlRows": 3,
+      "xmlNumericCells": 15,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/turnover.pdf"
+    },
+    {
+      "key": "los",
+      "kind": "los",
+      "screenRows": 3,
+      "screenColumns": 14,
+      "printPanels": 1,
+      "xmlRows": 3,
+      "xmlNumericCells": 6,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/los.pdf"
+    },
+    {
+      "key": "occupancy",
+      "kind": "occupancy",
+      "screenRows": 3,
+      "screenColumns": 16,
+      "printPanels": 1,
+      "xmlRows": 3,
+      "xmlNumericCells": 0,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/occupancy.pdf"
+    },
+    {
+      "key": "productivity",
+      "kind": "productivity",
+      "screenRows": 2,
+      "screenColumns": 32,
+      "printPanels": 4,
+      "xmlRows": 2,
+      "xmlNumericCells": 62,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/productivity.pdf"
+    },
+    {
+      "key": "specialty",
+      "kind": "specialty",
+      "screenRows": 16,
+      "screenColumns": 19,
+      "printPanels": 2,
+      "xmlRows": 16,
+      "xmlNumericCells": 256,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/specialty.pdf"
+    },
+    {
+      "key": "skill-mix",
+      "kind": "skill-mix",
+      "screenRows": 3,
+      "screenColumns": 14,
+      "printPanels": 1,
+      "xmlRows": 3,
+      "xmlNumericCells": 39,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/skill-mix.pdf"
+    },
+    {
+      "key": "nursing-hours",
+      "kind": "nursing-hours",
+      "screenRows": 3,
+      "screenColumns": 14,
+      "printPanels": 1,
+      "xmlRows": 3,
+      "xmlNumericCells": 39,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/nursing-hours.pdf"
+    },
+    {
+      "key": "pressure",
+      "kind": "pressure",
+      "screenRows": 3,
+      "screenColumns": 14,
+      "printPanels": 1,
+      "xmlRows": 3,
+      "xmlNumericCells": 6,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/pressure.pdf"
+    },
+    {
+      "key": "pressure-detail",
+      "kind": "pressure-detail",
+      "screenRows": 31,
+      "screenColumns": 6,
+      "printPanels": 1,
+      "xmlRows": 31,
+      "xmlNumericCells": 9,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/pressure-detail.pdf"
+    },
+    {
+      "key": "readmission",
+      "kind": "readmission",
+      "screenRows": 3,
+      "screenColumns": 14,
+      "printPanels": 1,
+      "xmlRows": 3,
+      "xmlNumericCells": 9,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/readmission.pdf"
+    },
+    {
+      "key": "monthly-confirmed",
+      "kind": "monthly",
+      "screenRows": 8,
+      "screenColumns": 45,
+      "printPanels": 5,
+      "xmlRows": 8,
+      "xmlNumericCells": 328,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/monthly-confirmed.pdf"
+    },
+    {
+      "key": "bed-edge",
+      "kind": "monthly",
+      "screenRows": 8,
+      "screenColumns": 45,
+      "printPanels": 5,
+      "xmlRows": 8,
+      "xmlNumericCells": 328,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/bed-edge.pdf"
+    },
+    {
+      "key": "specialty-edge",
+      "kind": "specialty",
+      "screenRows": 12,
+      "screenColumns": 19,
+      "printPanels": 2,
+      "xmlRows": 12,
+      "xmlNumericCells": 192,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/specialty-edge.pdf"
+    },
+    {
+      "key": "pressure-detail-empty",
+      "kind": "pressure-detail",
+      "screenRows": 30,
+      "screenColumns": 6,
+      "printPanels": 1,
+      "xmlRows": 30,
+      "xmlNumericCells": 0,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/pressure-detail-empty.pdf"
+    },
+    {
+      "key": "occupancy-complete",
+      "kind": "occupancy",
+      "screenRows": 3,
+      "screenColumns": 16,
+      "printPanels": 1,
+      "xmlRows": 3,
+      "xmlNumericCells": 3,
+      "allScreenPrintAndXMLCellsMatched": true,
+      "pdf": "output/pdf/parity-phase-4/occupancy-complete.pdf"
+    }
+  ],
+  "sizes": [
+    {
+      "key": "daily",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 2924,
+          "left": 2632
+        }
+      ]
+    },
+    {
+      "key": "daily",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 2937,
+          "left": 2645
+        }
+      ]
+    },
+    {
+      "key": "daily",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 2924,
+          "left": 2336
+        }
+      ]
+    },
+    {
+      "key": "daily",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 2937,
+          "left": 2349
+        }
+      ]
+    },
+    {
+      "key": "daily",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 2924,
+          "left": 2248
+        }
+      ]
+    },
+    {
+      "key": "daily",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 2937,
+          "left": 2261
+        }
+      ]
+    },
+    {
+      "key": "daily",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 2924,
+          "left": 1832
+        }
+      ]
+    },
+    {
+      "key": "daily",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 2937,
+          "left": 1845
+        }
+      ]
+    },
+    {
+      "key": "daily-all",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 1433,
+          "left": 1141
+        }
+      ]
+    },
+    {
+      "key": "daily-all",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 1452,
+          "left": 1160
+        }
+      ]
+    },
+    {
+      "key": "daily-all",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 1433,
+          "left": 845
+        }
+      ]
+    },
+    {
+      "key": "daily-all",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 1452,
+          "left": 864
+        }
+      ]
+    },
+    {
+      "key": "daily-all",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 1433,
+          "left": 757
+        }
+      ]
+    },
+    {
+      "key": "daily-all",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 1452,
+          "left": 776
+        }
+      ]
+    },
+    {
+      "key": "daily-all",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1433,
+          "left": 341
+        }
+      ]
+    },
+    {
+      "key": "daily-all",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1452,
+          "left": 360
+        }
+      ]
+    },
+    {
+      "key": "monthly",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 2924,
+          "left": 2632
+        }
+      ]
+    },
+    {
+      "key": "monthly",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 2937,
+          "left": 2645
+        }
+      ]
+    },
+    {
+      "key": "monthly",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 2924,
+          "left": 2336
+        }
+      ]
+    },
+    {
+      "key": "monthly",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 2937,
+          "left": 2349
+        }
+      ]
+    },
+    {
+      "key": "monthly",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 2924,
+          "left": 2248
+        }
+      ]
+    },
+    {
+      "key": "monthly",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 2937,
+          "left": 2261
+        }
+      ]
+    },
+    {
+      "key": "monthly",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 2924,
+          "left": 1832
+        }
+      ]
+    },
+    {
+      "key": "monthly",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 2937,
+          "left": 1845
+        }
+      ]
+    },
+    {
+      "key": "census-day",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 3136,
+          "left": 2844
+        }
+      ]
+    },
+    {
+      "key": "census-day",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 3136,
+          "left": 2844
+        }
+      ]
+    },
+    {
+      "key": "census-day",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 3136,
+          "left": 2548
+        }
+      ]
+    },
+    {
+      "key": "census-day",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 3136,
+          "left": 2548
+        }
+      ]
+    },
+    {
+      "key": "census-day",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 3136,
+          "left": 2460
+        }
+      ]
+    },
+    {
+      "key": "census-day",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 3136,
+          "left": 2460
+        }
+      ]
+    },
+    {
+      "key": "census-day",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 3136,
+          "left": 2044
+        }
+      ]
+    },
+    {
+      "key": "census-day",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 3136,
+          "left": 2044
+        }
+      ]
+    },
+    {
+      "key": "census-month",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 3136,
+          "left": 2844
+        }
+      ]
+    },
+    {
+      "key": "census-month",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 3136,
+          "left": 2844
+        }
+      ]
+    },
+    {
+      "key": "census-month",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 3136,
+          "left": 2548
+        }
+      ]
+    },
+    {
+      "key": "census-month",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 3136,
+          "left": 2548
+        }
+      ]
+    },
+    {
+      "key": "census-month",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 3136,
+          "left": 2460
+        }
+      ]
+    },
+    {
+      "key": "census-month",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 3136,
+          "left": 2460
+        }
+      ]
+    },
+    {
+      "key": "census-month",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 3136,
+          "left": 2044
+        }
+      ]
+    },
+    {
+      "key": "census-month",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 3136,
+          "left": 2044
+        }
+      ]
+    },
+    {
+      "key": "turnover",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 1024,
+          "left": 732
+        }
+      ]
+    },
+    {
+      "key": "turnover",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 1024,
+          "left": 732
+        }
+      ]
+    },
+    {
+      "key": "turnover",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 1024,
+          "left": 436
+        }
+      ]
+    },
+    {
+      "key": "turnover",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 1024,
+          "left": 436
+        }
+      ]
+    },
+    {
+      "key": "turnover",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 1024,
+          "left": 348
+        }
+      ]
+    },
+    {
+      "key": "turnover",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 1024,
+          "left": 348
+        }
+      ]
+    },
+    {
+      "key": "turnover",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1092,
+          "left": 0
+        }
+      ]
+    },
+    {
+      "key": "turnover",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1092,
+          "left": 0
+        }
+      ]
+    },
+    {
+      "key": "los",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 896,
+          "left": 604
+        }
+      ]
+    },
+    {
+      "key": "los",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 896,
+          "left": 604
+        }
+      ]
+    },
+    {
+      "key": "los",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 896,
+          "left": 308
+        }
+      ]
+    },
+    {
+      "key": "los",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 896,
+          "left": 308
+        }
+      ]
+    },
+    {
+      "key": "los",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 896,
+          "left": 220
+        }
+      ]
+    },
+    {
+      "key": "los",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 896,
+          "left": 220
+        }
+      ]
+    },
+    {
+      "key": "los",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1092,
+          "left": 0
+        }
+      ]
+    },
+    {
+      "key": "los",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1092,
+          "left": 0
+        }
+      ]
+    },
+    {
+      "key": "occupancy",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 1360,
+          "left": 1068
+        }
+      ]
+    },
+    {
+      "key": "occupancy",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 1360,
+          "left": 1068
+        }
+      ]
+    },
+    {
+      "key": "occupancy",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 1360,
+          "left": 772
+        }
+      ]
+    },
+    {
+      "key": "occupancy",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 1360,
+          "left": 772
+        }
+      ]
+    },
+    {
+      "key": "occupancy",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 1360,
+          "left": 684
+        }
+      ]
+    },
+    {
+      "key": "occupancy",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 1360,
+          "left": 684
+        }
+      ]
+    },
+    {
+      "key": "occupancy",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1360,
+          "left": 268
+        }
+      ]
+    },
+    {
+      "key": "occupancy",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1360,
+          "left": 268
+        }
+      ]
+    },
+    {
+      "key": "productivity",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 2048,
+          "left": 1756
+        }
+      ]
+    },
+    {
+      "key": "productivity",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 2048,
+          "left": 1756
+        }
+      ]
+    },
+    {
+      "key": "productivity",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 2048,
+          "left": 1460
+        }
+      ]
+    },
+    {
+      "key": "productivity",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 2048,
+          "left": 1460
+        }
+      ]
+    },
+    {
+      "key": "productivity",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 2048,
+          "left": 1372
+        }
+      ]
+    },
+    {
+      "key": "productivity",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 2048,
+          "left": 1372
+        }
+      ]
+    },
+    {
+      "key": "productivity",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 2048,
+          "left": 956
+        }
+      ]
+    },
+    {
+      "key": "productivity",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 2048,
+          "left": 956
+        }
+      ]
+    },
+    {
+      "key": "specialty",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 1216,
+          "left": 924
+        }
+      ]
+    },
+    {
+      "key": "specialty",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 1216,
+          "left": 924
+        }
+      ]
+    },
+    {
+      "key": "specialty",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 1216,
+          "left": 628
+        }
+      ]
+    },
+    {
+      "key": "specialty",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 1216,
+          "left": 628
+        }
+      ]
+    },
+    {
+      "key": "specialty",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 1216,
+          "left": 540
+        }
+      ]
+    },
+    {
+      "key": "specialty",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 1216,
+          "left": 540
+        }
+      ]
+    },
+    {
+      "key": "specialty",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1216,
+          "left": 124
+        }
+      ]
+    },
+    {
+      "key": "specialty",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1216,
+          "left": 124
+        }
+      ]
+    },
+    {
+      "key": "skill-mix",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 896,
+          "left": 604
+        }
+      ]
+    },
+    {
+      "key": "skill-mix",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 896,
+          "left": 604
+        }
+      ]
+    },
+    {
+      "key": "skill-mix",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 896,
+          "left": 308
+        }
+      ]
+    },
+    {
+      "key": "skill-mix",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 896,
+          "left": 308
+        }
+      ]
+    },
+    {
+      "key": "skill-mix",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 896,
+          "left": 220
+        }
+      ]
+    },
+    {
+      "key": "skill-mix",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 896,
+          "left": 220
+        }
+      ]
+    },
+    {
+      "key": "skill-mix",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1092,
+          "left": 0
+        }
+      ]
+    },
+    {
+      "key": "skill-mix",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1092,
+          "left": 0
+        }
+      ]
+    },
+    {
+      "key": "nursing-hours",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 896,
+          "left": 604
+        }
+      ]
+    },
+    {
+      "key": "nursing-hours",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 896,
+          "left": 604
+        }
+      ]
+    },
+    {
+      "key": "nursing-hours",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 896,
+          "left": 308
+        }
+      ]
+    },
+    {
+      "key": "nursing-hours",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 896,
+          "left": 308
+        }
+      ]
+    },
+    {
+      "key": "nursing-hours",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 896,
+          "left": 220
+        }
+      ]
+    },
+    {
+      "key": "nursing-hours",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 896,
+          "left": 220
+        }
+      ]
+    },
+    {
+      "key": "nursing-hours",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1092,
+          "left": 0
+        }
+      ]
+    },
+    {
+      "key": "nursing-hours",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1092,
+          "left": 0
+        }
+      ]
+    },
+    {
+      "key": "pressure",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 896,
+          "left": 604
+        }
+      ]
+    },
+    {
+      "key": "pressure",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 896,
+          "left": 604
+        }
+      ]
+    },
+    {
+      "key": "pressure",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 896,
+          "left": 308
+        }
+      ]
+    },
+    {
+      "key": "pressure",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 896,
+          "left": 308
+        }
+      ]
+    },
+    {
+      "key": "pressure",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 896,
+          "left": 220
+        }
+      ]
+    },
+    {
+      "key": "pressure",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 896,
+          "left": 220
+        }
+      ]
+    },
+    {
+      "key": "pressure",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1092,
+          "left": 0
+        }
+      ]
+    },
+    {
+      "key": "pressure",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1092,
+          "left": 0
+        }
+      ]
+    },
+    {
+      "key": "pressure-detail",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 704,
+          "left": 412
+        }
+      ]
+    },
+    {
+      "key": "pressure-detail",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 704,
+          "left": 412
+        }
+      ]
+    },
+    {
+      "key": "pressure-detail",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 704,
+          "left": 116
+        }
+      ]
+    },
+    {
+      "key": "pressure-detail",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 704,
+          "left": 116
+        }
+      ]
+    },
+    {
+      "key": "pressure-detail",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 704,
+          "left": 28
+        }
+      ]
+    },
+    {
+      "key": "pressure-detail",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 704,
+          "left": 28
+        }
+      ]
+    },
+    {
+      "key": "pressure-detail",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1092,
+          "left": 0
+        }
+      ]
+    },
+    {
+      "key": "pressure-detail",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1092,
+          "left": 0
+        }
+      ]
+    },
+    {
+      "key": "readmission",
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 896,
+          "left": 604
+        }
+      ]
+    },
+    {
+      "key": "readmission",
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "table": [
+        {
+          "client": 292,
+          "scroll": 896,
+          "left": 604
+        }
+      ]
+    },
+    {
+      "key": "readmission",
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 896,
+          "left": 308
+        }
+      ]
+    },
+    {
+      "key": "readmission",
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 896,
+          "left": 308
+        }
+      ]
+    },
+    {
+      "key": "readmission",
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 896,
+          "left": 220
+        }
+      ]
+    },
+    {
+      "key": "readmission",
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 896,
+          "left": 220
+        }
+      ]
+    },
+    {
+      "key": "readmission",
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1092,
+          "left": 0
+        }
+      ]
+    },
+    {
+      "key": "readmission",
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1092,
+          "left": 0
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    {
+      "actor": "reader",
+      "totalPT": 12,
+      "censusOptions": 0,
+      "directWardB": 403,
+      "xmlNames": [
+        "รวมทุกหอที่เลือก",
+        "หอสมมติ A"
+      ],
+      "printScopeChecked": true
+    },
+    {
+      "actor": "multi",
+      "totalPT": 18,
+      "censusOptions": 0,
+      "directWardB": 200,
+      "xmlNames": [
+        "รวมทุกหอที่เลือก",
+        "หอสมมติ A",
+        "หอสมมติ B"
+      ],
+      "printScopeChecked": true
+    }
+  ],
+  "errors": [],
+  "mutations": [],
+  "reads": [
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/daily",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "ward_id": "ae601ee9-e2f5-41ff-91c2-5137480aec41"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/daily",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "ward_id": "ae601ee9-e2f5-41ff-91c2-5137480aec41",
+        "channel": "print"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/daily",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "ward_id": "ae601ee9-e2f5-41ff-91c2-5137480aec41",
+        "channel": "excel"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/daily",
+      "query": {
+        "service_date": "2026-11-01",
+        "ward_id": "ae601ee9-e2f5-41ff-91c2-5137480aec41"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/daily-all",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "shift_type_id": "71"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/daily",
+      "query": {
+        "service_date": "2026-11-01",
+        "shift_type_id": "71"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/monthly",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "ward_id": "ae601ee9-e2f5-41ff-91c2-5137480aec41"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/monthly",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "ward_id": "ae601ee9-e2f5-41ff-91c2-5137480aec41",
+        "channel": "print"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/monthly",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "ward_id": "ae601ee9-e2f5-41ff-91c2-5137480aec41",
+        "channel": "excel"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/census-day",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/census-month",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "through": "2026-11-01"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/census-month",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "through": "2026-11-01",
+        "channel": "print"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/census-month",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "through": "2026-11-01",
+        "channel": "excel"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/turnover",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/los",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/occupancy",
+      "query": {
+        "fiscal_year_end": "2027",
+        "status": "all"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/productivity",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/productivity",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "channel": "print"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/productivity",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "channel": "excel"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/specialty",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "through": "2026-11-01"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/skill-mix",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/nursing-hours",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/pressure",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/pressure-detail",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "ward_id": "ae601ee9-e2f5-41ff-91c2-5137480aec41"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/readmission",
+      "query": {
+        "selected": "2027-09-30",
+        "status": "all"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/monthly",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "confirmed",
+        "ward_id": "ae601ee9-e2f5-41ff-91c2-5137480aec41"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/monthly",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "confirmed",
+        "ward_id": "ae601ee9-e2f5-41ff-91c2-5137480aec41",
+        "channel": "print"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/monthly",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "confirmed",
+        "ward_id": "ae601ee9-e2f5-41ff-91c2-5137480aec41",
+        "channel": "excel"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/monthly",
+      "query": {
+        "selected": "2028-01-01",
+        "status": "all",
+        "ward_id": "ae601ee9-e2f5-41ff-91c2-5137480aec41"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/monthly",
+      "query": {
+        "selected": "2028-01-01",
+        "status": "all",
+        "ward_id": "ae601ee9-e2f5-41ff-91c2-5137480aec41",
+        "channel": "print"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/monthly",
+      "query": {
+        "selected": "2028-01-01",
+        "status": "all",
+        "ward_id": "ae601ee9-e2f5-41ff-91c2-5137480aec41",
+        "channel": "excel"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/specialty",
+      "query": {
+        "selected": "2028-01-01",
+        "status": "all",
+        "through": "2028-01-01"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/summary/pressure-detail",
+      "query": {
+        "selected": "2028-02-01",
+        "status": "all",
+        "ward_id": "ae601ee9-e2f5-41ff-91c2-5137480aec41"
+      }
+    },
+    {
+      "actor": "admin",
+      "path": "/api/v1/reports/occupancy",
+      "query": {
+        "fiscal_year_end": "2028",
+        "status": "all"
+      }
+    },
+    {
+      "actor": "reader",
+      "path": "/api/v1/reports/summary/daily-all",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "shift_type_id": "71"
+      }
+    },
+    {
+      "actor": "reader",
+      "path": "/api/v1/reports/daily",
+      "query": {
+        "service_date": "2026-11-01",
+        "shift_type_id": "71"
+      }
+    },
+    {
+      "actor": "reader",
+      "path": "/api/v1/reports/summary/specialty",
+      "query": {
+        "selected": "2026-11-01",
+        "ward_id": "637da784-c138-4355-8b93-80088e93f7a2"
+      }
+    },
+    {
+      "actor": "multi",
+      "path": "/api/v1/reports/summary/daily-all",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "shift_type_id": "71"
+      }
+    },
+    {
+      "actor": "multi",
+      "path": "/api/v1/reports/daily",
+      "query": {
+        "service_date": "2026-11-01",
+        "shift_type_id": "71"
+      }
+    },
+    {
+      "actor": "multi",
+      "path": "/api/v1/reports/summary/specialty",
+      "query": {
+        "selected": "2026-11-01",
+        "ward_id": "637da784-c138-4355-8b93-80088e93f7a2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+--- before/app/login/page.js
++++ after/app/login/page.js
+@@ -1,6 +1,7 @@
+ "use client";
+ 
+ import { useState } from "react";
++import Image from "next/image";
+ import { useRouter } from "next/navigation";
+ import { useAuth } from "@/components/AuthProvider";
+ import { getErrorMessage } from "@/lib/api";
+@@ -43,7 +44,7 @@
+   return (
+     <main className="login-page">
+       <div className="login-brand">
+-        <div className="brand-mark">IP</div>
++        <Image className="login-hospital-logo" src="/brand/akat-hospital.webp" width={400} height={106} alt="โรงพยาบาลอากาศอำนวย" preload unoptimized />
+         <p className="eyebrow">ข้อมูลผู้ป่วยใน</p>
+         <h1>ระบบบันทึกข้อมูลผู้ป่วยใน</h1>
+         <p>เข้าสู่ระบบด้วยบัญชีที่ผู้ดูแลระบบจัดเตรียมให้</p>
+--- before/components/shell/ShellFrame.jsx
++++ after/components/shell/ShellFrame.jsx
+@@ -1,5 +1,6 @@
+ "use client";
+ import { useEffect, useRef, useState } from "react";
++import Image from "next/image";
+ import { Button, Dialog, Drawer, Icon, Select } from "@/components/ui";
+ import { formatThaiDate, formatThaiTime, todayISO } from "@/lib/thai-date.mjs";
+ import { navigation, pageContext } from "@/lib/workspace.mjs";
+@@ -33,10 +34,10 @@
+   const statusText = { online: "ออนไลน์", syncing: "กำลังซิงก์", offline: "ขาดการเชื่อมต่อ" }[connection];
+   const openProfile = () => setProfile(true);
+   return <div className={`shell-frame ${collapsed ? "shell-frame--collapsed" : ""}`}><a className="ui-skip-link" href="#main-content">ข้ามไปเนื้อหาหลัก</a>
+-    <aside className="shell-sidebar" aria-label="แถบนำทาง"><a className="shell-brand" href="/" aria-label="ระบบรายงานจำนวนผู้ป่วยใน หน้าแรก"><span className="shell-brand-mark">IP</span><span className="shell-brand-text"><strong>ข้อมูลผู้ป่วยใน</strong><small>ระบบรายงานหอผู้ป่วย</small></span></a><nav className="shell-nav" aria-label="เมนูหลัก"><NavigationLinks {...{ current, count }} /></nav><div className="shell-sidebar-footer"><Button className="shell-collapse" variant="ghost" icon="panel" onClick={toggleRail} aria-expanded={!collapsed} aria-label={collapsed ? "ขยายแถบเมนู" : "ย่อแถบเมนู"}><span>{collapsed ? "ขยาย" : "ย่อแถบเมนู"}</span></Button><UserMenu {...{ user, ward, onLogout }} onProfile={openProfile} placement="sidebar" /></div></aside>
++    <aside className="shell-sidebar" aria-label="แถบนำทาง"><a className="shell-brand" href="/" aria-label="ระบบรายงานจำนวนผู้ป่วยใน หน้าแรก"><span className="shell-brand-mark"><Image src="/brand/moph-seal.png" width={175} height={175} alt="" aria-hidden="true" unoptimized /></span><span className="shell-brand-text"><strong>ข้อมูลผู้ป่วยใน</strong><small>ระบบรายงานหอผู้ป่วย</small></span></a><nav className="shell-nav" aria-label="เมนูหลัก"><NavigationLinks {...{ current, count }} /></nav><div className="shell-sidebar-footer"><Button className="shell-collapse" variant="ghost" icon="panel" onClick={toggleRail} aria-expanded={!collapsed} aria-label={collapsed ? "ขยายแถบเมนู" : "ย่อแถบเมนู"}><span>{collapsed ? "ขยาย" : "ย่อแถบเมนู"}</span></Button><UserMenu {...{ user, ward, onLogout }} onProfile={openProfile} placement="sidebar" /></div></aside>
+     <div className="shell-main"><header className="shell-header"><div className="shell-heading"><span className="shell-header-icon"><Icon name={current.icon} /></span><div>{current.href !== "/" && <nav className="shell-breadcrumb" aria-label="เส้นทางหน้าปัจจุบัน"><a href="/">หน้าแรก</a><span aria-hidden="true">/</span><span>{current.label}</span></nav>}<p className="shell-page-title">{current.label}</p><p className="shell-date">{formatThaiDate(todayISO(), { month: "long" })}</p></div></div><div className="shell-header-tools"><div className="shell-ward"><Select label="หอผู้ป่วยปัจจุบัน" value={selectedWardId} onChange={event => onWardChange(event.target.value)} disabled={wardsLoading || wards.length < 2} placeholder={wards.length ? undefined : wardsLoading ? "กำลังโหลดหอผู้ป่วย…" : "ยังไม่มีหอผู้ป่วยที่ได้รับสิทธิ์"} options={wards.map(item => ({ value: item.id, label: item.name }))} /></div><div className="shell-connection-wrap"><button type="button" className={`shell-connection shell-connection--${connection}`} onClick={() => setConnectionOpen(true)} aria-label={`${statusText} ดูรายละเอียดการเชื่อมต่อ`}><Icon name={connection === "online" ? "check" : connection === "syncing" ? "refresh" : "warning"} /><span>{statusText}</span></button>{connection === "offline" && <Button variant="ghost" icon="refresh" onClick={onRetry}><span className="shell-retry-text">ลองใหม่</span></Button>}</div><div className="shell-header-user"><UserMenu {...{ user, ward, onLogout }} onProfile={openProfile} placement="header" /></div></div></header><main id="main-content" className="shell-content" tabIndex={-1}>{logoutError && <div className="ui-callout ui-tone--danger" role="alert"><Icon name="error" />{logoutError}</div>}{children}</main></div>
+     <nav className="shell-mobile-nav" aria-label="เมนูหลักบนมือถือ">{[navigation[0], navigation[1], navigation[3], navigation[5]].map(item => <a href={item.href} key={item.href} className={`shell-mobile-link ${current.href === item.href ? "is-active" : ""}`} aria-current={current.href === item.href ? "page" : undefined}><span><Icon name={item.icon} />{item.pending && <PendingBadge count={count} />}</span>{item.short}</a>)}<button type="button" className={`shell-mobile-link ${["/history", "/indicators", "/occupancy"].includes(current.href) ? "is-active" : ""}`} aria-expanded={drawer} aria-haspopup="dialog" onClick={() => setDrawer(true)}><Icon name="more" />เมนู</button></nav>
+-    <Drawer open={drawer} onClose={() => setDrawer(false)} title="เมนูทั้งหมด"><nav className="shell-drawer-nav" aria-label="เมนูทั้งหมด"><NavigationLinks {...{ current, count }} onNavigate={() => setDrawer(false)} /></nav><div className="shell-drawer-user"><strong>{user.username}</strong><p>{user.is_admin ? "ผู้ดูแลระบบ" : "ผู้ใช้งานตามสิทธิ์ที่ได้รับ"}</p><Button variant="secondary" icon="user" onClick={() => { setDrawer(false); setProfile(true); }}>โปรไฟล์</Button><Button variant="ghost" icon="logout" data-confirm-leave onClick={() => { setDrawer(false); onLogout(); }}>ออกจากระบบ</Button></div></Drawer>
++    <Drawer open={drawer} onClose={() => setDrawer(false)} title="เมนูทั้งหมด"><div className="shell-drawer-brand"><span className="shell-brand-mark"><Image src="/brand/moph-seal.png" width={175} height={175} alt="" aria-hidden="true" unoptimized /></span><strong>โรงพยาบาลอากาศอำนวย</strong></div><nav className="shell-drawer-nav" aria-label="เมนูทั้งหมด"><NavigationLinks {...{ current, count }} onNavigate={() => setDrawer(false)} /></nav><div className="shell-drawer-user"><strong>{user.username}</strong><p>{user.is_admin ? "ผู้ดูแลระบบ" : "ผู้ใช้งานตามสิทธิ์ที่ได้รับ"}</p><Button variant="secondary" icon="user" onClick={() => { setDrawer(false); setProfile(true); }}>โปรไฟล์</Button><Button variant="ghost" icon="logout" data-confirm-leave onClick={() => { setDrawer(false); onLogout(); }}>ออกจากระบบ</Button></div></Drawer>
+     <Dialog open={profile} onClose={() => setProfile(false)} title="โปรไฟล์" description="ข้อมูลบัญชีที่กำลังใช้งาน"><dl className="shell-profile"><div><dt>ชื่อบัญชี</dt><dd>{user.username}</dd></div><div><dt>สิทธิ์</dt><dd>{user.is_admin ? "ผู้ดูแลระบบ" : "สิทธิ์ตามหอผู้ป่วยที่ได้รับมอบหมาย"}</dd></div><div><dt>หอผู้ป่วยปัจจุบัน</dt><dd>{ward?.name || "ยังไม่ได้เลือก"}</dd></div></dl></Dialog>
+     <Dialog open={connectionOpen} onClose={() => setConnectionOpen(false)} title="สถานะการเชื่อมต่อ"><p>{statusText}</p><p>ตรวจสอบล่าสุด {lastSync ? formatThaiTime(lastSync) : "ยังไม่มีการเชื่อมต่อสำเร็จ"}</p><p className="ui-field-hint">อ้างอิงการโหลดรายชื่อหอผู้ป่วยและจำนวนรายการรอยืนยัน ไม่ใช่เวลาที่ข้อมูลทุกส่วนถูกปรับปรุง</p><Button variant="secondary" icon="refresh" onClick={() => { setConnectionOpen(false); onRetry(); }}>ลองเชื่อมต่อใหม่</Button></Dialog>
+   </div>;
+--- before/app/globals.css
++++ after/app/globals.css
+@@ -131,15 +131,16 @@
+ .rule-grid b, .rule-grid span { display: block; }
+ .rule-grid b { font-size: var(--text-compact); margin-bottom: 7px; }
+ .rule-grid span { color: var(--muted); font-size: var(--text-xs); line-height: 1.5; }
+-.login-page { align-items: center; background: radial-gradient(ellipse at 20% 20%, #dcefeb, transparent 45%), var(--canvas); display: grid; gap: 8vw; grid-template-columns: minmax(0, 1fr) minmax(0, 400px); min-height: 100vh; padding: 8vw 12vw; }
+-.login-brand { max-width: 480px; }
+-.login-brand .brand-mark { margin-bottom: 25px; }
++.login-page { align-items: center; justify-content: center; background: radial-gradient(ellipse at 20% 20%, var(--color-primary-soft), transparent 45%), var(--canvas); display: grid; gap: var(--space-12); grid-template-columns: minmax(0, var(--drawer-width)) minmax(0, var(--drawer-width)); min-height: 100dvh; padding: var(--space-12) max(var(--space-8), env(safe-area-inset-right)) var(--space-12) max(var(--space-8), env(safe-area-inset-left)); }
++.login-brand { min-width: 0; }
++.login-hospital-logo { display: block; width: 100%; height: auto; object-fit: contain; margin-bottom: var(--space-6); }
+ .login-brand h1 { font-size: var(--text-login-title); }
+ .login-brand > p:last-child { color: var(--muted); }
+-.login-card { display: grid; gap: 16px; padding: 30px; }
++.login-card { min-width: 0; display: grid; gap: var(--space-4); padding: var(--space-8); }
+ .login-card h2 { margin: 0; }
+ .login-card label { color: #445b66; display: grid; font-size: var(--text-compact); gap: 7px; }
+ .login-card .alert { margin: 0; }
++.login-card .button { min-height: var(--control-height); }
+ .center-state { align-items: center; display: flex; gap: 12px; justify-content: center; min-height: 100vh; padding: 25px; }
+ .spinner { animation: spin 1s linear infinite; border: 3px solid #d7e7e5; border-radius: 50%; border-top-color: var(--teal); height: 24px; width: 24px; }
+ .small-spinner { display: inline-block; height: 16px; vertical-align: middle; width: 16px; }
+@@ -160,10 +161,16 @@
+   .number-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+   .number-grid.five-cols { grid-template-columns: repeat(2, minmax(0,1fr)); }
+   .page-heading { align-items: center; }
+-  .login-page { gap: 24px; grid-template-columns: 1fr; padding: 28px 18px; }
+-  .login-card { padding: 22px; }
++  .login-page { padding: var(--space-6) max(var(--space-4), env(safe-area-inset-right)) max(var(--space-6), env(safe-area-inset-bottom)) max(var(--space-4), env(safe-area-inset-left)); }
++  .login-hospital-logo { margin-bottom: var(--space-4); }
++  .login-brand h1 { font-size: var(--text-2xl); margin-block: var(--space-3); }
++  .login-brand > p { margin-block: var(--space-2); }
++  .login-card { padding: var(--space-5); }
+   .welcome-card { padding: 27px; }
+   .topbar { align-items: flex-start; }
+   .secure-badge { font-size: var(--text-tiny); }
+   .form-actions { flex-wrap: wrap; }
+ }
++@media (max-width: 1023px) {
++  .login-page { grid-template-columns: minmax(0, var(--drawer-width)); gap: var(--space-6); align-content: center; }
++}
+--- before/styles/shell.css
++++ after/styles/shell.css
+@@ -3,7 +3,8 @@
+ .shell-frame, .shell-frame * { box-sizing: border-box; }
+ .shell-sidebar { position: fixed; inset: 0 auto 0 0; width: var(--shell-width); height: 100dvh; padding: var(--space-5) var(--space-3) var(--space-4); background: var(--color-nav); color: var(--color-nav-text); display: flex; flex-direction: column; z-index: var(--z-sticky); }
+ .shell-brand { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-2) var(--space-2) var(--space-6); }
+-.shell-brand-mark { display: grid; place-items: center; flex: 0 0 var(--control-height); height: var(--control-height); border-radius: var(--radius-card); background: var(--color-primary-soft); color: var(--color-primary); font-weight: var(--weight-bold); }
++.shell-brand-mark { display: grid; place-items: center; flex: 0 0 var(--control-height); width: var(--control-height); height: var(--control-height); padding: var(--space-1); border-radius: var(--radius-pill); background: var(--color-surface); }
++.shell-brand-mark img { display: block; width: 100%; height: 100%; object-fit: contain; }
+ .shell-brand-text, .shell-user-meta { display: grid; min-width: 0; }
+ .shell-brand-text strong { font-size: var(--text-base); }
+ .shell-brand-text small, .shell-user-meta small { font-size: var(--text-sm); color: var(--color-nav-muted); }
+@@ -49,6 +50,8 @@
+ .shell-content { min-width: 0; max-width: var(--content-wide); margin-inline: auto; padding: var(--space-8) var(--space-6) var(--space-12); }
+ .shell-content > * { min-width: 0; }
+ .shell-mobile-nav { display: none; }
++.shell-drawer-brand { display: flex; align-items: center; gap: var(--space-3); padding-bottom: var(--space-4); margin-bottom: var(--space-4); border-bottom: var(--border-width) solid var(--color-border); }
++.shell-drawer-brand strong { min-width: 0; font-size: var(--text-base); overflow-wrap: anywhere; }
+ .shell-drawer-nav .shell-link { color: var(--color-text); }
+ .shell-drawer-nav .shell-nav-label { color: var(--color-muted); }
+ .shell-drawer-nav .shell-link.is-active, .shell-drawer-nav .shell-link:hover { color: var(--color-primary); background: var(--color-primary-soft); }

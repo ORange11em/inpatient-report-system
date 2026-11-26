@@ -1,0 +1,8 @@
+.entry-activity { min-width: 0; margin-block: var(--space-4); font-size: var(--text-sm); }
+.entry-activity > details { margin-top: var(--space-3); padding: var(--space-3); border: var(--border-width) solid var(--color-border); border-radius: var(--radius-control); background: var(--color-surface); }
+.entry-activity summary { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); min-height: var(--control-height); color: var(--color-primary); font-weight: var(--weight-semibold); cursor: pointer; }
+.entry-activity details[open] summary .ui-icon { transform: rotate(180deg); }
+.entry-activity ol { display: grid; gap: var(--space-3); list-style: none; margin: var(--space-3) 0 0; padding: 0; }
+.entry-activity li { display: grid; gap: var(--space-1); border-left: var(--border-width) solid var(--color-border); padding-left: var(--space-3); overflow-wrap: anywhere; }
+.entry-activity p { margin: 0; }
+.entry-activity time { color: var(--color-muted); }

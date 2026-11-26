@@ -1,0 +1,18 @@
+[
+  {
+    "state": "empty",
+    "kpis": [
+      "—",
+      "—",
+      "—",
+      "—",
+      "—"
+    ],
+    "newsEmpty": true
+  },
+  {
+    "state": "error",
+    "dashboardError": true,
+    "newsError": true
+  }
+]

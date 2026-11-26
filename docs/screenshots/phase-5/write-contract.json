@@ -1,0 +1,43 @@
+{
+  "before": [
+    {
+      "path": "/indicators/pressure/example-a/2026-11-19",
+      "method": "PUT",
+      "csrf": "synthetic-csrf",
+      "body": {
+        "stage2_4_cases": 2,
+        "at_risk_patient_days": 47
+      }
+    },
+    {
+      "path": "/indicators/readmission/example-a/2026-11-01",
+      "method": "PUT",
+      "csrf": "synthetic-csrf",
+      "body": {
+        "readmit_count": 3,
+        "discharge_count": 80
+      }
+    }
+  ],
+  "after": [
+    {
+      "path": "/indicators/pressure/example-a/2026-11-19",
+      "method": "PUT",
+      "csrf": "synthetic-csrf",
+      "body": {
+        "stage2_4_cases": 2,
+        "at_risk_patient_days": 47
+      }
+    },
+    {
+      "path": "/indicators/readmission/example-a/2026-11-01",
+      "method": "PUT",
+      "csrf": "synthetic-csrf",
+      "body": {
+        "readmit_count": 3,
+        "discharge_count": 80
+      }
+    }
+  ],
+  "equal": true
+}

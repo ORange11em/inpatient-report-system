@@ -1,0 +1,1286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>การให้บริการผู้ป่วยในแต่ละสาขา</title>
+<link rel="stylesheet" type="text/css" href="css/mycss.css"/>
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top"></td>
+  </tr>
+  <tr>
+    <td height="25" align="left">&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="10%" align="left" valign="top"></td>
+        <td width="90%" align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="25" class="textBlackBold" bgcolor="#FAE9F1" style="border-bottom:1px solid #F3CDDF; border-top:1px solid #F3CDDF;">รายงานแยกผู้ป่วยตามสาขา</td>
+          </tr>
+          <tr>
+            <td align="left"><table width="780" border="0" cellspacing="0" cellpadding="0">
+              <form method="post" action="report_split_patient.php">
+              <tr>
+                <td width="82" height="25" align="left">Ward</td>
+                <td width="119" height="25" align="left"><select name="ward" id="ward">
+                                  <option value='10'>หอสมมติ A</option><option value='11'>หอสมมติ B</option>                </select></td>
+                <td width="384" height="25" align="left">&nbsp;</td>
+                <td width="195" height="25" align="left">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="25" align="left">จากเดือน</td>
+                <td height="25" align="left"><select name="month1" id="month1">
+                  <option value='01' selected>มกราคม</option><option value='02'>กุมภาพันธ์</option><option value='03'>มีนาคม</option><option value='04'>เมษายน</option><option value='05'>พฤษภาคม</option><option value='06'>มิถุนายน</option><option value='07'>กรกฎาคม</option><option value='08'>สิงหาคม</option><option value='09'>กันยายน</option><option value='10'>ตุลาคม</option><option value='11'>พฤศจิกายน</option><option value='12'>ธันวาคม</option>                </select></td>
+                <td height="25" align="left"><select name="year1" id="year1">
+                  <option value='2569'>2569</option><option value='2568'>2568</option><option value='2567'>2567</option><option value='2566'>2566</option><option value='2565'>2565</option><option value='2564'>2564</option><option value='2563'>2563</option><option value='2562'>2562</option><option value='2561'>2561</option><option value='2560'>2560</option><option value='2559'>2559</option><option value='2558'>2558</option><option value='2557'>2557</option><option value='2556'>2556</option><option value='2555'>2555</option><option value='2554'>2554</option><option value='2553'>2553</option>                </select></td>
+                <td height="25" align="left">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="25" align="left">ถึงเดือน</td>
+                <td height="25" align="left"><select name="month2" id="month2">
+                  <option value='01' selected>มกราคม</option><option value='02'>กุมภาพันธ์</option><option value='03'>มีนาคม</option><option value='04'>เมษายน</option><option value='05'>พฤษภาคม</option><option value='06'>มิถุนายน</option><option value='07'>กรกฎาคม</option><option value='08'>สิงหาคม</option><option value='09'>กันยายน</option><option value='10'>ตุลาคม</option><option value='11'>พฤศจิกายน</option><option value='12'>ธันวาคม</option>                </select></td>
+                <td height="25" align="left"><select name="year2" id="year2">
+                  <option value='2569'>2569</option><option value='2568'>2568</option><option value='2567'>2567</option><option value='2566'>2566</option><option value='2565'>2565</option><option value='2564'>2564</option><option value='2563'>2563</option><option value='2562'>2562</option><option value='2561'>2561</option><option value='2560'>2560</option><option value='2559'>2559</option><option value='2558'>2558</option><option value='2557'>2557</option><option value='2556'>2556</option><option value='2555'>2555</option><option value='2554'>2554</option><option value='2553'>2553</option>                </select></td>
+                <td height="25" align="left">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="25" align="left">&nbsp;</td>
+                <td height="25" align="left"><input type="submit" name="button" id="button" value="  ตกลง  " /></td>
+                <td height="25" align="left">&nbsp;</td>
+                <td height="25" align="left">&nbsp;</td>
+              </tr>
+              </form>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="25" align="left"><img src="images/printer.png" width="23" height="23" border="0" align="absmiddle" /> <a href="report/split_patient_r.php?ward=0&month1=01&year1=2571&month2=01&year2=2571&i_status=&ac=p" target="_blank" id="k1">พิมพ์</a>&nbsp;&nbsp;&nbsp;<img src="images/excel.png" width="25" height="25" align="absmiddle" /> <a href="report/split_patient_r.php?ward=0&month1=01&year1=2571&month2=01&year2=2571&i_status=&ac=e" target="_blank" id="k1">ส่งออกเป็น Excel</a></td>
+          </tr>
+                    <tr>
+            <td height="25" align="left">การให้บริการผู้ป่วยในแต่ละสาขา&nbsp;ประจำเดือน มกราคม พ.ศ. 2571<br />
+<table width="800" border="1" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="31" rowspan="2" align="center" bgcolor="#FFE1D2">วันที่</td>
+                <td height="25" colspan="2" align="center" bgcolor="#CCFFE6">Patient Day</td>
+                <td height="25" colspan="13" align="center" bgcolor="#B9FFFF">แยกแผนกผู้ป่วย (ห้องสามัญ)</td>
+                </tr>
+              <tr>
+                <td width="43" height="25" align="center" bgcolor="#CCFFE6">PT</td>
+                <td width="43" height="25" align="center" bgcolor="#CCFFE6">NB</td>
+                <td width="49" height="25" align="center" bgcolor="#B9FFFF">OBS</td>
+                <td width="46" height="25" align="center" bgcolor="#B9FFFF">NB</td>
+                <td width="50" height="25" align="center" bgcolor="#B9FFFF">GYN</td>
+                <td width="55" height="25" align="center" bgcolor="#B9FFFF">SURG</td>
+                <td width="51" height="25" align="center" bgcolor="#B9FFFF">MED</td>
+                <td width="56" height="25" align="center" bgcolor="#B9FFFF">PSYCH</td>
+                <td width="42" height="25" align="center" bgcolor="#B9FFFF">SKIN</td>
+                <td width="45" height="25" align="center" bgcolor="#B9FFFF">PED</td>
+                <td width="56" height="25" align="center" bgcolor="#B9FFFF">ORTHO</td>
+                <td width="43" height="25" align="center" bgcolor="#B9FFFF">EYE</td>
+                <td width="47" height="25" align="center" bgcolor="#B9FFFF">ENT</td>
+                <td width="51" height="25" align="center" bgcolor="#B9FFFF">DENT</td>
+                <td width="58" align="center" bgcolor="#B9FFFF">NEURO SURG</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">20</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">3</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">2</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">3</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">4</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">5</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">6</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">7</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">8</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">9</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">10</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">11</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">12</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">13</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">14</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">15</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">16</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">17</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">18</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">19</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">20</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">21</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">22</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">23</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">24</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">25</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">26</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">27</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">28</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">29</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">30</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">31</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center" bgcolor="#FFF3C6">รวม</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">20</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">5</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top">&nbsp;</td>
+            </tr>
+          <tr>
+            <td align="left"><table width="800" border="1" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="31" rowspan="2" align="center" bgcolor="#FFE1D2">วันที่</td>
+                <td height="25" colspan="2" align="center" bgcolor="#CCFFE6">Patient Day</td>
+                <td height="25" colspan="13" align="center" bgcolor="#B9FFFF">แยกแผนกผู้ป่วย (ห้องพิเศษ)</td>
+              </tr>
+              <tr>
+                <td width="43" height="25" align="center" bgcolor="#CCFFE6">PT</td>
+                <td width="43" height="25" align="center" bgcolor="#CCFFE6">NB</td>
+                <td width="49" height="25" align="center" bgcolor="#B9FFFF">OBS</td>
+                <td width="46" height="25" align="center" bgcolor="#B9FFFF">NB</td>
+                <td width="50" height="25" align="center" bgcolor="#B9FFFF">GYN</td>
+                <td width="55" height="25" align="center" bgcolor="#B9FFFF">SURG</td>
+                <td width="51" height="25" align="center" bgcolor="#B9FFFF">MED</td>
+                <td width="56" height="25" align="center" bgcolor="#B9FFFF">PSYCH</td>
+                <td width="42" height="25" align="center" bgcolor="#B9FFFF">SKIN</td>
+                <td width="45" height="25" align="center" bgcolor="#B9FFFF">PED</td>
+                <td width="56" height="25" align="center" bgcolor="#B9FFFF">ORTHO</td>
+                <td width="43" height="25" align="center" bgcolor="#B9FFFF">EYE</td>
+                <td width="47" height="25" align="center" bgcolor="#B9FFFF">ENT</td>
+                <td width="51" height="25" align="center" bgcolor="#B9FFFF">DENT</td>
+                <td width="58" align="center" bgcolor="#B9FFFF">NEURO SURG</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">1</td>
+                <td height="25" align="center">10</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">7</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">2</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">3</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">4</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">5</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">6</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">7</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">8</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">9</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">10</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">11</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">12</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">13</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">14</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">15</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">16</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">17</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">18</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">19</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">20</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">21</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">22</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">23</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">24</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">25</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">26</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">27</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">28</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">29</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">30</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center">31</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">0</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+                <td height="25" align="center">&nbsp;</td>
+              </tr>
+                            <tr>
+                <td height="25" align="center" bgcolor="#FFF3C6">รวม</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">10</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">7</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+                <td height="25" align="center" bgcolor="#FFF3C6">0</td>
+              </tr>
+            </table></td>
+          </tr>
+                              <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+  </tr>
+</table>
+</body>
+</html>

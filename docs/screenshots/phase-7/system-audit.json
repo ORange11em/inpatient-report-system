@@ -1,0 +1,2821 @@
+{
+  "audits": [
+    {
+      "name": "home",
+      "url": "/",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "home",
+      "url": "/",
+      "width": 390,
+      "client": 390,
+      "scroll": 390,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "home",
+      "url": "/",
+      "width": 768,
+      "client": 768,
+      "scroll": 768,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 80
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "home",
+      "url": "/",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "home",
+      "url": "/",
+      "width": 1280,
+      "client": 1280,
+      "scroll": 1280,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "home",
+      "url": "/",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "home",
+      "url": "/",
+      "width": 1920,
+      "client": 1920,
+      "scroll": 1920,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "home",
+      "url": "/",
+      "landscape": true,
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "entry",
+      "url": "/entries?ward=example-0&date=2026-11-19&shift=73",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "title": "บันทึกข้อมูลประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "entry",
+      "url": "/entries?ward=example-0&date=2026-11-19&shift=73",
+      "width": 390,
+      "client": 390,
+      "scroll": 390,
+      "title": "บันทึกข้อมูลประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "entry",
+      "url": "/entries?ward=example-0&date=2026-11-19&shift=73",
+      "width": 768,
+      "client": 768,
+      "scroll": 768,
+      "title": "บันทึกข้อมูลประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 80
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "entry",
+      "url": "/entries?ward=example-0&date=2026-11-19&shift=73",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "บันทึกข้อมูลประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "entry",
+      "url": "/entries?ward=example-0&date=2026-11-19&shift=73",
+      "width": 1280,
+      "client": 1280,
+      "scroll": 1280,
+      "title": "บันทึกข้อมูลประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "entry",
+      "url": "/entries?ward=example-0&date=2026-11-19&shift=73",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "บันทึกข้อมูลประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "entry",
+      "url": "/entries?ward=example-0&date=2026-11-19&shift=73",
+      "width": 1920,
+      "client": 1920,
+      "scroll": 1920,
+      "title": "บันทึกข้อมูลประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "entry",
+      "url": "/entries?ward=example-0&date=2026-11-19&shift=73",
+      "landscape": true,
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "บันทึกข้อมูลประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "history",
+      "url": "/history",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "title": "ตรวจสอบและยืนยันข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "history",
+      "url": "/history",
+      "width": 390,
+      "client": 390,
+      "scroll": 390,
+      "title": "ตรวจสอบและยืนยันข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "history",
+      "url": "/history",
+      "width": 768,
+      "client": 768,
+      "scroll": 768,
+      "title": "ตรวจสอบและยืนยันข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 80
+      },
+      "tables": [
+        {
+          "client": 638,
+          "scroll": 1040
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "history",
+      "url": "/history",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "ตรวจสอบและยืนยันข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 726,
+          "scroll": 1040
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "history",
+      "url": "/history",
+      "width": 1280,
+      "client": 1280,
+      "scroll": 1280,
+      "title": "ตรวจสอบและยืนยันข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 982,
+          "scroll": 1040
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "history",
+      "url": "/history",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "ตรวจสอบและยืนยันข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 1142,
+          "scroll": 1142
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "history",
+      "url": "/history",
+      "width": 1920,
+      "client": 1920,
+      "scroll": 1920,
+      "title": "ตรวจสอบและยืนยันข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 1550,
+          "scroll": 1550
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "history",
+      "url": "/history",
+      "landscape": true,
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "ตรวจสอบและยืนยันข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 726,
+          "scroll": 1040
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "pending",
+      "url": "/history?status=unconfirmed",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "title": "รอยืนยันการส่งข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "pending",
+      "url": "/history?status=unconfirmed",
+      "width": 390,
+      "client": 390,
+      "scroll": 390,
+      "title": "รอยืนยันการส่งข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "pending",
+      "url": "/history?status=unconfirmed",
+      "width": 768,
+      "client": 768,
+      "scroll": 768,
+      "title": "รอยืนยันการส่งข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 80
+      },
+      "tables": [
+        {
+          "client": 588,
+          "scroll": 1040
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "pending",
+      "url": "/history?status=unconfirmed",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "รอยืนยันการส่งข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 676,
+          "scroll": 1040
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "pending",
+      "url": "/history?status=unconfirmed",
+      "width": 1280,
+      "client": 1280,
+      "scroll": 1280,
+      "title": "รอยืนยันการส่งข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 932,
+          "scroll": 1040
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "pending",
+      "url": "/history?status=unconfirmed",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "รอยืนยันการส่งข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 1092,
+          "scroll": 1092
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "pending",
+      "url": "/history?status=unconfirmed",
+      "width": 1920,
+      "client": 1920,
+      "scroll": 1920,
+      "title": "รอยืนยันการส่งข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 1500,
+          "scroll": 1500
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "pending",
+      "url": "/history?status=unconfirmed",
+      "landscape": true,
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "รอยืนยันการส่งข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 676,
+          "scroll": 1040
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "indicators",
+      "url": "/indicators?ward=example-0&date=2026-11-19&month=2026-11",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "title": "ตัวชี้วัดเสริม",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": [
+        "มีข้อมูลที่บันทึกไว้",
+        "มีข้อมูลที่บันทึกไว้"
+      ]
+    },
+    {
+      "name": "indicators",
+      "url": "/indicators?ward=example-0&date=2026-11-19&month=2026-11",
+      "width": 390,
+      "client": 390,
+      "scroll": 390,
+      "title": "ตัวชี้วัดเสริม",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": [
+        "มีข้อมูลที่บันทึกไว้",
+        "มีข้อมูลที่บันทึกไว้"
+      ]
+    },
+    {
+      "name": "indicators",
+      "url": "/indicators?ward=example-0&date=2026-11-19&month=2026-11",
+      "width": 768,
+      "client": 768,
+      "scroll": 768,
+      "title": "ตัวชี้วัดเสริม",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 80
+      },
+      "tables": [],
+      "statusLabels": [
+        "มีข้อมูลที่บันทึกไว้",
+        "มีข้อมูลที่บันทึกไว้"
+      ]
+    },
+    {
+      "name": "indicators",
+      "url": "/indicators?ward=example-0&date=2026-11-19&month=2026-11",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "ตัวชี้วัดเสริม",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "มีข้อมูลที่บันทึกไว้",
+        "มีข้อมูลที่บันทึกไว้"
+      ]
+    },
+    {
+      "name": "indicators",
+      "url": "/indicators?ward=example-0&date=2026-11-19&month=2026-11",
+      "width": 1280,
+      "client": 1280,
+      "scroll": 1280,
+      "title": "ตัวชี้วัดเสริม",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "มีข้อมูลที่บันทึกไว้",
+        "มีข้อมูลที่บันทึกไว้"
+      ]
+    },
+    {
+      "name": "indicators",
+      "url": "/indicators?ward=example-0&date=2026-11-19&month=2026-11",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "ตัวชี้วัดเสริม",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "มีข้อมูลที่บันทึกไว้",
+        "มีข้อมูลที่บันทึกไว้"
+      ]
+    },
+    {
+      "name": "indicators",
+      "url": "/indicators?ward=example-0&date=2026-11-19&month=2026-11",
+      "width": 1920,
+      "client": 1920,
+      "scroll": 1920,
+      "title": "ตัวชี้วัดเสริม",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "มีข้อมูลที่บันทึกไว้",
+        "มีข้อมูลที่บันทึกไว้"
+      ]
+    },
+    {
+      "name": "indicators",
+      "url": "/indicators?ward=example-0&date=2026-11-19&month=2026-11",
+      "landscape": true,
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "ตัวชี้วัดเสริม",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "มีข้อมูลที่บันทึกไว้",
+        "มีข้อมูลที่บันทึกไว้"
+      ]
+    },
+    {
+      "name": "reports",
+      "url": "/reports",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "title": "รายงานประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "reports",
+      "url": "/reports",
+      "width": 390,
+      "client": 390,
+      "scroll": 390,
+      "title": "รายงานประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "reports",
+      "url": "/reports",
+      "width": 768,
+      "client": 768,
+      "scroll": 768,
+      "title": "รายงานประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 80
+      },
+      "tables": [
+        {
+          "client": 588,
+          "scroll": 2853
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "reports",
+      "url": "/reports",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "รายงานประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 676,
+          "scroll": 2853
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "reports",
+      "url": "/reports",
+      "width": 1280,
+      "client": 1280,
+      "scroll": 1280,
+      "title": "รายงานประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 932,
+          "scroll": 2853
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "reports",
+      "url": "/reports",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "รายงานประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 1092,
+          "scroll": 2853
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "reports",
+      "url": "/reports",
+      "width": 1920,
+      "client": 1920,
+      "scroll": 1920,
+      "title": "รายงานประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 1500,
+          "scroll": 2853
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "reports",
+      "url": "/reports",
+      "landscape": true,
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "รายงานประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 676,
+          "scroll": 2853
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "occupancy",
+      "url": "/occupancy",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "title": "อัตราการครองเตียง",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "occupancy",
+      "url": "/occupancy",
+      "width": 390,
+      "client": 390,
+      "scroll": 390,
+      "title": "อัตราการครองเตียง",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "occupancy",
+      "url": "/occupancy",
+      "width": 768,
+      "client": 768,
+      "scroll": 768,
+      "title": "อัตราการครองเตียง",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 80
+      },
+      "tables": [
+        {
+          "client": 588,
+          "scroll": 1360
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "occupancy",
+      "url": "/occupancy",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "อัตราการครองเตียง",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 676,
+          "scroll": 1360
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "occupancy",
+      "url": "/occupancy",
+      "width": 1280,
+      "client": 1280,
+      "scroll": 1280,
+      "title": "อัตราการครองเตียง",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 932,
+          "scroll": 1360
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "occupancy",
+      "url": "/occupancy",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "อัตราการครองเตียง",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 1092,
+          "scroll": 1360
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "occupancy",
+      "url": "/occupancy",
+      "width": 1920,
+      "client": 1920,
+      "scroll": 1920,
+      "title": "อัตราการครองเตียง",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 1500,
+          "scroll": 1500
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "occupancy",
+      "url": "/occupancy",
+      "landscape": true,
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "อัตราการครองเตียง",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 676,
+          "scroll": 1360
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "login",
+      "url": "/login",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "title": "ระบบบันทึกข้อมูลผู้ป่วยใน",
+      "isoDates": [],
+      "technical": [
+        "session",
+        "cookie",
+        "API"
+      ],
+      "contrastFailures": [],
+      "borderFailures": [
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        }
+      ],
+      "smallControls": [
+        {
+          "tag": "BUTTON",
+          "name": "",
+          "text": "เข้าสู่ระบบ",
+          "height": 42
+        }
+      ],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": false,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "login",
+      "url": "/login",
+      "width": 390,
+      "client": 390,
+      "scroll": 390,
+      "title": "ระบบบันทึกข้อมูลผู้ป่วยใน",
+      "isoDates": [],
+      "technical": [
+        "session",
+        "cookie",
+        "API"
+      ],
+      "contrastFailures": [],
+      "borderFailures": [
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        }
+      ],
+      "smallControls": [
+        {
+          "tag": "BUTTON",
+          "name": "",
+          "text": "เข้าสู่ระบบ",
+          "height": 42
+        }
+      ],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": false,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "login",
+      "url": "/login",
+      "width": 768,
+      "client": 768,
+      "scroll": 768,
+      "title": "ระบบบันทึกข้อมูลผู้ป่วยใน",
+      "isoDates": [],
+      "technical": [
+        "session",
+        "cookie",
+        "API"
+      ],
+      "contrastFailures": [],
+      "borderFailures": [
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        }
+      ],
+      "smallControls": [
+        {
+          "tag": "BUTTON",
+          "name": "",
+          "text": "เข้าสู่ระบบ",
+          "height": 42
+        }
+      ],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": false,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "login",
+      "url": "/login",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "ระบบบันทึกข้อมูลผู้ป่วยใน",
+      "isoDates": [],
+      "technical": [
+        "session",
+        "cookie",
+        "API"
+      ],
+      "contrastFailures": [],
+      "borderFailures": [
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        }
+      ],
+      "smallControls": [
+        {
+          "tag": "BUTTON",
+          "name": "",
+          "text": "เข้าสู่ระบบ",
+          "height": 42
+        }
+      ],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": false,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "login",
+      "url": "/login",
+      "width": 1280,
+      "client": 1280,
+      "scroll": 1280,
+      "title": "ระบบบันทึกข้อมูลผู้ป่วยใน",
+      "isoDates": [],
+      "technical": [
+        "session",
+        "cookie",
+        "API"
+      ],
+      "contrastFailures": [],
+      "borderFailures": [
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        }
+      ],
+      "smallControls": [
+        {
+          "tag": "BUTTON",
+          "name": "",
+          "text": "เข้าสู่ระบบ",
+          "height": 42
+        }
+      ],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": false,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "login",
+      "url": "/login",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "ระบบบันทึกข้อมูลผู้ป่วยใน",
+      "isoDates": [],
+      "technical": [
+        "session",
+        "cookie",
+        "API"
+      ],
+      "contrastFailures": [],
+      "borderFailures": [
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        }
+      ],
+      "smallControls": [
+        {
+          "tag": "BUTTON",
+          "name": "",
+          "text": "เข้าสู่ระบบ",
+          "height": 42
+        }
+      ],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": false,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "login",
+      "url": "/login",
+      "width": 1920,
+      "client": 1920,
+      "scroll": 1920,
+      "title": "ระบบบันทึกข้อมูลผู้ป่วยใน",
+      "isoDates": [],
+      "technical": [
+        "session",
+        "cookie",
+        "API"
+      ],
+      "contrastFailures": [],
+      "borderFailures": [
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        }
+      ],
+      "smallControls": [
+        {
+          "tag": "BUTTON",
+          "name": "",
+          "text": "เข้าสู่ระบบ",
+          "height": 42
+        }
+      ],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": false,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "login",
+      "url": "/login",
+      "landscape": true,
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "ระบบบันทึกข้อมูลผู้ป่วยใน",
+      "isoDates": [],
+      "technical": [
+        "session",
+        "cookie",
+        "API"
+      ],
+      "contrastFailures": [],
+      "borderFailures": [
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        }
+      ],
+      "smallControls": [
+        {
+          "tag": "BUTTON",
+          "name": "",
+          "text": "เข้าสู่ระบบ",
+          "height": 42
+        }
+      ],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": false,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    }
+  ],
+  "states": [
+    {
+      "name": "home",
+      "phase": "loading",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "กำลังโหลดหอผู้ป่วย",
+        "กำลังโหลดข่าวประกาศ"
+      ]
+    },
+    {
+      "name": "entry",
+      "phase": "loading",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "บันทึกข้อมูลประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "กำลังเปิดแบบฟอร์ม"
+      ]
+    },
+    {
+      "name": "history",
+      "phase": "loading",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "ตรวจสอบและยืนยันข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "กำลังโหลดรายการข้อมูล"
+      ]
+    },
+    {
+      "name": "pending",
+      "phase": "loading",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "รอยืนยันการส่งข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "กำลังโหลดรายการข้อมูล"
+      ]
+    },
+    {
+      "name": "indicators",
+      "phase": "loading",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "ตัวชี้วัดเสริม",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "กำลังโหลดข้อมูล",
+        "กำลังโหลดข้อมูล"
+      ]
+    },
+    {
+      "name": "reports",
+      "phase": "loading",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "รายงานประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "กำลังโหลดรายงาน"
+      ]
+    },
+    {
+      "name": "occupancy",
+      "phase": "loading",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "อัตราการครองเตียง",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "กำลังโหลดรายงาน"
+      ]
+    },
+    {
+      "name": "home",
+      "phase": "empty",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "กำลังโหลดหอผู้ป่วย",
+        "ยังไม่มีข่าวประกาศ"
+      ],
+      "emptySemantics": "หน้าแรก\n\nภาพรวมประจำวันและงานที่รอดำเนินการ\n\nกำลังโหลดสถานะรายเวร\nกำลังโหลดข้อมูล\nกำลังโหลดข้อมูล\nกำลังโหลดข้อมูล\nกำลังโหลดข้อมูล\nกำลังโหลดข้อมูล\nข่าวประกาศ\n\nข่าวสารสำหรับหอผู้ป่วย\n\nเพิ่มข่าว\nยังไม่มีข่าวประกาศ\n\nข่าวสารใหม่จะแสดงที่นี่เมื่อมีการเผยแพร่"
+    },
+    {
+      "name": "entry",
+      "phase": "empty",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "บันทึกข้อมูลประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [],
+      "emptySemantics": "บันทึกข้อมูลประจำวัน\nหอผู้ป่วย *\nจำเป็น\nเลือกหอผู้ป่วย\nหอผู้ป่วยตัวอย่าง 01 ชื่อยาวสำหรับตรวจตาราง (E0)\nหอผู้ป่วยตัวอย่าง 02 ชื่อยาวสำหรับตรวจตาราง (E1)\nหอผู้ป่วยตัวอย่าง 03 ชื่อยาวสำหรับตรวจตาราง (E2)\nหอผู้ป่วยตัวอย่าง 04 ชื่อยาวสำหรับตรวจตาราง (E3)\nหอผู้ป่วยตัวอย่าง 05 ชื่อยาวสำหรับตรวจตาราง (E4)\nหอผู้ป่วยตัวอย่าง 06 ชื่อยาวสำหรับตรวจตาราง (E5)\nหอผู้ป่วยตัวอย่าง 07 ชื่อยาวสำหรับตรวจตาราง (E6)\nหอผู้ป่วยตัวอย่าง 08 ชื่อยาวสำหรับตรวจตาราง (E7)\nหอผู้ป่วยตัวอย่าง 09 ชื่อยาวสำหรับตรวจตาราง (E8)\nหอผู้ป่วยตัวอย่าง 10 ชื่อยาวสำหรับตรวจตาราง (E9)\nหอผู้ป่วยตัวอย่าง 11 ชื่อยาวสำหรับตรวจตาราง (E10)\nหอผู้ป่วยตัวอย่าง 12 ชื่อยาวสำหรับตรวจตาราง (E11)\nหอผู้ป่วยตัวอย่าง 13 ชื่อยาวสำหรับตรวจตาราง (E12)\nหอผู้ป่วยตัวอย่าง 14 ชื่อยาวสำหรับตรวจตาราง (E13)\nหอผู้ป่วยตัวอย่าง 15 ชื่อยาวสำหรับตรวจตาราง (E14)\nหอผู้ป่วยตัวอย่าง 16 ชื่อยาวสำหรับตรวจตาราง (E15)\nหอผู้ป่วยตัวอย่าง 17 ชื่อยาวสำหรับตรวจตาราง (E16)\nหอผู้ป่วยตัวอย่าง 18 ชื่อยาวสำหรับตรวจตาราง (E17)\nหอผู้ป่วยตัวอย่าง 19 ชื่อยาวสำหรับตรวจตาราง (E18)\nหอผู้ป่วยตัวอย่าง 20 ชื่อยาวสำหรับตรวจตาราง (E19)\nหอผู้ป่วยตัวอย่าง 21 ชื่อยาวสำหรับตรวจตาราง (E20)\nหอผู้ป่วยตัวอย่าง 22 ชื่อยาวสำหรับตรวจตาราง (E21)\nหอผู้ป่วยตัวอย่าง 23 ชื่อยาวสำหรับตรวจตาราง (E22)\nหอผู้ป่วยตัวอย่าง 24 ชื่อยาวสำหรับตรวจตาราง (E23)\nหอผู้ป่วยตัวอย่าง 25 ชื่อยาวสำหรับตรวจตาราง (E24)\nหอผู้ป่วยตัวอย่าง 26 ชื่อยาวสำหรับตรวจตาราง (E25)\nหอผู้ป่วยตัวอย่าง 27 ชื่อยาวสำหรับตรวจตาราง (E26)\nหอผู้ป่วยตัวอย่าง 28 ชื่อยาวสำหรับตรวจตาราง (E27)\nหอผู้ป่วยตัวอย่าง 29 ชื่อยาวสำหรับตรวจตาราง (E28)\nหอผู้ป่วยตัวอย่าง 30 ชื่อยาวสำหรับตรวจตาราง (E29)\nหอผู้ป่วยตัวอย่าง 31 ชื่อยาวสำหรับตรวจตาราง (E30)\nหอผู้ป่วยตัวอย่าง 32 ชื่อยาวสำหรับตรวจตาราง (E31)\nหอผู้ป่วยตัวอย่าง 33 ชื่อยาวสำหรับตรวจตาราง (E32)\nหอผู้ป่วยตัวอย่าง 34 ชื่อยาวสำหรับตรวจตาราง (E33)\nวันที่ *\nจำเป็น\nวันนี้\nเมื่อวาน\nเวร *\nบ่าย\nดึก\nเช้า\nเปิดแบบฟอร์ม\n\nเลือกหอผู้ป่วย วันที่ และเวรก่อนเปิดแบบฟอร์ม\n\nช่องนี้มีการแก้ไขที่ยังไม่บันทึก\nกรอกจำนวนเต็มตั้งแต่ศูนย์ จำนวนเตียงต้องอย่างน้อยหนึ่ง ตรวจจำนวนสูงสุดตามช่องกรอก\nหอผู้ป่วยตัวอย่าง 01 ชื่อยาวสำหรับตรวจตาราง · เวรบ่าย\n\n19 พฤศจิกายน 2569\n\nยังไม่บันทึก\nสร้างใหม่\nยอดคงเหลือเวรนี้\n\nยกมา + รับใหม่ + รับย้าย − การจำหน่ายทั้ง 5 ทาง · ไม่รวม A&D\n\nPT\n10\nNB\n0\nรวมประเภทผู้ป่วย\n0\nจำนวนเตียง\n30\nควรตรวจสอบ 1 จุด · ยังบันทึกได้\nผลรวมประเภทผู้ป่วยต่างจากยอดคงเหลือ PT กรุณาตรวจสอบไปตรวจสอบ\nอย่าลืมบันทึกข้อมูลแผลกดทับของวันนี้\n\nกรอกในส่วนแผลกดทับด้านล่าง ข้อมูลนี้ใช้ร่วมกับหน้าตัวชี้วัดเสริม\n\nไปหน้าตัวชี้วัดเสริม\nคำอธิบายช่องข้อมูล\nยอดผู้ป่วยยกมา\nPT 10\nNB 0\nยกมา\nPT\nNB\nการรับ\nPT 0\nNB 0\nรับใหม่\nPT\nNB\nรับย้าย\nPT\nNB\nการจำหน่าย\nPT 0\nNB 0\nกลับบ้าน\nPT\nNB\nย้ายตึก\nPT\nNB\nส่งต่อ\nPT\nNB\nตาย\nPT\nNB\nไม่สมัครใจอยู่\nPT\nNB\nรับและจำหน่ายในวันเดียวกัน (A&D)\nPT 0\nNB 0\nจำนวนผู้ป่วย\nPT\nNB\nประเภทผู้ป่วย\nประเภท 5\nประเภท 4\nประเภท 3\nประเภท 2\nประเภท 1\nจำนวนเตียง\nจำนวนเตียง\nเจ้าหน้าที่ปฏิบัติงาน\nHN\nRN\nTN\nPN\nAID\n8\nการให้บริการผู้ป่วยในแต่ละสาขา\nเฉพาะเวรบ่าย\n\nแยกห้องสามัญและห้องพิเศษตามรหัสสาขาในแบบรายงาน\n\nวันนอนผู้ป่วย\nPT 10\nNB 0\n\nOBS\nสามัญ\nพิเศษ\nNB\nสามัญ\nพิเศษ\nGYN\nสามัญ\nพิเศษ\nSURG\nสามัญ\nพิเศษ\nMED\nสามัญ\nพิเศษ\nPSYCH\nสามัญ\nพิเศษ\nSKIN\nสามัญ\nพิเศษ\nPED\nสามัญ\nพิเศษ\nORTHO\nสามัญ\nพิเศษ\nEYE\nสามัญ\nพิเศษ\nENT\nสามัญ\nพิเศษ\nDENT\nสามัญ\nพิเศษ\nNEURO SURG\nสามัญ\nพิเศษ\n9\nแผลกดทับประจำวัน\nเฉพาะเวรบ่าย\nจำนวนครั้งระดับ 2–4\nวันนอนรวมของผู้ป่วยเสี่ยง\n10\nข้อมูลรายเดือน (ใช้ร่วมกันทั้งเดือน)\nพฤศจิกายน 2569 · ยังไม่มีข้อมูลเดือนนี้\n\nคงเหลือ PT 10\nNB 0\n1 ข้อควรตรวจสอบ\n\nตรวจสอบข้อมูลก่อนบันทึก\n\nบันทึกข้อมูล"
+    },
+    {
+      "name": "history",
+      "phase": "empty",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "ตรวจสอบและยืนยันข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "ไม่พบรายการในช่วงที่เลือก"
+      ],
+      "emptySemantics": "ตรวจสอบและยืนยันข้อมูล\n\nค้นหา ดูรายละเอียด และแก้ไขข้อมูลด้วยแบบฟอร์มประจำวันเดิม\n\nหอผู้ป่วย\nทุกหอที่มีสิทธิ์\nหอผู้ป่วยตัวอย่าง 01 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 02 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 03 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 04 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 05 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 06 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 07 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 08 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 09 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 10 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 11 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 12 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 13 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 14 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 15 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 16 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 17 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 18 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 19 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 20 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 21 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 22 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 23 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 24 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 25 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 26 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 27 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 28 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 29 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 30 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 31 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 32 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 33 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 34 ชื่อยาวสำหรับตรวจตาราง\nช่วงวันที่\n1 พ.ย. 2569 – 20 พ.ย. 2569\nสถานะข้อมูล\nทั้งหมด\nรอยืนยัน\nยืนยันแล้ว\nค้นหารายการ\nล้างตัวกรอง\n1 พ.ย. 2569 – 20 พ.ย. 2569\n\nจำนวนเฉพาะ 0 รายการในหน้านี้\n\nทั้งหมด (0)\nรอยืนยัน (0)\nยืนยันแล้ว (0)\nตรวจเวรที่ยังไม่บันทึกในหน้าแรก\nผลการค้นหา\n\nหน้า 1 · แสดง 0 รายการ\n\nไม่พบรายการในช่วงที่เลือก\n\nลองล้างตัวกรองหรือเปลี่ยนช่วงวันที่\n\nล้างตัวกรอง\nดู 30 วันล่าสุด\nไปบันทึกข้อมูล"
+    },
+    {
+      "name": "pending",
+      "phase": "empty",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "รอยืนยันการส่งข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "ไม่มีรายการรอยืนยัน"
+      ],
+      "emptySemantics": "รอยืนยันการส่งข้อมูล\n\nตรวจข้อมูลที่บันทึกแล้วและรอการยืนยัน แยกตามวันที่\n\nหอผู้ป่วย\nทุกหอที่มีสิทธิ์\nหอผู้ป่วยตัวอย่าง 01 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 02 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 03 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 04 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 05 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 06 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 07 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 08 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 09 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 10 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 11 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 12 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 13 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 14 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 15 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 16 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 17 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 18 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 19 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 20 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 21 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 22 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 23 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 24 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 25 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 26 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 27 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 28 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 29 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 30 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 31 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 32 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 33 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 34 ชื่อยาวสำหรับตรวจตาราง\nช่วงวันที่\nทุกช่วงวัน\nสถานะข้อมูล\nทั้งหมด\nรอยืนยัน\nยืนยันแล้ว\nค้นหารายการ\nล้างตัวกรอง\nรอยืนยัน\n\nจำนวนเฉพาะ 0 รายการในหน้านี้\n\nทั้งหมด (0)\nรอยืนยัน (0)\nยืนยันแล้ว (0)\nตรวจเวรที่ยังไม่บันทึกในหน้าแรก\nผลการค้นหา\n\nหน้า 1 · แสดง 0 รายการ\n\nไม่มีรายการรอยืนยัน\n\nไม่พบข้อมูลรอยืนยันตามตัวกรองนี้ ตรวจสอบช่วงวันหรือเริ่มบันทึกข้อมูลประจำวันได้\n\nล้างตัวกรอง\nไปบันทึกข้อมูล"
+    },
+    {
+      "name": "indicators",
+      "phase": "empty",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "ตัวชี้วัดเสริม",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "ยังไม่มีข้อมูล\nช่องกรอกเริ่มต้นเป็น 0",
+        "ยังไม่มีข้อมูล\nช่องกรอกเริ่มต้นเป็น 0"
+      ],
+      "emptySemantics": "ตัวชี้วัดเสริม\n\nบันทึกข้อมูลแผลกดทับ (รายวัน) และการกลับมารักษาซ้ำ (รายเดือน) ของหอผู้ป่วย\n\nหอผู้ป่วยสำหรับตัวชี้วัด *\nจำเป็น\nเลือกหอผู้ป่วย\nหอผู้ป่วยตัวอย่าง 01 ชื่อยาวสำหรับตรวจตาราง (E0)\nหอผู้ป่วยตัวอย่าง 02 ชื่อยาวสำหรับตรวจตาราง (E1)\nหอผู้ป่วยตัวอย่าง 03 ชื่อยาวสำหรับตรวจตาราง (E2)\nหอผู้ป่วยตัวอย่าง 04 ชื่อยาวสำหรับตรวจตาราง (E3)\nหอผู้ป่วยตัวอย่าง 05 ชื่อยาวสำหรับตรวจตาราง (E4)\nหอผู้ป่วยตัวอย่าง 06 ชื่อยาวสำหรับตรวจตาราง (E5)\nหอผู้ป่วยตัวอย่าง 07 ชื่อยาวสำหรับตรวจตาราง (E6)\nหอผู้ป่วยตัวอย่าง 08 ชื่อยาวสำหรับตรวจตาราง (E7)\nหอผู้ป่วยตัวอย่าง 09 ชื่อยาวสำหรับตรวจตาราง (E8)\nหอผู้ป่วยตัวอย่าง 10 ชื่อยาวสำหรับตรวจตาราง (E9)\nหอผู้ป่วยตัวอย่าง 11 ชื่อยาวสำหรับตรวจตาราง (E10)\nหอผู้ป่วยตัวอย่าง 12 ชื่อยาวสำหรับตรวจตาราง (E11)\nหอผู้ป่วยตัวอย่าง 13 ชื่อยาวสำหรับตรวจตาราง (E12)\nหอผู้ป่วยตัวอย่าง 14 ชื่อยาวสำหรับตรวจตาราง (E13)\nหอผู้ป่วยตัวอย่าง 15 ชื่อยาวสำหรับตรวจตาราง (E14)\nหอผู้ป่วยตัวอย่าง 16 ชื่อยาวสำหรับตรวจตาราง (E15)\nหอผู้ป่วยตัวอย่าง 17 ชื่อยาวสำหรับตรวจตาราง (E16)\nหอผู้ป่วยตัวอย่าง 18 ชื่อยาวสำหรับตรวจตาราง (E17)\nหอผู้ป่วยตัวอย่าง 19 ชื่อยาวสำหรับตรวจตาราง (E18)\nหอผู้ป่วยตัวอย่าง 20 ชื่อยาวสำหรับตรวจตาราง (E19)\nหอผู้ป่วยตัวอย่าง 21 ชื่อยาวสำหรับตรวจตาราง (E20)\nหอผู้ป่วยตัวอย่าง 22 ชื่อยาวสำหรับตรวจตาราง (E21)\nหอผู้ป่วยตัวอย่าง 23 ชื่อยาวสำหรับตรวจตาราง (E22)\nหอผู้ป่วยตัวอย่าง 24 ชื่อยาวสำหรับตรวจตาราง (E23)\nหอผู้ป่วยตัวอย่าง 25 ชื่อยาวสำหรับตรวจตาราง (E24)\nหอผู้ป่วยตัวอย่าง 26 ชื่อยาวสำหรับตรวจตาราง (E25)\nหอผู้ป่วยตัวอย่าง 27 ชื่อยาวสำหรับตรวจตาราง (E26)\nหอผู้ป่วยตัวอย่าง 28 ชื่อยาวสำหรับตรวจตาราง (E27)\nหอผู้ป่วยตัวอย่าง 29 ชื่อยาวสำหรับตรวจตาราง (E28)\nหอผู้ป่วยตัวอย่าง 30 ชื่อยาวสำหรับตรวจตาราง (E29)\nหอผู้ป่วยตัวอย่าง 31 ชื่อยาวสำหรับตรวจตาราง (E30)\nหอผู้ป่วยตัวอย่าง 32 ชื่อยาวสำหรับตรวจตาราง (E31)\nหอผู้ป่วยตัวอย่าง 33 ชื่อยาวสำหรับตรวจตาราง (E32)\nหอผู้ป่วยตัวอย่าง 34 ชื่อยาวสำหรับตรวจตาราง (E33)\n\nหอผู้ป่วยเดียวกันสำหรับทั้งสองส่วน เลือกวันและเดือนแยกกันในแต่ละการ์ด\n\nแผลกดทับ\nรายวัน\nวันที่ข้อมูลแผลกดทับ *\nจำเป็น\n\nพิมพ์ วัน/เดือน/ปี พ.ศ. หรือ ค.ศ.\n\nวันนี้\nเมื่อวาน\nบันทึกคู่กับเวรบ่าย\nแก้ไขได้จนกว่าจะยืนยันเวร ข้อมูลเดียวกับหน้าบันทึกข้อมูลประจำวัน\nยังไม่มีข้อมูล\nช่องกรอกเริ่มต้นเป็น 0\nยังไม่พบเวรบ่ายที่บันทึกไว้\nจำนวนครั้งระดับ 2–4 *\nจำเป็น\n\nจำนวนครั้งที่พบแผลกดทับระดับ 2–4\n\nวันนอนผู้ป่วยเสี่ยง *\nจำเป็น\n\nวันนอนรวมของผู้ป่วยกลุ่มเสี่ยง\n\nบันทึกข้อมูลรายวัน\n\nบันทึกข้อมูลเวรบ่ายของวันที่เลือกก่อน จึงจะบันทึกแผลกดทับได้\n\nเปิดแบบฟอร์มเวรบ่ายของวันที่เลือก\nการกลับมารักษาซ้ำ\nรายเดือน\nเดือนรายงานการกลับมารักษาซ้ำ *\nจำเป็น\nใช้ร่วมกันทั้งเดือนของหอผู้ป่วย\nการแก้ไขมีผลต่อข้อมูลเดือนเดียวกันในหน้าบันทึกข้อมูลประจำวัน\nยังไม่มีข้อมูล\nช่องกรอกเริ่มต้นเป็น 0\nกลับมารักษาซ้ำด้วยโรคหรืออาการเดิมภายใน 28 วันหลังจำหน่าย *\nจำเป็น\n\nผู้ป่วยที่กลับมารักษาซ้ำด้วยโรคเดิมภายใน 28 วันหลังจำหน่าย\n\nจำนวนผู้ป่วยที่จำหน่ายทั้งหมดในตุลาคม 2569 *\nจำเป็น\n\nยอดจำหน่ายของเดือนก่อนเดือนรายงานที่เลือก\n\nบันทึกข้อมูลรายเดือน\n\nตรวจสอบตัวเลขให้ครบก่อนบันทึก"
+    },
+    {
+      "name": "reports",
+      "phase": "empty",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "รายงานประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "ไม่พบข้อมูลในช่วงที่เลือก"
+      ],
+      "emptySemantics": "รายงาน\nรายงานประจำวัน\nรายงานประจำวัน\n\nเลือกเงื่อนไขเพื่อตรวจรายงาน พิมพ์ หรือส่งออกข้อมูล\n\nประเภทรายงาน\nรายงานประจำวัน\nรายงานประจำวันรวมทุกตึก\nรายงานประจำเดือน\nยอดคงพยาบาลประจำวัน\nยอดคงพยาบาลประจำเดือน\nอัตราหมุนเวียนเตียง\nระยะเวลานอนเฉลี่ย (LOS)\nอัตราการครองเตียง\nผลผลิตทางการพยาบาล (Productivity)\nแยกผู้ป่วยตามสาขา\nการผสมผสานอัตรากำลัง (%)\nจำนวนชั่วโมงการพยาบาลต่อวันนอน\nอัตราการเกิดแผลกดทับต่อ 1,000 วันนอนเสี่ยง\nรายละเอียดแผลกดทับรายวัน\nอัตราการกลับมารักษาซ้ำภายใน 28 วัน (%)\nประจำวันที่ *\nจำเป็น\n\nพิมพ์ วัน/เดือน/ปี พ.ศ. หรือ ค.ศ.\n\nวันนี้\nเมื่อวาน\nหอผู้ป่วยในรายงาน\nทุกหอที่มีสิทธิ์\nหอผู้ป่วยตัวอย่าง 01 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 02 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 03 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 04 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 05 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 06 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 07 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 08 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 09 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 10 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 11 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 12 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 13 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 14 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 15 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 16 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 17 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 18 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 19 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 20 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 21 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 22 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 23 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 24 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 25 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 26 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 27 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 28 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 29 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 30 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 31 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 32 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 33 ชื่อยาวสำหรับตรวจตาราง\nหอผู้ป่วยตัวอย่าง 34 ชื่อยาวสำหรับตรวจตาราง\nสถานะข้อมูล\nทั้งหมด\nยืนยันแล้ว\nรอยืนยัน\nแสดงรายงาน\nล้างตัวกรอง\n20 พฤศจิกายน 2569\nทุกหอที่มีสิทธิ์\nสถานะข้อมูล: ทั้งหมด\nรายงานประจำวัน\n\n20 พฤศจิกายน 2569 · ทุกหอที่มีสิทธิ์\n\nสถานะข้อมูล: ทั้งหมด\n\nเรียกดูข้อมูล ณ 20 พฤศจิกายน 2569 10:00 น.\n\nพิมพ์\nส่งออก Excel\n\nไม่มีข้อมูลสำหรับพิมพ์หรือส่งออก เลือกวันหรือช่วงอื่น\n\nไม่พบข้อมูลในช่วงที่เลือก\n\nลองเปลี่ยนวัน ช่วงข้อมูล หรือสถานะข้อมูล แล้วกดแสดงรายงานอีกครั้ง\n\nส่งออกเป็น Excel XML (.xml) เปิดด้วยโปรแกรม Excel ได้ ตัวเลขคงค่าจากรายงาน"
+    },
+    {
+      "name": "occupancy",
+      "phase": "empty",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "อัตราการครองเตียง",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "ไม่พบข้อมูลในช่วงที่เลือก"
+      ],
+      "emptySemantics": "รายงาน\nอัตราการครองเตียง\nอัตราการครองเตียง\n\nเลือกเงื่อนไขเพื่อตรวจรายงาน พิมพ์ หรือส่งออกข้อมูล\n\nประเภทรายงาน\nรายงานประจำวัน\nรายงานประจำวันรวมทุกตึก\nรายงานประจำเดือน\nยอดคงพยาบาลประจำวัน\nยอดคงพยาบาลประจำเดือน\nอัตราหมุนเวียนเตียง\nระยะเวลานอนเฉลี่ย (LOS)\nอัตราการครองเตียง\nผลผลิตทางการพยาบาล (Productivity)\nแยกผู้ป่วยตามสาขา\nการผสมผสานอัตรากำลัง (%)\nจำนวนชั่วโมงการพยาบาลต่อวันนอน\nอัตราการเกิดแผลกดทับต่อ 1,000 วันนอนเสี่ยง\nรายละเอียดแผลกดทับรายวัน\nอัตราการกลับมารักษาซ้ำภายใน 28 วัน (%)\nปีงบประมาณ *\nจำเป็น\nปีงบประมาณ 3543 (ตุลาคม 3542 – กันยายน 3543)\nปีงบประมาณ 3542 (ตุลาคม 3541 – กันยายน 3542)\nปีงบประมาณ 3541 (ตุลาคม 3540 – กันยายน 3541)\nปีงบประมาณ 3540 (ตุลาคม 3539 – กันยายน 3540)\nปีงบประมาณ 3539 (ตุลาคม 3538 – กันยายน 3539)\nปีงบประมาณ 3538 (ตุลาคม 3537 – กันยายน 3538)\nปีงบประมาณ 3537 (ตุลาคม 3536 – กันยายน 3537)\nปีงบประมาณ 3536 (ตุลาคม 3535 – กันยายน 3536)\nปีงบประมาณ 3535 (ตุลาคม 3534 – กันยายน 3535)\nปีงบประมาณ 3534 (ตุลาคม 3533 – กันยายน 3534)\nปีงบประมาณ 3533 (ตุลาคม 3532 – กันยายน 3533)\nปีงบประมาณ 3532 (ตุลาคม 3531 – กันยายน 3532)\nปีงบประมาณ 3531 (ตุลาคม 3530 – กันยายน 3531)\nปีงบประมาณ 3530 (ตุลาคม 3529 – กันยายน 3530)\nปีงบประมาณ 3529 (ตุลาคม 3528 – กันยายน 3529)\nปีงบประมาณ 3528 (ตุลาคม 3527 – กันยายน 3528)\nปีงบประมาณ 3527 (ตุลาคม 3526 – กันยายน 3527)\nปีงบประมาณ 3526 (ตุลาคม 3525 – กันยายน 3526)\nปีงบประมาณ 3525 (ตุลาคม 3524 – กันยายน 3525)\nปีงบประมาณ 3524 (ตุลาคม 3523 – กันยายน 3524)\nปีงบประมาณ 3523 (ตุลาคม 3522 – กันยายน 3523)\nปีงบประมาณ 3522 (ตุลาคม 3521 – กันยายน 3522)\nปีงบประมาณ 3521 (ตุลาคม 3520 – กันยายน 3521)\nปีงบประมาณ 3520 (ตุลาคม 3519 – กันยายน 3520)\nปีงบประมาณ 3519 (ตุลาคม 3518 – กันยายน 3519)\nปีงบประมาณ 3518 (ตุลาคม 3517 – กันยายน 3518)\nปีงบประมาณ 3517 (ตุลาคม 3516 – กันยายน 3517)\nปีงบประมาณ 3516 (ตุลาคม 3515 – กันยายน 3516)\nปีงบประมาณ 3515 (ตุลาคม 3514 – กันยายน 3515)\nปีงบประมาณ 3514 (ตุลาคม 3513 – กันยายน 3514)\nปีงบประมาณ 3513 (ตุลาคม 3512 – กันยายน 3513)\nปีงบประมาณ 3512 (ตุลาคม 3511 – กันยายน 3512)\nปีงบประมาณ 3511 (ตุลาคม 3510 – กันยายน 3511)\nปีงบประมาณ 3510 (ตุลาคม 3509 – กันยายน 3510)\nปีงบประมาณ 3509 (ตุลาคม 3508 – กันยายน 3509)\nปีงบประมาณ 3508 (ตุลาคม 3507 – กันยายน 3508)\nปีงบประมาณ 3507 (ตุลาคม 3506 – กันยายน 3507)\nปีงบประมาณ 3506 (ตุลาคม 3505 – กันยายน 3506)\nปีงบประมาณ 3505 (ตุลาคม 3504 – กันยายน 3505)\nปีงบประมาณ 3504 (ตุลาคม 3503 – กันยายน 3504)\nปีงบประมาณ 3503 (ตุลาคม 3502 – กันยายน 3503)\nปีงบประมาณ 3502 (ตุลาคม 3501 – กันยายน 3502)\nปีงบประมาณ 3501 (ตุลาคม 3500 – กันยายน 3501)\nปีงบประมาณ 3500 (ตุลาคม 3499 – กันยายน 3500)\nปีงบประมาณ 3499 (ตุลาคม 3498 – กันยายน 3499)\nปีงบประมาณ 3498 (ตุลาคม 3497 – กันยายน 3498)\nปีงบประมาณ 3497 (ตุลาคม 3496 – กันยายน 3497)\nปีงบประมาณ 3496 (ตุลาคม 3495 – กันยายน 3496)\nปีงบประมาณ 3495 (ตุลาคม 3494 – กันยายน 3495)\nปีงบประมาณ 3494 (ตุลาคม 3493 – กันยายน 3494)\nปีงบประมาณ 3493 (ตุลาคม 3492 – กันยายน 3493)\nปีงบประมาณ 3492 (ตุลาคม 3491 – กันยายน 3492)\nปีงบประมาณ 3491 (ตุลาคม 3490 – กันยายน 3491)\nปีงบประมาณ 3490 (ตุลาคม 3489 – กันยายน 3490)\nปีงบประมาณ 3489 (ตุลาคม 3488 – กันยายน 3489)\nปีงบประมาณ 3488 (ตุลาคม 3487 – กันยายน 3488)\nปีงบประมาณ 3487 (ตุลาคม 3486 – กันยายน 3487)\nปีงบประมาณ 3486 (ตุลาคม 3485 – กันยายน 3486)\nปีงบประมาณ 3485 (ตุลาคม 3484 – กันยายน 3485)\nปีงบประมาณ 3484 (ตุลาคม 3483 – กันยายน 3484)\nปีงบประมาณ 3483 (ตุลาคม 3482 – กันยายน 3483)\nปีงบประมาณ 3482 (ตุลาคม 3481 – กันยายน 3482)\nปีงบประมาณ 3481 (ตุลาคม 3480 – กันยายน 3481)\nปีงบประมาณ 3480 (ตุลาคม 3479 – กันยายน 3480)\nปีงบประมาณ 3479 (ตุลาคม 3478 – กันยายน 3479)\nปีงบประมาณ 3478 (ตุลาคม 3477 – กันยายน 3478)\nปีงบประมาณ 3477 (ตุลาคม 3476 – กันยายน 3477)\nปีงบประมาณ 3476 (ตุลาคม 3475 – กันยายน 3476)\nปีงบประมาณ 3475 (ตุลาคม 3474 – กันยายน 3475)\nปีงบประมาณ 3474 (ตุลาคม 3473 – กันยายน 3474)\nปีงบประมาณ 3473 (ตุลาคม 3472 – กันยายน 3473)\nปีงบประมาณ 3472 (ตุลาคม 3471 – กันยายน 3472)\nปีงบประมาณ 3471 (ตุลาคม 3470 – กันยายน 3471)\nปีงบประมาณ 3470 (ตุลาคม 3469 – กันยายน 3470)\nปีงบประมาณ 3469 (ตุลาคม 3468 – กันยายน 3469)\nปีงบประมาณ 3468 (ตุลาคม 3467 – กันยายน 3468)\nปีงบประมาณ 3467 (ตุลาคม 3466 – กันยายน 3467)\nปีงบประมาณ 3466 (ตุลาคม 3465 – กันยายน 3466)\nปีงบประมาณ 3465 (ตุลาคม 3464 – กันยายน 3465)\nปีงบประมาณ 3464 (ตุลาคม 3463 – กันยายน 3464)\nปีงบประมาณ 3463 (ตุลาคม 3462 – กันยายน 3463)\nปีงบประมาณ 3462 (ตุลาคม 3461 – กันยายน 3462)\nปีงบประมาณ 3461 (ตุลาคม 3460 – กันยายน 3461)\nปีงบประมาณ 3460 (ตุลาคม 3459 – กันยายน 3460)\nปีงบประมาณ 3459 (ตุลาคม 3458 – กันยายน 3459)\nปีงบประมาณ 3458 (ตุลาคม 3457 – กันยายน 3458)\nปีงบประมาณ 3457 (ตุลาคม 3456 – กันยายน 3457)\nปีงบประมาณ 3456 (ตุลาคม 3455 – กันยายน 3456)\nปีงบประมาณ 3455 (ตุลาคม 3454 – กันยายน 3455)\nปีงบประมาณ 3454 (ตุลาคม 3453 – กันยายน 3454)\nปีงบประมาณ 3453 (ตุลาคม 3452 – กันยายน 3453)\nปีงบประมาณ 3452 (ตุลาคม 3451 – กันยายน 3452)\nปีงบประมาณ 3451 (ตุลาคม 3450 – กันยายน 3451)\nปีงบประมาณ 3450 (ตุลาคม 3449 – กันยายน 3450)\nปีงบประมาณ 3449 (ตุลาคม 3448 – กันยายน 3449)\nปีงบประมาณ 3448 (ตุลาคม 3447 – กันยายน 3448)\nปีงบประมาณ 3447 (ตุลาคม 3446 – กันยายน 3447)\nปีงบประมาณ 3446 (ตุลาคม 3445 – กันยายน 3446)\nปีงบประมาณ 3445 (ตุลาคม 3444 – กันยายน 3445)\nปีงบประมาณ 3444 (ตุลาคม 3443 – กันยายน 3444)\nปีงบประมาณ 3443 (ตุลาคม 3442 – กันยายน 3443)\nปีงบประมาณ 3442 (ตุลาคม 3441 – กันยายน 3442)\nปีงบประมาณ 3441 (ตุลาคม 3440 – กันยายน 3441)\nปีงบประมาณ 3440 (ตุลาคม 3439 – กันยายน 3440)\nปีงบประมาณ 3439 (ตุลาคม 3438 – กันยายน 3439)\nปีงบประมาณ 3438 (ตุลาคม 3437 – กันยายน 3438)\nปีงบประมาณ 3437 (ตุลาคม 3436 – กันยายน 3437)\nปีงบประมาณ 3436 (ตุลาคม 3435 – กันยายน 3436)\nปีงบประมาณ 3435 (ตุลาคม 3434 – กันยายน 3435)\nปีงบประมาณ 3434 (ตุลาคม 3433 – กันยายน 3434)\nปีงบประมาณ 3433 (ตุลาคม 3432 – กันยายน 3433)\nปีงบประมาณ 3432 (ตุลาคม 3431 – กันยายน 3432)\nปีงบประมาณ 3431 (ตุลาคม 3430 – กันยายน 3431)\nปีงบประมาณ 3430 (ตุลาคม 3429 – กันยายน 3430)\nปีงบประมาณ 3429 (ตุลาคม 3428 – กันยายน 3429)\nปีงบประมาณ 3428 (ตุลาคม 3427 – กันยายน 3428)\nปีงบประมาณ 3427 (ตุลาคม 3426 – กันยายน 3427)\nปีงบประมาณ 3426 (ตุลาคม 3425 – กันยายน 3426)\nปีงบประมาณ 3425 (ตุลาคม 3424 – กันยายน 3425)\nปีงบประมาณ 3424 (ตุลาคม 3423 – กันยายน 3424)\nปีงบประมาณ 3423 (ตุลาคม 3422 – กันยายน 3423)\nปีงบประมาณ 3422 (ตุลาคม 3421 – กันยายน 3422)\nปีงบประมาณ 3421 (ตุลาคม 3420 – กันยายน 3421)\nปีงบประมาณ 3420 (ตุลาคม 3419 – กันยายน 3420)\nปีงบประมาณ 3419 (ตุลาคม 3418 – กันยายน 3419)\nปีงบประมาณ 3418 (ตุลาคม 3417 – กันยายน 3418)\nปีงบประมาณ 3417 (ตุลาคม 3416 – กันยายน 3417)\nปีงบประมาณ 3416 (ตุลาคม 3415 – กันยายน 3416)\nปีงบประมาณ 3415 (ตุลาคม 3414 – กันยายน 3415)\nปีงบประมาณ 3414 (ตุลาคม 3413 – กันยายน 3414)\nปีงบประมาณ 3413 (ตุลาคม 3412 – กันยายน 3413)\nปีงบประมาณ 3412 (ตุลาคม 3411 – กันยายน 3412)\nปีงบประมาณ 3411 (ตุลาคม 3410 – กันยายน 3411)\nปีงบประมาณ 3410 (ตุลาคม 3409 – กันยายน 3410)\nปีงบประมาณ 3409 (ตุลาคม 3408 – กันยายน 3409)\nปีงบประมาณ 3408 (ตุลาคม 3407 – กันยายน 3408)\nปีงบประมาณ 3407 (ตุลาคม 3406 – กันยายน 3407)\nปีงบประมาณ 3406 (ตุลาคม 3405 – กันยายน 3406)\nปีงบประมาณ 3405 (ตุลาคม 3404 – กันยายน 3405)\nปีงบประมาณ 3404 (ตุลาคม 3403 – กันยายน 3404)\nปีงบประมาณ 3403 (ตุลาคม 3402 – กันยายน 3403)\nปีงบประมาณ 3402 (ตุลาคม 3401 – กันยายน 3402)\nปีงบประมาณ 3401 (ตุลาคม 3400 – กันยายน 3401)\nปีงบประมาณ 3400 (ตุลาคม 3399 – กันยายน 3400)\nปีงบประมาณ 3399 (ตุลาคม 3398 – กันยายน 3399)\nปีงบประมาณ 3398 (ตุลาคม 3397 – กันยายน 3398)\nปีงบประมาณ 3397 (ตุลาคม 3396 – กันยายน 3397)\nปีงบประมาณ 3396 (ตุลาคม 3395 – กันยายน 3396)\nปีงบประมาณ 3395 (ตุลาคม 3394 – กันยายน 3395)\nปีงบประมาณ 3394 (ตุลาคม 3393 – กันยายน 3394)\nปีงบประมาณ 3393 (ตุลาคม 3392 – กันยายน 3393)\nปีงบประมาณ 3392 (ตุลาคม 3391 – กันยายน 3392)\nปีงบประมาณ 3391 (ตุลาคม 3390 – กันยายน 3391)\nปีงบประมาณ 3390 (ตุลาคม 3389 – กันยายน 3390)\nปีงบประมาณ 3389 (ตุลาคม 3388 – กันยายน 3389)\nปีงบประมาณ 3388 (ตุลาคม 3387 – กันยายน 3388)\nปีงบประมาณ 3387 (ตุลาคม 3386 – กันยายน 3387)\nปีงบประมาณ 3386 (ตุลาคม 3385 – กันยายน 3386)\nปีงบประมาณ 3385 (ตุลาคม 3384 – กันยายน 3385)\nปีงบประมาณ 3384 (ตุลาคม 3383 – กันยายน 3384)\nปีงบประมาณ 3383 (ตุลาคม 3382 – กันยายน 3383)\nปีงบประมาณ 3382 (ตุลาคม 3381 – กันยายน 3382)\nปีงบประมาณ 3381 (ตุลาคม 3380 – กันยายน 3381)\nปีงบประมาณ 3380 (ตุลาคม 3379 – กันยายน 3380)\nปีงบประมาณ 3379 (ตุลาคม 3378 – กันยายน 3379)\nปีงบประมาณ 3378 (ตุลาคม 3377 – กันยายน 3378)\nปีงบประมาณ 3377 (ตุลาคม 3376 – กันยายน 3377)\nปีงบประมาณ 3376 (ตุลาคม 3375 – กันยายน 3376)\nปีงบประมาณ 3375 (ตุลาคม 3374 – กันยายน 3375)\nปีงบประมาณ 3374 (ตุลาคม 3373 – กันยายน 3374)\nปีงบประมาณ 3373 (ตุลาคม 3372 – กันยายน 3373)\nปีงบประมาณ 3372 (ตุลาคม 3371 – กันยายน 3372)\nปีงบประมาณ 3371 (ตุลาคม 3370 – กันยายน 3371)\nปีงบประมาณ 3370 (ตุลาคม 3369 – กันยายน 3370)\nปีงบประมาณ 3369 (ตุลาคม 3368 – กันยายน 3369)\nปีงบประมาณ 3368 (ตุลาคม 3367 – กันยายน 3368)\nปีงบประมาณ 3367 (ตุลาคม 3366 – กันยายน 3367)\nปีงบประมาณ 3366 (ตุลาคม 3365 – กันยายน 3366)\nปีงบประมาณ 3365 (ตุลาคม 3364 – กันยายน 3365)\nปีงบประมาณ 3364 (ตุลาคม 3363 – กันยายน 3364)\nปีงบประมาณ 3363 (ตุลาคม 3362 – กันยายน 3363)\nปีงบประมาณ 3362 (ตุลาคม 3361 – กันยายน 3362)\nปีงบประมาณ 3361 (ตุลาคม 3360 – กันยายน 3361)\nปีงบประมาณ 3360 (ตุลาคม 3359 – กันยายน 3360)\nปีงบประมาณ 3359 (ตุลาคม 3358 – กันยายน 3359)\nปีงบประมาณ 3358 (ตุลาคม 3357 – กันยายน 3358)\nปีงบประมาณ 3357 (ตุลาคม 3356 – กันยายน 3357)\nปีงบประมาณ 3356 (ตุลาคม 3355 – กันยายน 3356)\nปีงบประมาณ 3355 (ตุลาคม 3354 – กันยายน 3355)\nปีงบประมาณ 3354 (ตุลาคม 3353 – กันยายน 3354)\nปีงบประมาณ 3353 (ตุลาคม 3352 – กันยายน 3353)\nปีงบประมาณ 3352 (ตุลาคม 3351 – กันยายน 3352)\nปีงบประมาณ 3351 (ตุลาคม 3350 – กันยายน 3351)\nปีงบประมาณ 3350 (ตุลาคม 3349 – กันยายน 3350)\nปีงบประมาณ 3349 (ตุลาคม 3348 – กันยายน 3349)\nปีงบประมาณ 3348 (ตุลาคม 3347 – กันยายน 3348)\nปีงบประมาณ 3347 (ตุลาคม 3346 – กันยายน 3347)\nปีงบประมาณ 3346 (ตุลาคม 3345 – กันยายน 3346)\nปีงบประมาณ 3345 (ตุลาคม 3344 – กันยายน 3345)\nปีงบประมาณ 3344 (ตุลาคม 3343 – กันยายน 3344)\nปีงบประมาณ 3343 (ตุลาคม 3342 – กันยายน 3343)\nปีงบประมาณ 3342 (ตุลาคม 3341 – กันยายน 3342)\nปีงบประมาณ 3341 (ตุลาคม 3340 – กันยายน 3341)\nปีงบประมาณ 3340 (ตุลาคม 3339 – กันยายน 3340)\nปีงบประมาณ 3339 (ตุลาคม 3338 – กันยายน 3339)\nปีงบประมาณ 3338 (ตุลาคม 3337 – กันยายน 3338)\nปีงบประมาณ 3337 (ตุลาคม 3336 – กันยายน 3337)\nปีงบประมาณ 3336 (ตุลาคม 3335 – กันยายน 3336)\nปีงบประมาณ 3335 (ตุลาคม 3334 – กันยายน 3335)\nปีงบประมาณ 3334 (ตุลาคม 3333 – กันยายน 3334)\nปีงบประมาณ 3333 (ตุลาคม 3332 – กันยายน 3333)\nปีงบประมาณ 3332 (ตุลาคม 3331 – กันยายน 3332)\nปีงบประมาณ 3331 (ตุลาคม 3330 – กันยายน 3331)\nปีงบประมาณ 3330 (ตุลาคม 3329 – กันยายน 3330)\nปีงบประมาณ 3329 (ตุลาคม 3328 – กันยายน 3329)\nปีงบประมาณ 3328 (ตุลาคม 3327 – กันยายน 3328)\nปีงบประมาณ 3327 (ตุลาคม 3326 – กันยายน 3327)\nปีงบประมาณ 3326 (ตุลาคม 3325 – กันยายน 3326)\nปีงบประมาณ 3325 (ตุลาคม 3324 – กันยายน 3325)\nปีงบประมาณ 3324 (ตุลาคม 3323 – กันยายน 3324)\nปีงบประมาณ 3323 (ตุลาคม 3322 – กันยายน 3323)\nปีงบประมาณ 3322 (ตุลาคม 3321 – กันยายน 3322)\nปีงบประมาณ 3321 (ตุลาคม 3320 – กันยายน 3321)\nปีงบประมาณ 3320 (ตุลาคม 3319 – กันยายน 3320)\nปีงบประมาณ 3319 (ตุลาคม 3318 – กันยายน 3319)\nปีงบประมาณ 3318 (ตุลาคม 3317 – กันยายน 3318)\nปีงบประมาณ 3317 (ตุลาคม 3316 – กันยายน 3317)\nปีงบประมาณ 3316 (ตุลาคม 3315 – กันยายน 3316)\nปีงบประมาณ 3315 (ตุลาคม 3314 – กันยายน 3315)\nปีงบประมาณ 3314 (ตุลาคม 3313 – กันยายน 3314)\nปีงบประมาณ 3313 (ตุลาคม 3312 – กันยายน 3313)\nปีงบประมาณ 3312 (ตุลาคม 3311 – กันยายน 3312)\nปีงบประมาณ 3311 (ตุลาคม 3310 – กันยายน 3311)\nปีงบประมาณ 3310 (ตุลาคม 3309 – กันยายน 3310)\nปีงบประมาณ 3309 (ตุลาคม 3308 – กันยายน 3309)\nปีงบประมาณ 3308 (ตุลาคม 3307 – กันยายน 3308)\nปีงบประมาณ 3307 (ตุลาคม 3306 – กันยายน 3307)\nปีงบประมาณ 3306 (ตุลาคม 3305 – กันยายน 3306)\nปีงบประมาณ 3305 (ตุลาคม 3304 – กันยายน 3305)\nปีงบประมาณ 3304 (ตุลาคม 3303 – กันยายน 3304)\nปีงบประมาณ 3303 (ตุลาคม 3302 – กันยายน 3303)\nปีงบประมาณ 3302 (ตุลาคม 3301 – กันยายน 3302)\nปีงบประมาณ 3301 (ตุลาคม 3300 – กันยายน 3301)\nปีงบประมาณ 3300 (ตุลาคม 3299 – กันยายน 3300)\nปีงบประมาณ 3299 (ตุลาคม 3298 – กันยายน 3299)\nปีงบประมาณ 3298 (ตุลาคม 3297 – กันยายน 3298)\nปีงบประมาณ 3297 (ตุลาคม 3296 – กันยายน 3297)\nปีงบประมาณ 3296 (ตุลาคม 3295 – กันยายน 3296)\nปีงบประมาณ 3295 (ตุลาคม 3294 – กันยายน 3295)\nปีงบประมาณ 3294 (ตุลาคม 3293 – กันยายน 3294)\nปีงบประมาณ 3293 (ตุลาคม 3292 – กันยายน 3293)\nปีงบประมาณ 3292 (ตุลาคม 3291 – กันยายน 3292)\nปีงบประมาณ 3291 (ตุลาคม 3290 – กันยายน 3291)\nปีงบประมาณ 3290 (ตุลาคม 3289 – กันยายน 3290)\nปีงบประมาณ 3289 (ตุลาคม 3288 – กันยายน 3289)\nปีงบประมาณ 3288 (ตุลาคม 3287 – กันยายน 3288)\nปีงบประมาณ 3287 (ตุลาคม 3286 – กันยายน 3287)\nปีงบประมาณ 3286 (ตุลาคม 3285 – กันยายน 3286)\nปีงบประมาณ 3285 (ตุลาคม 3284 – กันยายน 3285)\nปีงบประมาณ 3284 (ตุลาคม 3283 – กันยายน 3284)\nปีงบประมาณ 3283 (ตุลาคม 3282 – กันยายน 3283)\nปีงบประมาณ 3282 (ตุลาคม 3281 – กันยายน 3282)\nปีงบประมาณ 3281 (ตุลาคม 3280 – กันยายน 3281)\nปีงบประมาณ 3280 (ตุลาคม 3279 – กันยายน 3280)\nปีงบประมาณ 3279 (ตุลาคม 3278 – กันยายน 3279)\nปีงบประมาณ 3278 (ตุลาคม 3277 – กันยายน 3278)\nปีงบประมาณ 3277 (ตุลาคม 3276 – กันยายน 3277)\nปีงบประมาณ 3276 (ตุลาคม 3275 – กันยายน 3276)\nปีงบประมาณ 3275 (ตุลาคม 3274 – กันยายน 3275)\nปีงบประมาณ 3274 (ตุลาคม 3273 – กันยายน 3274)\nปีงบประมาณ 3273 (ตุลาคม 3272 – กันยายน 3273)\nปีงบประมาณ 3272 (ตุลาคม 3271 – กันยายน 3272)\nปีงบประมาณ 3271 (ตุลาคม 3270 – กันยายน 3271)\nปีงบประมาณ 3270 (ตุลาคม 3269 – กันยายน 3270)\nปีงบประมาณ 3269 (ตุลาคม 3268 – กันยายน 3269)\nปีงบประมาณ 3268 (ตุลาคม 3267 – กันยายน 3268)\nปีงบประมาณ 3267 (ตุลาคม 3266 – กันยายน 3267)\nปีงบประมาณ 3266 (ตุลาคม 3265 – กันยายน 3266)\nปีงบประมาณ 3265 (ตุลาคม 3264 – กันยายน 3265)\nปีงบประมาณ 3264 (ตุลาคม 3263 – กันยายน 3264)\nปีงบประมาณ 3263 (ตุลาคม 3262 – กันยายน 3263)\nปีงบประมาณ 3262 (ตุลาคม 3261 – กันยายน 3262)\nปีงบประมาณ 3261 (ตุลาคม 3260 – กันยายน 3261)\nปีงบประมาณ 3260 (ตุลาคม 3259 – กันยายน 3260)\nปีงบประมาณ 3259 (ตุลาคม 3258 – กันยายน 3259)\nปีงบประมาณ 3258 (ตุลาคม 3257 – กันยายน 3258)\nปีงบประมาณ 3257 (ตุลาคม 3256 – กันยายน 3257)\nปีงบประมาณ 3256 (ตุลาคม 3255 – กันยายน 3256)\nปีงบประมาณ 3255 (ตุลาคม 3254 – กันยายน 3255)\nปีงบประมาณ 3254 (ตุลาคม 3253 – กันยายน 3254)\nปีงบประมาณ 3253 (ตุลาคม 3252 – กันยายน 3253)\nปีงบประมาณ 3252 (ตุลาคม 3251 – กันยายน 3252)\nปีงบประมาณ 3251 (ตุลาคม 3250 – กันยายน 3251)\nปีงบประมาณ 3250 (ตุลาคม 3249 – กันยายน 3250)\nปีงบประมาณ 3249 (ตุลาคม 3248 – กันยายน 3249)\nปีงบประมาณ 3248 (ตุลาคม 3247 – กันยายน 3248)\nปีงบประมาณ 3247 (ตุลาคม 3246 – กันยายน 3247)\nปีงบประมาณ 3246 (ตุลาคม 3245 – กันยายน 3246)\nปีงบประมาณ 3245 (ตุลาคม 3244 – กันยายน 3245)\nปีงบประมาณ 3244 (ตุลาคม 3243 – กันยายน 3244)\nปีงบประมาณ 3243 (ตุลาคม 3242 – กันยายน 3243)\nปีงบประมาณ 3242 (ตุลาคม 3241 – กันยายน 3242)\nปีงบประมาณ 3241 (ตุลาคม 3240 – กันยายน 3241)\nปีงบประมาณ 3240 (ตุลาคม 3239 – กันยายน 3240)\nปีงบประมาณ 3239 (ตุลาคม 3238 – กันยายน 3239)\nปีงบประมาณ 3238 (ตุลาคม 3237 – กันยายน 3238)\nปีงบประมาณ 3237 (ตุลาคม 3236 – กันยายน 3237)\nปีงบประมาณ 3236 (ตุลาคม 3235 – กันยายน 3236)\nปีงบประมาณ 3235 (ตุลาคม 3234 – กันยายน 3235)\nปีงบประมาณ 3234 (ตุลาคม 3233 – กันยายน 3234)\nปีงบประมาณ 3233 (ตุลาคม 3232 – กันยายน 3233)\nปีงบประมาณ 3232 (ตุลาคม 3231 – กันยายน 3232)\nปีงบประมาณ 3231 (ตุลาคม 3230 – กันยายน 3231)\nปีงบประมาณ 3230 (ตุลาคม 3229 – กันยายน 3230)\nปีงบประมาณ 3229 (ตุลาคม 3228 – กันยายน 3229)\nปีงบประมาณ 3228 (ตุลาคม 3227 – กันยายน 3228)\nปีงบประมาณ 3227 (ตุลาคม 3226 – กันยายน 3227)\nปีงบประมาณ 3226 (ตุลาคม 3225 – กันยายน 3226)\nปีงบประมาณ 3225 (ตุลาคม 3224 – กันยายน 3225)\nปีงบประมาณ 3224 (ตุลาคม 3223 – กันยายน 3224)\nปีงบประมาณ 3223 (ตุลาคม 3222 – กันยายน 3223)\nปีงบประมาณ 3222 (ตุลาคม 3221 – กันยายน 3222)\nปีงบประมาณ 3221 (ตุลาคม 3220 – กันยายน 3221)\nปีงบประมาณ 3220 (ตุลาคม 3219 – กันยายน 3220)\nปีงบประมาณ 3219 (ตุลาคม 3218 – กันยายน 3219)\nปีงบประมาณ 3218 (ตุลาคม 3217 – กันยายน 3218)\nปีงบประมาณ 3217 (ตุลาคม 3216 – กันยายน 3217)\nปีงบประมาณ 3216 (ตุลาคม 3215 – กันยายน 3216)\nปีงบประมาณ 3215 (ตุลาคม 3214 – กันยายน 3215)\nปีงบประมาณ 3214 (ตุลาคม 3213 – กันยายน 3214)\nปีงบประมาณ 3213 (ตุลาคม 3212 – กันยายน 3213)\nปีงบประมาณ 3212 (ตุลาคม 3211 – กันยายน 3212)\nปีงบประมาณ 3211 (ตุลาคม 3210 – กันยายน 3211)\nปีงบประมาณ 3210 (ตุลาคม 3209 – กันยายน 3210)\nปีงบประมาณ 3209 (ตุลาคม 3208 – กันยายน 3209)\nปีงบประมาณ 3208 (ตุลาคม 3207 – กันยายน 3208)\nปีงบประมาณ 3207 (ตุลาคม 3206 – กันยายน 3207)\nปีงบประมาณ 3206 (ตุลาคม 3205 – กันยายน 3206)\nปีงบประมาณ 3205 (ตุลาคม 3204 – กันยายน 3205)\nปีงบประมาณ 3204 (ตุลาคม 3203 – กันยายน 3204)\nปีงบประมาณ 3203 (ตุลาคม 3202 – กันยายน 3203)\nปีงบประมาณ 3202 (ตุลาคม 3201 – กันยายน 3202)\nปีงบประมาณ 3201 (ตุลาคม 3200 – กันยายน 3201)\nปีงบประมาณ 3200 (ตุลาคม 3199 – กันยายน 3200)\nปีงบประมาณ 3199 (ตุลาคม 3198 – กันยายน 3199)\nปีงบประมาณ 3198 (ตุลาคม 3197 – กันยายน 3198)\nปีงบประมาณ 3197 (ตุลาคม 3196 – กันยายน 3197)\nปีงบประมาณ 3196 (ตุลาคม 3195 – กันยายน 3196)\nปีงบประมาณ 3195 (ตุลาคม 3194 – กันยายน 3195)\nปีงบประมาณ 3194 (ตุลาคม 3193 – กันยายน 3194)\nปีงบประมาณ 3193 (ตุลาคม 3192 – กันยายน 3193)\nปีงบประมาณ 3192 (ตุลาคม 3191 – กันยายน 3192)\nปีงบประมาณ 3191 (ตุลาคม 3190 – กันยายน 3191)\nปีงบประมาณ 3190 (ตุลาคม 3189 – กันยายน 3190)\nปีงบประมาณ 3189 (ตุลาคม 3188 – กันยายน 3189)\nปีงบประมาณ 3188 (ตุลาคม 3187 – กันยายน 3188)\nปีงบประมาณ 3187 (ตุลาคม 3186 – กันยายน 3187)\nปีงบประมาณ 3186 (ตุลาคม 3185 – กันยายน 3186)\nปีงบประมาณ 3185 (ตุลาคม 3184 – กันยายน 3185)\nปีงบประมาณ 3184 (ตุลาคม 3183 – กันยายน 3184)\nปีงบประมาณ 3183 (ตุลาคม 3182 – กันยายน 3183)\nปีงบประมาณ 3182 (ตุลาคม 3181 – กันยายน 3182)\nปีงบประมาณ 3181 (ตุลาคม 3180 – กันยายน 3181)\nปีงบประมาณ 3180 (ตุลาคม 3179 – กันยายน 3180)\nปีงบประมาณ 3179 (ตุลาคม 3178 – กันยายน 3179)\nปีงบประมาณ 3178 (ตุลาคม 3177 – กันยายน 3178)\nปีงบประมาณ 3177 (ตุลาคม 3176 – กันยายน 3177)\nปีงบประมาณ 3176 (ตุลาคม 3175 – กันยายน 3176)\nปีงบประมาณ 3175 (ตุลาคม 3174 – กันยายน 3175)\nปีงบประมาณ 3174 (ตุลาคม 3173 – กันยายน 3174)\nปีงบประมาณ 3173 (ตุลาคม 3172 – กันยายน 3173)\nปีงบประมาณ 3172 (ตุลาคม 3171 – กันยายน 3172)\nปีงบประมาณ 3171 (ตุลาคม 3170 – กันยายน 3171)\nปีงบประมาณ 3170 (ตุลาคม 3169 – กันยายน 3170)\nปีงบประมาณ 3169 (ตุลาคม 3168 – กันยายน 3169)\nปีงบประมาณ 3168 (ตุลาคม 3167 – กันยายน 3168)\nปีงบประมาณ 3167 (ตุลาคม 3166 – กันยายน 3167)\nปีงบประมาณ 3166 (ตุลาคม 3165 – กันยายน 3166)\nปีงบประมาณ 3165 (ตุลาคม 3164 – กันยายน 3165)\nปีงบประมาณ 3164 (ตุลาคม 3163 – กันยายน 3164)\nปีงบประมาณ 3163 (ตุลาคม 3162 – กันยายน 3163)\nปีงบประมาณ 3162 (ตุลาคม 3161 – กันยายน 3162)\nปีงบประมาณ 3161 (ตุลาคม 3160 – กันยายน 3161)\nปีงบประมาณ 3160 (ตุลาคม 3159 – กันยายน 3160)\nปีงบประมาณ 3159 (ตุลาคม 3158 – กันยายน 3159)\nปีงบประมาณ 3158 (ตุลาคม 3157 – กันยายน 3158)\nปีงบประมาณ 3157 (ตุลาคม 3156 – กันยายน 3157)\nปีงบประมาณ 3156 (ตุลาคม 3155 – กันยายน 3156)\nปีงบประมาณ 3155 (ตุลาคม 3154 – กันยายน 3155)\nปีงบประมาณ 3154 (ตุลาคม 3153 – กันยายน 3154)\nปีงบประมาณ 3153 (ตุลาคม 3152 – กันยายน 3153)\nปีงบประมาณ 3152 (ตุลาคม 3151 – กันยายน 3152)\nปีงบประมาณ 3151 (ตุลาคม 3150 – กันยายน 3151)\nปีงบประมาณ 3150 (ตุลาคม 3149 – กันยายน 3150)\nปีงบประมาณ 3149 (ตุลาคม 3148 – กันยายน 3149)\nปีงบประมาณ 3148 (ตุลาคม 3147 – กันยายน 3148)\nปีงบประมาณ 3147 (ตุลาคม 3146 – กันยายน 3147)\nปีงบประมาณ 3146 (ตุลาคม 3145 – กันยายน 3146)\nปีงบประมาณ 3145 (ตุลาคม 3144 – กันยายน 3145)\nปีงบประมาณ 3144 (ตุลาคม 3143 – กันยายน 3144)\nปีงบประมาณ 3143 (ตุลาคม 3142 – กันยายน 3143)\nปีงบประมาณ 3142 (ตุลาคม 3141 – กันยายน 3142)\nปีงบประมาณ 3141 (ตุลาคม 3140 – กันยายน 3141)\nปีงบประมาณ 3140 (ตุลาคม 3139 – กันยายน 3140)\nปีงบประมาณ 3139 (ตุลาคม 3138 – กันยายน 3139)\nปีงบประมาณ 3138 (ตุลาคม 3137 – กันยายน 3138)\nปีงบประมาณ 3137 (ตุลาคม 3136 – กันยายน 3137)\nปีงบประมาณ 3136 (ตุลาคม 3135 – กันยายน 3136)\nปีงบประมาณ 3135 (ตุลาคม 3134 – กันยายน 3135)\nปีงบประมาณ 3134 (ตุลาคม 3133 – กันยายน 3134)\nปีงบประมาณ 3133 (ตุลาคม 3132 – กันยายน 3133)\nปีงบประมาณ 3132 (ตุลาคม 3131 – กันยายน 3132)\nปีงบประมาณ 3131 (ตุลาคม 3130 – กันยายน 3131)\nปีงบประมาณ 3130 (ตุลาคม 3129 – กันยายน 3130)\nปีงบประมาณ 3129 (ตุลาคม 3128 – กันยายน 3129)\nปีงบประมาณ 3128 (ตุลาคม 3127 – กันยายน 3128)\nปีงบประมาณ 3127 (ตุลาคม 3126 – กันยายน 3127)\nปีงบประมาณ 3126 (ตุลาคม 3125 – กันยายน 3126)\nปีงบประมาณ 3125 (ตุลาคม 3124 – กันยายน 3125)\nปีงบประมาณ 3124 (ตุลาคม 3123 – กันยายน 3124)\nปีงบประมาณ 3123 (ตุลาคม 3122 – กันยายน 3123)\nปีงบประมาณ 3122 (ตุลาคม 3121 – กันยายน 3122)\nปีงบประมาณ 3121 (ตุลาคม 3120 – กันยายน 3121)\nปีงบประมาณ 3120 (ตุลาคม 3119 – กันยายน 3120)\nปีงบประมาณ 3119 (ตุลาคม 3118 – กันยายน 3119)\nปีงบประมาณ 3118 (ตุลาคม 3117 – กันยายน 3118)\nปีงบประมาณ 3117 (ตุลาคม 3116 – กันยายน 3117)\nปีงบประมาณ 3116 (ตุลาคม 3115 – กันยายน 3116)\nปีงบประมาณ 3115 (ตุลาคม 3114 – กันยายน 3115)\nปีงบประมาณ 3114 (ตุลาคม 3113 – กันยายน 3114)\nปีงบประมาณ 3113 (ตุลาคม 3112 – กันยายน 3113)\nปีงบประมาณ 3112 (ตุลาคม 3111 – กันยายน 3112)\nปีงบประมาณ 3111 (ตุลาคม 3110 – กันยายน 3111)\nปีงบประมาณ 3110 (ตุลาคม 3109 – กันยายน 3110)\nปีงบประมาณ 3109 (ตุลาคม 3108 – กันยายน 3109)\nปีงบประมาณ 3108 (ตุลาคม 3107 – กันยายน 3108)\nปีงบประมาณ 3107 (ตุลาคม 3106 – กันยายน 3107)\nปีงบประมาณ 3106 (ตุลาคม 3105 – กันยายน 3106)\nปีงบประมาณ 3105 (ตุลาคม 3104 – กันยายน 3105)\nปีงบประมาณ 3104 (ตุลาคม 3103 – กันยายน 3104)\nปีงบประมาณ 3103 (ตุลาคม 3102 – กันยายน 3103)\nปีงบประมาณ 3102 (ตุลาคม 3101 – กันยายน 3102)\nปีงบประมาณ 3101 (ตุลาคม 3100 – กันยายน 3101)\nปีงบประมาณ 3100 (ตุลาคม 3099 – กันยายน 3100)\nปีงบประมาณ 3099 (ตุลาคม 3098 – กันยายน 3099)\nปีงบประมาณ 3098 (ตุลาคม 3097 – กันยายน 3098)\nปีงบประมาณ 3097 (ตุลาคม 3096 – กันยายน 3097)\nปีงบประมาณ 3096 (ตุลาคม 3095 – กันยายน 3096)\nปีงบประมาณ 3095 (ตุลาคม 3094 – กันยายน 3095)\nปีงบประมาณ 3094 (ตุลาคม 3093 – กันยายน 3094)\nปีงบประมาณ 3093 (ตุลาคม 3092 – กันยายน 3093)\nปีงบประมาณ 3092 (ตุลาคม 3091 – กันยายน 3092)\nปีงบประมาณ 3091 (ตุลาคม 3090 – กันยายน 3091)\nปีงบประมาณ 3090 (ตุลาคม 3089 – กันยายน 3090)\nปีงบประมาณ 3089 (ตุลาคม 3088 – กันยายน 3089)\nปีงบประมาณ 3088 (ตุลาคม 3087 – กันยายน 3088)\nปีงบประมาณ 3087 (ตุลาคม 3086 – กันยายน 3087)\nปีงบประมาณ 3086 (ตุลาคม 3085 – กันยายน 3086)\nปีงบประมาณ 3085 (ตุลาคม 3084 – กันยายน 3085)\nปีงบประมาณ 3084 (ตุลาคม 3083 – กันยายน 3084)\nปีงบประมาณ 3083 (ตุลาคม 3082 – กันยายน 3083)\nปีงบประมาณ 3082 (ตุลาคม 3081 – กันยายน 3082)\nปีงบประมาณ 3081 (ตุลาคม 3080 – กันยายน 3081)\nปีงบประมาณ 3080 (ตุลาคม 3079 – กันยายน 3080)\nปีงบประมาณ 3079 (ตุลาคม 3078 – กันยายน 3079)\nปีงบประมาณ 3078 (ตุลาคม 3077 – กันยายน 3078)\nปีงบประมาณ 3077 (ตุลาคม 3076 – กันยายน 3077)\nปีงบประมาณ 3076 (ตุลาคม 3075 – กันยายน 3076)\nปีงบประมาณ 3075 (ตุลาคม 3074 – กันยายน 3075)\nปีงบประมาณ 3074 (ตุลาคม 3073 – กันยายน 3074)\nปีงบประมาณ 3073 (ตุลาคม 3072 – กันยายน 3073)\nปีงบประมาณ 3072 (ตุลาคม 3071 – กันยายน 3072)\nปีงบประมาณ 3071 (ตุลาคม 3070 – กันยายน 3071)\nปีงบประมาณ 3070 (ตุลาคม 3069 – กันยายน 3070)\nปีงบประมาณ 3069 (ตุลาคม 3068 – กันยายน 3069)\nปีงบประมาณ 3068 (ตุลาคม 3067 – กันยายน 3068)\nปีงบประมาณ 3067 (ตุลาคม 3066 – กันยายน 3067)\nปีงบประมาณ 3066 (ตุลาคม 3065 – กันยายน 3066)\nปีงบประมาณ 3065 (ตุลาคม 3064 – กันยายน 3065)\nปีงบประมาณ 3064 (ตุลาคม 3063 – กันยายน 3064)\nปีงบประมาณ 3063 (ตุลาคม 3062 – กันยายน 3063)\nปีงบประมาณ 3062 (ตุลาคม 3061 – กันยายน 3062)\nปีงบประมาณ 3061 (ตุลาคม 3060 – กันยายน 3061)\nปีงบประมาณ 3060 (ตุลาคม 3059 – กันยายน 3060)\nปีงบประมาณ 3059 (ตุลาคม 3058 – กันยายน 3059)\nปีงบประมาณ 3058 (ตุลาคม 3057 – กันยายน 3058)\nปีงบประมาณ 3057 (ตุลาคม 3056 – กันยายน 3057)\nปีงบประมาณ 3056 (ตุลาคม 3055 – กันยายน 3056)\nปีงบประมาณ 3055 (ตุลาคม 3054 – กันยายน 3055)\nปีงบประมาณ 3054 (ตุลาคม 3053 – กันยายน 3054)\nปีงบประมาณ 3053 (ตุลาคม 3052 – กันยายน 3053)\nปีงบประมาณ 3052 (ตุลาคม 3051 – กันยายน 3052)\nปีงบประมาณ 3051 (ตุลาคม 3050 – กันยายน 3051)\nปีงบประมาณ 3050 (ตุลาคม 3049 – กันยายน 3050)\nปีงบประมาณ 3049 (ตุลาคม 3048 – กันยายน 3049)\nปีงบประมาณ 3048 (ตุลาคม 3047 – กันยายน 3048)\nปีงบประมาณ 3047 (ตุลาคม 3046 – กันยายน 3047)\nปีงบประมาณ 3046 (ตุลาคม 3045 – กันยายน 3046)\nปีงบประมาณ 3045 (ตุลาคม 3044 – กันยายน 3045)\nปีงบประมาณ 3044 (ตุลาคม 3043 – กันยายน 3044)\nปีงบประมาณ 3043 (ตุลาคม 3042 – กันยายน 3043)\nปีงบประมาณ 3042 (ตุลาคม 3041 – กันยายน 3042)\nปีงบประมาณ 3041 (ตุลาคม 3040 – กันยายน 3041)\nปีงบประมาณ 3040 (ตุลาคม 3039 – กันยายน 3040)\nปีงบประมาณ 3039 (ตุลาคม 3038 – กันยายน 3039)\nปีงบประมาณ 3038 (ตุลาคม 3037 – กันยายน 3038)\nปีงบประมาณ 3037 (ตุลาคม 3036 – กันยายน 3037)\nปีงบประมาณ 3036 (ตุลาคม 3035 – กันยายน 3036)\nปีงบประมาณ 3035 (ตุลาคม 3034 – กันยายน 3035)\nปีงบประมาณ 3034 (ตุลาคม 3033 – กันยายน 3034)\nปีงบประมาณ 3033 (ตุลาคม 3032 – กันยายน 3033)\nปีงบประมาณ 3032 (ตุลาคม 3031 – กันยายน 3032)\nปีงบประมาณ 3031 (ตุลาคม 3030 – กันยายน 3031)\nปีงบประมาณ 3030 (ตุลาคม 3029 – กันยายน 3030)\nปีงบประมาณ 3029 (ตุลาคม 3028 – กันยายน 3029)\nปีงบประมาณ 3028 (ตุลาคม 3027 – กันยายน 3028)\nปีงบประมาณ 3027 (ตุลาคม 3026 – กันยายน 3027)\nปีงบประมาณ 3026 (ตุลาคม 3025 – กันยายน 3026)\nปีงบประมาณ 3025 (ตุลาคม 3024 – กันยายน 3025)\nปีงบประมาณ 3024 (ตุลาคม 3023 – กันยายน 3024)\nปีงบประมาณ 3023 (ตุลาคม 3022 – กันยายน 3023)\nปีงบประมาณ 3022 (ตุลาคม 3021 – กันยายน 3022)\nปีงบประมาณ 3021 (ตุลาคม 3020 – กันยายน 3021)\nปีงบประมาณ 3020 (ตุลาคม 3019 – กันยายน 3020)\nปีงบประมาณ 3019 (ตุลาคม 3018 – กันยายน 3019)\nปีงบประมาณ 3018 (ตุลาคม 3017 – กันยายน 3018)\nปีงบประมาณ 3017 (ตุลาคม 3016 – กันยายน 3017)\nปีงบประมาณ 3016 (ตุลาคม 3015 – กันยายน 3016)\nปีงบประมาณ 3015 (ตุลาคม 3014 – กันยายน 3015)\nปีงบประมาณ 3014 (ตุลาคม 3013 – กันยายน 3014)\nปีงบประมาณ 3013 (ตุลาคม 3012 – กันยายน 3013)\nปีงบประมาณ 3012 (ตุลาคม 3011 – กันยายน 3012)\nปีงบประมาณ 3011 (ตุลาคม 3010 – กันยายน 3011)\nปีงบประมาณ 3010 (ตุลาคม 3009 – กันยายน 3010)\nปีงบประมาณ 3009 (ตุลาคม 3008 – กันยายน 3009)\nปีงบประมาณ 3008 (ตุลาคม 3007 – กันยายน 3008)\nปีงบประมาณ 3007 (ตุลาคม 3006 – กันยายน 3007)\nปีงบประมาณ 3006 (ตุลาคม 3005 – กันยายน 3006)\nปีงบประมาณ 3005 (ตุลาคม 3004 – กันยายน 3005)\nปีงบประมาณ 3004 (ตุลาคม 3003 – กันยายน 3004)\nปีงบประมาณ 3003 (ตุลาคม 3002 – กันยายน 3003)\nปีงบประมาณ 3002 (ตุลาคม 3001 – กันยายน 3002)\nปีงบประมาณ 3001 (ตุลาคม 3000 – กันยายน 3001)\nปีงบประมาณ 3000 (ตุลาคม 2999 – กันยายน 3000)\nปีงบประมาณ 2999 (ตุลาคม 2998 – กันยายน 2999)\nปีงบประมาณ 2998 (ตุลาคม 2997 – กันยายน 2998)\nปีงบประมาณ 2997 (ตุลาคม 2996 – กันยายน 2997)\nปีงบประมาณ 2996 (ตุลาคม 2995 – กันยายน 2996)\nปีงบประมาณ 2995 (ตุลาคม 2994 – กันยายน 2995)\nปีงบประมาณ 2994 (ตุลาคม 2993 – กันยายน 2994)\nปีงบประมาณ 2993 (ตุลาคม 2992 – กันยายน 2993)\nปีงบประมาณ 2992 (ตุลาคม 2991 – กันยายน 2992)\nปีงบประมาณ 2991 (ตุลาคม 2990 – กันยายน 2991)\nปีงบประมาณ 2990 (ตุลาคม 2989 – กันยายน 2990)\nปีงบประมาณ 2989 (ตุลาคม 2988 – กันยายน 2989)\nปีงบประมาณ 2988 (ตุลาคม 2987 – กันยายน 2988)\nปีงบประมาณ 2987 (ตุลาคม 2986 – กันยายน 2987)\nปีงบประมาณ 2986 (ตุลาคม 2985 – กันยายน 2986)\nปีงบประมาณ 2985 (ตุลาคม 2984 – กันยายน 2985)\nปีงบประมาณ 2984 (ตุลาคม 2983 – กันยายน 2984)\nปีงบประมาณ 2983 (ตุลาคม 2982 – กันยายน 2983)\nปีงบประมาณ 2982 (ตุลาคม 2981 – กันยายน 2982)\nปีงบประมาณ 2981 (ตุลาคม 2980 – กันยายน 2981)\nปีงบประมาณ 2980 (ตุลาคม 2979 – กันยายน 2980)\nปีงบประมาณ 2979 (ตุลาคม 2978 – กันยายน 2979)\nปีงบประมาณ 2978 (ตุลาคม 2977 – กันยายน 2978)\nปีงบประมาณ 2977 (ตุลาคม 2976 – กันยายน 2977)\nปีงบประมาณ 2976 (ตุลาคม 2975 – กันยายน 2976)\nปีงบประมาณ 2975 (ตุลาคม 2974 – กันยายน 2975)\nปีงบประมาณ 2974 (ตุลาคม 2973 – กันยายน 2974)\nปีงบประมาณ 2973 (ตุลาคม 2972 – กันยายน 2973)\nปีงบประมาณ 2972 (ตุลาคม 2971 – กันยายน 2972)\nปีงบประมาณ 2971 (ตุลาคม 2970 – กันยายน 2971)\nปีงบประมาณ 2970 (ตุลาคม 2969 – กันยายน 2970)\nปีงบประมาณ 2969 (ตุลาคม 2968 – กันยายน 2969)\nปีงบประมาณ 2968 (ตุลาคม 2967 – กันยายน 2968)\nปีงบประมาณ 2967 (ตุลาคม 2966 – กันยายน 2967)\nปีงบประมาณ 2966 (ตุลาคม 2965 – กันยายน 2966)\nปีงบประมาณ 2965 (ตุลาคม 2964 – กันยายน 2965)\nปีงบประมาณ 2964 (ตุลาคม 2963 – กันยายน 2964)\nปีงบประมาณ 2963 (ตุลาคม 2962 – กันยายน 2963)\nปีงบประมาณ 2962 (ตุลาคม 2961 – กันยายน 2962)\nปีงบประมาณ 2961 (ตุลาคม 2960 – กันยายน 2961)\nปีงบประมาณ 2960 (ตุลาคม 2959 – กันยายน 2960)\nปีงบประมาณ 2959 (ตุลาคม 2958 – กันยายน 2959)\nปีงบประมาณ 2958 (ตุลาคม 2957 – กันยายน 2958)\nปีงบประมาณ 2957 (ตุลาคม 2956 – กันยายน 2957)\nปีงบประมาณ 2956 (ตุลาคม 2955 – กันยายน 2956)\nปีงบประมาณ 2955 (ตุลาคม 2954 – กันยายน 2955)\nปีงบประมาณ 2954 (ตุลาคม 2953 – กันยายน 2954)\nปีงบประมาณ 2953 (ตุลาคม 2952 – กันยายน 2953)\nปีงบประมาณ 2952 (ตุลาคม 2951 – กันยายน 2952)\nปีงบประมาณ 2951 (ตุลาคม 2950 – กันยายน 2951)\nปีงบประมาณ 2950 (ตุลาคม 2949 – กันยายน 2950)\nปีงบประมาณ 2949 (ตุลาคม 2948 – กันยายน 2949)\nปีงบประมาณ 2948 (ตุลาคม 2947 – กันยายน 2948)\nปีงบประมาณ 2947 (ตุลาคม 2946 – กันยายน 2947)\nปีงบประมาณ 2946 (ตุลาคม 2945 – กันยายน 2946)\nปีงบประมาณ 2945 (ตุลาคม 2944 – กันยายน 2945)\nปีงบประมาณ 2944 (ตุลาคม 2943 – กันยายน 2944)\nปีงบประมาณ 2943 (ตุลาคม 2942 – กันยายน 2943)\nปีงบประมาณ 2942 (ตุลาคม 2941 – กันยายน 2942)\nปีงบประมาณ 2941 (ตุลาคม 2940 – กันยายน 2941)\nปีงบประมาณ 2940 (ตุลาคม 2939 – กันยายน 2940)\nปีงบประมาณ 2939 (ตุลาคม 2938 – กันยายน 2939)\nปีงบประมาณ 2938 (ตุลาคม 2937 – กันยายน 2938)\nปีงบประมาณ 2937 (ตุลาคม 2936 – กันยายน 2937)\nปีงบประมาณ 2936 (ตุลาคม 2935 – กันยายน 2936)\nปีงบประมาณ 2935 (ตุลาคม 2934 – กันยายน 2935)\nปีงบประมาณ 2934 (ตุลาคม 2933 – กันยายน 2934)\nปีงบประมาณ 2933 (ตุลาคม 2932 – กันยายน 2933)\nปีงบประมาณ 2932 (ตุลาคม 2931 – กันยายน 2932)\nปีงบประมาณ 2931 (ตุลาคม 2930 – กันยายน 2931)\nปีงบประมาณ 2930 (ตุลาคม 2929 – กันยายน 2930)\nปีงบประมาณ 2929 (ตุลาคม 2928 – กันยายน 2929)\nปีงบประมาณ 2928 (ตุลาคม 2927 – กันยายน 2928)\nปีงบประมาณ 2927 (ตุลาคม 2926 – กันยายน 2927)\nปีงบประมาณ 2926 (ตุลาคม 2925 – กันยายน 2926)\nปีงบประมาณ 2925 (ตุลาคม 2924 – กันยายน 2925)\nปีงบประมาณ 2924 (ตุลาคม 2923 – กันยายน 2924)\nปีงบประมาณ 2923 (ตุลาคม 2922 – กันยายน 2923)\nปีงบประมาณ 2922 (ตุลาคม 2921 – กันยายน 2922)\nปีงบประมาณ 2921 (ตุลาคม 2920 – กันยายน 2921)\nปีงบประมาณ 2920 (ตุลาคม 2919 – กันยายน 2920)\nปีงบประมาณ 2919 (ตุลาคม 2918 – กันยายน 2919)\nปีงบประมาณ 2918 (ตุลาคม 2917 – กันยายน 2918)\nปีงบประมาณ 2917 (ตุลาคม 2916 – กันยายน 2917)\nปีงบประมาณ 2916 (ตุลาคม 2915 – กันยายน 2916)\nปีงบประมาณ 2915 (ตุลาคม 2914 – กันยายน 2915)\nปีงบประมาณ 2914 (ตุลาคม 2913 – กันยายน 2914)\nปีงบประมาณ 2913 (ตุลาคม 2912 – กันยายน 2913)\nปีงบประมาณ 2912 (ตุลาคม 2911 – กันยายน 2912)\nปีงบประมาณ 2911 (ตุลาคม 2910 – กันยายน 2911)\nปีงบประมาณ 2910 (ตุลาคม 2909 – กันยายน 2910)\nปีงบประมาณ 2909 (ตุลาคม 2908 – กันยายน 2909)\nปีงบประมาณ 2908 (ตุลาคม 2907 – กันยายน 2908)\nปีงบประมาณ 2907 (ตุลาคม 2906 – กันยายน 2907)\nปีงบประมาณ 2906 (ตุลาคม 2905 – กันยายน 2906)\nปีงบประมาณ 2905 (ตุลาคม 2904 – กันยายน 2905)\nปีงบประมาณ 2904 (ตุลาคม 2903 – กันยายน 2904)\nปีงบประมาณ 2903 (ตุลาคม 2902 – กันยายน 2903)\nปีงบประมาณ 2902 (ตุลาคม 2901 – กันยายน 2902)\nปีงบประมาณ 2901 (ตุลาคม 2900 – กันยายน 2901)\nปีงบประมาณ 2900 (ตุลาคม 2899 – กันยายน 2900)\nปีงบประมาณ 2899 (ตุลาคม 2898 – กันยายน 2899)\nปีงบประมาณ 2898 (ตุลาคม 2897 – กันยายน 2898)\nปีงบประมาณ 2897 (ตุลาคม 2896 – กันยายน 2897)\nปีงบประมาณ 2896 (ตุลาคม 2895 – กันยายน 2896)\nปีงบประมาณ 2895 (ตุลาคม 2894 – กันยายน 2895)\nปีงบประมาณ 2894 (ตุลาคม 2893 – กันยายน 2894)\nปีงบประมาณ 2893 (ตุลาคม 2892 – กันยายน 2893)\nปีงบประมาณ 2892 (ตุลาคม 2891 – กันยายน 2892)\nปีงบประมาณ 2891 (ตุลาคม 2890 – กันยายน 2891)\nปีงบประมาณ 2890 (ตุลาคม 2889 – กันยายน 2890)\nปีงบประมาณ 2889 (ตุลาคม 2888 – กันยายน 2889)\nปีงบประมาณ 2888 (ตุลาคม 2887 – กันยายน 2888)\nปีงบประมาณ 2887 (ตุลาคม 2886 – กันยายน 2887)\nปีงบประมาณ 2886 (ตุลาคม 2885 – กันยายน 2886)\nปีงบประมาณ 2885 (ตุลาคม 2884 – กันยายน 2885)\nปีงบประมาณ 2884 (ตุลาคม 2883 – กันยายน 2884)\nปีงบประมาณ 2883 (ตุลาคม 2882 – กันยายน 2883)\nปีงบประมาณ 2882 (ตุลาคม 2881 – กันยายน 2882)\nปีงบประมาณ 2881 (ตุลาคม 2880 – กันยายน 2881)\nปีงบประมาณ 2880 (ตุลาคม 2879 – กันยายน 2880)\nปีงบประมาณ 2879 (ตุลาคม 2878 – กันยายน 2879)\nปีงบประมาณ 2878 (ตุลาคม 2877 – กันยายน 2878)\nปีงบประมาณ 2877 (ตุลาคม 2876 – กันยายน 2877)\nปีงบประมาณ 2876 (ตุลาคม 2875 – กันยายน 2876)\nปีงบประมาณ 2875 (ตุลาคม 2874 – กันยายน 2875)\nปีงบประมาณ 2874 (ตุลาคม 2873 – กันยายน 2874)\nปีงบประมาณ 2873 (ตุลาคม 2872 – กันยายน 2873)\nปีงบประมาณ 2872 (ตุลาคม 2871 – กันยายน 2872)\nปีงบประมาณ 2871 (ตุลาคม 2870 – กันยายน 2871)\nปีงบประมาณ 2870 (ตุลาคม 2869 – กันยายน 2870)\nปีงบประมาณ 2869 (ตุลาคม 2868 – กันยายน 2869)\nปีงบประมาณ 2868 (ตุลาคม 2867 – กันยายน 2868)\nปีงบประมาณ 2867 (ตุลาคม 2866 – กันยายน 2867)\nปีงบประมาณ 2866 (ตุลาคม 2865 – กันยายน 2866)\nปีงบประมาณ 2865 (ตุลาคม 2864 – กันยายน 2865)\nปีงบประมาณ 2864 (ตุลาคม 2863 – กันยายน 2864)\nปีงบประมาณ 2863 (ตุลาคม 2862 – กันยายน 2863)\nปีงบประมาณ 2862 (ตุลาคม 2861 – กันยายน 2862)\nปีงบประมาณ 2861 (ตุลาคม 2860 – กันยายน 2861)\nปีงบประมาณ 2860 (ตุลาคม 2859 – กันยายน 2860)\nปีงบประมาณ 2859 (ตุลาคม 2858 – กันยายน 2859)\nปีงบประมาณ 2858 (ตุลาคม 2857 – กันยายน 2858)\nปีงบประมาณ 2857 (ตุลาคม 2856 – กันยายน 2857)\nปีงบประมาณ 2856 (ตุลาคม 2855 – กันยายน 2856)\nปีงบประมาณ 2855 (ตุลาคม 2854 – กันยายน 2855)\nปีงบประมาณ 2854 (ตุลาคม 2853 – กันยายน 2854)\nปีงบประมาณ 2853 (ตุลาคม 2852 – กันยายน 2853)\nปีงบประมาณ 2852 (ตุลาคม 2851 – กันยายน 2852)\nปีงบประมาณ 2851 (ตุลาคม 2850 – กันยายน 2851)\nปีงบประมาณ 2850 (ตุลาคม 2849 – กันยายน 2850)\nปีงบประมาณ 2849 (ตุลาคม 2848 – กันยายน 2849)\nปีงบประมาณ 2848 (ตุลาคม 2847 – กันยายน 2848)\nปีงบประมาณ 2847 (ตุลาคม 2846 – กันยายน 2847)\nปีงบประมาณ 2846 (ตุลาคม 2845 – กันยายน 2846)\nปีงบประมาณ 2845 (ตุลาคม 2844 – กันยายน 2845)\nปีงบประมาณ 2844 (ตุลาคม 2843 – กันยายน 2844)\nปีงบประมาณ 2843 (ตุลาคม 2842 – กันยายน 2843)\nปีงบประมาณ 2842 (ตุลาคม 2841 – กันยายน 2842)\nปีงบประมาณ 2841 (ตุลาคม 2840 – กันยายน 2841)\nปีงบประมาณ 2840 (ตุลาคม 2839 – กันยายน 2840)\nปีงบประมาณ 2839 (ตุลาคม 2838 – กันยายน 2839)\nปีงบประมาณ 2838 (ตุลาคม 2837 – กันยายน 2838)\nปีงบประมาณ 2837 (ตุลาคม 2836 – กันยายน 2837)\nปีงบประมาณ 2836 (ตุลาคม 2835 – กันยายน 2836)\nปีงบประมาณ 2835 (ตุลาคม 2834 – กันยายน 2835)\nปีงบประมาณ 2834 (ตุลาคม 2833 – กันยายน 2834)\nปีงบประมาณ 2833 (ตุลาคม 2832 – กันยายน 2833)\nปีงบประมาณ 2832 (ตุลาคม 2831 – กันยายน 2832)\nปีงบประมาณ 2831 (ตุลาคม 2830 – กันยายน 2831)\nปีงบประมาณ 2830 (ตุลาคม 2829 – กันยายน 2830)\nปีงบประมาณ 2829 (ตุลาคม 2828 – กันยายน 2829)\nปีงบประมาณ 2828 (ตุลาคม 2827 – กันยายน 2828)\nปีงบประมาณ 2827 (ตุลาคม 2826 – กันยายน 2827)\nปีงบประมาณ 2826 (ตุลาคม 2825 – กันยายน 2826)\nปีงบประมาณ 2825 (ตุลาคม 2824 – กันยายน 2825)\nปีงบประมาณ 2824 (ตุลาคม 2823 – กันยายน 2824)\nปีงบประมาณ 2823 (ตุลาคม 2822 – กันยายน 2823)\nปีงบประมาณ 2822 (ตุลาคม 2821 – กันยายน 2822)\nปีงบประมาณ 2821 (ตุลาคม 2820 – กันยายน 2821)\nปีงบประมาณ 2820 (ตุลาคม 2819 – กันยายน 2820)\nปีงบประมาณ 2819 (ตุลาคม 2818 – กันยายน 2819)\nปีงบประมาณ 2818 (ตุลาคม 2817 – กันยายน 2818)\nปีงบประมาณ 2817 (ตุลาคม 2816 – กันยายน 2817)\nปีงบประมาณ 2816 (ตุลาคม 2815 – กันยายน 2816)\nปีงบประมาณ 2815 (ตุลาคม 2814 – กันยายน 2815)\nปีงบประมาณ 2814 (ตุลาคม 2813 – กันยายน 2814)\nปีงบประมาณ 2813 (ตุลาคม 2812 – กันยายน 2813)\nปีงบประมาณ 2812 (ตุลาคม 2811 – กันยายน 2812)\nปีงบประมาณ 2811 (ตุลาคม 2810 – กันยายน 2811)\nปีงบประมาณ 2810 (ตุลาคม 2809 – กันยายน 2810)\nปีงบประมาณ 2809 (ตุลาคม 2808 – กันยายน 2809)\nปีงบประมาณ 2808 (ตุลาคม 2807 – กันยายน 2808)\nปีงบประมาณ 2807 (ตุลาคม 2806 – กันยายน 2807)\nปีงบประมาณ 2806 (ตุลาคม 2805 – กันยายน 2806)\nปีงบประมาณ 2805 (ตุลาคม 2804 – กันยายน 2805)\nปีงบประมาณ 2804 (ตุลาคม 2803 – กันยายน 2804)\nปีงบประมาณ 2803 (ตุลาคม 2802 – กันยายน 2803)\nปีงบประมาณ 2802 (ตุลาคม 2801 – กันยายน 2802)\nปีงบประมาณ 2801 (ตุลาคม 2800 – กันยายน 2801)\nปีงบประมาณ 2800 (ตุลาคม 2799 – กันยายน 2800)\nปีงบประมาณ 2799 (ตุลาคม 2798 – กันยายน 2799)\nปีงบประมาณ 2798 (ตุลาคม 2797 – กันยายน 2798)\nปีงบประมาณ 2797 (ตุลาคม 2796 – กันยายน 2797)\nปีงบประมาณ 2796 (ตุลาคม 2795 – กันยายน 2796)\nปีงบประมาณ 2795 (ตุลาคม 2794 – กันยายน 2795)\nปีงบประมาณ 2794 (ตุลาคม 2793 – กันยายน 2794)\nปีงบประมาณ 2793 (ตุลาคม 2792 – กันยายน 2793)\nปีงบประมาณ 2792 (ตุลาคม 2791 – กันยายน 2792)\nปีงบประมาณ 2791 (ตุลาคม 2790 – กันยายน 2791)\nปีงบประมาณ 2790 (ตุลาคม 2789 – กันยายน 2790)\nปีงบประมาณ 2789 (ตุลาคม 2788 – กันยายน 2789)\nปีงบประมาณ 2788 (ตุลาคม 2787 – กันยายน 2788)\nปีงบประมาณ 2787 (ตุลาคม 2786 – กันยายน 2787)\nปีงบประมาณ 2786 (ตุลาคม 2785 – กันยายน 2786)\nปีงบประมาณ 2785 (ตุลาคม 2784 – กันยายน 2785)\nปีงบประมาณ 2784 (ตุลาคม 2783 – กันยายน 2784)\nปีงบประมาณ 2783 (ตุลาคม 2782 – กันยายน 2783)\nปีงบประมาณ 2782 (ตุลาคม 2781 – กันยายน 2782)\nปีงบประมาณ 2781 (ตุลาคม 2780 – กันยายน 2781)\nปีงบประมาณ 2780 (ตุลาคม 2779 – กันยายน 2780)\nปีงบประมาณ 2779 (ตุลาคม 2778 – กันยายน 2779)\nปีงบประมาณ 2778 (ตุลาคม 2777 – กันยายน 2778)\nปีงบประมาณ 2777 (ตุลาคม 2776 – กันยายน 2777)\nปีงบประมาณ 2776 (ตุลาคม 2775 – กันยายน 2776)\nปีงบประมาณ 2775 (ตุลาคม 2774 – กันยายน 2775)\nปีงบประมาณ 2774 (ตุลาคม 2773 – กันยายน 2774)\nปีงบประมาณ 2773 (ตุลาคม 2772 – กันยายน 2773)\nปีงบประมาณ 2772 (ตุลาคม 2771 – กันยายน 2772)\nปีงบประมาณ 2771 (ตุลาคม 2770 – กันยายน 2771)\nปีงบประมาณ 2770 (ตุลาคม 2769 – กันยายน 2770)\nปีงบประมาณ 2769 (ตุลาคม 2768 – กันยายน 2769)\nปีงบประมาณ 2768 (ตุลาคม 2767 – กันยายน 2768)\nปีงบประมาณ 2767 (ตุลาคม 2766 – กันยายน 2767)\nปีงบประมาณ 2766 (ตุลาคม 2765 – กันยายน 2766)\nปีงบประมาณ 2765 (ตุลาคม 2764 – กันยายน 2765)\nปีงบประมาณ 2764 (ตุลาคม 2763 – กันยายน 2764)\nปีงบประมาณ 2763 (ตุลาคม 2762 – กันยายน 2763)\nปีงบประมาณ 2762 (ตุลาคม 2761 – กันยายน 2762)\nปีงบประมาณ 2761 (ตุลาคม 2760 – กันยายน 2761)\nปีงบประมาณ 2760 (ตุลาคม 2759 – กันยายน 2760)\nปีงบประมาณ 2759 (ตุลาคม 2758 – กันยายน 2759)\nปีงบประมาณ 2758 (ตุลาคม 2757 – กันยายน 2758)\nปีงบประมาณ 2757 (ตุลาคม 2756 – กันยายน 2757)\nปีงบประมาณ 2756 (ตุลาคม 2755 – กันยายน 2756)\nปีงบประมาณ 2755 (ตุลาคม 2754 – กันยายน 2755)\nปีงบประมาณ 2754 (ตุลาคม 2753 – กันยายน 2754)\nปีงบประมาณ 2753 (ตุลาคม 2752 – กันยายน 2753)\nปีงบประมาณ 2752 (ตุลาคม 2751 – กันยายน 2752)\nปีงบประมาณ 2751 (ตุลาคม 2750 – กันยายน 2751)\nปีงบประมาณ 2750 (ตุลาคม 2749 – กันยายน 2750)\nปีงบประมาณ 2749 (ตุลาคม 2748 – กันยายน 2749)\nปีงบประมาณ 2748 (ตุลาคม 2747 – กันยายน 2748)\nปีงบประมาณ 2747 (ตุลาคม 2746 – กันยายน 2747)\nปีงบประมาณ 2746 (ตุลาคม 2745 – กันยายน 2746)\nปีงบประมาณ 2745 (ตุลาคม 2744 – กันยายน 2745)\nปีงบประมาณ 2744 (ตุลาคม 2743 – กันยายน 2744)\nปีงบประมาณ 2743 (ตุลาคม 2742 – กันยายน 2743)\nปีงบประมาณ 2742 (ตุลาคม 2741 – กันยายน 2742)\nปีงบประมาณ 2741 (ตุลาคม 2740 – กันยายน 2741)\nปีงบประมาณ 2740 (ตุลาคม 2739 – กันยายน 2740)\nปีงบประมาณ 2739 (ตุลาคม 2738 – กันยายน 2739)\nปีงบประมาณ 2738 (ตุลาคม 2737 – กันยายน 2738)\nปีงบประมาณ 2737 (ตุลาคม 2736 – กันยายน 2737)\nปีงบประมาณ 2736 (ตุลาคม 2735 – กันยายน 2736)\nปีงบประมาณ 2735 (ตุลาคม 2734 – กันยายน 2735)\nปีงบประมาณ 2734 (ตุลาคม 2733 – กันยายน 2734)\nปีงบประมาณ 2733 (ตุลาคม 2732 – กันยายน 2733)\nปีงบประมาณ 2732 (ตุลาคม 2731 – กันยายน 2732)\nปีงบประมาณ 2731 (ตุลาคม 2730 – กันยายน 2731)\nปีงบประมาณ 2730 (ตุลาคม 2729 – กันยายน 2730)\nปีงบประมาณ 2729 (ตุลาคม 2728 – กันยายน 2729)\nปีงบประมาณ 2728 (ตุลาคม 2727 – กันยายน 2728)\nปีงบประมาณ 2727 (ตุลาคม 2726 – กันยายน 2727)\nปีงบประมาณ 2726 (ตุลาคม 2725 – กันยายน 2726)\nปีงบประมาณ 2725 (ตุลาคม 2724 – กันยายน 2725)\nปีงบประมาณ 2724 (ตุลาคม 2723 – กันยายน 2724)\nปีงบประมาณ 2723 (ตุลาคม 2722 – กันยายน 2723)\nปีงบประมาณ 2722 (ตุลาคม 2721 – กันยายน 2722)\nปีงบประมาณ 2721 (ตุลาคม 2720 – กันยายน 2721)\nปีงบประมาณ 2720 (ตุลาคม 2719 – กันยายน 2720)\nปีงบประมาณ 2719 (ตุลาคม 2718 – กันยายน 2719)\nปีงบประมาณ 2718 (ตุลาคม 2717 – กันยายน 2718)\nปีงบประมาณ 2717 (ตุลาคม 2716 – กันยายน 2717)\nปีงบประมาณ 2716 (ตุลาคม 2715 – กันยายน 2716)\nปีงบประมาณ 2715 (ตุลาคม 2714 – กันยายน 2715)\nปีงบประมาณ 2714 (ตุลาคม 2713 – กันยายน 2714)\nปีงบประมาณ 2713 (ตุลาคม 2712 – กันยายน 2713)\nปีงบประมาณ 2712 (ตุลาคม 2711 – กันยายน 2712)\nปีงบประมาณ 2711 (ตุลาคม 2710 – กันยายน 2711)\nปีงบประมาณ 2710 (ตุลาคม 2709 – กันยายน 2710)\nปีงบประมาณ 2709 (ตุลาคม 2708 – กันยายน 2709)\nปีงบประมาณ 2708 (ตุลาคม 2707 – กันยายน 2708)\nปีงบประมาณ 2707 (ตุลาคม 2706 – กันยายน 2707)\nปีงบประมาณ 2706 (ตุลาคม 2705 – กันยายน 2706)\nปีงบประมาณ 2705 (ตุลาคม 2704 – กันยายน 2705)\nปีงบประมาณ 2704 (ตุลาคม 2703 – กันยายน 2704)\nปีงบประมาณ 2703 (ตุลาคม 2702 – กันยายน 2703)\nปีงบประมาณ 2702 (ตุลาคม 2701 – กันยายน 2702)\nปีงบประมาณ 2701 (ตุลาคม 2700 – กันยายน 2701)\nปีงบประมาณ 2700 (ตุลาคม 2699 – กันยายน 2700)\nปีงบประมาณ 2699 (ตุลาคม 2698 – กันยายน 2699)\nปีงบประมาณ 2698 (ตุลาคม 2697 – กันยายน 2698)\nปีงบประมาณ 2697 (ตุลาคม 2696 – กันยายน 2697)\nปีงบประมาณ 2696 (ตุลาคม 2695 – กันยายน 2696)\nปีงบประมาณ 2695 (ตุลาคม 2694 – กันยายน 2695)\nปีงบประมาณ 2694 (ตุลาคม 2693 – กันยายน 2694)\nปีงบประมาณ 2693 (ตุลาคม 2692 – กันยายน 2693)\nปีงบประมาณ 2692 (ตุลาคม 2691 – กันยายน 2692)\nปีงบประมาณ 2691 (ตุลาคม 2690 – กันยายน 2691)\nปีงบประมาณ 2690 (ตุลาคม 2689 – กันยายน 2690)\nปีงบประมาณ 2689 (ตุลาคม 2688 – กันยายน 2689)\nปีงบประมาณ 2688 (ตุลาคม 2687 – กันยายน 2688)\nปีงบประมาณ 2687 (ตุลาคม 2686 – กันยายน 2687)\nปีงบประมาณ 2686 (ตุลาคม 2685 – กันยายน 2686)\nปีงบประมาณ 2685 (ตุลาคม 2684 – กันยายน 2685)\nปีงบประมาณ 2684 (ตุลาคม 2683 – กันยายน 2684)\nปีงบประมาณ 2683 (ตุลาคม 2682 – กันยายน 2683)\nปีงบประมาณ 2682 (ตุลาคม 2681 – กันยายน 2682)\nปีงบประมาณ 2681 (ตุลาคม 2680 – กันยายน 2681)\nปีงบประมาณ 2680 (ตุลาคม 2679 – กันยายน 2680)\nปีงบประมาณ 2679 (ตุลาคม 2678 – กันยายน 2679)\nปีงบประมาณ 2678 (ตุลาคม 2677 – กันยายน 2678)\nปีงบประมาณ 2677 (ตุลาคม 2676 – กันยายน 2677)\nปีงบประมาณ 2676 (ตุลาคม 2675 – กันยายน 2676)\nปีงบประมาณ 2675 (ตุลาคม 2674 – กันยายน 2675)\nปีงบประมาณ 2674 (ตุลาคม 2673 – กันยายน 2674)\nปีงบประมาณ 2673 (ตุลาคม 2672 – กันยายน 2673)\nปีงบประมาณ 2672 (ตุลาคม 2671 – กันยายน 2672)\nปีงบประมาณ 2671 (ตุลาคม 2670 – กันยายน 2671)\nปีงบประมาณ 2670 (ตุลาคม 2669 – กันยายน 2670)\nปีงบประมาณ 2669 (ตุลาคม 2668 – กันยายน 2669)\nปีงบประมาณ 2668 (ตุลาคม 2667 – กันยายน 2668)\nปีงบประมาณ 2667 (ตุลาคม 2666 – กันยายน 2667)\nปีงบประมาณ 2666 (ตุลาคม 2665 – กันยายน 2666)\nปีงบประมาณ 2665 (ตุลาคม 2664 – กันยายน 2665)\nปีงบประมาณ 2664 (ตุลาคม 2663 – กันยายน 2664)\nปีงบประมาณ 2663 (ตุลาคม 2662 – กันยายน 2663)\nปีงบประมาณ 2662 (ตุลาคม 2661 – กันยายน 2662)\nปีงบประมาณ 2661 (ตุลาคม 2660 – กันยายน 2661)\nปีงบประมาณ 2660 (ตุลาคม 2659 – กันยายน 2660)\nปีงบประมาณ 2659 (ตุลาคม 2658 – กันยายน 2659)\nปีงบประมาณ 2658 (ตุลาคม 2657 – กันยายน 2658)\nปีงบประมาณ 2657 (ตุลาคม 2656 – กันยายน 2657)\nปีงบประมาณ 2656 (ตุลาคม 2655 – กันยายน 2656)\nปีงบประมาณ 2655 (ตุลาคม 2654 – กันยายน 2655)\nปีงบประมาณ 2654 (ตุลาคม 2653 – กันยายน 2654)\nปีงบประมาณ 2653 (ตุลาคม 2652 – กันยายน 2653)\nปีงบประมาณ 2652 (ตุลาคม 2651 – กันยายน 2652)\nปีงบประมาณ 2651 (ตุลาคม 2650 – กันยายน 2651)\nปีงบประมาณ 2650 (ตุลาคม 2649 – กันยายน 2650)\nปีงบประมาณ 2649 (ตุลาคม 2648 – กันยายน 2649)\nปีงบประมาณ 2648 (ตุลาคม 2647 – กันยายน 2648)\nปีงบประมาณ 2647 (ตุลาคม 2646 – กันยายน 2647)\nปีงบประมาณ 2646 (ตุลาคม 2645 – กันยายน 2646)\nปีงบประมาณ 2645 (ตุลาคม 2644 – กันยายน 2645)\nปีงบประมาณ 2644 (ตุลาคม 2643 – กันยายน 2644)\nปีงบประมาณ 2643 (ตุลาคม 2642 – กันยายน 2643)\nปีงบประมาณ 2642 (ตุลาคม 2641 – กันยายน 2642)\nปีงบประมาณ 2641 (ตุลาคม 2640 – กันยายน 2641)\nปีงบประมาณ 2640 (ตุลาคม 2639 – กันยายน 2640)\nปีงบประมาณ 2639 (ตุลาคม 2638 – กันยายน 2639)\nปีงบประมาณ 2638 (ตุลาคม 2637 – กันยายน 2638)\nปีงบประมาณ 2637 (ตุลาคม 2636 – กันยายน 2637)\nปีงบประมาณ 2636 (ตุลาคม 2635 – กันยายน 2636)\nปีงบประมาณ 2635 (ตุลาคม 2634 – กันยายน 2635)\nปีงบประมาณ 2634 (ตุลาคม 2633 – กันยายน 2634)\nปีงบประมาณ 2633 (ตุลาคม 2632 – กันยายน 2633)\nปีงบประมาณ 2632 (ตุลาคม 2631 – กันยายน 2632)\nปีงบประมาณ 2631 (ตุลาคม 2630 – กันยายน 2631)\nปีงบประมาณ 2630 (ตุลาคม 2629 – กันยายน 2630)\nปีงบประมาณ 2629 (ตุลาคม 2628 – กันยายน 2629)\nปีงบประมาณ 2628 (ตุลาคม 2627 – กันยายน 2628)\nปีงบประมาณ 2627 (ตุลาคม 2626 – กันยายน 2627)\nปีงบประมาณ 2626 (ตุลาคม 2625 – กันยายน 2626)\nปีงบประมาณ 2625 (ตุลาคม 2624 – กันยายน 2625)\nปีงบประมาณ 2624 (ตุลาคม 2623 – กันยายน 2624)\nปีงบประมาณ 2623 (ตุลาคม 2622 – กันยายน 2623)\nปีงบประมาณ 2622 (ตุลาคม 2621 – กันยายน 2622)\nปีงบประมาณ 2621 (ตุลาคม 2620 – กันยายน 2621)\nปีงบประมาณ 2620 (ตุลาคม 2619 – กันยายน 2620)\nปีงบประมาณ 2619 (ตุลาคม 2618 – กันยายน 2619)\nปีงบประมาณ 2618 (ตุลาคม 2617 – กันยายน 2618)\nปีงบประมาณ 2617 (ตุลาคม 2616 – กันยายน 2617)\nปีงบประมาณ 2616 (ตุลาคม 2615 – กันยายน 2616)\nปีงบประมาณ 2615 (ตุลาคม 2614 – กันยายน 2615)\nปีงบประมาณ 2614 (ตุลาคม 2613 – กันยายน 2614)\nปีงบประมาณ 2613 (ตุลาคม 2612 – กันยายน 2613)\nปีงบประมาณ 2612 (ตุลาคม 2611 – กันยายน 2612)\nปีงบประมาณ 2611 (ตุลาคม 2610 – กันยายน 2611)\nปีงบประมาณ 2610 (ตุลาคม 2609 – กันยายน 2610)\nปีงบประมาณ 2609 (ตุลาคม 2608 – กันยายน 2609)\nปีงบประมาณ 2608 (ตุลาคม 2607 – กันยายน 2608)\nปีงบประมาณ 2607 (ตุลาคม 2606 – กันยายน 2607)\nปีงบประมาณ 2606 (ตุลาคม 2605 – กันยายน 2606)\nปีงบประมาณ 2605 (ตุลาคม 2604 – กันยายน 2605)\nปีงบประมาณ 2604 (ตุลาคม 2603 – กันยายน 2604)\nปีงบประมาณ 2603 (ตุลาคม 2602 – กันยายน 2603)\nปีงบประมาณ 2602 (ตุลาคม 2601 – กันยายน 2602)\nปีงบประมาณ 2601 (ตุลาคม 2600 – กันยายน 2601)\nปีงบประมาณ 2600 (ตุลาคม 2599 – กันยายน 2600)\nปีงบประมาณ 2599 (ตุลาคม 2598 – กันยายน 2599)\nปีงบประมาณ 2598 (ตุลาคม 2597 – กันยายน 2598)\nปีงบประมาณ 2597 (ตุลาคม 2596 – กันยายน 2597)\nปีงบประมาณ 2596 (ตุลาคม 2595 – กันยายน 2596)\nปีงบประมาณ 2595 (ตุลาคม 2594 – กันยายน 2595)\nปีงบประมาณ 2594 (ตุลาคม 2593 – กันยายน 2594)\nปีงบประมาณ 2593 (ตุลาคม 2592 – กันยายน 2593)\nปีงบประมาณ 2592 (ตุลาคม 2591 – กันยายน 2592)\nปีงบประมาณ 2591 (ตุลาคม 2590 – กันยายน 2591)\nปีงบประมาณ 2590 (ตุลาคม 2589 – กันยายน 2590)\nปีงบประมาณ 2589 (ตุลาคม 2588 – กันยายน 2589)\nปีงบประมาณ 2588 (ตุลาคม 2587 – กันยายน 2588)\nปีงบประมาณ 2587 (ตุลาคม 2586 – กันยายน 2587)\nปีงบประมาณ 2586 (ตุลาคม 2585 – กันยายน 2586)\nปีงบประมาณ 2585 (ตุลาคม 2584 – กันยายน 2585)\nปีงบประมาณ 2584 (ตุลาคม 2583 – กันยายน 2584)\nปีงบประมาณ 2583 (ตุลาคม 2582 – กันยายน 2583)\nปีงบประมาณ 2582 (ตุลาคม 2581 – กันยายน 2582)\nปีงบประมาณ 2581 (ตุลาคม 2580 – กันยายน 2581)\nปีงบประมาณ 2580 (ตุลาคม 2579 – กันยายน 2580)\nปีงบประมาณ 2579 (ตุลาคม 2578 – กันยายน 2579)\nปีงบประมาณ 2578 (ตุลาคม 2577 – กันยายน 2578)\nปีงบประมาณ 2577 (ตุลาคม 2576 – กันยายน 2577)\nปีงบประมาณ 2576 (ตุลาคม 2575 – กันยายน 2576)\nปีงบประมาณ 2575 (ตุลาคม 2574 – กันยายน 2575)\nปีงบประมาณ 2574 (ตุลาคม 2573 – กันยายน 2574)\nปีงบประมาณ 2573 (ตุลาคม 2572 – กันยายน 2573)\nปีงบประมาณ 2572 (ตุลาคม 2571 – กันยายน 2572)\nปีงบประมาณ 2571 (ตุลาคม 2570 – กันยายน 2571)\nปีงบประมาณ 2570 (ตุลาคม 2569 – กันยายน 2570)\nปีงบประมาณ 2569 (ตุลาคม 2568 – กันยายน 2569)\nปีงบประมาณ 2568 (ตุลาคม 2567 – กันยายน 2568)\nปีงบประมาณ 2567 (ตุลาคม 2566 – กันยายน 2567)\nปีงบประมาณ 2566 (ตุลาคม 2565 – กันยายน 2566)\nปีงบประมาณ 2565 (ตุลาคม 2564 – กันยายน 2565)\nปีงบประมาณ 2564 (ตุลาคม 2563 – กันยายน 2564)\nปีงบประมาณ 2563 (ตุลาคม 2562 – กันยายน 2563)\nปีงบประมาณ 2562 (ตุลาคม 2561 – กันยายน 2562)\nปีงบประมาณ 2561 (ตุลาคม 2560 – กันยายน 2561)\nปีงบประมาณ 2560 (ตุลาคม 2559 – กันยายน 2560)\nปีงบประมาณ 2559 (ตุลาคม 2558 – กันยายน 2559)\nปีงบประมาณ 2558 (ตุลาคม 2557 – กันยายน 2558)\nปีงบประมาณ 2557 (ตุลาคม 2556 – กันยายน 2557)\nปีงบประมาณ 2556 (ตุลาคม 2555 – กันยายน 2556)\nปีงบประมาณ 2555 (ตุลาคม 2554 – กันยายน 2555)\nปีงบประมาณ 2554 (ตุลาคม 2553 – กันยายน 2554)\nปีงบประมาณ 2553 (ตุลาคม 2552 – กันยายน 2553)\nปีงบประมาณ 2552 (ตุลาคม 2551 – กันยายน 2552)\nปีงบประมาณ 2551 (ตุลาคม 2550 – กันยายน 2551)\nปีงบประมาณ 2550 (ตุลาคม 2549 – กันยายน 2550)\nปีงบประมาณ 2549 (ตุลาคม 2548 – กันยายน 2549)\nปีงบประมาณ 2548 (ตุลาคม 2547 – กันยายน 2548)\nปีงบประมาณ 2547 (ตุลาคม 2546 – กันยายน 2547)\nปีงบประมาณ 2546 (ตุลาคม 2545 – กันยายน 2546)\nปีงบประมาณ 2545 (ตุลาคม 2544 – กันยายน 2545)\nปีงบประมาณ 2544 (ตุลาคม 2543 – กันยายน 2544)\nปีงบประมาณ 2543 (ตุลาคม 2542 – กันยายน 2543)\nสถานะข้อมูล\nทั้งหมด\nยืนยันแล้ว\nรอยืนยัน\nแสดงรายงาน\nล้างตัวกรอง\nปีงบประมาณ 2570 (ตุลาคม 2569 – กันยายน 2570)\nสถานะข้อมูล: ทั้งหมด\nอัตราการครองเตียง\n\nปีงบประมาณ 2570 (ตุลาคม 2569 – กันยายน 2570) · ทุกหอที่มีสิทธิ์\n\nสถานะข้อมูล: ทั้งหมด\n\nเรียกดูข้อมูล ณ 20 พฤศจิกายน 2569 10:00 น.\n\nพิมพ์\nส่งออก Excel\n\nไม่มีข้อมูลสำหรับพิมพ์หรือส่งออก เลือกวันหรือช่วงอื่น\n\nไม่พบข้อมูลในช่วงที่เลือก\n\nลองเปลี่ยนวัน ช่วงข้อมูล หรือสถานะข้อมูล แล้วกดแสดงรายงานอีกครั้ง\n\nส่งออกเป็น Excel XML (.xml) เปิดด้วยโปรแกรม Excel ได้ ตัวเลขคงค่าจากรายงาน"
+    },
+    {
+      "name": "home",
+      "phase": "error",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "กำลังโหลดสถานะรายเวร",
+        "กำลังโหลดข้อมูล",
+        "กำลังโหลดข้อมูล",
+        "กำลังโหลดข้อมูล",
+        "กำลังโหลดข้อมูล",
+        "กำลังโหลดข้อมูล",
+        "โหลดข้อมูลไม่สำเร็จ\n\nระบบหลังบ้านขัดข้องชั่วคราว กรุณาลองใหม่ภายหลัง\n\nลองใหม่",
+        "โหลดข้อมูลไม่สำเร็จ"
+      ]
+    },
+    {
+      "name": "entry",
+      "phase": "error",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "บันทึกข้อมูลประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "ทำรายการไม่สำเร็จ\nระบบหลังบ้านขัดข้องชั่วคราว กรุณาลองใหม่ภายหลัง"
+      ]
+    },
+    {
+      "name": "history",
+      "phase": "error",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "ตรวจสอบและยืนยันข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "ค้นหาหรือปรับสถานะข้อมูลไม่สำเร็จ\n\nระบบหลังบ้านขัดข้องชั่วคราว กรุณาลองใหม่ภายหลัง\n\nลองใหม่",
+        "ค้นหาหรือปรับสถานะข้อมูลไม่สำเร็จ"
+      ]
+    },
+    {
+      "name": "pending",
+      "phase": "error",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "รอยืนยันการส่งข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "ค้นหาหรือปรับสถานะข้อมูลไม่สำเร็จ\n\nระบบหลังบ้านขัดข้องชั่วคราว กรุณาลองใหม่ภายหลัง\n\nลองใหม่",
+        "ค้นหาหรือปรับสถานะข้อมูลไม่สำเร็จ"
+      ]
+    },
+    {
+      "name": "indicators",
+      "phase": "error",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "ตัวชี้วัดเสริม",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "โหลดข้อมูลไม่สำเร็จ\n\nระบบหลังบ้านขัดข้องชั่วคราว กรุณาลองใหม่ภายหลัง\n\nลองใหม่",
+        "โหลดข้อมูลไม่สำเร็จ",
+        "โหลดข้อมูลไม่สำเร็จ\n\nระบบหลังบ้านขัดข้องชั่วคราว กรุณาลองใหม่ภายหลัง\n\nลองใหม่",
+        "โหลดข้อมูลไม่สำเร็จ"
+      ]
+    },
+    {
+      "name": "reports",
+      "phase": "error",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "รายงานประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "โหลดข้อมูลไม่สำเร็จ\n\nระบบหลังบ้านขัดข้องชั่วคราว กรุณาลองใหม่ภายหลัง\n\nลองใหม่",
+        "โหลดข้อมูลไม่สำเร็จ"
+      ]
+    },
+    {
+      "name": "occupancy",
+      "phase": "error",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "อัตราการครองเตียง",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "โหลดข้อมูลไม่สำเร็จ\n\nระบบหลังบ้านขัดข้องชั่วคราว กรุณาลองใหม่ภายหลัง\n\nลองใหม่",
+        "โหลดข้อมูลไม่สำเร็จ"
+      ]
+    },
+    {
+      "name": "entry",
+      "phase": "ward-denied",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "บันทึกข้อมูลประจำวัน",
+      "isoDates": [],
+      "technical": [
+        "ward"
+      ],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "ทำรายการไม่สำเร็จ\nบัญชีนี้ไม่มีสิทธิ์ดูข้อมูล ward ที่เลือก"
+      ]
+    },
+    {
+      "name": "pending",
+      "phase": "ward-denied",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "รอยืนยันการส่งข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "ค้นหาหรือปรับสถานะข้อมูลไม่สำเร็จ\n\nบัญชีนี้ไม่มีสิทธิ์ดูข้อมูล หอผู้ป่วย ที่เลือก\n\nลองใหม่",
+        "ค้นหาหรือปรับสถานะข้อมูลไม่สำเร็จ"
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "width": 767,
+      "client": 767,
+      "scroll": 767,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "width": 768,
+      "client": 768,
+      "scroll": 768,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 80
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "width": 1023,
+      "client": 1023,
+      "scroll": 1023,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 80
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": []
+    }
+  ],
+  "keyboard": [
+    {
+      "width": 1440,
+      "fields": 59,
+      "sequence": [
+        "pt_on",
+        "nb_on",
+        "pt_in",
+        "nb_in",
+        "pt_move",
+        "nb_move",
+        "pt_home",
+        "nb_home",
+        "pt_move_b",
+        "nb_move_b",
+        "pt_send",
+        "nb_send",
+        "pt_dead",
+        "nb_dead",
+        "pt_non_voluntary",
+        "nb_non_voluntary",
+        "pt_ad",
+        "nb_ad",
+        "patient_type5",
+        "patient_type4",
+        "patient_type3",
+        "patient_type2",
+        "patient_type1",
+        "amount_bed",
+        "em_hn",
+        "em_rn",
+        "em_tn",
+        "em_pn",
+        "em_aid",
+        "obs:n",
+        "obs:s",
+        "nb:n",
+        "nb:s",
+        "gyn:n",
+        "gyn:s",
+        "surg:n",
+        "surg:s",
+        "med:n",
+        "med:s",
+        "psych:n",
+        "psych:s",
+        "skin:n",
+        "skin:s",
+        "ped:n",
+        "ped:s",
+        "ortho:n",
+        "ortho:s",
+        "eye:n",
+        "eye:s",
+        "ent:n",
+        "ent:s",
+        "dent:n",
+        "dent:s",
+        "neuro_surg:n",
+        "neuro_surg:s",
+        "stage2_4_cases",
+        "at_risk_patient_days",
+        "readmit_count",
+        "discharge_count"
+      ],
+      "saved": true,
+      "usesPointer": false,
+      "body": {
+        "pt_on": 7,
+        "pt_in": 7,
+        "pt_move": 7,
+        "pt_home": 7,
+        "pt_move_b": 7,
+        "pt_send": 7,
+        "pt_dead": 7,
+        "pt_non_voluntary": 7,
+        "pt_ad": 7,
+        "nb_on": 7,
+        "nb_in": 7,
+        "nb_move": 7,
+        "nb_home": 7,
+        "nb_move_b": 7,
+        "nb_send": 7,
+        "nb_dead": 7,
+        "nb_non_voluntary": 7,
+        "nb_ad": 7,
+        "patient_type5": 7,
+        "patient_type4": 7,
+        "patient_type3": 7,
+        "patient_type2": 7,
+        "patient_type1": 7,
+        "em_hn": 7,
+        "em_rn": 7,
+        "em_tn": 7,
+        "em_pn": 7,
+        "em_aid": 7,
+        "amount_bed": 50,
+        "specialties": [
+          {
+            "specialty_code": "obs",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "obs",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "nb",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "nb",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "gyn",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "gyn",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "surg",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "surg",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "med",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "med",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "psych",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "psych",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "skin",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "skin",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "ped",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "ped",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "ortho",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "ortho",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "eye",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "eye",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "ent",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "ent",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "dent",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "dent",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "neuro_surg",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "neuro_surg",
+            "category_code": "s",
+            "count_value": 7
+          }
+        ],
+        "pressure": {
+          "stage2_4_cases": 7,
+          "at_risk_patient_days": 7
+        },
+        "readmission": {
+          "readmit_count": 7,
+          "discharge_count": 7
+        },
+        "previous_readmission": {
+          "readmit_count": 3,
+          "discharge_count": 80
+        },
+        "expected_version": 1
+      }
+    },
+    {
+      "width": 360,
+      "fields": 59,
+      "sequence": [
+        "pt_on",
+        "nb_on",
+        "pt_in",
+        "nb_in",
+        "pt_move",
+        "nb_move",
+        "pt_home",
+        "nb_home",
+        "pt_move_b",
+        "nb_move_b",
+        "pt_send",
+        "nb_send",
+        "pt_dead",
+        "nb_dead",
+        "pt_non_voluntary",
+        "nb_non_voluntary",
+        "pt_ad",
+        "nb_ad",
+        "patient_type5",
+        "patient_type4",
+        "patient_type3",
+        "patient_type2",
+        "patient_type1",
+        "amount_bed",
+        "em_hn",
+        "em_rn",
+        "em_tn",
+        "em_pn",
+        "em_aid",
+        "obs:n",
+        "obs:s",
+        "nb:n",
+        "nb:s",
+        "gyn:n",
+        "gyn:s",
+        "surg:n",
+        "surg:s",
+        "med:n",
+        "med:s",
+        "psych:n",
+        "psych:s",
+        "skin:n",
+        "skin:s",
+        "ped:n",
+        "ped:s",
+        "ortho:n",
+        "ortho:s",
+        "eye:n",
+        "eye:s",
+        "ent:n",
+        "ent:s",
+        "dent:n",
+        "dent:s",
+        "neuro_surg:n",
+        "neuro_surg:s",
+        "stage2_4_cases",
+        "at_risk_patient_days",
+        "readmit_count",
+        "discharge_count"
+      ],
+      "saved": true,
+      "usesPointer": false,
+      "body": {
+        "pt_on": 7,
+        "pt_in": 7,
+        "pt_move": 7,
+        "pt_home": 7,
+        "pt_move_b": 7,
+        "pt_send": 7,
+        "pt_dead": 7,
+        "pt_non_voluntary": 7,
+        "pt_ad": 7,
+        "nb_on": 7,
+        "nb_in": 7,
+        "nb_move": 7,
+        "nb_home": 7,
+        "nb_move_b": 7,
+        "nb_send": 7,
+        "nb_dead": 7,
+        "nb_non_voluntary": 7,
+        "nb_ad": 7,
+        "patient_type5": 7,
+        "patient_type4": 7,
+        "patient_type3": 7,
+        "patient_type2": 7,
+        "patient_type1": 7,
+        "em_hn": 7,
+        "em_rn": 7,
+        "em_tn": 7,
+        "em_pn": 7,
+        "em_aid": 7,
+        "amount_bed": 50,
+        "specialties": [
+          {
+            "specialty_code": "obs",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "obs",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "nb",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "nb",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "gyn",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "gyn",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "surg",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "surg",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "med",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "med",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "psych",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "psych",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "skin",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "skin",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "ped",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "ped",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "ortho",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "ortho",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "eye",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "eye",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "ent",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "ent",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "dent",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "dent",
+            "category_code": "s",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "neuro_surg",
+            "category_code": "n",
+            "count_value": 7
+          },
+          {
+            "specialty_code": "neuro_surg",
+            "category_code": "s",
+            "count_value": 7
+          }
+        ],
+        "pressure": {
+          "stage2_4_cases": 7,
+          "at_risk_patient_days": 7
+        },
+        "readmission": {
+          "readmit_count": 7,
+          "discharge_count": 7
+        },
+        "previous_readmission": {
+          "readmit_count": 3,
+          "discharge_count": 80
+        },
+        "expected_version": 1
+      }
+    }
+  ],
+  "pageErrors": [],
+  "unexpected": [],
+  "confirmations": [
+    "บันทึกข้อมูลเวรบ่าย วันที่ 19 พฤศจิกายน 2569 หรือไม่?"
+  ],
+  "contrastMethod": "effective rendered backgrounds; unresolved gradients excluded; focused login detail in contrast-audit.json"
+}

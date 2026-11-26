@@ -1,0 +1,32 @@
+[
+  {
+    "name": "initialValues",
+    "identical": true,
+    "beforeSha256": "b4148a968fed3edcd98d9f005b0c8fd5aafbd8fc8371bf02dfff73337cf1b739",
+    "afterSha256": "b4148a968fed3edcd98d9f005b0c8fd5aafbd8fc8371bf02dfff73337cf1b739"
+  },
+  {
+    "name": "save body and request",
+    "identical": true,
+    "beforeSha256": "08a495e6784a3c6913fd6d56bafabef7f8a6326a29e40b91d04f0ead91b76141",
+    "afterSha256": "08a495e6784a3c6913fd6d56bafabef7f8a6326a29e40b91d04f0ead91b76141"
+  },
+  {
+    "name": "confirmEntry",
+    "identical": true,
+    "beforeSha256": "cb356ee816c1a0d66a2fe0bd8221737a63b4d96da441d8570cb7b70b0b59eb4f",
+    "afterSha256": "cb356ee816c1a0d66a2fe0bd8221737a63b4d96da441d8570cb7b70b0b59eb4f"
+  },
+  {
+    "name": "indicator loading",
+    "identical": true,
+    "beforeSha256": "e46ecd9b282805dd8c312de8aef3c23580bd2cd806afbdc109cb48ad7e3435a5",
+    "afterSha256": "e46ecd9b282805dd8c312de8aef3c23580bd2cd806afbdc109cb48ad7e3435a5"
+  },
+  {
+    "name": "indicator saves",
+    "identical": true,
+    "beforeSha256": "43379257ce6c74dc23843e44601c56068aecf4a93c4e4a08b068e59134e6a131",
+    "afterSha256": "43379257ce6c74dc23843e44601c56068aecf4a93c4e4a08b068e59134e6a131"
+  }
+]

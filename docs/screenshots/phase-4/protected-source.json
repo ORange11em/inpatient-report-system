@@ -1,0 +1,18 @@
+[
+  {
+    "name": "list read and 51/50 paging",
+    "identical": true,
+    "beforeSha256": "5b01c1547ce5ba0fdc1040ce72166e9f6747fcbae83e025feafbb59085046feb",
+    "afterSha256": "5b01c1547ce5ba0fdc1040ce72166e9f6747fcbae83e025feafbb59085046feb"
+  },
+  {
+    "name": "confirm/return request",
+    "identical": true,
+    "beforeSha256": "79975e07866f93230acd5dfbb5c4917257d6f600912cefc605d50ba9678c45f2",
+    "afterSha256": "79975e07866f93230acd5dfbb5c4917257d6f600912cefc605d50ba9678c45f2"
+  },
+  {
+    "name": "last-row page fallback",
+    "identical": true
+  }
+]

@@ -1,0 +1,401 @@
+{
+  "method": "WCAG relative luminance of effective rendered backgrounds; opaque descendants override ancestor gradients; unresolved gradients require manual inspection",
+  "rows": [
+    {
+      "name": "home",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "home",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "หน้าแรก",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "entry",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "title": "บันทึกข้อมูลประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "entry",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "บันทึกข้อมูลประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "history",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "title": "รอยืนยันการส่งข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "history",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "รอยืนยันการส่งข้อมูล",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 1092,
+          "scroll": 1092
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "indicators",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "title": "ตัวชี้วัดเสริม",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": [
+        "มีข้อมูลที่บันทึกไว้",
+        "มีข้อมูลที่บันทึกไว้"
+      ]
+    },
+    {
+      "name": "indicators",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "ตัวชี้วัดเสริม",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [],
+      "statusLabels": [
+        "มีข้อมูลที่บันทึกไว้",
+        "มีข้อมูลที่บันทึกไว้"
+      ]
+    },
+    {
+      "name": "reports",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "title": "รายงานประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "reports",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "รายงานประจำวัน",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 1092,
+          "scroll": 2853
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "occupancy",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "title": "อัตราการครองเตียง",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": true,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": [
+        "กำลังโหลดรายงาน"
+      ]
+    },
+    {
+      "name": "occupancy",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "อัตราการครองเตียง",
+      "isoDates": [],
+      "technical": [],
+      "contrastFailures": [],
+      "borderFailures": [],
+      "smallControls": [],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": true,
+        "bottom": false,
+        "sidebarWidth": 248
+      },
+      "tables": [
+        {
+          "client": 1092,
+          "scroll": 1360
+        }
+      ],
+      "statusLabels": []
+    },
+    {
+      "name": "login",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "title": "ระบบบันทึกข้อมูลผู้ป่วยใน",
+      "isoDates": [],
+      "technical": [
+        "session",
+        "cookie",
+        "API"
+      ],
+      "contrastFailures": [],
+      "borderFailures": [
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        }
+      ],
+      "smallControls": [
+        {
+          "tag": "BUTTON",
+          "name": "",
+          "text": "เข้าสู่ระบบ",
+          "height": 42
+        }
+      ],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": false,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "login",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "ระบบบันทึกข้อมูลผู้ป่วยใน",
+      "isoDates": [],
+      "technical": [
+        "session",
+        "cookie",
+        "API"
+      ],
+      "contrastFailures": [],
+      "borderFailures": [
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        }
+      ],
+      "smallControls": [
+        {
+          "tag": "BUTTON",
+          "name": "",
+          "text": "เข้าสู่ระบบ",
+          "height": 42
+        }
+      ],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": false,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    },
+    {
+      "name": "login",
+      "focused": true,
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "title": "ระบบบันทึกข้อมูลผู้ป่วยใน",
+      "isoDates": [],
+      "technical": [
+        "session",
+        "cookie",
+        "API"
+      ],
+      "contrastFailures": [],
+      "borderFailures": [
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 2.77,
+          "color": "rgb(76, 170, 161)"
+        },
+        {
+          "tag": "INPUT",
+          "name": "",
+          "ratio": 1.34,
+          "color": "rgb(214, 224, 228)"
+        }
+      ],
+      "smallControls": [
+        {
+          "tag": "BUTTON",
+          "name": "",
+          "text": "เข้าสู่ระบบ",
+          "height": 42
+        }
+      ],
+      "missingLabels": [],
+      "nav": {
+        "sidebar": false,
+        "bottom": false,
+        "sidebarWidth": 0
+      },
+      "tables": [],
+      "statusLabels": []
+    }
+  ]
+}

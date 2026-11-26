@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-20",
+  "baselineFiles": 378,
+  "changed": [
+    "new-system/docs/ui-progress.md"
+  ],
+  "unchangedBaselineFiles": 377,
+  "removed": [],
+  "addedCountBeforeScopeReview": 125,
+  "sourceTestsConfigDependenciesUnchanged": true,
+  "allAddedFilesUnderDocs": true,
+  "productionDataAccessed": false,
+  "qaOutcome": {
+    "acceptancePassed": 5,
+    "acceptanceFailed": 2,
+    "unit": 35,
+    "browserRegressionGroups": 72,
+    "keyboardFieldsPerViewport": 59,
+    "keyboardWidths": [
+      1440,
+      360
+    ],
+    "responsiveMeasurements": 64,
+    "pdfPages": [
+      31,
+      3
+    ],
+    "lighthouseScores": null
+  },
+  "findings": [
+    "F01 login jargon",
+    "F02 raw ward wording in entry error",
+    "F03 login input border/focus contrast",
+    "F04 login button below 44px",
+    "F05 mobile toast covers save button"
+  ],
+  "manualTests": "M01-M07 in docs/ui-phase-7.md"
+}

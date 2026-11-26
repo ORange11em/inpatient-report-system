@@ -1,0 +1,527 @@
+{
+  "passed": true,
+  "reports": [
+    {
+      "key": "daily",
+      "pdf": "output/pdf/parity-phase-4/daily.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 4
+        },
+        {
+          "page": 2,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 4
+        },
+        {
+          "page": 3,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 4
+        },
+        {
+          "page": 4,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 4
+        },
+        {
+          "page": 5,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 4
+        }
+      ],
+      "data_rows": 20,
+      "expected_data_rows": 20,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "daily-all",
+      "pdf": "output/pdf/parity-phase-4/daily-all.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        },
+        {
+          "page": 2,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        },
+        {
+          "page": 3,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        }
+      ],
+      "data_rows": 9,
+      "expected_data_rows": 9,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "monthly",
+      "pdf": "output/pdf/parity-phase-4/monthly.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 11
+        },
+        {
+          "page": 2,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 11
+        },
+        {
+          "page": 3,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 11
+        },
+        {
+          "page": 4,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 11
+        },
+        {
+          "page": 5,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 11
+        }
+      ],
+      "data_rows": 55,
+      "expected_data_rows": 55,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "census-day",
+      "pdf": "output/pdf/parity-phase-4/census-day.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        },
+        {
+          "page": 2,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        },
+        {
+          "page": 3,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        },
+        {
+          "page": 4,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        },
+        {
+          "page": 5,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        },
+        {
+          "page": 6,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        }
+      ],
+      "data_rows": 18,
+      "expected_data_rows": 18,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "census-month",
+      "pdf": "output/pdf/parity-phase-4/census-month.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 4
+        },
+        {
+          "page": 2,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 4
+        },
+        {
+          "page": 3,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 4
+        },
+        {
+          "page": 4,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 4
+        },
+        {
+          "page": 5,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 4
+        },
+        {
+          "page": 6,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 4
+        }
+      ],
+      "data_rows": 24,
+      "expected_data_rows": 24,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "turnover",
+      "pdf": "output/pdf/parity-phase-4/turnover.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        }
+      ],
+      "data_rows": 3,
+      "expected_data_rows": 3,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "los",
+      "pdf": "output/pdf/parity-phase-4/los.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        }
+      ],
+      "data_rows": 3,
+      "expected_data_rows": 3,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "occupancy",
+      "pdf": "output/pdf/parity-phase-4/occupancy.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        }
+      ],
+      "data_rows": 3,
+      "expected_data_rows": 3,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "productivity",
+      "pdf": "output/pdf/parity-phase-4/productivity.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 2
+        },
+        {
+          "page": 2,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 2
+        },
+        {
+          "page": 3,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 2
+        },
+        {
+          "page": 4,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 2
+        }
+      ],
+      "data_rows": 8,
+      "expected_data_rows": 8,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "specialty",
+      "pdf": "output/pdf/parity-phase-4/specialty.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 16
+        },
+        {
+          "page": 2,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 16
+        }
+      ],
+      "data_rows": 32,
+      "expected_data_rows": 32,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "skill-mix",
+      "pdf": "output/pdf/parity-phase-4/skill-mix.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        }
+      ],
+      "data_rows": 3,
+      "expected_data_rows": 3,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "nursing-hours",
+      "pdf": "output/pdf/parity-phase-4/nursing-hours.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        }
+      ],
+      "data_rows": 3,
+      "expected_data_rows": 3,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "pressure",
+      "pdf": "output/pdf/parity-phase-4/pressure.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        }
+      ],
+      "data_rows": 3,
+      "expected_data_rows": 3,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "pressure-detail",
+      "pdf": "output/pdf/parity-phase-4/pressure-detail.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 23
+        },
+        {
+          "page": 2,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 8
+        }
+      ],
+      "data_rows": 31,
+      "expected_data_rows": 31,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "readmission",
+      "pdf": "output/pdf/parity-phase-4/readmission.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        }
+      ],
+      "data_rows": 3,
+      "expected_data_rows": 3,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "bed-edge",
+      "pdf": "output/pdf/parity-phase-4/bed-edge.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 8
+        },
+        {
+          "page": 2,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 8
+        },
+        {
+          "page": 3,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 8
+        },
+        {
+          "page": 4,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 8
+        },
+        {
+          "page": 5,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 8
+        }
+      ],
+      "data_rows": 40,
+      "expected_data_rows": 40,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "specialty-edge",
+      "pdf": "output/pdf/parity-phase-4/specialty-edge.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 12
+        },
+        {
+          "page": 2,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 12
+        }
+      ],
+      "data_rows": 24,
+      "expected_data_rows": 24,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "pressure-detail-empty",
+      "pdf": "output/pdf/parity-phase-4/pressure-detail-empty.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 23
+        },
+        {
+          "page": 2,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 7
+        }
+      ],
+      "data_rows": 30,
+      "expected_data_rows": 30,
+      "rendered_all_pages": true
+    },
+    {
+      "key": "occupancy-complete",
+      "pdf": "output/pdf/parity-phase-4/occupancy-complete.pdf",
+      "pages": [
+        {
+          "page": 1,
+          "A4_landscape": true,
+          "repeated_header": true,
+          "text_within_page": true,
+          "data_rows": 3
+        }
+      ],
+      "data_rows": 3,
+      "expected_data_rows": 3,
+      "rendered_all_pages": true
+    }
+  ],
+  "total_pages": 50
+}

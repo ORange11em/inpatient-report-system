@@ -1,0 +1,1510 @@
+[
+  {
+    "100": {
+      "width": 360,
+      "scroll": 360,
+      "client": 360,
+      "input": 16,
+      "entryInput": null,
+      "table": null,
+      "heading": 32,
+      "label": 13,
+      "button": 13,
+      "menu": null,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 61,
+        "top": 0,
+        "right": 360,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 360,
+      "scroll": 360,
+      "client": 360,
+      "input": 20,
+      "entryInput": null,
+      "table": null,
+      "heading": 40,
+      "label": 16.25,
+      "button": 16.25,
+      "menu": null,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 63.875,
+        "top": 0,
+        "right": 360,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/login",
+    "width": 360
+  },
+  {
+    "100": {
+      "width": 360,
+      "scroll": 360,
+      "client": 360,
+      "input": null,
+      "entryInput": null,
+      "table": null,
+      "heading": 24,
+      "label": null,
+      "button": 16,
+      "menu": 14,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 61,
+        "top": 0,
+        "right": 360,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 360,
+      "scroll": 360,
+      "client": 360,
+      "input": null,
+      "entryInput": null,
+      "table": null,
+      "heading": 30,
+      "label": null,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 63.875,
+        "top": 0,
+        "right": 360,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/",
+    "width": 360
+  },
+  {
+    "100": {
+      "width": 360,
+      "scroll": 360,
+      "client": 360,
+      "input": 16,
+      "entryInput": 16,
+      "table": null,
+      "heading": 24,
+      "label": 16,
+      "button": 16,
+      "menu": 14,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 61,
+        "top": 0,
+        "right": 360,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 360,
+      "scroll": 360,
+      "client": 360,
+      "input": 20,
+      "entryInput": 20,
+      "table": null,
+      "heading": 30,
+      "label": 20,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 63.875,
+        "top": 0,
+        "right": 360,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/entries?ward=example-0&date=2026-11-20&shift=73",
+    "width": 360
+  },
+  {
+    "100": {
+      "width": 360,
+      "scroll": 360,
+      "client": 360,
+      "input": null,
+      "entryInput": null,
+      "table": null,
+      "heading": 24,
+      "label": null,
+      "button": 16,
+      "menu": 14,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 61,
+        "top": 0,
+        "right": 360,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 360,
+      "scroll": 360,
+      "client": 360,
+      "input": null,
+      "entryInput": null,
+      "table": null,
+      "heading": 30,
+      "label": null,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 63.875,
+        "top": 0,
+        "right": 360,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/history",
+    "width": 360
+  },
+  {
+    "100": {
+      "width": 360,
+      "scroll": 360,
+      "client": 360,
+      "input": 16,
+      "entryInput": null,
+      "table": null,
+      "heading": 24,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 61,
+        "top": 0,
+        "right": 360,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 360,
+      "scroll": 360,
+      "client": 360,
+      "input": 20,
+      "entryInput": null,
+      "table": null,
+      "heading": 30,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 63.875,
+        "top": 0,
+        "right": 360,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/indicators",
+    "width": 360
+  },
+  {
+    "100": {
+      "width": 360,
+      "scroll": 360,
+      "client": 360,
+      "input": null,
+      "entryInput": null,
+      "table": null,
+      "heading": 24,
+      "label": null,
+      "button": 16,
+      "menu": 14,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 61,
+        "top": 0,
+        "right": 360,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 360,
+      "scroll": 360,
+      "client": 360,
+      "input": null,
+      "entryInput": null,
+      "table": null,
+      "heading": 30,
+      "label": null,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 63.875,
+        "top": 0,
+        "right": 360,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/reports",
+    "width": 360
+  },
+  {
+    "100": {
+      "width": 360,
+      "scroll": 360,
+      "client": 360,
+      "input": null,
+      "entryInput": null,
+      "table": null,
+      "heading": 24,
+      "label": null,
+      "button": 16,
+      "menu": 14,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 61,
+        "top": 0,
+        "right": 360,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 360,
+      "scroll": 360,
+      "client": 360,
+      "input": null,
+      "entryInput": null,
+      "table": null,
+      "heading": 30,
+      "label": null,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 63.875,
+        "top": 0,
+        "right": 360,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/occupancy",
+    "width": 360
+  },
+  {
+    "100": {
+      "width": 768,
+      "scroll": 768,
+      "client": 768,
+      "input": 16,
+      "entryInput": null,
+      "table": null,
+      "heading": 38.4,
+      "label": 13,
+      "button": 13,
+      "menu": null,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 61,
+        "top": 0,
+        "right": 768,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 768,
+      "scroll": 768,
+      "client": 768,
+      "input": 20,
+      "entryInput": null,
+      "table": null,
+      "heading": 48,
+      "label": 16.25,
+      "button": 16.25,
+      "menu": null,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 63.875,
+        "top": 0,
+        "right": 768,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/login",
+    "width": 768
+  },
+  {
+    "100": {
+      "width": 768,
+      "scroll": 768,
+      "client": 768,
+      "input": null,
+      "entryInput": null,
+      "table": null,
+      "heading": 24,
+      "label": null,
+      "button": 16,
+      "menu": 14,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 61,
+        "top": 0,
+        "right": 768,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 768,
+      "scroll": 768,
+      "client": 768,
+      "input": null,
+      "entryInput": null,
+      "table": null,
+      "heading": 30,
+      "label": null,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 63.875,
+        "top": 0,
+        "right": 768,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/",
+    "width": 768
+  },
+  {
+    "100": {
+      "width": 768,
+      "scroll": 768,
+      "client": 768,
+      "input": 16,
+      "entryInput": 16,
+      "table": null,
+      "heading": 24,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 61,
+        "top": 0,
+        "right": 768,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 768,
+      "scroll": 768,
+      "client": 768,
+      "input": 20,
+      "entryInput": 20,
+      "table": null,
+      "heading": 30,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 63.875,
+        "top": 0,
+        "right": 768,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/entries?ward=example-0&date=2026-11-20&shift=73",
+    "width": 768
+  },
+  {
+    "100": {
+      "width": 768,
+      "scroll": 768,
+      "client": 768,
+      "input": null,
+      "entryInput": null,
+      "table": 14,
+      "heading": 24,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [
+        {
+          "client": 638,
+          "scroll": 1040,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 61,
+        "top": 0,
+        "right": 768,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 768,
+      "scroll": 768,
+      "client": 768,
+      "input": null,
+      "entryInput": null,
+      "table": 17.5,
+      "heading": 30,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [
+        {
+          "client": 638,
+          "scroll": 1040,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 63.875,
+        "top": 0,
+        "right": 768,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/history",
+    "width": 768
+  },
+  {
+    "100": {
+      "width": 768,
+      "scroll": 768,
+      "client": 768,
+      "input": 16,
+      "entryInput": null,
+      "table": null,
+      "heading": 24,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 61,
+        "top": 0,
+        "right": 768,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 768,
+      "scroll": 768,
+      "client": 768,
+      "input": 20,
+      "entryInput": null,
+      "table": null,
+      "heading": 30,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 63.875,
+        "top": 0,
+        "right": 768,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/indicators",
+    "width": 768
+  },
+  {
+    "100": {
+      "width": 768,
+      "scroll": 768,
+      "client": 768,
+      "input": 16,
+      "entryInput": null,
+      "table": 14,
+      "heading": 24,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [
+        {
+          "client": 588,
+          "scroll": 2853,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 61,
+        "top": 0,
+        "right": 768,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 768,
+      "scroll": 768,
+      "client": 768,
+      "input": 20,
+      "entryInput": null,
+      "table": 17.5,
+      "heading": 30,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [
+        {
+          "client": 588,
+          "scroll": 2863,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 63.875,
+        "top": 0,
+        "right": 768,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/reports",
+    "width": 768
+  },
+  {
+    "100": {
+      "width": 768,
+      "scroll": 768,
+      "client": 768,
+      "input": null,
+      "entryInput": null,
+      "table": 14,
+      "heading": 24,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [
+        {
+          "client": 588,
+          "scroll": 1360,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 61,
+        "top": 0,
+        "right": 768,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 768,
+      "scroll": 768,
+      "client": 768,
+      "input": null,
+      "entryInput": null,
+      "table": 17.5,
+      "heading": 30,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [
+        {
+          "client": 588,
+          "scroll": 1360,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 768,
+        "height": 63.875,
+        "top": 0,
+        "right": 768,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/occupancy",
+    "width": 768
+  },
+  {
+    "100": {
+      "width": 1024,
+      "scroll": 1024,
+      "client": 1024,
+      "input": 16,
+      "entryInput": null,
+      "table": null,
+      "heading": 50,
+      "label": 13,
+      "button": 13,
+      "menu": null,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 61,
+        "top": 0,
+        "right": 1024,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 1024,
+      "scroll": 1024,
+      "client": 1024,
+      "input": 20,
+      "entryInput": null,
+      "table": null,
+      "heading": 62.5,
+      "label": 16.25,
+      "button": 16.25,
+      "menu": null,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 63.875,
+        "top": 0,
+        "right": 1024,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/login",
+    "width": 1024
+  },
+  {
+    "100": {
+      "width": 1024,
+      "scroll": 1024,
+      "client": 1024,
+      "input": null,
+      "entryInput": null,
+      "table": null,
+      "heading": 28,
+      "label": null,
+      "button": 16,
+      "menu": 14,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 61,
+        "top": 0,
+        "right": 1024,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 1024,
+      "scroll": 1024,
+      "client": 1024,
+      "input": null,
+      "entryInput": null,
+      "table": null,
+      "heading": 35,
+      "label": null,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 63.875,
+        "top": 0,
+        "right": 1024,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/",
+    "width": 1024
+  },
+  {
+    "100": {
+      "width": 1024,
+      "scroll": 1024,
+      "client": 1024,
+      "input": 16,
+      "entryInput": 16,
+      "table": null,
+      "heading": 28,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 61,
+        "top": 0,
+        "right": 1024,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 1024,
+      "scroll": 1024,
+      "client": 1024,
+      "input": 20,
+      "entryInput": 20,
+      "table": null,
+      "heading": 35,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 63.875,
+        "top": 0,
+        "right": 1024,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/entries?ward=example-0&date=2026-11-20&shift=73",
+    "width": 1024
+  },
+  {
+    "100": {
+      "width": 1024,
+      "scroll": 1024,
+      "client": 1024,
+      "input": null,
+      "entryInput": null,
+      "table": 14,
+      "heading": 28,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [
+        {
+          "client": 726,
+          "scroll": 1040,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 61,
+        "top": 0,
+        "right": 1024,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 1024,
+      "scroll": 1024,
+      "client": 1024,
+      "input": null,
+      "entryInput": null,
+      "table": 17.5,
+      "heading": 35,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [
+        {
+          "client": 726,
+          "scroll": 1040,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 63.875,
+        "top": 0,
+        "right": 1024,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/history",
+    "width": 1024
+  },
+  {
+    "100": {
+      "width": 1024,
+      "scroll": 1024,
+      "client": 1024,
+      "input": 16,
+      "entryInput": null,
+      "table": null,
+      "heading": 28,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 61,
+        "top": 0,
+        "right": 1024,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 1024,
+      "scroll": 1024,
+      "client": 1024,
+      "input": 20,
+      "entryInput": null,
+      "table": null,
+      "heading": 35,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 63.875,
+        "top": 0,
+        "right": 1024,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/indicators",
+    "width": 1024
+  },
+  {
+    "100": {
+      "width": 1024,
+      "scroll": 1024,
+      "client": 1024,
+      "input": 16,
+      "entryInput": null,
+      "table": 14,
+      "heading": 28,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [
+        {
+          "client": 676,
+          "scroll": 2853,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 61,
+        "top": 0,
+        "right": 1024,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 1024,
+      "scroll": 1024,
+      "client": 1024,
+      "input": 20,
+      "entryInput": null,
+      "table": 17.5,
+      "heading": 35,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [
+        {
+          "client": 676,
+          "scroll": 2863,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 63.875,
+        "top": 0,
+        "right": 1024,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/reports",
+    "width": 1024
+  },
+  {
+    "100": {
+      "width": 1024,
+      "scroll": 1024,
+      "client": 1024,
+      "input": null,
+      "entryInput": null,
+      "table": 14,
+      "heading": 28,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [
+        {
+          "client": 676,
+          "scroll": 1360,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 61,
+        "top": 0,
+        "right": 1024,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 1024,
+      "scroll": 1024,
+      "client": 1024,
+      "input": null,
+      "entryInput": null,
+      "table": 17.5,
+      "heading": 35,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [
+        {
+          "client": 676,
+          "scroll": 1360,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 63.875,
+        "top": 0,
+        "right": 1024,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/occupancy",
+    "width": 1024
+  },
+  {
+    "100": {
+      "width": 1440,
+      "scroll": 1440,
+      "client": 1440,
+      "input": 16,
+      "entryInput": null,
+      "table": null,
+      "heading": 50,
+      "label": 13,
+      "button": 13,
+      "menu": null,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 61,
+        "top": 0,
+        "right": 1440,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 1440,
+      "scroll": 1440,
+      "client": 1440,
+      "input": 20,
+      "entryInput": null,
+      "table": null,
+      "heading": 62.5,
+      "label": 16.25,
+      "button": 16.25,
+      "menu": null,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 63.875,
+        "top": 0,
+        "right": 1440,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/login",
+    "width": 1440
+  },
+  {
+    "100": {
+      "width": 1440,
+      "scroll": 1440,
+      "client": 1440,
+      "input": null,
+      "entryInput": null,
+      "table": null,
+      "heading": 28,
+      "label": null,
+      "button": 16,
+      "menu": 14,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 61,
+        "top": 0,
+        "right": 1440,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 1440,
+      "scroll": 1440,
+      "client": 1440,
+      "input": null,
+      "entryInput": null,
+      "table": null,
+      "heading": 35,
+      "label": null,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 63.875,
+        "top": 0,
+        "right": 1440,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/",
+    "width": 1440
+  },
+  {
+    "100": {
+      "width": 1440,
+      "scroll": 1440,
+      "client": 1440,
+      "input": 16,
+      "entryInput": 16,
+      "table": null,
+      "heading": 28,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 61,
+        "top": 0,
+        "right": 1440,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 1440,
+      "scroll": 1440,
+      "client": 1440,
+      "input": 20,
+      "entryInput": 20,
+      "table": null,
+      "heading": 35,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 63.875,
+        "top": 0,
+        "right": 1440,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/entries?ward=example-0&date=2026-11-20&shift=73",
+    "width": 1440
+  },
+  {
+    "100": {
+      "width": 1440,
+      "scroll": 1440,
+      "client": 1440,
+      "input": null,
+      "entryInput": null,
+      "table": 14,
+      "heading": 28,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [
+        {
+          "client": 1142,
+          "scroll": 1142,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 61,
+        "top": 0,
+        "right": 1440,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 1440,
+      "scroll": 1440,
+      "client": 1440,
+      "input": null,
+      "entryInput": null,
+      "table": 17.5,
+      "heading": 35,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [
+        {
+          "client": 1142,
+          "scroll": 1142,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 63.875,
+        "top": 0,
+        "right": 1440,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/history",
+    "width": 1440
+  },
+  {
+    "100": {
+      "width": 1440,
+      "scroll": 1440,
+      "client": 1440,
+      "input": 16,
+      "entryInput": null,
+      "table": null,
+      "heading": 28,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 61,
+        "top": 0,
+        "right": 1440,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 1440,
+      "scroll": 1440,
+      "client": 1440,
+      "input": 20,
+      "entryInput": null,
+      "table": null,
+      "heading": 35,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 63.875,
+        "top": 0,
+        "right": 1440,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/indicators",
+    "width": 1440
+  },
+  {
+    "100": {
+      "width": 1440,
+      "scroll": 1440,
+      "client": 1440,
+      "input": 16,
+      "entryInput": null,
+      "table": 14,
+      "heading": 28,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [
+        {
+          "client": 1092,
+          "scroll": 2853,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 61,
+        "top": 0,
+        "right": 1440,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 1440,
+      "scroll": 1440,
+      "client": 1440,
+      "input": 20,
+      "entryInput": null,
+      "table": 17.5,
+      "heading": 35,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [
+        {
+          "client": 1092,
+          "scroll": 2863,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 63.875,
+        "top": 0,
+        "right": 1440,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/reports",
+    "width": 1440
+  },
+  {
+    "100": {
+      "width": 1440,
+      "scroll": 1440,
+      "client": 1440,
+      "input": null,
+      "entryInput": null,
+      "table": 14,
+      "heading": 28,
+      "label": 14,
+      "button": 16,
+      "menu": 14,
+      "tables": [
+        {
+          "client": 1092,
+          "scroll": 1360,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 61,
+        "top": 0,
+        "right": 1440,
+        "bottom": 61,
+        "left": 0
+      }
+    },
+    "125": {
+      "width": 1440,
+      "scroll": 1440,
+      "client": 1440,
+      "input": null,
+      "entryInput": null,
+      "table": 17.5,
+      "heading": 35,
+      "label": 17.5,
+      "button": 20,
+      "menu": 17.5,
+      "tables": [
+        {
+          "client": 1092,
+          "scroll": 1360,
+          "overflow": "auto"
+        }
+      ],
+      "control": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 63.875,
+        "top": 0,
+        "right": 1440,
+        "bottom": 63.875,
+        "left": 0
+      }
+    },
+    "route": "/occupancy",
+    "width": 1440
+  }
+]

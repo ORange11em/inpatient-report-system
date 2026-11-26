@@ -1,0 +1,32 @@
+[
+  {
+    "name": "initialValues",
+    "identical": true,
+    "beforeSha256": "b4148a968fed3edcd98d9f005b0c8fd5aafbd8fc8371bf02dfff73337cf1b739",
+    "afterSha256": "b4148a968fed3edcd98d9f005b0c8fd5aafbd8fc8371bf02dfff73337cf1b739"
+  },
+  {
+    "name": "state/init/open",
+    "identical": true,
+    "beforeSha256": "5a0f1ca9140c06c70c776bae501930037c1d7b9a2371ee80bcc4a950ddab03b2",
+    "afterSha256": "5a0f1ca9140c06c70c776bae501930037c1d7b9a2371ee80bcc4a950ddab03b2"
+  },
+  {
+    "name": "save",
+    "identical": true,
+    "beforeSha256": "15519a2bda9ca1d710f8ad2615c34d03d85874315208c63846f91d6eda777cde",
+    "afterSha256": "15519a2bda9ca1d710f8ad2615c34d03d85874315208c63846f91d6eda777cde"
+  },
+  {
+    "name": "confirm",
+    "identical": true,
+    "beforeSha256": "cb356ee816c1a0d66a2fe0bd8221737a63b4d96da441d8570cb7b70b0b59eb4f",
+    "afterSha256": "cb356ee816c1a0d66a2fe0bd8221737a63b4d96da441d8570cb7b70b0b59eb4f"
+  },
+  {
+    "name": "input except CSS class",
+    "identical": true,
+    "beforeSha256": "8098d36cff1e090327875795563871f99d88fee7955997e5f07ddb30ec7cab7c",
+    "afterSha256": "8098d36cff1e090327875795563871f99d88fee7955997e5f07ddb30ec7cab7c"
+  }
+]

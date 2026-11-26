@@ -1,0 +1,3341 @@
+[
+  {
+    "scenario": "create-night-without-month",
+    "fieldNames": [
+      "amount_bed",
+      "discharge_count",
+      "em_aid",
+      "em_hn",
+      "em_pn",
+      "em_rn",
+      "em_tn",
+      "nb_ad",
+      "nb_dead",
+      "nb_home",
+      "nb_in",
+      "nb_move",
+      "nb_move_b",
+      "nb_non_voluntary",
+      "nb_on",
+      "nb_send",
+      "patient_type1",
+      "patient_type2",
+      "patient_type3",
+      "patient_type4",
+      "patient_type5",
+      "pt_ad",
+      "pt_dead",
+      "pt_home",
+      "pt_in",
+      "pt_move",
+      "pt_move_b",
+      "pt_non_voluntary",
+      "pt_on",
+      "pt_send",
+      "readmit_count"
+    ],
+    "attributes": [
+      {
+        "name": "amount_bed",
+        "type": "number",
+        "required": true,
+        "min": "1",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "discharge_count",
+        "type": "number",
+        "required": false,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_aid",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_hn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_pn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_rn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_tn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_ad",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_dead",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_home",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_in",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_move",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_move_b",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_non_voluntary",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_on",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_send",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type1",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type2",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type3",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type4",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type5",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_ad",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_dead",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_home",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_in",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_move",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_move_b",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_non_voluntary",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_on",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_send",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "readmit_count",
+        "type": "number",
+        "required": false,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      }
+    ],
+    "writes": [
+      {
+        "method": "POST",
+        "path": "/entries",
+        "query": "",
+        "body": {
+          "pt_on": 10,
+          "pt_in": 12,
+          "pt_move": 14,
+          "pt_home": 16,
+          "pt_move_b": 18,
+          "pt_send": 20,
+          "pt_dead": 22,
+          "pt_non_voluntary": 24,
+          "pt_ad": 26,
+          "nb_on": 11,
+          "nb_in": 13,
+          "nb_move": 15,
+          "nb_home": 17,
+          "nb_move_b": 19,
+          "nb_send": 21,
+          "nb_dead": 23,
+          "nb_non_voluntary": 25,
+          "nb_ad": 27,
+          "patient_type5": 28,
+          "patient_type4": 29,
+          "patient_type3": 30,
+          "patient_type2": 31,
+          "patient_type1": 32,
+          "em_hn": 34,
+          "em_rn": 35,
+          "em_tn": 36,
+          "em_pn": 37,
+          "em_aid": 38,
+          "amount_bed": 33,
+          "ward_id": "example-ward",
+          "service_date": "2026-11-19",
+          "shift_type_id": 11
+        },
+        "csrf": "synthetic-csrf"
+      }
+    ],
+    "reads": [
+      "/auth/csrf",
+      "/auth/me",
+      "/entries/pending-count",
+      "/entry-form?ward_id=example-ward&service_date=2026-11-19&shift_type_id=11",
+      "/shifts?include_inactive=true",
+      "/wards"
+    ]
+  },
+  {
+    "scenario": "create-morning-with-month",
+    "fieldNames": [
+      "amount_bed",
+      "discharge_count",
+      "em_aid",
+      "em_hn",
+      "em_pn",
+      "em_rn",
+      "em_tn",
+      "nb_ad",
+      "nb_dead",
+      "nb_home",
+      "nb_in",
+      "nb_move",
+      "nb_move_b",
+      "nb_non_voluntary",
+      "nb_on",
+      "nb_send",
+      "patient_type1",
+      "patient_type2",
+      "patient_type3",
+      "patient_type4",
+      "patient_type5",
+      "pt_ad",
+      "pt_dead",
+      "pt_home",
+      "pt_in",
+      "pt_move",
+      "pt_move_b",
+      "pt_non_voluntary",
+      "pt_on",
+      "pt_send",
+      "readmit_count"
+    ],
+    "attributes": [
+      {
+        "name": "amount_bed",
+        "type": "number",
+        "required": true,
+        "min": "1",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "discharge_count",
+        "type": "number",
+        "required": false,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_aid",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_hn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_pn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_rn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_tn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_ad",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_dead",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_home",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_in",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_move",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_move_b",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_non_voluntary",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_on",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_send",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type1",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type2",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type3",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type4",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type5",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_ad",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_dead",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_home",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_in",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_move",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_move_b",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_non_voluntary",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_on",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_send",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "readmit_count",
+        "type": "number",
+        "required": false,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      }
+    ],
+    "writes": [
+      {
+        "method": "POST",
+        "path": "/entries",
+        "query": "",
+        "body": {
+          "pt_on": 10,
+          "pt_in": 12,
+          "pt_move": 14,
+          "pt_home": 16,
+          "pt_move_b": 18,
+          "pt_send": 20,
+          "pt_dead": 22,
+          "pt_non_voluntary": 24,
+          "pt_ad": 26,
+          "nb_on": 11,
+          "nb_in": 13,
+          "nb_move": 15,
+          "nb_home": 17,
+          "nb_move_b": 19,
+          "nb_send": 21,
+          "nb_dead": 23,
+          "nb_non_voluntary": 25,
+          "nb_ad": 27,
+          "patient_type5": 28,
+          "patient_type4": 29,
+          "patient_type3": 30,
+          "patient_type2": 31,
+          "patient_type1": 32,
+          "em_hn": 34,
+          "em_rn": 35,
+          "em_tn": 36,
+          "em_pn": 37,
+          "em_aid": 38,
+          "amount_bed": 33,
+          "readmission": {
+            "readmit_count": 39,
+            "discharge_count": 40
+          },
+          "previous_readmission": null,
+          "ward_id": "example-ward",
+          "service_date": "2026-11-19",
+          "shift_type_id": 12
+        },
+        "csrf": "synthetic-csrf"
+      }
+    ],
+    "reads": [
+      "/auth/csrf",
+      "/auth/me",
+      "/entries/pending-count",
+      "/entry-form?ward_id=example-ward&service_date=2026-11-19&shift_type_id=12",
+      "/shifts?include_inactive=true",
+      "/wards"
+    ]
+  },
+  {
+    "scenario": "create-afternoon-with-month",
+    "fieldNames": [
+      "amount_bed",
+      "at_risk_patient_days",
+      "dent:n",
+      "dent:s",
+      "discharge_count",
+      "em_aid",
+      "em_hn",
+      "em_pn",
+      "em_rn",
+      "em_tn",
+      "ent:n",
+      "ent:s",
+      "eye:n",
+      "eye:s",
+      "gyn:n",
+      "gyn:s",
+      "med:n",
+      "med:s",
+      "nb:n",
+      "nb:s",
+      "nb_ad",
+      "nb_dead",
+      "nb_home",
+      "nb_in",
+      "nb_move",
+      "nb_move_b",
+      "nb_non_voluntary",
+      "nb_on",
+      "nb_send",
+      "neuro_surg:n",
+      "neuro_surg:s",
+      "obs:n",
+      "obs:s",
+      "ortho:n",
+      "ortho:s",
+      "patient_type1",
+      "patient_type2",
+      "patient_type3",
+      "patient_type4",
+      "patient_type5",
+      "ped:n",
+      "ped:s",
+      "psych:n",
+      "psych:s",
+      "pt_ad",
+      "pt_dead",
+      "pt_home",
+      "pt_in",
+      "pt_move",
+      "pt_move_b",
+      "pt_non_voluntary",
+      "pt_on",
+      "pt_send",
+      "readmit_count",
+      "skin:n",
+      "skin:s",
+      "stage2_4_cases",
+      "surg:n",
+      "surg:s"
+    ],
+    "attributes": [
+      {
+        "name": "amount_bed",
+        "type": "number",
+        "required": true,
+        "min": "1",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "at_risk_patient_days",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "dent:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "dent:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "discharge_count",
+        "type": "number",
+        "required": false,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_aid",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_hn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_pn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_rn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_tn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ent:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ent:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "eye:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "eye:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "gyn:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "gyn:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "med:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "med:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_ad",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_dead",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_home",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_in",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_move",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_move_b",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_non_voluntary",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_on",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_send",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "neuro_surg:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "neuro_surg:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "obs:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "obs:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ortho:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ortho:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type1",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type2",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type3",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type4",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type5",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ped:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ped:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "psych:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "psych:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_ad",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_dead",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_home",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_in",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_move",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_move_b",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_non_voluntary",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_on",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_send",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "readmit_count",
+        "type": "number",
+        "required": false,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "skin:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "skin:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "stage2_4_cases",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "surg:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "surg:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      }
+    ],
+    "writes": [
+      {
+        "method": "POST",
+        "path": "/entries",
+        "query": "",
+        "body": {
+          "pt_on": 10,
+          "pt_in": 12,
+          "pt_move": 14,
+          "pt_home": 16,
+          "pt_move_b": 18,
+          "pt_send": 20,
+          "pt_dead": 22,
+          "pt_non_voluntary": 24,
+          "pt_ad": 26,
+          "nb_on": 11,
+          "nb_in": 13,
+          "nb_move": 15,
+          "nb_home": 17,
+          "nb_move_b": 19,
+          "nb_send": 21,
+          "nb_dead": 23,
+          "nb_non_voluntary": 25,
+          "nb_ad": 27,
+          "patient_type5": 28,
+          "patient_type4": 29,
+          "patient_type3": 30,
+          "patient_type2": 31,
+          "patient_type1": 32,
+          "em_hn": 34,
+          "em_rn": 35,
+          "em_tn": 36,
+          "em_pn": 37,
+          "em_aid": 38,
+          "amount_bed": 33,
+          "specialties": [
+            {
+              "specialty_code": "obs",
+              "category_code": "n",
+              "count_value": 39
+            },
+            {
+              "specialty_code": "obs",
+              "category_code": "s",
+              "count_value": 40
+            },
+            {
+              "specialty_code": "nb",
+              "category_code": "n",
+              "count_value": 41
+            },
+            {
+              "specialty_code": "nb",
+              "category_code": "s",
+              "count_value": 42
+            },
+            {
+              "specialty_code": "gyn",
+              "category_code": "n",
+              "count_value": 43
+            },
+            {
+              "specialty_code": "gyn",
+              "category_code": "s",
+              "count_value": 44
+            },
+            {
+              "specialty_code": "surg",
+              "category_code": "n",
+              "count_value": 45
+            },
+            {
+              "specialty_code": "surg",
+              "category_code": "s",
+              "count_value": 46
+            },
+            {
+              "specialty_code": "med",
+              "category_code": "n",
+              "count_value": 47
+            },
+            {
+              "specialty_code": "med",
+              "category_code": "s",
+              "count_value": 48
+            },
+            {
+              "specialty_code": "psych",
+              "category_code": "n",
+              "count_value": 49
+            },
+            {
+              "specialty_code": "psych",
+              "category_code": "s",
+              "count_value": 50
+            },
+            {
+              "specialty_code": "skin",
+              "category_code": "n",
+              "count_value": 51
+            },
+            {
+              "specialty_code": "skin",
+              "category_code": "s",
+              "count_value": 52
+            },
+            {
+              "specialty_code": "ped",
+              "category_code": "n",
+              "count_value": 53
+            },
+            {
+              "specialty_code": "ped",
+              "category_code": "s",
+              "count_value": 54
+            },
+            {
+              "specialty_code": "ortho",
+              "category_code": "n",
+              "count_value": 55
+            },
+            {
+              "specialty_code": "ortho",
+              "category_code": "s",
+              "count_value": 56
+            },
+            {
+              "specialty_code": "eye",
+              "category_code": "n",
+              "count_value": 57
+            },
+            {
+              "specialty_code": "eye",
+              "category_code": "s",
+              "count_value": 58
+            },
+            {
+              "specialty_code": "ent",
+              "category_code": "n",
+              "count_value": 59
+            },
+            {
+              "specialty_code": "ent",
+              "category_code": "s",
+              "count_value": 60
+            },
+            {
+              "specialty_code": "dent",
+              "category_code": "n",
+              "count_value": 61
+            },
+            {
+              "specialty_code": "dent",
+              "category_code": "s",
+              "count_value": 62
+            },
+            {
+              "specialty_code": "neuro_surg",
+              "category_code": "n",
+              "count_value": 63
+            },
+            {
+              "specialty_code": "neuro_surg",
+              "category_code": "s",
+              "count_value": 64
+            }
+          ],
+          "pressure": {
+            "stage2_4_cases": 65,
+            "at_risk_patient_days": 66
+          },
+          "readmission": {
+            "readmit_count": 67,
+            "discharge_count": 68
+          },
+          "previous_readmission": null,
+          "ward_id": "example-ward",
+          "service_date": "2026-11-19",
+          "shift_type_id": 13
+        },
+        "csrf": "synthetic-csrf"
+      }
+    ],
+    "reads": [
+      "/auth/csrf",
+      "/auth/me",
+      "/entries/pending-count",
+      "/entry-form?ward_id=example-ward&service_date=2026-11-19&shift_type_id=13",
+      "/shifts?include_inactive=true",
+      "/wards"
+    ]
+  },
+  {
+    "scenario": "edit-morning-unchanged-month",
+    "fieldNames": [
+      "amount_bed",
+      "discharge_count",
+      "em_aid",
+      "em_hn",
+      "em_pn",
+      "em_rn",
+      "em_tn",
+      "nb_ad",
+      "nb_dead",
+      "nb_home",
+      "nb_in",
+      "nb_move",
+      "nb_move_b",
+      "nb_non_voluntary",
+      "nb_on",
+      "nb_send",
+      "patient_type1",
+      "patient_type2",
+      "patient_type3",
+      "patient_type4",
+      "patient_type5",
+      "pt_ad",
+      "pt_dead",
+      "pt_home",
+      "pt_in",
+      "pt_move",
+      "pt_move_b",
+      "pt_non_voluntary",
+      "pt_on",
+      "pt_send",
+      "readmit_count"
+    ],
+    "attributes": [
+      {
+        "name": "amount_bed",
+        "type": "number",
+        "required": true,
+        "min": "1",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "discharge_count",
+        "type": "number",
+        "required": false,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_aid",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_hn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_pn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_rn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_tn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_ad",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_dead",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_home",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_in",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_move",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_move_b",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_non_voluntary",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_on",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_send",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type1",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type2",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type3",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type4",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type5",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_ad",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_dead",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_home",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_in",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_move",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_move_b",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_non_voluntary",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_on",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_send",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "readmit_count",
+        "type": "number",
+        "required": false,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      }
+    ],
+    "writes": [
+      {
+        "method": "PATCH",
+        "path": "/entries/example-entry",
+        "query": "",
+        "body": {
+          "pt_on": 10,
+          "pt_in": 12,
+          "pt_move": 14,
+          "pt_home": 16,
+          "pt_move_b": 18,
+          "pt_send": 20,
+          "pt_dead": 22,
+          "pt_non_voluntary": 24,
+          "pt_ad": 26,
+          "nb_on": 11,
+          "nb_in": 13,
+          "nb_move": 15,
+          "nb_home": 17,
+          "nb_move_b": 19,
+          "nb_send": 21,
+          "nb_dead": 23,
+          "nb_non_voluntary": 25,
+          "nb_ad": 27,
+          "patient_type5": 28,
+          "patient_type4": 29,
+          "patient_type3": 30,
+          "patient_type2": 31,
+          "patient_type1": 32,
+          "em_hn": 34,
+          "em_rn": 35,
+          "em_tn": 36,
+          "em_pn": 37,
+          "em_aid": 38,
+          "amount_bed": 33,
+          "expected_version": 7
+        },
+        "csrf": "synthetic-csrf"
+      },
+      {
+        "method": "POST",
+        "path": "/entries/example-entry/confirm",
+        "query": "",
+        "body": {
+          "expected_version": 8
+        },
+        "csrf": "synthetic-csrf"
+      }
+    ],
+    "reads": [
+      "/auth/csrf",
+      "/auth/me",
+      "/entries/pending-count",
+      "/entry-form?ward_id=example-ward&service_date=2026-11-19&shift_type_id=12",
+      "/shifts?include_inactive=true",
+      "/wards"
+    ]
+  },
+  {
+    "scenario": "edit-afternoon-changed-month",
+    "fieldNames": [
+      "amount_bed",
+      "at_risk_patient_days",
+      "dent:n",
+      "dent:s",
+      "discharge_count",
+      "em_aid",
+      "em_hn",
+      "em_pn",
+      "em_rn",
+      "em_tn",
+      "ent:n",
+      "ent:s",
+      "eye:n",
+      "eye:s",
+      "gyn:n",
+      "gyn:s",
+      "med:n",
+      "med:s",
+      "nb:n",
+      "nb:s",
+      "nb_ad",
+      "nb_dead",
+      "nb_home",
+      "nb_in",
+      "nb_move",
+      "nb_move_b",
+      "nb_non_voluntary",
+      "nb_on",
+      "nb_send",
+      "neuro_surg:n",
+      "neuro_surg:s",
+      "obs:n",
+      "obs:s",
+      "ortho:n",
+      "ortho:s",
+      "patient_type1",
+      "patient_type2",
+      "patient_type3",
+      "patient_type4",
+      "patient_type5",
+      "ped:n",
+      "ped:s",
+      "psych:n",
+      "psych:s",
+      "pt_ad",
+      "pt_dead",
+      "pt_home",
+      "pt_in",
+      "pt_move",
+      "pt_move_b",
+      "pt_non_voluntary",
+      "pt_on",
+      "pt_send",
+      "readmit_count",
+      "skin:n",
+      "skin:s",
+      "stage2_4_cases",
+      "surg:n",
+      "surg:s"
+    ],
+    "attributes": [
+      {
+        "name": "amount_bed",
+        "type": "number",
+        "required": true,
+        "min": "1",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "at_risk_patient_days",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "dent:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "dent:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "discharge_count",
+        "type": "number",
+        "required": false,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_aid",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_hn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_pn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_rn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_tn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ent:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ent:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "eye:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "eye:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "gyn:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "gyn:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "med:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "med:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_ad",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_dead",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_home",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_in",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_move",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_move_b",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_non_voluntary",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_on",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_send",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "neuro_surg:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "neuro_surg:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "obs:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "obs:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ortho:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ortho:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type1",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type2",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type3",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type4",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type5",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ped:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ped:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "psych:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "psych:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_ad",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_dead",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_home",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_in",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_move",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_move_b",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_non_voluntary",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_on",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_send",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "readmit_count",
+        "type": "number",
+        "required": false,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "skin:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "skin:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "stage2_4_cases",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "surg:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "surg:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      }
+    ],
+    "writes": [
+      {
+        "method": "PATCH",
+        "path": "/entries/example-entry",
+        "query": "",
+        "body": {
+          "pt_on": 10,
+          "pt_in": 12,
+          "pt_move": 14,
+          "pt_home": 16,
+          "pt_move_b": 18,
+          "pt_send": 20,
+          "pt_dead": 22,
+          "pt_non_voluntary": 24,
+          "pt_ad": 26,
+          "nb_on": 11,
+          "nb_in": 13,
+          "nb_move": 15,
+          "nb_home": 17,
+          "nb_move_b": 19,
+          "nb_send": 21,
+          "nb_dead": 23,
+          "nb_non_voluntary": 25,
+          "nb_ad": 27,
+          "patient_type5": 28,
+          "patient_type4": 29,
+          "patient_type3": 30,
+          "patient_type2": 31,
+          "patient_type1": 32,
+          "em_hn": 34,
+          "em_rn": 35,
+          "em_tn": 36,
+          "em_pn": 37,
+          "em_aid": 38,
+          "amount_bed": 33,
+          "specialties": [
+            {
+              "specialty_code": "obs",
+              "category_code": "n",
+              "count_value": 39
+            },
+            {
+              "specialty_code": "obs",
+              "category_code": "s",
+              "count_value": 40
+            },
+            {
+              "specialty_code": "nb",
+              "category_code": "n",
+              "count_value": 41
+            },
+            {
+              "specialty_code": "nb",
+              "category_code": "s",
+              "count_value": 42
+            },
+            {
+              "specialty_code": "gyn",
+              "category_code": "n",
+              "count_value": 43
+            },
+            {
+              "specialty_code": "gyn",
+              "category_code": "s",
+              "count_value": 44
+            },
+            {
+              "specialty_code": "surg",
+              "category_code": "n",
+              "count_value": 45
+            },
+            {
+              "specialty_code": "surg",
+              "category_code": "s",
+              "count_value": 46
+            },
+            {
+              "specialty_code": "med",
+              "category_code": "n",
+              "count_value": 47
+            },
+            {
+              "specialty_code": "med",
+              "category_code": "s",
+              "count_value": 48
+            },
+            {
+              "specialty_code": "psych",
+              "category_code": "n",
+              "count_value": 49
+            },
+            {
+              "specialty_code": "psych",
+              "category_code": "s",
+              "count_value": 50
+            },
+            {
+              "specialty_code": "skin",
+              "category_code": "n",
+              "count_value": 51
+            },
+            {
+              "specialty_code": "skin",
+              "category_code": "s",
+              "count_value": 52
+            },
+            {
+              "specialty_code": "ped",
+              "category_code": "n",
+              "count_value": 53
+            },
+            {
+              "specialty_code": "ped",
+              "category_code": "s",
+              "count_value": 54
+            },
+            {
+              "specialty_code": "ortho",
+              "category_code": "n",
+              "count_value": 55
+            },
+            {
+              "specialty_code": "ortho",
+              "category_code": "s",
+              "count_value": 56
+            },
+            {
+              "specialty_code": "eye",
+              "category_code": "n",
+              "count_value": 57
+            },
+            {
+              "specialty_code": "eye",
+              "category_code": "s",
+              "count_value": 58
+            },
+            {
+              "specialty_code": "ent",
+              "category_code": "n",
+              "count_value": 59
+            },
+            {
+              "specialty_code": "ent",
+              "category_code": "s",
+              "count_value": 60
+            },
+            {
+              "specialty_code": "dent",
+              "category_code": "n",
+              "count_value": 61
+            },
+            {
+              "specialty_code": "dent",
+              "category_code": "s",
+              "count_value": 62
+            },
+            {
+              "specialty_code": "neuro_surg",
+              "category_code": "n",
+              "count_value": 63
+            },
+            {
+              "specialty_code": "neuro_surg",
+              "category_code": "s",
+              "count_value": 64
+            }
+          ],
+          "pressure": {
+            "stage2_4_cases": 65,
+            "at_risk_patient_days": 66
+          },
+          "readmission": {
+            "readmit_count": 67,
+            "discharge_count": 68
+          },
+          "previous_readmission": {
+            "readmit_count": 5,
+            "discharge_count": 50
+          },
+          "expected_version": 7
+        },
+        "csrf": "synthetic-csrf"
+      },
+      {
+        "method": "POST",
+        "path": "/entries/example-entry/confirm",
+        "query": "",
+        "body": {
+          "expected_version": 8
+        },
+        "csrf": "synthetic-csrf"
+      }
+    ],
+    "reads": [
+      "/auth/csrf",
+      "/auth/me",
+      "/entries/pending-count",
+      "/entry-form?ward_id=example-ward&service_date=2026-11-19&shift_type_id=13",
+      "/shifts?include_inactive=true",
+      "/wards"
+    ]
+  },
+  {
+    "scenario": "edit-afternoon-unchanged-month",
+    "fieldNames": [
+      "amount_bed",
+      "at_risk_patient_days",
+      "dent:n",
+      "dent:s",
+      "discharge_count",
+      "em_aid",
+      "em_hn",
+      "em_pn",
+      "em_rn",
+      "em_tn",
+      "ent:n",
+      "ent:s",
+      "eye:n",
+      "eye:s",
+      "gyn:n",
+      "gyn:s",
+      "med:n",
+      "med:s",
+      "nb:n",
+      "nb:s",
+      "nb_ad",
+      "nb_dead",
+      "nb_home",
+      "nb_in",
+      "nb_move",
+      "nb_move_b",
+      "nb_non_voluntary",
+      "nb_on",
+      "nb_send",
+      "neuro_surg:n",
+      "neuro_surg:s",
+      "obs:n",
+      "obs:s",
+      "ortho:n",
+      "ortho:s",
+      "patient_type1",
+      "patient_type2",
+      "patient_type3",
+      "patient_type4",
+      "patient_type5",
+      "ped:n",
+      "ped:s",
+      "psych:n",
+      "psych:s",
+      "pt_ad",
+      "pt_dead",
+      "pt_home",
+      "pt_in",
+      "pt_move",
+      "pt_move_b",
+      "pt_non_voluntary",
+      "pt_on",
+      "pt_send",
+      "readmit_count",
+      "skin:n",
+      "skin:s",
+      "stage2_4_cases",
+      "surg:n",
+      "surg:s"
+    ],
+    "attributes": [
+      {
+        "name": "amount_bed",
+        "type": "number",
+        "required": true,
+        "min": "1",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "at_risk_patient_days",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "dent:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "dent:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "discharge_count",
+        "type": "number",
+        "required": false,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_aid",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_hn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_pn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_rn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "em_tn",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ent:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ent:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "eye:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "eye:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "gyn:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "gyn:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "med:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "med:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_ad",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_dead",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_home",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_in",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_move",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_move_b",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_non_voluntary",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_on",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "nb_send",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "neuro_surg:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "neuro_surg:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "obs:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "obs:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ortho:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ortho:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type1",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type2",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type3",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type4",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "patient_type5",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ped:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "ped:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "psych:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "psych:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_ad",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_dead",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_home",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_in",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_move",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_move_b",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_non_voluntary",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_on",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "pt_send",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "readmit_count",
+        "type": "number",
+        "required": false,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "skin:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "skin:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "stage2_4_cases",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "surg:n",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      },
+      {
+        "name": "surg:s",
+        "type": "number",
+        "required": true,
+        "min": "0",
+        "max": "2147483647",
+        "step": "1"
+      }
+    ],
+    "writes": [
+      {
+        "method": "PATCH",
+        "path": "/entries/example-entry",
+        "query": "",
+        "body": {
+          "pt_on": 10,
+          "pt_in": 12,
+          "pt_move": 14,
+          "pt_home": 16,
+          "pt_move_b": 18,
+          "pt_send": 20,
+          "pt_dead": 22,
+          "pt_non_voluntary": 24,
+          "pt_ad": 26,
+          "nb_on": 11,
+          "nb_in": 13,
+          "nb_move": 15,
+          "nb_home": 17,
+          "nb_move_b": 19,
+          "nb_send": 21,
+          "nb_dead": 23,
+          "nb_non_voluntary": 25,
+          "nb_ad": 27,
+          "patient_type5": 28,
+          "patient_type4": 29,
+          "patient_type3": 30,
+          "patient_type2": 31,
+          "patient_type1": 32,
+          "em_hn": 34,
+          "em_rn": 35,
+          "em_tn": 36,
+          "em_pn": 37,
+          "em_aid": 38,
+          "amount_bed": 33,
+          "specialties": [
+            {
+              "specialty_code": "obs",
+              "category_code": "n",
+              "count_value": 39
+            },
+            {
+              "specialty_code": "obs",
+              "category_code": "s",
+              "count_value": 40
+            },
+            {
+              "specialty_code": "nb",
+              "category_code": "n",
+              "count_value": 41
+            },
+            {
+              "specialty_code": "nb",
+              "category_code": "s",
+              "count_value": 42
+            },
+            {
+              "specialty_code": "gyn",
+              "category_code": "n",
+              "count_value": 43
+            },
+            {
+              "specialty_code": "gyn",
+              "category_code": "s",
+              "count_value": 44
+            },
+            {
+              "specialty_code": "surg",
+              "category_code": "n",
+              "count_value": 45
+            },
+            {
+              "specialty_code": "surg",
+              "category_code": "s",
+              "count_value": 46
+            },
+            {
+              "specialty_code": "med",
+              "category_code": "n",
+              "count_value": 47
+            },
+            {
+              "specialty_code": "med",
+              "category_code": "s",
+              "count_value": 48
+            },
+            {
+              "specialty_code": "psych",
+              "category_code": "n",
+              "count_value": 49
+            },
+            {
+              "specialty_code": "psych",
+              "category_code": "s",
+              "count_value": 50
+            },
+            {
+              "specialty_code": "skin",
+              "category_code": "n",
+              "count_value": 51
+            },
+            {
+              "specialty_code": "skin",
+              "category_code": "s",
+              "count_value": 52
+            },
+            {
+              "specialty_code": "ped",
+              "category_code": "n",
+              "count_value": 53
+            },
+            {
+              "specialty_code": "ped",
+              "category_code": "s",
+              "count_value": 54
+            },
+            {
+              "specialty_code": "ortho",
+              "category_code": "n",
+              "count_value": 55
+            },
+            {
+              "specialty_code": "ortho",
+              "category_code": "s",
+              "count_value": 56
+            },
+            {
+              "specialty_code": "eye",
+              "category_code": "n",
+              "count_value": 57
+            },
+            {
+              "specialty_code": "eye",
+              "category_code": "s",
+              "count_value": 58
+            },
+            {
+              "specialty_code": "ent",
+              "category_code": "n",
+              "count_value": 59
+            },
+            {
+              "specialty_code": "ent",
+              "category_code": "s",
+              "count_value": 60
+            },
+            {
+              "specialty_code": "dent",
+              "category_code": "n",
+              "count_value": 61
+            },
+            {
+              "specialty_code": "dent",
+              "category_code": "s",
+              "count_value": 62
+            },
+            {
+              "specialty_code": "neuro_surg",
+              "category_code": "n",
+              "count_value": 63
+            },
+            {
+              "specialty_code": "neuro_surg",
+              "category_code": "s",
+              "count_value": 64
+            }
+          ],
+          "pressure": {
+            "stage2_4_cases": 65,
+            "at_risk_patient_days": 66
+          },
+          "expected_version": 7
+        },
+        "csrf": "synthetic-csrf"
+      },
+      {
+        "method": "POST",
+        "path": "/entries/example-entry/confirm",
+        "query": "",
+        "body": {
+          "expected_version": 8
+        },
+        "csrf": "synthetic-csrf"
+      }
+    ],
+    "reads": [
+      "/auth/csrf",
+      "/auth/me",
+      "/entries/pending-count",
+      "/entry-form?ward_id=example-ward&service_date=2026-11-19&shift_type_id=13",
+      "/shifts?include_inactive=true",
+      "/wards"
+    ]
+  },
+  {
+    "scenario": "confirmed-readonly",
+    "fieldNames": [
+      "amount_bed",
+      "at_risk_patient_days",
+      "dent:n",
+      "dent:s",
+      "discharge_count",
+      "em_aid",
+      "em_hn",
+      "em_pn",
+      "em_rn",
+      "em_tn",
+      "ent:n",
+      "ent:s",
+      "eye:n",
+      "eye:s",
+      "gyn:n",
+      "gyn:s",
+      "med:n",
+      "med:s",
+      "nb:n",
+      "nb:s",
+      "nb_ad",
+      "nb_dead",
+      "nb_home",
+      "nb_in",
+      "nb_move",
+      "nb_move_b",
+      "nb_non_voluntary",
+      "nb_on",
+      "nb_send",
+      "neuro_surg:n",
+      "neuro_surg:s",
+      "obs:n",
+      "obs:s",
+      "ortho:n",
+      "ortho:s",
+      "patient_type1",
+      "patient_type2",
+      "patient_type3",
+      "patient_type4",
+      "patient_type5",
+      "ped:n",
+      "ped:s",
+      "psych:n",
+      "psych:s",
+      "pt_ad",
+      "pt_dead",
+      "pt_home",
+      "pt_in",
+      "pt_move",
+      "pt_move_b",
+      "pt_non_voluntary",
+      "pt_on",
+      "pt_send",
+      "readmit_count",
+      "skin:n",
+      "skin:s",
+      "stage2_4_cases",
+      "surg:n",
+      "surg:s"
+    ],
+    "writes": [],
+    "reads": [
+      "/auth/csrf",
+      "/auth/me",
+      "/entries/pending-count",
+      "/entry-form?ward_id=example-ward&service_date=2026-11-19&shift_type_id=13",
+      "/shifts?include_inactive=true",
+      "/wards"
+    ],
+    "readonly": true
+  },
+  {
+    "scenario": "reader-readonly",
+    "fieldNames": [
+      "amount_bed",
+      "discharge_count",
+      "em_aid",
+      "em_hn",
+      "em_pn",
+      "em_rn",
+      "em_tn",
+      "nb_ad",
+      "nb_dead",
+      "nb_home",
+      "nb_in",
+      "nb_move",
+      "nb_move_b",
+      "nb_non_voluntary",
+      "nb_on",
+      "nb_send",
+      "patient_type1",
+      "patient_type2",
+      "patient_type3",
+      "patient_type4",
+      "patient_type5",
+      "pt_ad",
+      "pt_dead",
+      "pt_home",
+      "pt_in",
+      "pt_move",
+      "pt_move_b",
+      "pt_non_voluntary",
+      "pt_on",
+      "pt_send",
+      "readmit_count"
+    ],
+    "writes": [],
+    "reads": [
+      "/auth/csrf",
+      "/auth/me",
+      "/entries/pending-count",
+      "/entry-form?ward_id=example-ward&service_date=2026-11-19&shift_type_id=12",
+      "/shifts?include_inactive=true",
+      "/wards"
+    ],
+    "readonly": true
+  }
+]

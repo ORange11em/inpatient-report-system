@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "php_arithmetic_cases": [
+    {
+      "id": "A1031N",
+      "pt": 10,
+      "nb": 2
+    },
+    {
+      "id": "A1031M",
+      "pt": 10,
+      "nb": 2
+    },
+    {
+      "id": "A1031E",
+      "pt": 10,
+      "nb": 2
+    },
+    {
+      "id": "B1031N",
+      "pt": 6,
+      "nb": 1
+    },
+    {
+      "id": "B1031M",
+      "pt": 6,
+      "nb": 1
+    },
+    {
+      "id": "B1031E",
+      "pt": 6,
+      "nb": 1
+    },
+    {
+      "id": "A1101N",
+      "pt": 12,
+      "nb": 3
+    },
+    {
+      "id": "A1101M",
+      "pt": 11,
+      "nb": 2
+    },
+    {
+      "id": "A1101E",
+      "pt": 10,
+      "nb": 1
+    },
+    {
+      "id": "B1101N",
+      "pt": 6,
+      "nb": 1
+    },
+    {
+      "id": "B1101E",
+      "pt": 5,
+      "nb": 1
+    },
+    {
+      "id": "A1102N",
+      "pt": 10,
+      "nb": 1
+    },
+    {
+      "id": "A1102E",
+      "pt": 10,
+      "nb": 1
+    }
+  ],
+  "source_contracts": {
+    "carry_forward_date_lte_not_prior_shift": true,
+    "confirmation_status_and_actual_session_actor": true,
+    "return_status_zero_without_reason": true,
+    "news_insert_and_edit_store_actual_session_login": true,
+    "raw_blank_not_normalized_before_sql": true,
+    "gyn_normal_post_key_typo": true,
+    "gyn_special_post_key_typo": true,
+    "insert_skin_normal_uses_special": true,
+    "edit_skin_normal_uses_normal": true,
+    "monthly_key_and_replace": true,
+    "afternoon_supplements_branch": true
+  },
+  "limits": "PHP arithmetic only plus source assertions. No legacy PHP page, session, MySQL query, or blank coercion executed."
+}

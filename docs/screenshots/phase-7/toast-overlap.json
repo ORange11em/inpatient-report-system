@@ -1,0 +1,36 @@
+[
+  {
+    "width": 360,
+    "toast": {
+      "x": 16,
+      "y": 722,
+      "w": 328,
+      "h": 78
+    },
+    "button": {
+      "x": 33,
+      "y": 774.15625,
+      "w": 294,
+      "h": 44.390625
+    },
+    "overlapArea": 7598.0625,
+    "buttonCenterBlockedByToast": true
+  },
+  {
+    "width": 1440,
+    "toast": {
+      "x": 912,
+      "y": 802,
+      "w": 512,
+      "h": 78
+    },
+    "button": {
+      "x": 1044.140625,
+      "y": 889.84375,
+      "w": 164.15625,
+      "h": 44.390625
+    },
+    "overlapArea": 0,
+    "buttonCenterBlockedByToast": false
+  }
+]

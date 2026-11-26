@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "widths": [
+    {
+      "width": 360,
+      "client": 360,
+      "scroll": 360
+    },
+    {
+      "width": 768,
+      "client": 768,
+      "scroll": 768
+    },
+    {
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024
+    },
+    {
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,111 @@
+{
+  "passed": true,
+  "checks": [
+    "shared monthly 2/40 across morning/afternoon; pressure 1/10 only afternoon; no fabricated zero for absent morning pressure",
+    "28 distinct nonzero PT/NB/type/staff values plus beds and pressure/monthly fields round-trip through real form, service and database",
+    "keyboard opens activity; failed read retries without losing form; five actual events, actor, reason and Thai Buddhist timestamp rendered",
+    "same shared activity component renders all five events in history inspection dialog at 360px/125%",
+    "eight-account cross-month history and daily-all scopes: recorder A 8/12, B 5/6, multi/admin 13/18, auditor 0/0; November 7 rows/4 confirmed after cycle"
+  ],
+  "history": [
+    {
+      "actor": "rec_a",
+      "rows": 8,
+      "daily_all_closing_pt": 12
+    },
+    {
+      "actor": "admin",
+      "rows": 13,
+      "daily_all_closing_pt": 18
+    },
+    {
+      "actor": "multi",
+      "rows": 13,
+      "daily_all_closing_pt": 18
+    },
+    {
+      "actor": "auditor",
+      "rows": 0,
+      "daily_all_closing_pt": 0
+    },
+    {
+      "actor": "rec_b",
+      "rows": 5,
+      "daily_all_closing_pt": 6
+    },
+    {
+      "actor": "reader",
+      "rows": 8,
+      "daily_all_closing_pt": 12
+    },
+    {
+      "actor": "mixed",
+      "rows": 13,
+      "daily_all_closing_pt": 18
+    },
+    {
+      "actor": "editor",
+      "rows": 13,
+      "daily_all_closing_pt": 18
+    }
+  ],
+  "sizes": [
+    {
+      "width": 360,
+      "level": 100,
+      "client": 360,
+      "scroll": 360,
+      "font": 14
+    },
+    {
+      "width": 360,
+      "level": 125,
+      "client": 360,
+      "scroll": 360,
+      "font": 17.5
+    },
+    {
+      "width": 768,
+      "level": 100,
+      "client": 768,
+      "scroll": 768,
+      "font": 14
+    },
+    {
+      "width": 768,
+      "level": 125,
+      "client": 768,
+      "scroll": 768,
+      "font": 17.5
+    },
+    {
+      "width": 1024,
+      "level": 100,
+      "client": 1024,
+      "scroll": 1024,
+      "font": 14
+    },
+    {
+      "width": 1024,
+      "level": 125,
+      "client": 1024,
+      "scroll": 1024,
+      "font": 17.5
+    },
+    {
+      "width": 1440,
+      "level": 100,
+      "client": 1440,
+      "scroll": 1440,
+      "font": 14
+    },
+    {
+      "width": 1440,
+      "level": 125,
+      "client": 1440,
+      "scroll": 1440,
+      "font": 17.5
+    }
+  ],
+  "errors": []
+}

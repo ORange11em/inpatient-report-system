@@ -1,0 +1,213 @@
+{
+  "checks": [
+    "daily initial screen GET plus separate print/Excel channels and authorized overview",
+    "all 15 original report parameter contracts preserved",
+    "all 15 Excel XML downloads use BE filenames and unchanged numeric cells with well-formed XML",
+    "both routes at 360/768/1024/1440/1920 without page overflow; all occupancy columns visible at 1920",
+    "mobile occupancy cards expand 12 months and toggle table",
+    "incomplete counts expose touch/keyboard explanation; complete zero/null preserved",
+    "mobile filter sheet Escape and scroll restoration",
+    "occupancy header and ward column remain sticky inside scroll region",
+    "fiscal BE select sends Gregorian year and retains occupancy route/query",
+    "empty report disables actions with explanation",
+    "fiscal ward-label rows with only null values do not enable empty exports",
+    "report error and retry without stale results",
+    "overview error does not hide the unchanged report or invent zero totals",
+    "catalog failure recovers before initial report",
+    "loading skeleton and disabled actions",
+    "non-admin retains 13 options and no census reports",
+    "query restores applied filters with original endpoint parameters",
+    "actual browser print PDFs generated from both routes using A4 CSS, print columns/headers and hidden navigation"
+  ],
+  "sizes": [
+    {
+      "route": "/reports",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "table": []
+    },
+    {
+      "route": "/reports",
+      "width": 768,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 2853
+        }
+      ]
+    },
+    {
+      "route": "/reports",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 2853
+        }
+      ]
+    },
+    {
+      "route": "/reports",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 2853
+        }
+      ]
+    },
+    {
+      "route": "/reports",
+      "width": 1920,
+      "client": 1920,
+      "scroll": 1920,
+      "table": [
+        {
+          "client": 1500,
+          "scroll": 2853
+        }
+      ]
+    },
+    {
+      "route": "/occupancy",
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "table": []
+    },
+    {
+      "route": "/occupancy",
+      "width": 768,
+      "client": 768,
+      "scroll": 768,
+      "table": [
+        {
+          "client": 588,
+          "scroll": 1360
+        }
+      ]
+    },
+    {
+      "route": "/occupancy",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "table": [
+        {
+          "client": 676,
+          "scroll": 1360
+        }
+      ]
+    },
+    {
+      "route": "/occupancy",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "table": [
+        {
+          "client": 1092,
+          "scroll": 1360
+        }
+      ]
+    },
+    {
+      "route": "/occupancy",
+      "width": 1920,
+      "client": 1920,
+      "scroll": 1920,
+      "table": [
+        {
+          "client": 1500,
+          "scroll": 1500
+        }
+      ]
+    }
+  ],
+  "exports": [
+    {
+      "kind": "daily",
+      "filename": "รายงานประจำวัน_19-11-2569.xml",
+      "numericCells": 2652
+    },
+    {
+      "kind": "daily-all",
+      "filename": "รายงานประจำวันรวมทุกตึก_19-11-2569.xml",
+      "numericCells": 646
+    },
+    {
+      "kind": "monthly",
+      "filename": "รายงานประจำเดือน_11-2569.xml",
+      "numericCells": 2652
+    },
+    {
+      "kind": "census-day",
+      "filename": "ยอดคงพยาบาลประจำวัน_19-11-2569.xml",
+      "numericCells": 3060
+    },
+    {
+      "kind": "census-month",
+      "filename": "ยอดคงพยาบาลประจำเดือน_11-2569_ถึง_11-2569.xml",
+      "numericCells": 3060
+    },
+    {
+      "kind": "turnover",
+      "filename": "อัตราหมุนเวียนเตียง_ปีงบ2570.xml",
+      "numericCells": 491
+    },
+    {
+      "kind": "los",
+      "filename": "ระยะเวลานอนเฉลี่ย (LOS)_ปีงบ2570.xml",
+      "numericCells": 421
+    },
+    {
+      "kind": "occupancy",
+      "filename": "อัตราการครองเตียง_ปีงบ2570.xml",
+      "numericCells": 462
+    },
+    {
+      "kind": "productivity",
+      "filename": "ผลผลิตทางการพยาบาล (Productivity)_11-2569.xml",
+      "numericCells": 714
+    },
+    {
+      "kind": "specialty",
+      "filename": "แยกผู้ป่วยตามสาขา_11-2569_ถึง_11-2569.xml",
+      "numericCells": 170
+    },
+    {
+      "kind": "skill-mix",
+      "filename": "การผสมผสานอัตรากำลัง (%)_ปีงบ2570.xml",
+      "numericCells": 421
+    },
+    {
+      "kind": "nursing-hours",
+      "filename": "จำนวนชั่วโมงการพยาบาลต่อวันนอน_ปีงบ2570.xml",
+      "numericCells": 421
+    },
+    {
+      "kind": "pressure",
+      "filename": "อัตราการเกิดแผลกดทับต่อ 1,000 วันนอนเสี่ยง_ปีงบ2570.xml",
+      "numericCells": 421
+    },
+    {
+      "kind": "pressure-detail",
+      "filename": "รายละเอียดแผลกดทับรายวัน_11-2569.xml",
+      "numericCells": 102
+    },
+    {
+      "kind": "readmission",
+      "filename": "อัตราการกลับมารักษาซ้ำภายใน 28 วัน (%)_ปีงบ2570.xml",
+      "numericCells": 421
+    }
+  ],
+  "pageErrors": [],
+  "mutations": []
+}

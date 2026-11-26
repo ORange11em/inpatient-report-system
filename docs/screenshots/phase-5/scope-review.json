@@ -1,0 +1,41 @@
+{
+  "baselineFileCount": 275,
+  "changed": [
+    "new-system/docs/ui-progress.md",
+    "new-system/docs/ui-spec.md",
+    "new-system/frontend/app/entries/page.js",
+    "new-system/frontend/app/indicators/page.js",
+    "new-system/frontend/tests/browser/entry-editing.cjs"
+  ],
+  "unchangedBaselineFiles": 270,
+  "removed": [],
+  "referenceImageIdentical": true,
+  "dailyFormOnlyLabelChangesVerified": {
+    "baselineSha256": "A4D8C159BEE1890F56BE8904790AF565C6F84670565CBA3842B6473108353FAB",
+    "restoredOnlyImportsLabelsAndAriaSha256": "A4D8C159BEE1890F56BE8904790AF565C6F84670565CBA3842B6473108353FAB",
+    "identical": true
+  },
+  "unchangedScopes": [
+    "backend",
+    "data models",
+    "dependencies",
+    "routing",
+    "auth",
+    "shell",
+    "shared foundation"
+  ],
+  "authorizedChanges": [
+    "automatic existing indicator GETs",
+    "independent day/month load guards",
+    "read-only existing shift/entry-form services",
+    "previous-month labels confirmed by owner"
+  ],
+  "checks": {
+    "unit": 28,
+    "indicatorBrowserGroups": 18,
+    "entryRegressionGroups": 20,
+    "build": "passed",
+    "lint": "missing preexisting script",
+    "typecheck": "missing preexisting compiler/config"
+  }
+}

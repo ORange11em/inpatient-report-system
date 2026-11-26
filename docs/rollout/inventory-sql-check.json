@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "synthetic_empty_schema_only": true,
+  "source_data_imported": false,
+  "database_version": "10.4.32-MariaDB",
+  "select_statements": 20,
+  "inventory_rows": {
+    "data_all": 0,
+    "data_confirm": 0,
+    "data_split_patient": 0,
+    "pressure": 0,
+    "readmit": 0,
+    "tb_news": 0
+  },
+  "hospital_database_tested": false
+}

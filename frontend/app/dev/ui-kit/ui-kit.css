@@ -1,0 +1,48 @@
+.ui-kit-page { min-height: 100dvh; background: var(--color-canvas); }
+.ui-kit-topbar { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); padding: var(--space-4) var(--space-8); border-bottom: var(--border-width) solid var(--color-border); background: var(--color-surface); }
+.ui-kit-brand { display: flex; align-items: center; gap: var(--space-3); min-width: 0; }
+.ui-kit-brand-mark { display: grid; place-items: center; min-width: var(--control-height); height: var(--control-height); background: var(--color-primary); color: var(--color-on-primary); font-weight: var(--weight-bold); border-radius: var(--radius-card); }
+.ui-kit-brand > div { display: grid; }
+.ui-kit-brand > div > span { color: var(--color-muted); font-size: var(--text-sm); }
+.ui-kit-main { max-width: var(--content-wide); margin-inline: auto; padding: var(--space-10) var(--space-8) var(--space-4); outline: none; }
+.ui-kit-toc { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-block: var(--space-6) var(--space-10); }
+.ui-kit-toc a { display: flex; align-items: center; min-height: var(--control-height); border: var(--border-width) solid var(--color-border); padding: var(--space-2) var(--space-4); background: var(--color-surface); border-radius: var(--radius-pill); font-size: var(--text-sm); font-weight: var(--weight-medium); }
+.ui-kit-toc a:hover { border-color: var(--color-primary); background: var(--color-primary-soft); color: var(--color-primary); }
+.ui-kit-section { display: grid; gap: var(--space-5); margin-bottom: var(--space-12); scroll-margin-top: var(--space-6); }
+.ui-kit-section-heading { display: flex; align-items: start; gap: var(--space-3); }
+.ui-kit-section-heading h2 { margin: 0; font-size: var(--text-xl); }
+.ui-kit-section-heading p { margin: var(--space-1) 0 0; }
+.ui-kit-number { display: grid; place-items: center; background: var(--color-primary-soft); color: var(--color-primary); border-radius: var(--radius-control); min-width: var(--space-10); height: var(--space-10); font-weight: var(--weight-bold); font-variant-numeric: tabular-nums; }
+.ui-kit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5); }
+.ui-kit-heading-sample { font-size: var(--text-2xl); font-weight: var(--weight-semibold); margin-block: var(--space-4); }
+.ui-kit-numbers { font-size: var(--text-2xl); font-variant-numeric: tabular-nums; font-weight: var(--weight-semibold); margin-block: var(--space-6) var(--space-1); }
+.ui-kit-numbers span { font-size: var(--text-lg); color: var(--color-primary); margin-left: var(--space-4); }
+.ui-kit-stack { display: grid; gap: var(--space-4); }
+.ui-kit-swatch { display: flex; gap: var(--space-3); align-items: center; flex-wrap: wrap; color: var(--tone-text); }
+.ui-kit-swatch > span:first-child { width: var(--space-10); height: var(--space-10); border-radius: var(--radius-control); background: var(--tone-bg); border: var(--border-width) solid var(--tone-text); }
+.ui-kit-swatch > span:last-child { margin-left: auto; }
+.ui-kit-spacing { display: flex; align-items: end; gap: var(--space-6); flex-wrap: wrap; margin-bottom: var(--space-4); }
+.ui-kit-spacing > div { display: grid; gap: var(--space-2); }
+.ui-kit-spacing > div > span { display: block; height: var(--space-8); background: var(--color-primary); border-radius: var(--space-1); }
+.ui-kit-spacing small { font-size: var(--text-sm); color: var(--color-muted); }
+.ui-kit-button-states { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--compact-column-width)), 1fr)); gap: var(--space-6); }
+.ui-kit-example { display: grid; align-content: start; justify-items: start; min-width: 0; gap: var(--space-3); }
+.ui-kit-example h3 { margin: 0; font-size: var(--text-sm); color: var(--color-muted); font-weight: var(--weight-medium); }
+.ui-kit-icons { display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--rail-width), 1fr)); gap: var(--space-3); }
+.ui-kit-icons > div { display: grid; justify-items: center; gap: var(--space-2); padding: var(--space-3); border: var(--border-width) solid var(--color-border); border-radius: var(--radius-control); }
+.ui-kit-icons code { font-size: var(--text-sm); }
+.ui-kit-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--field-min-width)), 1fr)); gap: var(--space-6); }
+.ui-kit-details { margin-top: var(--space-6); }
+.ui-kit-details > summary { min-height: var(--control-height); color: var(--color-primary); cursor: pointer; }
+.ui-kit-details > .ui-kit-stack { margin-top: var(--space-4); }
+.ui-kit-divider { height: var(--border-width); background: var(--color-border); margin-block: var(--space-6); }
+.ui-kit-format-list { display: grid; gap: var(--space-3); margin: 0; }
+.ui-kit-format-list > div { display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; border-bottom: var(--border-width) solid var(--color-border); padding-bottom: var(--space-3); }
+.ui-kit-format-list dt { color: var(--color-muted); }
+.ui-kit-format-list dd { margin: 0; font-variant-numeric: tabular-nums; }
+.ui-kit-drawer-links { display: grid; gap: var(--space-2); }
+.ui-kit-drawer-links a { display: flex; justify-content: space-between; align-items: center; min-height: var(--control-height); gap: var(--space-3); padding: var(--space-3); border-radius: var(--radius-control); }
+.ui-kit-drawer-links a:hover { background: var(--color-primary-soft); }
+.ui-kit-floating-toast { position: fixed; right: var(--space-4); bottom: calc(var(--space-4) + env(safe-area-inset-bottom, 0px)); width: min(var(--dialog-width), calc(100% - var(--space-8))); z-index: var(--z-toast); }
+.ui-kit-footer { margin-top: var(--space-8); padding-bottom: var(--space-8); text-align: center; color: var(--color-muted); font-size: var(--text-sm); }
+@media (width < 768px) { .ui-kit-topbar { padding: var(--space-4); align-items: start; flex-wrap: wrap; } .ui-kit-main { padding: var(--space-6) var(--space-4); } .ui-kit-grid { grid-template-columns: 1fr; } .ui-kit-section-heading h2 { font-size: var(--text-lg); } .ui-kit-section-heading p { font-size: var(--text-sm); } }

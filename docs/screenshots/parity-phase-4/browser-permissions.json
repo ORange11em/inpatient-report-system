@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "checks": [],
+  "sizes": [],
+  "permissions": [
+    {
+      "actor": "reader",
+      "totalPT": 12,
+      "censusOptions": 0,
+      "directWardB": 403,
+      "xmlNames": [
+        "รวมทุกหอที่เลือก",
+        "หอสมมติ A"
+      ],
+      "printScopeChecked": true
+    },
+    {
+      "actor": "multi",
+      "totalPT": 18,
+      "censusOptions": 0,
+      "directWardB": 200,
+      "xmlNames": [
+        "รวมทุกหอที่เลือก",
+        "หอสมมติ A",
+        "หอสมมติ B"
+      ],
+      "printScopeChecked": true
+    }
+  ],
+  "errors": [],
+  "mutations": [],
+  "reads": [
+    {
+      "actor": "reader",
+      "path": "/api/v1/reports/summary/daily-all",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "shift_type_id": "71"
+      }
+    },
+    {
+      "actor": "reader",
+      "path": "/api/v1/reports/daily",
+      "query": {
+        "service_date": "2026-11-01",
+        "shift_type_id": "71"
+      }
+    },
+    {
+      "actor": "reader",
+      "path": "/api/v1/reports/summary/specialty",
+      "query": {
+        "selected": "2026-11-01",
+        "ward_id": "7e260205-63b1-45ff-8915-acd506f2afd3"
+      }
+    },
+    {
+      "actor": "multi",
+      "path": "/api/v1/reports/summary/daily-all",
+      "query": {
+        "selected": "2026-11-01",
+        "status": "all",
+        "shift_type_id": "71"
+      }
+    },
+    {
+      "actor": "multi",
+      "path": "/api/v1/reports/daily",
+      "query": {
+        "service_date": "2026-11-01",
+        "shift_type_id": "71"
+      }
+    },
+    {
+      "actor": "multi",
+      "path": "/api/v1/reports/summary/specialty",
+      "query": {
+        "selected": "2026-11-01",
+        "ward_id": "7e260205-63b1-45ff-8915-acd506f2afd3"
+      }
+    }
+  ]
+}

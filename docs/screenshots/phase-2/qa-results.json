@@ -1,0 +1,291 @@
+{
+  "widths": [
+    {
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "sidebar": "none",
+      "sidebarWidth": 0,
+      "bottom": "grid",
+      "fullLabels": true,
+      "active": 1
+    },
+    {
+      "width": 767,
+      "client": 767,
+      "scroll": 767,
+      "sidebar": "none",
+      "sidebarWidth": 0,
+      "bottom": "grid",
+      "fullLabels": true,
+      "active": 1
+    },
+    {
+      "width": 768,
+      "client": 768,
+      "scroll": 768,
+      "sidebar": "flex",
+      "sidebarWidth": 80,
+      "bottom": "none",
+      "fullLabels": false,
+      "active": 1
+    },
+    {
+      "width": 1023,
+      "client": 1023,
+      "scroll": 1023,
+      "sidebar": "flex",
+      "sidebarWidth": 80,
+      "bottom": "none",
+      "fullLabels": false,
+      "active": 1
+    },
+    {
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "sidebar": "flex",
+      "sidebarWidth": 248,
+      "bottom": "none",
+      "fullLabels": true,
+      "active": 1
+    },
+    {
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "sidebar": "flex",
+      "sidebarWidth": 248,
+      "bottom": "none",
+      "fullLabels": true,
+      "active": 1
+    }
+  ],
+  "routeChecks": [
+    {
+      "route": "/entries",
+      "width": 360,
+      "client": 360,
+      "scroll": 360
+    },
+    {
+      "route": "/entries",
+      "width": 768,
+      "client": 768,
+      "scroll": 768
+    },
+    {
+      "route": "/entries",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024
+    },
+    {
+      "route": "/entries",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440
+    },
+    {
+      "route": "/history",
+      "width": 360,
+      "client": 360,
+      "scroll": 360
+    },
+    {
+      "route": "/history",
+      "width": 768,
+      "client": 768,
+      "scroll": 768
+    },
+    {
+      "route": "/history",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024
+    },
+    {
+      "route": "/history",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440
+    },
+    {
+      "route": "/history?status=unconfirmed",
+      "width": 360,
+      "client": 360,
+      "scroll": 360
+    },
+    {
+      "route": "/history?status=unconfirmed",
+      "width": 768,
+      "client": 768,
+      "scroll": 768
+    },
+    {
+      "route": "/history?status=unconfirmed",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024
+    },
+    {
+      "route": "/history?status=unconfirmed",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440
+    },
+    {
+      "route": "/indicators",
+      "width": 360,
+      "client": 360,
+      "scroll": 360
+    },
+    {
+      "route": "/indicators",
+      "width": 768,
+      "client": 768,
+      "scroll": 768
+    },
+    {
+      "route": "/indicators",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024
+    },
+    {
+      "route": "/indicators",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440
+    },
+    {
+      "route": "/reports",
+      "width": 360,
+      "client": 360,
+      "scroll": 360
+    },
+    {
+      "route": "/reports",
+      "width": 768,
+      "client": 768,
+      "scroll": 768
+    },
+    {
+      "route": "/reports",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024
+    },
+    {
+      "route": "/reports",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440
+    },
+    {
+      "route": "/occupancy",
+      "width": 360,
+      "client": 360,
+      "scroll": 360
+    },
+    {
+      "route": "/occupancy",
+      "width": 768,
+      "client": 768,
+      "scroll": 768
+    },
+    {
+      "route": "/occupancy",
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024
+    },
+    {
+      "route": "/occupancy",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440
+    }
+  ],
+  "checks": [
+    "collapse persistence",
+    "drawer keyboard focus trap/restore/Escape",
+    "drawer closes at 768",
+    "query active state",
+    "ward selection",
+    "news POST/PUT/DELETE contracts",
+    "dashboard loading/error/retry",
+    "six existing routes at four widths",
+    "ward defaults and explicit deep link",
+    "mobile profile/logout",
+    "connection error/retry",
+    "empty != zero",
+    "badge zero hidden",
+    "news permissions"
+  ],
+  "reads": [
+    "/news",
+    "/auth/me",
+    "/auth/csrf",
+    "/entries/pending-count",
+    "/wards",
+    "/shifts?include_inactive=true",
+    "/reports/daily?service_date=2026-11-13&ward_id=example-a",
+    "/reports/daily?service_date=2026-11-14&ward_id=example-a",
+    "/reports/daily?service_date=2026-11-15&ward_id=example-a",
+    "/reports/daily?service_date=2026-11-16&ward_id=example-a",
+    "/reports/daily?service_date=2026-11-17&ward_id=example-a",
+    "/reports/daily?service_date=2026-11-18&ward_id=example-a",
+    "/reports/daily?service_date=2026-11-19",
+    "/entries?status=unconfirmed&offset=0&limit=51",
+    "/reports/daily?service_date=2026-11-13&ward_id=example-b",
+    "/reports/daily?service_date=2026-11-14&ward_id=example-b",
+    "/reports/daily?service_date=2026-11-15&ward_id=example-b",
+    "/reports/daily?service_date=2026-11-16&ward_id=example-b",
+    "/reports/daily?service_date=2026-11-17&ward_id=example-b",
+    "/reports/daily?service_date=2026-11-18&ward_id=example-b",
+    "/shifts",
+    "/entry-form?ward_id=example-a&service_date=2026-11-19&shift_type_id=11"
+  ],
+  "writes": [
+    {
+      "path": "/news",
+      "method": "POST",
+      "body": {
+        "title": "หัวข้อทดสอบสมมติ",
+        "body": "รายละเอียดสมมติสำหรับตรวจสัญญาการบันทึก",
+        "published": true
+      },
+      "csrf": "synthetic-csrf"
+    },
+    {
+      "path": "/news/new-example",
+      "method": "PUT",
+      "body": {
+        "title": "แก้ไขหัวข้อสมมติ",
+        "body": "รายละเอียดสมมติสำหรับตรวจสัญญาการบันทึก",
+        "published": true
+      },
+      "csrf": "synthetic-csrf"
+    },
+    {
+      "path": "/news/new-example",
+      "method": "DELETE",
+      "body": null,
+      "csrf": "synthetic-csrf"
+    },
+    {
+      "path": "/auth/logout",
+      "method": "POST",
+      "body": null,
+      "csrf": "synthetic-csrf"
+    }
+  ],
+  "writeQueries": [
+    "",
+    "?version=1",
+    "?version=2",
+    ""
+  ],
+  "errors": []
+}

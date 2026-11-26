@@ -1,0 +1,316 @@
+{
+  "passed": true,
+  "base": "http://localhost:3005",
+  "environment": "production build; Microsoft Edge headless; synthetic intercepted service responses; no real patient data",
+  "checks": [
+    {
+      "name": "login-360",
+      "viewport": 360,
+      "client": 360,
+      "scroll": 360,
+      "images": [
+        {
+          "src": "/brand/akat-hospital.webp",
+          "alt": "โรงพยาบาลอากาศอำนวย",
+          "width": 328,
+          "height": 86.90625,
+          "naturalWidth": 400,
+          "naturalHeight": 106,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "login-button-360",
+      "top": 657.625,
+      "bottom": 701.625,
+      "height": 44,
+      "uncovered": true
+    },
+    {
+      "name": "entries-360",
+      "viewport": 360,
+      "client": 360,
+      "scroll": 360,
+      "images": []
+    },
+    {
+      "name": "mobile-menu-button",
+      "top": 729,
+      "bottom": 792,
+      "height": 63,
+      "uncovered": true
+    },
+    {
+      "name": "entries-mobile-menu-360",
+      "viewport": 360,
+      "client": 360,
+      "scroll": 360,
+      "images": [
+        {
+          "src": "/brand/moph-seal.png",
+          "alt": "",
+          "width": 36,
+          "height": 36,
+          "naturalWidth": 175,
+          "naturalHeight": 175,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "entries-form-360",
+      "viewport": 360,
+      "client": 360,
+      "scroll": 360,
+      "images": []
+    },
+    {
+      "name": "entries-save-360",
+      "top": 650.609375,
+      "bottom": 695,
+      "height": 44.390625,
+      "uncovered": true
+    },
+    {
+      "name": "login-768",
+      "viewport": 768,
+      "client": 768,
+      "scroll": 768,
+      "images": [
+        {
+          "src": "/brand/akat-hospital.webp",
+          "alt": "โรงพยาบาลอากาศอำนวย",
+          "width": 400,
+          "height": 106,
+          "naturalWidth": 400,
+          "naturalHeight": 106,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "login-button-768",
+      "top": 812.703125,
+      "bottom": 856.703125,
+      "height": 44,
+      "uncovered": true
+    },
+    {
+      "name": "entries-768",
+      "viewport": 768,
+      "client": 768,
+      "scroll": 768,
+      "images": [
+        {
+          "src": "/brand/moph-seal.png",
+          "alt": "",
+          "width": 36,
+          "height": 36,
+          "naturalWidth": 175,
+          "naturalHeight": 175,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "entries-form-768",
+      "viewport": 768,
+      "client": 768,
+      "scroll": 768,
+      "images": [
+        {
+          "src": "/brand/moph-seal.png",
+          "alt": "",
+          "width": 36,
+          "height": 36,
+          "naturalWidth": 175,
+          "naturalHeight": 175,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "entries-save-768",
+      "top": 925.703125,
+      "bottom": 970.09375,
+      "height": 44.390625,
+      "uncovered": true
+    },
+    {
+      "name": "login-1024",
+      "viewport": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "images": [
+        {
+          "src": "/brand/akat-hospital.webp",
+          "alt": "โรงพยาบาลอากาศอำนวย",
+          "width": 400,
+          "height": 106,
+          "naturalWidth": 400,
+          "naturalHeight": 106,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "login-button-1024",
+      "top": 634.328125,
+      "bottom": 678.328125,
+      "height": 44,
+      "uncovered": true
+    },
+    {
+      "name": "entries-1024",
+      "viewport": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "images": [
+        {
+          "src": "/brand/moph-seal.png",
+          "alt": "",
+          "width": 36,
+          "height": 36,
+          "naturalWidth": 175,
+          "naturalHeight": 175,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "entries-collapsed-1024",
+      "viewport": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "images": [
+        {
+          "src": "/brand/moph-seal.png",
+          "alt": "",
+          "width": 36,
+          "height": 36,
+          "naturalWidth": 175,
+          "naturalHeight": 175,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "entries-form-1024",
+      "viewport": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "images": [
+        {
+          "src": "/brand/moph-seal.png",
+          "alt": "",
+          "width": 36,
+          "height": 36,
+          "naturalWidth": 175,
+          "naturalHeight": 175,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "entries-save-1024",
+      "top": 925.703125,
+      "bottom": 970.09375,
+      "height": 44.390625,
+      "uncovered": true
+    },
+    {
+      "name": "login-1440",
+      "viewport": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "images": [
+        {
+          "src": "/brand/akat-hospital.webp",
+          "alt": "โรงพยาบาลอากาศอำนวย",
+          "width": 400,
+          "height": 106,
+          "naturalWidth": 400,
+          "naturalHeight": 106,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "login-button-1440",
+      "top": 634.328125,
+      "bottom": 678.328125,
+      "height": 44,
+      "uncovered": true
+    },
+    {
+      "name": "entries-1440",
+      "viewport": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "images": [
+        {
+          "src": "/brand/moph-seal.png",
+          "alt": "",
+          "width": 36,
+          "height": 36,
+          "naturalWidth": 175,
+          "naturalHeight": 175,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "entries-collapsed-1440",
+      "viewport": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "images": [
+        {
+          "src": "/brand/moph-seal.png",
+          "alt": "",
+          "width": 36,
+          "height": 36,
+          "naturalWidth": 175,
+          "naturalHeight": 175,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "entries-form-1440",
+      "viewport": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "images": [
+        {
+          "src": "/brand/moph-seal.png",
+          "alt": "",
+          "width": 36,
+          "height": 36,
+          "naturalWidth": 175,
+          "naturalHeight": 175,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "entries-save-1440",
+      "top": 925.703125,
+      "bottom": 970.09375,
+      "height": 44.390625,
+      "uncovered": true
+    },
+    {
+      "name": "production-asset-akat-hospital.webp",
+      "status": 200
+    },
+    {
+      "name": "production-asset-moph-seal.png",
+      "status": 200
+    }
+  ],
+  "errors": [],
+  "unexpected": [],
+  "writes": []
+}

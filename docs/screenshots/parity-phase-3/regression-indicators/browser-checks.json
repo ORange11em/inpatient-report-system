@@ -1,0 +1,102 @@
+{
+  "checks": [
+    "auto-load original GETs and map afternoon using legacy 3 to primary 73",
+    "four viewport layouts, no page overflow, 44px targets and 16px fields",
+    "Thai labels, Buddhist dates and actual preceding month",
+    "invalid typed date blocks save; keyboard selects full count; wheel/cancelled monthly switch preserves value",
+    "both original PUT contracts deep equal: path, fields, number types and CSRF",
+    "day/month state isolation preserves opposite card edits and avoids unrelated GET",
+    "dirty context cancel restores date/value; confirmed ward change reloads both cards",
+    "navigation and beforeunload guards preserve unsaved values",
+    "late previous-date response ignored",
+    "confirmed afternoon locks pressure only",
+    "missing afternoon explanation and exact form deep link",
+    "read-only role with explicit disabled reason",
+    "missing records distinct from zero; blank and overflow counts not submitted",
+    "independent GET errors prevent zero overwrite and retry recovers",
+    "failed afternoon mapping fails closed without blocking monthly",
+    "loading disables save and duplicate click sends one write",
+    "backend 409/403 remains authoritative with Thai recovery",
+    "actual daily form shares exact visible and accessible monthly labels"
+  ],
+  "sizes": [
+    {
+      "width": 360,
+      "client": 360,
+      "scroll": 360,
+      "panels": [
+        {
+          "x": 16,
+          "y": 508.125,
+          "width": 328
+        },
+        {
+          "x": 16,
+          "y": 1440.96875,
+          "width": 328
+        }
+      ],
+      "minHeight": 44,
+      "minFont": 16
+    },
+    {
+      "width": 768,
+      "client": 768,
+      "scroll": 768,
+      "panels": [
+        {
+          "x": 104,
+          "y": 467.9375,
+          "width": 640
+        },
+        {
+          "x": 104,
+          "y": 1367.296875,
+          "width": 640
+        }
+      ],
+      "minHeight": 44,
+      "minFont": 16
+    },
+    {
+      "width": 1024,
+      "client": 1024,
+      "scroll": 1024,
+      "panels": [
+        {
+          "x": 272,
+          "y": 474.34375,
+          "width": 354
+        },
+        {
+          "x": 646,
+          "y": 474.34375,
+          "width": 354
+        }
+      ],
+      "minHeight": 44,
+      "minFont": 16
+    },
+    {
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "panels": [
+        {
+          "x": 324,
+          "y": 474.34375,
+          "width": 510
+        },
+        {
+          "x": 854,
+          "y": 474.34375,
+          "width": 510
+        }
+      ],
+      "minHeight": 44,
+      "minFont": 16
+    }
+  ],
+  "writeCount": 6,
+  "pageErrors": []
+}

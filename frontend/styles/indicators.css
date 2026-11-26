@@ -1,0 +1,20 @@
+.indicators-page { display: grid; gap: var(--space-5); max-width: var(--content-form); margin-inline: auto; min-width: 0; }
+.indicators-page .ui-page-header { margin-bottom: 0; }
+.indicators-ward { display: grid; gap: var(--space-3); }
+.indicators-ward .ui-field { max-width: var(--dialog-width); }
+.indicators-ward p { margin: 0; }
+.indicators-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-5); align-items: start; }
+.indicator-panel form { display: grid; gap: var(--space-5); min-width: 0; }
+.indicator-panel .ui-card-heading { gap: var(--space-2); flex-wrap: wrap; }
+.indicator-panel .ui-card-heading > div { min-width: 0; }
+.indicator-panel .ui-field > label { font-size: var(--text-base); }
+.indicator-inputs { display: grid; gap: var(--space-5); }
+.indicator-record-state { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); font-size: var(--text-sm); }
+.indicator-record-state > span:first-child:not(.ui-badge), .indicator-notice { display: flex; align-items: center; gap: var(--space-2); color: var(--color-success); }
+.indicator-save { display: grid; gap: var(--space-2); }
+.indicator-save .ui-button { width: 100%; }
+.indicator-notice { margin: 0; font-size: var(--text-sm); }
+.indicator-entry-link { justify-self: start; white-space: normal; text-align: left; }
+@media (min-width: 1024px) {
+  .indicators-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
