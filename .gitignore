@@ -1,0 +1,39 @@
+# ฐานข้อมูลและไฟล์สำรองข้อมูล — ห้าม commit ขึ้นรีโป
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.mdb
+*.accdb
+*.dump
+*.sql.gz
+*.sql.bz2
+*.bak
+*.backup
+
+# โฟลเดอร์ข้อมูล/สำรองข้อมูล
+data/
+database/
+db/
+backups/
+backup/
+dumps/
+pgdata/
+mysql-data/
+
+# ไฟล์ลับ
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# dependency / build
+node_modules/
+.next/
+out/
+.venv/
+__pycache__/
