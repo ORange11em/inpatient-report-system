@@ -97,7 +97,7 @@ async function printMetrics(page) {
     await page.waitForFunction(dpr=>devicePixelRatio>=dpr*1.99,before.dpr,{timeout:240000});
     const m=await measure(page);assert.equal(m.scroll,m.client);assert.equal(await page.evaluate(()=>visualViewport.scale),1);
     await page.locator('.entry-actions').scrollIntoViewIfNeeded();
-    const save=page.getByRole('button',{name:'บันทึกการแก้ไข',exact:true});await save.click();await page.locator('.entry-toast .ui-toast').waitFor();
+    const save=page.getByRole('button',{name:'บันทึกการแก้ไข',exact:true});await save.click();const saveDialog=page.getByRole('dialog',{name:'ยืนยันการบันทึกข้อมูล',exact:true});await saveDialog.waitFor();await saveDialog.getByRole('button',{name:'บันทึกการแก้ไข',exact:true}).click();await page.locator('.entry-toast .ui-toast').waitFor();
     const after=await page.evaluate(()=>({width:innerWidth,dpr:devicePixelRatio,scale:visualViewport.scale,scroll:document.documentElement.scrollWidth}));
     assert.ok(Math.abs(after.dpr/before.dpr-2)<.01);
     await page.screenshot({path:path.join(out,'entries-browser-zoom-200.png')});
@@ -147,7 +147,7 @@ async function printMetrics(page) {
   await page.setViewportSize({width:360,height:1000});
   for(const n of [100,125]) {
     await load(page,entryUrl);await level(page,n);await page.locator('.entry-actions').scrollIntoViewIfNeeded();
-    const save=page.getByRole('button',{name:'บันทึกการแก้ไข',exact:true});await save.click();await page.locator('.entry-toast .ui-toast').waitFor();
+    const save=page.getByRole('button',{name:'บันทึกการแก้ไข',exact:true});await save.click();const saveDialog=page.getByRole('dialog',{name:'ยืนยันการบันทึกข้อมูล',exact:true});await saveDialog.waitFor();await saveDialog.getByRole('button',{name:'บันทึกการแก้ไข',exact:true}).click();await page.locator('.entry-toast .ui-toast').waitFor();
     const m=await page.evaluate(()=>{const a=document.querySelector('.entry-actions'),t=document.querySelector('.entry-toast .ui-toast');const ar=a.getBoundingClientRect(),tr=t.getBoundingClientRect();const b=a.querySelector('button'),br=b.getBoundingClientRect();return {action:ar.toJSON(),toast:tr.toJSON(),button:br.toJSON(),hit:b.contains(document.elementFromPoint(br.x+br.width/2,br.y+br.height/2)),height:innerHeight};});
     assert.ok(m.toast.bottom<=m.action.top,JSON.stringify(m));assert.ok(m.hit);assert.ok(m.button.bottom<=m.height&&m.button.top>=0);
     saves.push({level:n,...m});

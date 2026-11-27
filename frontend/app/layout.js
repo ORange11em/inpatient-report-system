@@ -10,7 +10,7 @@ import { isMaintenanceModeEnabled } from "@/lib/maintenance.mjs";
 const sarabun = Sarabun({ subsets: ["thai", "latin"], weight: ["400", "500", "600", "700"], display: "swap", variable: "--font-thai" });
 
 export const metadata = {
-  title: "ระบบบันทึกข้อมูลผู้ป่วยใน",
+  title: "ระบบรายงานจำนวนผู้ป่วยใน",
   description: "ระบบบันทึกและทบทวนข้อมูลรายหอผู้ป่วย"
 };
 

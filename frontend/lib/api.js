@@ -27,7 +27,7 @@ export async function apiRequest(path, options = {}) {
 }
 
 const messages = {
-  readmission_changed: "ข้อมูลรีแอดมิตเดือนนี้ถูกแก้ไขแล้ว กรุณาเปิดรายการอีกครั้งก่อนบันทึก",
+  readmission_changed: "ข้อมูลการกลับมารักษาซ้ำเดือนนี้ถูกแก้ไขแล้ว กรุณาเปิดรายการอีกครั้งก่อนบันทึก",
   afternoon_entry_required: "กรุณาบันทึกเวรบ่ายของวันที่เลือกก่อน หากยืนยันแล้วให้ผู้ดูแลส่งกลับแก้ไข",
   afternoon_fields_only: "ข้อมูลแยกสาขาและแผลกดทับบันทึกได้ในเวรบ่าย",
   bed_count_required: "กรุณาระบุจำนวนเตียง",
@@ -39,7 +39,7 @@ const messages = {
   confirmed_entry_is_read_only: "รายการยืนยันแล้ว แก้ไขไม่ได้",
   entry_version_conflict: "รายการถูกเปลี่ยนจากหน้าต่างอื่น กรุณาโหลดข้อมูลใหม่",
   entry_state_or_version_conflict: "สถานะรายการเปลี่ยนแล้ว กรุณาโหลดข้อมูลใหม่",
-  occupancy_rules_not_approved: "ยังไม่เปิดคำนวณอัตราครองเตียง เพราะรอยืนยันสูตรและฐานจำนวนเตียง",
+  occupancy_rules_not_approved: "ยังไม่เปิดคำนวณอัตราการครองเตียง เพราะรอยืนยันสูตรและฐานจำนวนเตียง",
   capacity_period_overlap: "ช่วงวันที่ความจุเตียงซ้อนกับช่วงที่บันทึกไว้",
   shift_mapping_missing_or_inactive: "ยังไม่มีประเภทเวรที่จับคู่กับรหัสนี้",
   ward_mapping_missing_or_inactive: "ยังไม่มีหอผู้ป่วยที่จับคู่กับรหัสนี้",
@@ -49,7 +49,11 @@ const messages = {
   user_not_found: "ไม่พบบัญชีผู้ใช้ที่ต้องการ",
   cannot_modify_own_admin_access: "ไม่สามารถปิดใช้งานหรือถอดสิทธิ์ผู้ดูแลระบบของบัญชีที่กำลังใช้งานอยู่ได้",
   system_admin_required: "หน้านี้สำหรับผู้ดูแลระบบเท่านั้น",
-  ward_not_found_or_inactive: "ไม่พบหอผู้ป่วยที่เลือก หรือหอผู้ป่วยถูกปิดใช้งาน"
+  ward_not_found_or_inactive: "ไม่พบหอผู้ป่วยที่เลือก หรือหอผู้ป่วยถูกปิดใช้งาน",
+  ward_code_already_exists: "รหัสหอผู้ป่วยนี้มีอยู่ในระบบแล้ว กรุณาใช้รหัสอื่น",
+  shift_code_or_legacy_id_already_exists: "รหัสเวรนี้มีอยู่ในระบบแล้ว กรุณาใช้รหัสอื่น",
+  shift_not_found: "ไม่พบข้อมูลประเภทเวรที่ต้องการแก้ไข",
+  capacity_date_order_invalid: "วันที่สิ้นสุดต้องไม่อยู่ก่อนวันที่เริ่มใช้งาน"
 };
 
 export function getErrorMessage(error, fallback = "ทำรายการไม่สำเร็จ กรุณาลองใหม่") {
@@ -64,6 +68,6 @@ export function getErrorMessage(error, fallback = "ทำรายการไ�
   }
   if (error && error.status === 422) return "ข้อมูลไม่ผ่านการตรวจ กรุณาตรวจช่องที่กรอกแล้วลองอีกครั้ง";
   if (error && error.status === 409) return "ข้อมูลขัดแย้งกับรายการที่บันทึกไว้ กรุณาโหลดข้อมูลใหม่";
-  if (error && error.status >= 500) return "ระบบหลังบ้านขัดข้องชั่วคราว กรุณาลองใหม่ภายหลัง";
+  if (error && error.status >= 500) return "ระบบขัดข้องชั่วคราว กรุณาลองใหม่ภายหลัง";
   return fallback;
 }

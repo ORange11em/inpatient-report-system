@@ -97,3 +97,27 @@ test("ลิงก์เจาะดูรายละเอียดแผล�
   assert.deepEqual(wardDisplayMeta("สังเกตุอาการณ์", wards), { fullName: "สังเกตุอาการณ์", shortName: null });
   assert.deepEqual(wardDisplayMeta("รวมทุกหอที่เลือก", wards), { fullName: "รวมทุกหอที่เลือก", shortName: null });
 });
+
+test("รายงานประจำวันรวมทุกตึก (daily-all) มีช่องลงนามและหมายเหตุท้ายตารางใน XML ส่วนรายงานอื่นไม่มี", () => {
+  const dailyAllXml = spreadsheetXML({
+    kind: "daily-all",
+    title: "รายงานประจำวันรวมทุกตึก",
+    period: "19 พฤศจิกายน 2569",
+    columns: ["หอผู้ป่วย", "เวร"],
+    rows: [["หอ ก", "ดึก"]],
+  });
+  assert.match(dailyAllXml, /<Row><Cell><Data ss:Type="String">แพทย์เวร<\/Data><\/Cell><Cell><Data ss:Type="String"><\/Data><\/Cell><\/Row>/);
+  assert.match(dailyAllXml, /<Row><Cell><Data ss:Type="String">พยาบาลเวรตรวจการ<\/Data><\/Cell><Cell><Data ss:Type="String"><\/Data><\/Cell><\/Row>/);
+  assert.match(dailyAllXml, /<Row><Cell><Data ss:Type="String">หากไม่มีรายชื่อตึก แสดงว่าในวันดังกล่าว ตึกยังไม่มีการบันทึกข้อมูล<\/Data><\/Cell><\/Row>/);
+
+  const dailyXml = spreadsheetXML({
+    kind: "daily",
+    title: "รายงานประจำวัน",
+    period: "19 พฤศจิกายน 2569",
+    columns: ["หอผู้ป่วย", "เวร"],
+    rows: [["หอ ก", "ดึก"]],
+  });
+  assert.doesNotMatch(dailyXml, /แพทย์เวร/);
+  assert.doesNotMatch(dailyXml, /พยาบาลเวรตรวจการ/);
+  assert.doesNotMatch(dailyXml, /หากไม่มีรายชื่อตึก แสดงว่าในวันดังกล่าว ตึกยังไม่มีการบันทึกข้อมูล/);
+});

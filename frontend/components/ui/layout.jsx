@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { Icon } from "./Icon";
 import { Button, EmptyState, ErrorState, Skeleton, useMobile } from "./primitives";
 import { BottomSheet } from "./overlays";
 
 export function PageHeader({ title, description, breadcrumbs = [], actions }) {
   const mobile = useMobile();
-  return <header className="ui-page-header"><div>{breadcrumbs.length > 0 && <nav aria-label="เส้นทางหน้าปัจจุบัน"><ol className="ui-breadcrumbs">{breadcrumbs.map((item, index) => <li key={item.label}>{item.href ? <a href={item.href}>{item.label}</a> : <span aria-current={index === breadcrumbs.length - 1 ? "page" : undefined}>{item.label}</span>}</li>)}</ol></nav>}
+  return <header className="ui-page-header"><div>{breadcrumbs.length > 0 && <nav aria-label="เส้นทางหน้าปัจจุบัน"><ol className="ui-breadcrumbs">{breadcrumbs.map((item, index) => <li key={item.label}>{item.href ? <Link href={item.href}>{item.label}</Link> : <span aria-current={index === breadcrumbs.length - 1 ? "page" : undefined}>{item.label}</span>}</li>)}</ol></nav>}
     <h1>{title}</h1>{description && <p className="ui-muted">{description}</p>}</div>
     {actions && (mobile ? <details className="ui-page-actions"><summary className="ui-button ui-button--secondary" aria-label="การดำเนินการเพิ่มเติม"><Icon name="more" /></summary><div>{actions}</div></details> : <div className="ui-actions">{actions}</div>)}
   </header>;

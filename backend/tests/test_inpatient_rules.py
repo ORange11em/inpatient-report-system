@@ -63,11 +63,12 @@ class InpatientRules(TestCase):
         rows = [self.entry(1,pt_on=14,patient_type5=3,em_hn=1,em_rn=2,em_tn=1,em_pn=1,em_aid=1)]
         self.assertEqual(reports.fiscal_value("nursing-hours",rows,self.shifts), 2.5)
         self.assertEqual(reports.fiscal_value("skill-mix",rows,self.shifts), 60)
-        result = reports.productivity_report(rows,self.shifts,self.wards,self.day)["rows"][0]
-        self.assertAlmostEqual(result[1],round(12*100/42,2))
-        self.assertAlmostEqual(result[-1],round(7.5*100/42,2))
-        self.ward.legacy_code = "28"
-        self.assertAlmostEqual(reports.productivity_report(rows,self.shifts,self.wards,self.day)["rows"][0][-1],round(12*100/42,2))
+        for code, expected in (("10", 7.5), ("28", 7.5), ("12", 12), ("13", 12)):
+            self.ward.legacy_code = code
+            for channel in ("screen", "print", "excel"):
+                result = reports.productivity_report(rows, self.shifts, self.wards, self.day, channel)["rows"][0]
+                self.assertAlmostEqual(result[1], round(expected * 100 / 42, 2))
+                self.assertAlmostEqual(result[-1], round(expected * 100 / 42, 2))
 
     def test_indicator_rates_are_weighted_across_months(self):
         def pressure(month, cases, risk):

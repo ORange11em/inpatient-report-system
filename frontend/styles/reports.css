@@ -54,7 +54,14 @@
 .report-screen .ui-record-card dl > div { gap: var(--space-3); align-items: start; }
 .report-screen .ui-record-card dd { overflow-wrap: anywhere; }
 .report-export-note { margin: var(--space-2) 0 0; }
+.reports-toast { position: fixed; inset: auto var(--space-4) var(--space-4) auto; width: min(var(--dialog-width), calc(100% - var(--space-8))); z-index: var(--z-toast); }
 .report-print-only { display: none; }
+@media (min-width: 1024px) {
+  .occupancy-table { min-width: calc(var(--compact-column-width) + var(--space-12) + 15 * var(--rail-width)); }
+  .occupancy-ward-col,
+  .occupancy-table th:first-child,
+  .occupancy-table td:first-child { width: calc(var(--compact-column-width) + var(--space-12)); max-width: calc(var(--compact-column-width) + var(--space-12)); }
+}
 @media (max-width: 767px) {
   .reports-filters .ui-filter-fields { grid-template-columns: minmax(0, 1fr); }
   .report-actions { width: 100%; }
@@ -62,6 +69,7 @@
   .reports-page .ui-filter-bar > .ui-button, .reports-page .ui-filter-form .ui-actions .ui-button { width: 100%; }
   .report-screen .ui-table .report-ward-name--has-short .report-ward-full { display: none; }
   .report-screen .ui-table .report-ward-name--has-short .report-ward-short { display: inline; }
+  .reports-toast { bottom: calc(var(--mobile-nav-height) + var(--space-4) + env(safe-area-inset-bottom, 0px)); }
 }
 @media print {
   @page { size: A4 landscape; margin: 12mm 10mm; }
@@ -83,6 +91,7 @@
   .report-print-header strong { font-size: var(--report-print-heading); }
   .report-print-header h2 { font-size: var(--report-print-text); margin: var(--space-1) 0; }
   .report-print-header p { margin: 0; }
+  .report-print-note { margin: var(--space-2) 0 0; font-size: var(--report-print-meta); }
   .shell-frame:has(.reports-page) { min-height: 0; }
   .shell-frame:has(.reports-page) > .ui-skip-link { display: none !important; }
   .shell-frame:has(.reports-page) .shell-content { max-width: none; padding: 0; }

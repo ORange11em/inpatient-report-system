@@ -1,0 +1,136 @@
+{
+  "fiscal_year_be": 2570,
+  "status": "all",
+  "row_order": ["A (10)", "B (11)", "รวม"],
+  "synthetic": true,
+  "widths_px": [360, 768, 1024, 1440],
+  "months": {
+    "2026-11": {
+      "days": 30,
+      "records": [5, 2, 7],
+      "expected_records": [90, 90, 180],
+      "occupancy": {
+        "numerator": [21, 6, 27],
+        "beds_php_first_load": [25, 10, 30],
+        "beds_new": [25, 10, 35],
+        "php": {"screen": ["", "", ""], "print": ["", "", ""], "excel": ["", "", ""]},
+        "php_reverse_insert": {"screen": ["", "", ""], "print": ["", "", ""], "excel": ["", "", ""]},
+        "new": {"screen": ["5/90", "2/90", "7/180"], "print": ["5/90", "2/90", "7/180"], "excel": [{"type": "String", "value": "5/90 เวร"}, {"type": "String", "value": "2/90 เวร"}, {"type": "String", "value": "7/180 เวร"}]}
+      },
+      "turnover": {
+        "numerator": [5, 2, 7],
+        "beds_php_first_load": [25, 10, 30],
+        "beds_new": [25, 10, 35],
+        "php": {"screen": ["0.20", "0.20", "0.23"], "print": ["0.20", "0.20", "0.23"], "excel": ["0.20", "0.20", "0.23"]},
+        "php_reverse_insert": {"screen": ["0.20", "0.20", "0.20"], "print": ["0.20", "0.20", "0.20"], "excel": ["0.20", "0.20", "0.20"]},
+        "new": {"screen": ["0.20", "0.20", "0.20"], "print": ["0.20", "0.20", "0.20"], "excel": [{"type": "Number", "value": "0.2"}, {"type": "Number", "value": "0.2"}, {"type": "Number", "value": "0.2"}]}
+      }
+    },
+    "2026-12": {
+      "days": 31,
+      "records": [92, 93, 185],
+      "expected_records": [93, 93, 186],
+      "occupancy": {
+        "numerator": [300, 186, 486],
+        "beds_php_first_load": [20, 10, 30],
+        "beds_new": [20, 10, 30],
+        "php": {"screen": ["", "60.00", ""], "print": ["", "60.00", ""], "excel": ["", "60.00", ""]},
+        "php_reverse_insert": {"screen": ["", "60.00", ""], "print": ["", "60.00", ""], "excel": ["", "60.00", ""]},
+        "new": {"screen": ["92/93", "60.00%", "185/186"], "print": ["92/93", "60.00", "185/186"], "excel": [{"type": "String", "value": "92/93 เวร"}, {"type": "Number", "value": "60"}, {"type": "String", "value": "185/186 เวร"}]}
+      },
+      "turnover": {
+        "numerator": [5, 2, 7],
+        "beds_php_first_load": [20, 10, 30],
+        "beds_new": [20, 10, 30],
+        "php": {"screen": ["0.25", "0.20", "0.23"], "print": ["0.25", "0.20", "0.23"], "excel": ["0.25", "0.20", "0.23"]},
+        "php_reverse_insert": {"screen": ["0.25", "0.20", "0.23"], "print": ["0.25", "0.20", "0.23"], "excel": ["0.25", "0.20", "0.23"]},
+        "new": {"screen": ["0.25", "0.20", "0.23"], "print": ["0.25", "0.20", "0.23"], "excel": [{"type": "Number", "value": "0.25"}, {"type": "Number", "value": "0.2"}, {"type": "Number", "value": "0.23"}]}
+      }
+    },
+    "2027-04": {
+      "days": 30,
+      "records": [90, 90, 180],
+      "expected_records": [90, 90, 180],
+      "occupancy": {
+        "numerator": [300, 180, 480],
+        "beds_php_first_load": [20, 10, 30],
+        "beds_new": [20, 10, 30],
+        "php": {"screen": ["50.00", "60.00", "53.33"], "print": ["50.00", "60.00", "53.33"], "excel": ["50.00", "60.00", "53.33"]},
+        "php_reverse_insert": {"screen": ["50.00", "60.00", "53.33"], "print": ["50.00", "60.00", "53.33"], "excel": ["50.00", "60.00", "53.33"]},
+        "new": {"screen": ["50.00%", "60.00%", "53.33%"], "print": ["50.00", "60.00", "53.33"], "excel": [{"type": "Number", "value": "50"}, {"type": "Number", "value": "60"}, {"type": "Number", "value": "53.33"}]}
+      },
+      "turnover": {
+        "numerator": [5, 2, 7],
+        "beds_php_first_load": [20, 10, 30],
+        "beds_new": [20, 10, 30],
+        "php": {"screen": ["0.25", "0.20", "0.23"], "print": ["0.25", "0.20", "0.23"], "excel": ["0.25", "0.20", "0.23"]},
+        "php_reverse_insert": {"screen": ["0.25", "0.20", "0.23"], "print": ["0.25", "0.20", "0.23"], "excel": ["0.25", "0.20", "0.23"]},
+        "new": {"screen": ["0.25", "0.20", "0.23"], "print": ["0.25", "0.20", "0.23"], "excel": [{"type": "Number", "value": "0.25"}, {"type": "Number", "value": "0.2"}, {"type": "Number", "value": "0.23"}]}
+      }
+    },
+    "2027-06": {
+      "days": 30,
+      "records": [90, 90, 180],
+      "expected_records": [90, 90, 180],
+      "occupancy": {
+        "numerator": [300, 180, 480],
+        "beds_php_first_load": [25, 10, 30],
+        "beds_new": [25, 10, 35],
+        "php": {"screen": ["40.00", "60.00", "53.33"], "print": ["40.00", "60.00", "53.33"], "excel": ["40.00", "60.00", "53.33"]},
+        "php_reverse_insert": {"screen": ["40.00", "60.00", "45.71"], "print": ["40.00", "60.00", "45.71"], "excel": ["40.00", "60.00", "45.71"]},
+        "new": {"screen": ["40.00%", "60.00%", "45.71%"], "print": ["40.00", "60.00", "45.71"], "excel": [{"type": "Number", "value": "40"}, {"type": "Number", "value": "60"}, {"type": "Number", "value": "45.71"}]}
+      },
+      "turnover": {
+        "numerator": [5, 2, 7],
+        "beds_php_first_load": [25, 10, 30],
+        "beds_new": [25, 10, 35],
+        "php": {"screen": ["0.20", "0.20", "0.23"], "print": ["0.20", "0.20", "0.23"], "excel": ["0.20", "0.20", "0.23"]},
+        "php_reverse_insert": {"screen": ["0.20", "0.20", "0.20"], "print": ["0.20", "0.20", "0.20"], "excel": ["0.20", "0.20", "0.20"]},
+        "new": {"screen": ["0.20", "0.20", "0.20"], "print": ["0.20", "0.20", "0.20"], "excel": [{"type": "Number", "value": "0.2"}, {"type": "Number", "value": "0.2"}, {"type": "Number", "value": "0.2"}]}
+      }
+    },
+    "2027-09": {
+      "days": 30,
+      "records": [89, 90, 179],
+      "expected_records": [90, 90, 180],
+      "occupancy": {
+        "numerator": [290, 180, 470],
+        "beds_php_first_load": [25, 10, 30],
+        "beds_new": [25, 10, 35],
+        "php": {"screen": ["", "60.00", ""], "print": ["", "60.00", ""], "excel": ["", "60.00", ""]},
+        "php_reverse_insert": {"screen": ["", "60.00", ""], "print": ["", "60.00", ""], "excel": ["", "60.00", ""]},
+        "new": {"screen": ["89/90", "60.00%", "179/180"], "print": ["89/90", "60.00", "179/180"], "excel": [{"type": "String", "value": "89/90 เวร"}, {"type": "Number", "value": "60"}, {"type": "String", "value": "179/180 เวร"}]}
+      },
+      "turnover": {
+        "numerator": [5, 2, 7],
+        "beds_php_first_load": [25, 10, 30],
+        "beds_new": [25, 10, 35],
+        "php": {"screen": ["0.20", "0.20", "0.23"], "print": ["0.20", "0.20", "0.23"], "excel": ["0.20", "0.20", "0.23"]},
+        "php_reverse_insert": {"screen": ["0.20", "0.20", "0.20"], "print": ["0.20", "0.20", "0.20"], "excel": ["0.20", "0.20", "0.20"]},
+        "new": {"screen": ["0.20", "0.20", "0.20"], "print": ["0.20", "0.20", "0.20"], "excel": [{"type": "Number", "value": "0.2"}, {"type": "Number", "value": "0.2"}, {"type": "Number", "value": "0.2"}]}
+      }
+    }
+  },
+  "P1_sql_probe": {
+    "normal": [["20", "10"], ["10\t2026-11-01\t1\t20", "11\t2026-11-01\t1\t10"]],
+    "reverse": [["10", "25"], ["11\t2026-11-01\t3\t10", "10\t2026-11-02\t3\t25"]]
+  },
+  "pdf": {
+    "old_occupancy": {
+      "pages": 1,
+      "verified_printed_values": 8
+    },
+    "old_turnover": {
+      "pages": 1,
+      "verified_printed_values": 27
+    },
+    "new_occupancy": {
+      "pages": 1,
+      "verified_printed_values": 42
+    },
+    "new_turnover": {
+      "pages": 1,
+      "verified_printed_values": 27
+    }
+  }
+}

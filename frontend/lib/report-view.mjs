@@ -121,7 +121,16 @@ export function reportFilename(result) {
 }
 export function spreadsheetXML(result) {
   const escape = s => String(s ?? "").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
-  const rows = [[result.title], [result.period], result.columns.map(reportColumnLabel), ...result.rows.map(row => row.map((cell, i) => reportCellValue(cell, result.columns[i])))].map(row => "<Row>" + row.map(cell =>
+  const isDailyAll = result.kind === "daily-all";
+  const rawRows = [
+    [result.title],
+    [result.period],
+    ...(isDailyAll ? [["แพทย์เวร", ""], ["พยาบาลเวรตรวจการ", ""]] : []),
+    result.columns.map(reportColumnLabel),
+    ...result.rows.map(row => row.map((cell, i) => reportCellValue(cell, result.columns[i]))),
+    ...(isDailyAll ? [["หากไม่มีรายชื่อตึก แสดงว่าในวันดังกล่าว ตึกยังไม่มีการบันทึกข้อมูล"]] : []),
+  ];
+  const rows = rawRows.map(row => "<Row>" + row.map(cell =>
     '<Cell><Data ss:Type="' + (typeof cell === "number" ? "Number" : "String") + '">' + escape(cell) + "</Data></Cell>"
   ).join("") + "</Row>").join("");
   return '<?xml version="1.0" encoding="UTF-8"?><?mso-application progid="Excel.Sheet"?>' +

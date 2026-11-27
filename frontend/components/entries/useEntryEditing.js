@@ -124,7 +124,7 @@ export function useEntryEditing({ userId, selection, context, values, setValues,
   useEffect(() => {
     const form = formRef.current;
     if (!form) return;
-    const wheel = event => { if (event.target.type === "number" && event.target === document.activeElement) event.preventDefault(); };
+    const wheel = event => { if (event.target.dataset?.entryNumber === "true" && event.target === document.activeElement) event.preventDefault(); };
     form.addEventListener("wheel", wheel, { passive: false });
     return () => form.removeEventListener("wheel", wheel);
   }, [context, userId, readonly]);
@@ -156,8 +156,8 @@ export function useEntryEditing({ userId, selection, context, values, setValues,
   }, [error, context, userId]);
 
   function moveField(event) {
-    if (event.isComposing || event.ctrlKey || event.metaKey || event.altKey || !["Enter", "Tab"].includes(event.key) || event.target.type !== "number") return;
-    const fields = [...formRef.current.querySelectorAll('input[type="number"]:not(:disabled)')];
+    if (event.isComposing || event.ctrlKey || event.metaKey || event.altKey || !["Enter", "Tab"].includes(event.key) || event.target.dataset?.entryNumber !== "true") return;
+    const fields = [...formRef.current.querySelectorAll('input[data-entry-number="true"]:not(:disabled)')];
     const next = fields[fields.indexOf(event.target) + (event.shiftKey ? -1 : 1)];
     if (next) { event.preventDefault(); focusEntryField(next); }
     else if (event.key === "Enter") { event.preventDefault(); formRef.current.querySelector('button[type="submit"]')?.focus(); }

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/components/AuthProvider";
-import { Button, Card, TextInput } from "@/components/ui";
+import { Button, Card, InfoCallout, PasswordInput, TextInput } from "@/components/ui";
 import { getErrorMessage } from "@/lib/api";
 
 export default function LoginPage() {
@@ -47,12 +47,12 @@ export default function LoginPage() {
       <Card as="form" className="login-panel" aria-labelledby="login-title" onSubmit={submit}>
         <header className="login-heading">
           <Image className="login-hospital-logo" src="/brand/akat-hospital.webp" width={400} height={106} alt="โรงพยาบาลอากาศอำนวย" preload unoptimized />
-          <h1 id="login-title">ระบบบันทึกข้อมูลผู้ป่วยใน</h1>
+          <h1 id="login-title">ระบบรายงานจำนวนผู้ป่วยใน</h1>
           <p className="ui-muted">เข้าสู่ระบบด้วยบัญชีที่ได้รับจากผู้ดูแลระบบ</p>
         </header>
         <TextInput label="ชื่อบัญชี" autoComplete="username" value={username} onChange={(e) => setUsername(e.target.value)} required maxLength={80} />
-        <TextInput label="รหัสผ่าน" type="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        {error && <div className="alert error" role="alert">{error}</div>}
+        <PasswordInput label="รหัสผ่าน" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+        {error && <InfoCallout tone="danger" role="alert">{error}</InfoCallout>}
         <Button type="submit" disabled={pending}>
           {pending ? "กำลังเข้าสู่ระบบ…" : "เข้าสู่ระบบ"}
         </Button>

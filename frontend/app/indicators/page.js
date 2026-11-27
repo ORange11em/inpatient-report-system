@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { useAuth } from "@/components/AuthProvider";
-import { Button, Card, ConfirmDialog, EmptyState, ErrorState, PageHeader, Select, Skeleton } from "@/components/ui";
+import { Button, Card, ConfirmDialog, EmptyState, ErrorState, PageHeader, Select, Skeleton, Toast } from "@/components/ui";
 import { PressureIndicatorCard, ReadmissionIndicatorCard } from "@/components/indicators/IndicatorCards";
 import { apiRequest, getErrorMessage } from "@/lib/api";
 import { preferredWard } from "@/lib/workspace.mjs";
@@ -31,6 +31,8 @@ export default function IndicatorsPage() {
   const [dailyRetry, setDailyRetry] = useState(0);
   const [monthlyRetry, setMonthlyRetry] = useState(0);
   const [pending, setPending] = useState("");
+  const [toast, setToast] = useState("");
+  const [activeTab, setActiveTab] = useState("daily");
   const writeLock = useRef(false);
   const [confirmation, setConfirmation] = useState(null);
   const confirmAction = useRef(null);
@@ -139,7 +141,7 @@ export default function IndicatorsPage() {
   async function savePressure() {
     if (writeLock.current || dailyReason) return;
     if (!validateCounts(pressure)) { setDaily(old => ({ ...old, saveError: "กรอกจำนวนเต็มไม่ติดลบให้ครบทุกช่อง แล้วลองบันทึกอีกครั้ง" })); return; }
-    writeLock.current = true; setPending("daily"); setDaily(old => ({ ...old, saveError: "", notice: "" }));
+    writeLock.current = true; setPending("daily"); setToast(""); setDaily(old => ({ ...old, saveError: "", notice: "" }));
     try {
       await apiRequest("/indicators/pressure/" + wardId + "/" + serviceDate, {
         method: "PUT",
@@ -150,6 +152,7 @@ export default function IndicatorsPage() {
         }
       });
       setDaily(old => ({ ...old, found: true, baseline: { ...pressure }, notice: "บันทึกข้อมูลแผลกดทับแล้ว" }));
+      setToast("บันทึกข้อมูลแผลกดทับแล้ว");
     } catch (problem) {
       setDaily(old => ({ ...old, saveError: message(problem, "บันทึกข้อมูลแผลกดทับไม่สำเร็จ กรุณาตรวจสอบแล้วลองใหม่"), entryStatus: problem.detail === "afternoon_entry_required" ? "unknown" : old.entryStatus }));
     } finally { writeLock.current = false; setPending(""); }
@@ -157,7 +160,7 @@ export default function IndicatorsPage() {
   async function saveReadmission() {
     if (writeLock.current || monthlyReason) return;
     if (!validateCounts(readmission)) { setMonthly(old => ({ ...old, saveError: "กรอกจำนวนเต็มไม่ติดลบให้ครบทุกช่อง แล้วลองบันทึกอีกครั้ง" })); return; }
-    writeLock.current = true; setPending("monthly"); setMonthly(old => ({ ...old, saveError: "", notice: "" }));
+    writeLock.current = true; setPending("monthly"); setToast(""); setMonthly(old => ({ ...old, saveError: "", notice: "" }));
     try {
       await apiRequest("/indicators/readmission/" + wardId + "/" + reportMonth + "-01", {
         method: "PUT",
@@ -168,11 +171,20 @@ export default function IndicatorsPage() {
         }
       });
       setMonthly(old => ({ ...old, found: true, baseline: { ...readmission }, notice: "บันทึกข้อมูลการกลับมารักษาซ้ำแล้ว" }));
+      setToast("บันทึกข้อมูลการกลับมารักษาซ้ำแล้ว");
     } catch (problem) { setMonthly(old => ({ ...old, saveError: message(problem, "บันทึกข้อมูลการกลับมารักษาซ้ำไม่สำเร็จ กรุณาตรวจสอบแล้วลองใหม่") })); }
     finally { writeLock.current = false; setPending(""); }
   }
   const retryDaily = () => requestChange(() => { if (shiftCatalog.error) setShiftRetry(value => value + 1); else setDailyRetry(value => value + 1); }, dailyDirty);
   const entryHref = wardId && serviceDate && shiftCatalog.afternoon ? "/entries?" + new URLSearchParams({ ward: wardId, date: serviceDate, shift: shiftCatalog.afternoon.id }) : null;
+  function handleTabKeyDown(event) {
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const tabs = ["daily", "monthly"];
+    const next = event.key === "Home" ? "daily" : event.key === "End" ? "monthly" : tabs[(tabs.indexOf(activeTab) + 1) % tabs.length];
+    setActiveTab(next);
+    document.getElementById(`indicator-tab-${next}`)?.focus();
+  }
   return <AppShell><div className="indicators-page">
     <PageHeader title="ตัวชี้วัดเสริม" description="บันทึกข้อมูลแผลกดทับ (รายวัน) และการกลับมารักษาซ้ำ (รายเดือน) ของหอผู้ป่วย" />
     <Card className="indicators-ward">
@@ -181,11 +193,24 @@ export default function IndicatorsPage() {
         <p className="ui-muted">หอผู้ป่วยเดียวกันสำหรับทั้งสองส่วน เลือกวันและเดือนแยกกันในแต่ละการ์ด</p>
       </>}
     </Card>
+    <div className="indicators-tabs" role="tablist" aria-label="เลือกประเภทตัวชี้วัด" onKeyDown={handleTabKeyDown}>
+      <button type="button" role="tab" id="indicator-tab-daily" className="indicators-tab" aria-selected={activeTab === "daily"} aria-controls="indicator-panel-daily" tabIndex={activeTab === "daily" ? 0 : -1} onClick={() => setActiveTab("daily")}>
+        แผลกดทับ (รายวัน)
+      </button>
+      <button type="button" role="tab" id="indicator-tab-monthly" className="indicators-tab" aria-selected={activeTab === "monthly"} aria-controls="indicator-panel-monthly" tabIndex={activeTab === "monthly" ? 0 : -1} onClick={() => setActiveTab("monthly")}>
+        การกลับมารักษาซ้ำ (รายเดือน)
+      </button>
+    </div>
     <div className="indicators-grid">
-      <PressureIndicatorCard date={serviceDate} onDateChange={value => requestChange(() => setServiceDate(value), value !== serviceDate && dailyDirty)} {...{ resetToken, entryHref }} state={daily} ready={dailyReady} values={pressure} onChange={(key, value) => setPressure(old => ({ ...old, [key]: value }))} reason={dailyReason} busy={Boolean(pending)} saving={pending === "daily"} onSave={savePressure} onRetry={retryDaily} />
-      <ReadmissionIndicatorCard month={reportMonth} onMonthChange={value => requestChange(() => setReportMonth(value), value !== reportMonth && monthlyDirty)} state={monthly} ready={monthlyReady} values={readmission} onChange={(key, value) => setReadmission(old => ({ ...old, [key]: value }))} reason={monthlyReason} busy={Boolean(pending)} saving={pending === "monthly"} onSave={saveReadmission} onRetry={() => requestChange(() => setMonthlyRetry(value => value + 1), monthlyDirty)} />
+      <div id="indicator-panel-daily" role="tabpanel" aria-labelledby="indicator-tab-daily" className={`indicator-tab-panel ${activeTab !== "daily" ? "is-inactive-tab" : ""}`}>
+        <PressureIndicatorCard date={serviceDate} onDateChange={value => requestChange(() => setServiceDate(value), value !== serviceDate && dailyDirty)} {...{ resetToken, entryHref }} state={daily} ready={dailyReady} values={pressure} onChange={(key, value) => setPressure(old => ({ ...old, [key]: value }))} reason={dailyReason} busy={Boolean(pending)} saving={pending === "daily"} onSave={savePressure} onRetry={retryDaily} />
+      </div>
+      <div id="indicator-panel-monthly" role="tabpanel" aria-labelledby="indicator-tab-monthly" className={`indicator-tab-panel ${activeTab !== "monthly" ? "is-inactive-tab" : ""}`}>
+        <ReadmissionIndicatorCard month={reportMonth} onMonthChange={value => requestChange(() => setReportMonth(value), value !== reportMonth && monthlyDirty)} state={monthly} ready={monthlyReady} values={readmission} onChange={(key, value) => setReadmission(old => ({ ...old, [key]: value }))} reason={monthlyReason} busy={Boolean(pending)} saving={pending === "monthly"} onSave={saveReadmission} onRetry={() => requestChange(() => setMonthlyRetry(value => value + 1), monthlyDirty)} />
+      </div>
     </div>
     {dailyReady && daily.entryStatus === "unknown" && <Button variant="secondary" icon="refresh" onClick={retryDaily}>ตรวจสถานะเวรบ่ายและโหลดข้อมูลใหม่</Button>}
     <ConfirmDialog open={Boolean(confirmation)} onClose={cancelChange} onConfirm={continueChange} title="มีข้อมูลที่ยังไม่บันทึก" description="การดำเนินการนี้จะทิ้งค่าที่แก้ไขในส่วนที่เปลี่ยน กรุณาบันทึกก่อนหากต้องการเก็บข้อมูล" confirmLabel="ทิ้งค่าและดำเนินการต่อ" />
+    <div className="indicators-toast"><Toast open={Boolean(toast)} title={toast} onClose={() => setToast("")} /></div>
   </div></AppShell>;
 }

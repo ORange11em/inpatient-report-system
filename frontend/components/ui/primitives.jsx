@@ -45,11 +45,27 @@ export function TextInput({ label, hint, error, id, required, className = "", ..
   </FormField>;
 }
 
-export function Select({ label, hint, error, id, required, options = [], placeholder, readOnly, className = "", ...props }) {
+export function PasswordInput({ label, hint, error, id, required, disabled, readOnly, className = "", type: _type, "aria-describedby": ariaDescribedBy, ...props }) {
+  const [visible, setVisible] = useState(false);
   return <FormField {...{ label, hint, error, id, required }}>
-    {field => readOnly ? <input className="ui-input" {...field} readOnly value={options.find(option => String(option.value) === String(props.value))?.label || "—"} /> :
+    {field => <div className="ui-input-action">
+      <input className={`ui-input ${className}`} {...field} {...props} type={visible ? "text" : "password"} disabled={disabled} readOnly={readOnly}
+        aria-describedby={[field["aria-describedby"], ariaDescribedBy].filter(Boolean).join(" ") || undefined} />
+      <Button type="button" variant="ghost" icon={visible ? "eyeOff" : "eye"} aria-label={visible ? "ซ่อนรหัสผ่าน" : "แสดงรหัสผ่าน"} aria-pressed={visible}
+        disabled={disabled} onClick={() => setVisible(current => !current)} />
+    </div>}
+  </FormField>;
+}
+
+export function Select({ label, hint, error, id, required, options = [], groups, placeholder, readOnly, className = "", ...props }) {
+  const flatOptions = groups ? groups.flatMap(group => group.options || []) : options;
+  return <FormField {...{ label, hint, error, id, required }}>
+    {field => readOnly ? <input className="ui-input" {...field} readOnly value={flatOptions.find(option => String(option.value) === String(props.value))?.label || "—"} /> :
       <div className="ui-select-wrap"><select className={`ui-input ui-select ${className}`} {...field} {...props}>
-        {placeholder !== undefined && <option value="">{placeholder}</option>}{options.map(option => <option key={option.value} value={option.value} disabled={option.disabled}>{option.label}</option>)}
+        {placeholder !== undefined && <option value="">{placeholder}</option>}
+        {groups
+          ? groups.filter(group => group.options?.length).map(group => <optgroup key={group.label} label={group.label}>{group.options.map(option => <option key={option.value} value={option.value} disabled={option.disabled}>{option.label}</option>)}</optgroup>)
+          : options.map(option => <option key={option.value} value={option.value} disabled={option.disabled}>{option.label}</option>)}
       </select><Icon name="chevron" /></div>}
   </FormField>;
 }
@@ -78,8 +94,8 @@ export function StatusBadge({ status = "unrecorded", label }) {
   return <span className={`ui-badge ui-tone--${tone}`}><Icon name={icon} />{label || text}</span>;
 }
 
-export function InfoCallout({ tone = "info", title, children }) {
-  return <div className={`ui-callout ui-tone--${tone}`}><Icon name={tone === "danger" ? "error" : tone === "warning" ? "warning" : tone === "success" ? "check" : "info"} /><div>{title && <strong>{title}</strong>}{children && <div>{children}</div>}</div></div>;
+export function InfoCallout({ tone = "info", title, children, className = "", ...props }) {
+  return <div className={`ui-callout ui-tone--${tone}${className ? ` ${className}` : ""}`} {...props}><Icon name={tone === "danger" ? "error" : tone === "warning" ? "warning" : tone === "success" ? "check" : "info"} /><div>{title && <strong>{title}</strong>}{children && <div>{children}</div>}</div></div>;
 }
 
 export function EmptyState({ title = "ยังไม่มีข้อมูล", description = "เลือกช่วงข้อมูลหรือเริ่มเพิ่มรายการใหม่", action, icon = "empty" }) {
@@ -117,7 +133,7 @@ export function ShiftSelector({ label = "เวร", value, onChange, options, d
   }
   if (required && !options.length) return <Select {...{ label, value, disabled, required }} placeholder="เลือกเวร" options={[]} />;
   if (required) return <fieldset className="ui-shifts" disabled={disabled}><legend id={groupId}>{label} <span className="ui-required" aria-hidden="true">*</span></legend><div className="ui-segmented ui-native-shifts" role="radiogroup" aria-labelledby={groupId}>
-    {options.map(option => <label className="ui-shift-option" key={option.value}><input type="radio" name={groupId} value={option.value} checked={String(option.value) === String(value)} required disabled={disabled || option.disabled} onChange={() => onChange?.(option.value)} /><span><strong>{option.label}</strong>{option.time && <small>{option.time}</small>}{option.status && <StatusBadge status={option.status} />}</span></label>)}
+    {options.map(option => { const statusId = option.status ? `${groupId}-${option.value}-status` : undefined; return <label className="ui-shift-option" key={option.value}><input type="radio" name={groupId} value={option.value} aria-label={option.label} aria-describedby={statusId} checked={String(option.value) === String(value)} required disabled={disabled || option.disabled} onChange={() => onChange?.(option.value)} /><span><strong>{option.label}</strong>{option.time && <small>{option.time}</small>}{option.status && <span id={statusId}><StatusBadge status={option.status} /></span>}</span></label>; })}
   </div></fieldset>;
   return <fieldset className="ui-shifts" disabled={disabled}><legend id={groupId}>{label}</legend><div className="ui-segmented" role="radiogroup" aria-labelledby={groupId} onKeyDown={move}>
     {options.map((option, index) => <button type="button" role="radio" aria-checked={String(option.value) === String(value)} tabIndex={String(option.value) === String(value) || (!selected && index === options.indexOf(available[0])) ? 0 : -1}

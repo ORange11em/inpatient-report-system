@@ -37,7 +37,7 @@ export function TextSizeControl() {
     <span className="text-size-caption">ตัวอักษร <span role="status" aria-live="polite" aria-atomic="true"><span className="ui-sr-only">ขนาดปัจจุบัน </span><strong>{level}%</strong></span></span>
     <div className="text-size-buttons" role="group" aria-label="เลือกระดับขนาดตัวอักษร">
       <Button variant="secondary" aria-label="ลดขนาดตัวอักษร" title="ลดขนาดตัวอักษร" disabled={index === 0} onClick={() => change(levels[index - 1])}>ก−</Button>
-      <Button variant="ghost" aria-label="ขนาดปกติ" aria-pressed={level === 100} onClick={() => change(100)}>ขนาดปกติ</Button>
+      <Button variant="ghost" aria-label="ขนาดปกติ" aria-pressed={level === 100} onClick={() => change(100)}><span className="text-size-reset-full">ขนาดปกติ</span><span className="text-size-reset-short" aria-hidden="true">ปกติ</span></Button>
       <Button variant="secondary" aria-label="เพิ่มขนาดตัวอักษร" title="เพิ่มขนาดตัวอักษร" disabled={index === levels.length - 1} onClick={() => change(levels[index + 1])}>ก+</Button>
     </div>
   </section>;

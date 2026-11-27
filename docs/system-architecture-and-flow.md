@@ -1,6 +1,6 @@
 # สถาปัตยกรรมระบบ ลำดับการทำงาน และแผนภาพ Flow (System Architecture & End-to-End Flow)
 
-> **ขอบเขตเอกสาร:** สรุปจากการตรวจสอบซอร์สโค้ดจริงของระบบเดิม (`inpatient/`, แบบอ่านอย่างเดียว) และระบบใหม่ (`new-system/frontend/`, `new-system/backend/`) ณ วันที่ 24 พฤศจิกายน 2569 (2026-11-24)  
+> **ขอบเขตเอกสาร:** สรุปจากการตรวจสอบซอร์สโค้ดจริงของระบบเดิม (`inpatient/`, แบบอ่านอย่างเดียว) และระบบใหม่ (`new-system/frontend/`, `new-system/backend/`) ณ วันที่ 24 พฤศจิกายน 2569 (2026-11-24) และ **ปรับให้ตรงโค้ดจริงอีกครั้งเมื่อ 26 พฤศจิกายน 2569 (2026-11-26): 37 endpoint, migration `0001`–`0008`, 17 ตาราง** — ดูหัวข้อ 6 สำหรับวิธีตรวจและส่วนที่ยังพิสูจน์ไม่ได้  
 > **ความปลอดภัยของข้อมูล:** เอกสารนี้ไม่ได้อ่านหรือเปิดเผยค่าเชื่อมต่อ/รหัสผ่านใน `inpatient/connect.php` และตรวจสอบเฉพาะโครงสร้างตาราง (`CREATE TABLE`) ใน `inpatient/db/db_inpatient.sql` โดยไม่เปิดเผยข้อมูลผู้ป่วยจริง
 
 ---
@@ -14,7 +14,7 @@
 | **Frontend** | Next.js `^16.1.0` (App Router), React `^19.2.0`, JavaScript (`.js`/`.jsx`/`.mjs`), CSS Custom Properties Design Tokens, Font `Sarabun` (`next/font/google`) | `new-system/frontend/package.json`, `new-system/frontend/next.config.mjs`, `new-system/frontend/jsconfig.json`, `new-system/frontend/styles/tokens.css` |
 | **API Proxy** | Next.js Rewrites ส่งต่อ `/api/v1/:path*` → Backend (`INPATIENT_DEV_API_URL` ใน dev หรือ `BACKEND_API_URL` ค่าเริ่มต้น `http://127.0.0.1:8000`) | `new-system/frontend/next.config.mjs` |
 | **Backend** | Python `>=3.11`, FastAPI `>=0.115,<1`, Uvicorn, Pydantic Settings `>=2,<3`, `pwdlib[argon2]` สำหรับแฮชรหัสผ่าน | `new-system/backend/pyproject.toml`, `new-system/backend/requirements.txt`, `new-system/backend/app/main.py` |
-| **Database & ORM** | PostgreSQL, SQLAlchemy 2.0 Async (`sqlalchemy[asyncio]`), `asyncpg`, Alembic `>=1.13,<2` (7 revisions: `0001`–`0007`) | `new-system/backend/app/db.py`, `new-system/backend/app/models.py`, `new-system/backend/alembic/versions/` |
+| **Database & ORM** | PostgreSQL, SQLAlchemy 2.0 Async (`sqlalchemy[asyncio]`), `asyncpg`, Alembic `>=1.13,<2` (**8 revisions: `0001`–`0008`**) | `new-system/backend/app/db.py`, `new-system/backend/app/models.py`, `new-system/backend/alembic/versions/` |
 | **Automated Tests** | Frontend: `node --test tests/*.test.mjs` (unit) + Playwright/Edge `.cjs`/`.py` (browser/print); Backend: `unittest` + integration scripts กับ PostgreSQL แยก | `new-system/frontend/tests/`, `new-system/backend/tests/` |
 
 ### 1.2 โครงสร้างโฟลเดอร์และหน้าที่ใน `new-system/frontend/`
@@ -28,6 +28,8 @@
   - `indicators/page.js` — หน้าตัวชี้วัดเสริม (`/indicators`) แยกการ์ดบันทึกแผลกดทับรายวัน (ผูกเงื่อนไขเวรบ่ายยังไม่ยืนยัน) และรีแอดมิตรายเดือน
   - `reports/page.js` — ศูนย์รายงานผู้ป่วยใน (`/reports`) เรียก `ReportViewer` ค่าเริ่มต้น `daily` รองรับครบ 15 ชนิดรายงาน (ตาม query `?kind=...`)
   - `occupancy/page.js` — หน้าอัตราการครองเตียง (`/occupancy`) เรียก `ReportViewer` ค่าเริ่มต้น `initialKind="occupancy"`
+  - `users/page.js` — หน้าจัดการผู้ใช้ (`/users`) สำหรับ `system_admin`: ตารางผู้ใช้, สร้าง/แก้บทบาทรายหอ, เปิด-ปิดบัญชี, รีเซ็ตรหัสผ่าน (เรียก `/admin/users*`), ใช้ `PasswordChecklist` และ `lib/password-policy.mjs`
+  - `maintenance/page.js` — หน้าแจ้งปิดปรับปรุง (`/maintenance`) แสดง `MaintenanceNotice`; เส้นทางนี้ถูกใช้เมื่อ `NEXT_PUBLIC_MAINTENANCE_MODE` เปิด (layout จะไม่ครอบ `AuthProvider`)
   - `dev/ui-kit/page.js` — หน้าแสดงคลังคอมโพเนนต์ UI เฉพาะ `NODE_ENV === "development"` (โหมดอื่นคืน `notFound()`)
 - **Components (`new-system/frontend/components/`):**
   - `AuthProvider.jsx` — จัดการสถานะการล็อกอิน (`/auth/me`, `/auth/csrf`, `/auth/logout`)
@@ -51,19 +53,21 @@
   - `db.py` — สร้าง async SQLAlchemy engine (`postgresql+asyncpg://`), SSL context และ session factory
   - `security.py` — `pwdlib` (Argon2) password hashing/verify, `new_session_token()`, `session_csrf_token()` (HMAC-SHA256 จาก session token), `token_hash()` (SHA-256), `constant_time_match()`
   - `permissions.py` — `current_user`, `is_system_admin`, `can_read_ward`, `can_write_ward`, `ensure_ward_read`, `ensure_ward_write`
-  - `models.py` — โมเดล SQLAlchemy 16 ตาราง พร้อม constraints (Unique, Check, FK)
+  - `models.py` — โมเดล SQLAlchemy **17 ตาราง** พร้อม constraints (Unique, Check, FK)
   - `schemas.py` — Pydantic v2 models (`StrictModel` ตั้ง `extra="forbid"`, กัน boolean ถูกแปลงเป็น int, ตรวจรูปแบบวันที่ ISO `YYYY-MM-DD`)
-  - `api.py` — FastAPI Router ใต้ prefix `/api/v1` (25 endpoints) + `/healthz`
+  - `api.py` — FastAPI Router ใต้ prefix `/api/v1` (**37 endpoints** จาก `@router.*` 37 ตัว) + `GET /healthz` (นอก prefix, `include_in_schema=False`)
   - `reports.py` — เครื่องคำนวณรายงานแบบตาราง 14 ชนิด รองรับแยกช่องทาง `channel = screen | print | excel` และการปัดเศษ `ROUND_HALF_UP` แบบ PHP
   - `occupancy.py` — สูตรอัตราครองเตียงรายเดือน/ปีงบประมาณชั่วคราว (`FORMULA_ID = "legacy_monthly_temporary_v1"`)
 - **API Endpoints ทั้งหมด (`new-system/backend/app/api.py`):**
-  - **System:** `GET /healthz`
-  - **Auth (4):** `POST /api/v1/auth/login`, `POST /api/v1/auth/logout` (CSRF), `GET /api/v1/auth/csrf`, `GET /api/v1/auth/me`
-  - **Admin / Master Catalog (8):** `POST /api/v1/admin/users` (Admin+CSRF), `GET /api/v1/wards`, `POST /api/v1/wards` (Admin+CSRF), `GET /api/v1/shifts`, `POST /api/v1/shifts` (Admin+CSRF), `PATCH /api/v1/shifts/{shift_id}` (Admin+CSRF), `GET /api/v1/wards/{ward_id}/capacity`, `POST /api/v1/wards/{ward_id}/capacity` (Write+CSRF)
+  - **System (1):** `GET /healthz`
+  - **Auth (5):** `POST /api/v1/auth/login`, `POST /api/v1/auth/logout` (CSRF), `GET /api/v1/auth/csrf`, `GET /api/v1/auth/me`, `POST /api/v1/auth/change-password` (ล็อกอินอยู่ + CSRF; ต้องยืนยันรหัสผ่านเดิม และ revoke session อื่นทั้งหมด)
+  - **Admin — ผู้ใช้ (4):** `GET /api/v1/admin/users` (Admin), `POST /api/v1/admin/users` (Admin+CSRF), `PATCH /api/v1/admin/users/{user_id}` (Admin+CSRF, แก้ `full_name`/global role/`is_active`/บทบาทรายหอ), `POST /api/v1/admin/users/{user_id}/password` (Admin+CSRF, รีเซ็ตรหัสผ่าน)
+  - **Master Catalog — หอ/เวร/ความจุ (7):** `GET /api/v1/wards`, `POST /api/v1/wards` (Admin+CSRF), `GET /api/v1/shifts`, `POST /api/v1/shifts` (Admin+CSRF), `PATCH /api/v1/shifts/{shift_id}` (Admin+CSRF), `GET /api/v1/wards/{ward_id}/capacity`, `POST /api/v1/wards/{ward_id}/capacity` (Write+CSRF)
   - **Announcements (4):** `GET /api/v1/news`, `POST /api/v1/news` (Admin+CSRF), `PUT /api/v1/news/{news_id}?version=...` (Admin+CSRF), `DELETE /api/v1/news/{news_id}?version=...` (Admin+CSRF)
-  - **Daily Entries & Workflow (9):** `GET /api/v1/entry-form`, `GET /api/v1/entries/pending-count`, `GET /api/v1/entries/status-counts`, `GET /api/v1/entries`, `POST /api/v1/entries` (Write+CSRF), `GET /api/v1/entries/{entry_id}`, `GET /api/v1/entries/{entry_id}/events`, `PATCH /api/v1/entries/{entry_id}` (Write+CSRF), `POST /api/v1/entries/{entry_id}/confirm` (Write+CSRF), `POST /api/v1/entries/{entry_id}/return` (Admin+CSRF)
+  - **Daily Entries & Workflow (10):** `GET /api/v1/entry-form`, `GET /api/v1/entries/pending-count`, `GET /api/v1/entries/status-counts`, `GET /api/v1/entries`, `POST /api/v1/entries` (Write+CSRF), `GET /api/v1/entries/{entry_id}`, `GET /api/v1/entries/{entry_id}/events`, `PATCH /api/v1/entries/{entry_id}` (Write+CSRF), `POST /api/v1/entries/{entry_id}/confirm` (Write+CSRF), `POST /api/v1/entries/{entry_id}/return` (Admin+CSRF)
   - **Indicators (4):** `PUT /api/v1/indicators/pressure/{ward_id}/{service_date}` (Write+CSRF), `GET /api/v1/indicators/pressure/{ward_id}`, `PUT /api/v1/indicators/readmission/{ward_id}/{reporting_month}` (Write+CSRF), `GET /api/v1/indicators/readmission/{ward_id}`
-  - **Reports (3):** `GET /api/v1/reports/daily`, `GET /api/v1/reports/summary/{kind}`, `GET /api/v1/reports/occupancy`
+  - **Reports (3):** `GET /api/v1/reports/daily`, `GET /api/v1/reports/summary/{kind}` (`kind` รับ 14 ค่าตาม `ReportKind`), `GET /api/v1/reports/occupancy`
+  - **ผลรวม:** 5 + 4 + 7 + 4 + 10 + 4 + 3 = **37** (ไม่นับ `/healthz`) — ตรงกับ `grep -c '^@router\.' app/api.py` = 37 เมื่อ 2026-11-26
 - **Database Models & Migrations (`new-system/backend/alembic/versions/`):**
   - `0001_initial_schema.py` — สร้างโครงสร้างเริ่มต้นผ่าน `Base.metadata.create_all` (ครอบคลุม `wards`, `shift_types`, `users`, `user_global_roles`, `user_ward_roles`, `auth_sessions`, `ward_capacity_history`, `daily_entries`, `specialty_counts`, `pressure_daily`, `readmission_monthly`, `submission_events`, `legacy_key_map`, `migration_batches`)
   - `0002_legacy_import_tracking.py` — เพิ่ม `rows_skipped`, `rows_failed` ใน `migration_batches` และ FK `migration_batch_id` ใน `legacy_key_map`
@@ -72,6 +76,7 @@
   - `0005_ward_report_groups.py` — เพิ่ม `report_group` (ตั้งค่า `0` ให้หอ `22` สังเกตอาการ, `1` ให้หออื่น) และ `display_order` ตามลำดับในระบบเดิม
   - `0006_announcement_publisher.py` — เพิ่ม `updated_by` (FK → `users.id`) และ `publisher_username` ใน `announcements`
   - `0007_legacy_history_and_issues.py` — สร้าง `legacy_confirmation_records` และ `legacy_import_issues` สำหรับเก็บประวัติ `data_confirm` และข้อยกเว้นจากการนำเข้า
+  - `0008_user_and_ward_names.py` — เพิ่ม `users.full_name` (`String(160)`, nullable) และ `wards.short_name` (`String(40)`, nullable) พร้อมเติม `short_name` 19 หอจาก `ward.shortname` เดิม (หอ `22` คงเป็น `NULL` ตามต้นฉบับ); ใช้ `sa.inspect()` guard และ downgrade ลบคอลัมน์ทั้งสอง
 - **CLI Scripts (`new-system/backend/app/cli/`):**
   - `create_admin.py` — สร้างบัญชี `system_admin` แบบ interactive (รหัสผ่านขั้นต่ำ 12 ตัวอักษร แฮชด้วย Argon2)
   - `import_legacy.py` — นำเข้า CSV ที่ normalize แล้วของ `data_all` (dry-run เป็นค่าเริ่มต้น, `--apply` เขียนจริงในฐานพัฒนา/ทดสอบ)
@@ -79,6 +84,8 @@
   - `import_legacy_confirmations.py` — นำเข้า `data_confirm.csv` + `account-map.csv` ลง `legacy_confirmation_records` และ `legacy_import_issues` โดยไม่เปลี่ยนสถานะปัจจุบันของ `daily_entries`
 
 ### 1.4 ตาราง Mapping ฐานข้อมูลเดิม (`inpatient/db/db_inpatient.sql`) → ระบบใหม่ (`new-system/backend/app/models.py`)
+
+`models.py` ณ 2026-11-26 มี `__tablename__` **17 ตาราง**: `announcements`, `wards`, `shift_types`, `users`, `user_global_roles`, `user_ward_roles`, `auth_sessions`, `ward_capacity_history`, `daily_entries`, `specialty_counts`, `pressure_daily`, `readmission_monthly`, `submission_events`, `legacy_key_map`, `migration_batches`, `legacy_confirmation_records`, `legacy_import_issues` (ตารางของ Alembic เองคือ `alembic_version` ไม่อยู่ในรายการนี้)
 
 | ตารางเดิม (MySQL MyISAM) | PK เดิม | ตารางใหม่ (PostgreSQL) | คีย์หลัก / ข้อจำกัดสำคัญในระบบใหม่ |
 |---|---|---|---|
@@ -317,8 +324,8 @@ flowchart LR
         CLI["CLI Tools (Dev/Test): create_admin, import_legacy, reconcile_legacy, import_legacy_confirmations"]
     end
 
-    subgraph Data["PostgreSQL Database (Alembic 0001-0007)"]
-        CoreDB[("Core & Workflow Tables: users, roles, auth_sessions, wards, shift_types, daily_entries, specialty_counts, pressure_daily, readmission_monthly, announcements, submission_events")]
+    subgraph Data["PostgreSQL Database (Alembic 0001-0008 · 17 ตาราง)"]
+        CoreDB[("Core & Workflow Tables: users, user_global_roles, user_ward_roles, auth_sessions, wards, ward_capacity_history, shift_types, daily_entries, specialty_counts, pressure_daily, readmission_monthly, announcements, submission_events")]
         MigDB[("Migration & Provenance Tables: migration_batches, legacy_key_map, legacy_confirmation_records, legacy_import_issues")]
     end
 
@@ -537,11 +544,47 @@ sequenceDiagram
 
 | หมวด | รายการที่ตรวจพบจากโค้ดจริง | ไฟล์อ้างอิง / ผลกระทบ |
 |---|---|---|
-| **หน้าจอ Admin ยังไม่มี** | Backend มี API สำหรับสร้างผู้ใช้ (`POST /admin/users`), สร้างหอ (`POST /wards`), จัดการเวร (`POST/PATCH /shifts`) และจัดการความจุเตียง (`GET/POST /wards/{id}/capacity`) แต่ **Frontend ยังไม่มีหน้าจอเรียกใช้** ต้องจัดการผ่าน CLI (`create_admin.py`) หรือยิง API โดยตรง | `backend/app/api.py`, `frontend/app/` |
-| **บทบาท `auditor` ยังไม่ผูกสิทธิ์อ่าน** | มีใน DB constraint (`user_global_roles`) และ `UserCreate` แต่ `permissions.py` ยังไม่ให้สิทธิ์อ่านข้ามหอ ทำให้บัญชีที่มีเฉพาะ `auditor` เห็น 0 หอ / 0 รายการ | `backend/app/models.py#L89`, `backend/app/permissions.py` |
+| **หน้าจอ Admin ทำได้บางส่วน** | มีหน้า `/users` เรียก `GET/POST /admin/users`, `PATCH /admin/users/{id}`, `POST /admin/users/{id}/password` แล้ว แต่ยัง **ไม่มีหน้าจอ** สำหรับ `POST /wards`, `POST/PATCH /shifts` และ `GET/POST /wards/{id}/capacity` ต้องใช้ CLI (`create_admin.py`) หรือยิง API โดยตรง | `backend/app/api.py`, `frontend/app/users/page.js`, `frontend/app/` |
+| **บทบาท `auditor` ยังไม่ผูกสิทธิ์อ่าน** | มีใน DB constraint (`user_global_roles`) และ `UserCreate` แต่ `permissions.py` ยังไม่ให้สิทธิ์อ่านข้ามหอ ทำให้บัญชีที่มีเฉพาะ `auditor` เห็น 0 หอ / 0 รายการ | `backend/app/models.py`, `backend/app/permissions.py` |
 | **ตัวนำเข้าข้อมูลเก่าไม่ครบทุกตาราง** | มี CLI นำเข้าเฉพาะ `data_all` และ `data_confirm` เท่านั้น; **ยังไม่มี importer** สำหรับ `data_split_patient`, `pressure`, `readmit`, `tb_news` และไฟล์ `inpatient/db/db_inpatient.sql` ปัจจุบันเป็น schema/seed dump (0 แถวข้อมูลปฏิบัติงาน) | `backend/app/cli/`, `backend/docs/legacy_import.md` |
 | **สูตรรายงานที่ยังรอรับรอง / ข้อจำกัด PHP เดิม** | 1) **R08 อัตราครองเตียง** ใช้สูตรชั่วคราว `legacy_monthly_temporary_v1` (อ่าน `daily_entries.amount_bed` ไม่ได้ใช้ `ward_capacity_history`) และฐานเตียงแถวรวมเมื่อเตียงเปลี่ยนกลางเดือนยังรอรับรอง; 2) **R06 Turnover** แถวรวม PHP ใช้ `GROUP BY ward` ไม่กำหนดแถวเตียงแน่นอน; 3) **R09 Productivity** ไฟล์พิมพ์ PHP เดิมล้มก่อนจบ จึงยังเทียบใบพิมพ์เต็มไม่ได้; 4) **R02 `daily-all`** คอลัมน์ Productivity คืน `None` ตาม PHP เดิมที่ไม่มีสูตร | `backend/app/occupancy.py`, `backend/app/reports.py`, `new-system/docs/parity-phase-6-acceptance.md` |
 | **Channel Quirks ที่ฝังใน `reports.py`** | `reports.py` ตั้งใจเลียนแบบบั๊กของไฟล์พิมพ์/Excel ใน PHP เดิมบางจุดเมื่อ `channel != "screen"` (เช่น `nb_paid = 0` ในรวมวัน, ตัด `nb_in` เวรเช้าในรวมเดือน, `nb_average = 0` ใน `census-month`, `nb_move_b` หายใน `census-*`) — **ระวังอย่าเผลอ "แก้ให้ตรงกัน" โดยไม่ได้รับอนุมัติเปลี่ยนกติกา parity** | `backend/app/reports.py#L97-L129` |
 | **ลิงก์ระบบความพึงพอใจภายนอก** | ปุ่มลิงก์ใน `/entries` ทำงานเมื่อตั้ง `NEXT_PUBLIC_SATISFACTION_URL` และส่งเฉพาะ `?ward=<legacy_code>` ยังไม่มีระบบ `contentment` ใน workspace และไม่เดา `cook_id`/`account.id` เดิม | `frontend/lib/satisfaction.mjs`, `frontend/components/entries/EntryContextBar.jsx` |
 | **โค้ดเก่าค้างและ Tooling ใน Frontend** | 1) `frontend/package.json` ไม่มี script `lint` และไม่มี TypeScript (`tsc`) ใน dependencies (`npm run lint` และ `npx tsc --noEmit` จะรันไม่ได้); 2) `frontend/components/DateField.jsx` (แม้ตัว JSX จะไม่ถูก render แล้ว) ยังมีข้อความ `"ส่งวันที่ไป API ในรูปแบบ Gregorian ISO"` (ข้อค้าง F01) และ `entries/page.js` ยัง import helper จากไฟล์นี้แทน `lib/thai-date.mjs`; 3) `frontend/app/globals.css` ยังมี CSS รุ่นเก่าปนอยู่จำนวนมาก (หมายเหตุ: หน้า `/login` เปลี่ยนไปใช้ shared `Card`/`TextInput`/`Button` แล้วเมื่อ 23 พ.ย. 2569 ซึ่งปิดปัญหา contrast/ความสูง 44px บนหน้า `/login` แล้ว) | `frontend/package.json`, `frontend/components/DateField.jsx`, `frontend/app/globals.css`, `frontend/app/login/page.js` |
-| **การตั้งค่าสภาพแวดล้อมพัฒนาและ Deploy** | 1) `frontend/.env.development.local` ในเครื่องนี้ตั้ง `INPATIENT_DEV_API_URL` ชี้พอร์ต `18763` ซึ่ง override `BACKEND_API_URL` (`8000`) ในโหมด `dev`; 2) Backend `config.py` ตั้ง `env_file=None` จึงไม่อ่าน `.env` อัตโนมัติ ต้องกำหนด env vars ใน shell; 3) `alembic/versions/0001_initial_schema.py` เรียก `Base.metadata.create_all` โดยตรง ทำให้ migration 0002–0007 ต้องเขียน `sa.inspect()` guard เสมอหากเพิ่ม migration ใหม่; 4) Workspace ไม่มี `.git` repository ต้องสำรองหรือตรวจ diff อย่างระมัดระวังก่อนแก้โค้ด | `frontend/next.config.mjs`, `backend/app/config.py`, `backend/alembic/versions/0001_initial_schema.py`, `new-system/OPERATIONS_GUIDE_TH.md` |
+| **การตั้งค่าสภาพแวดล้อมพัฒนาและ Deploy** | 1) `frontend/.env.development.local` ในเครื่องนี้ตั้ง `INPATIENT_DEV_API_URL` ชี้พอร์ต `18763` ซึ่ง override `BACKEND_API_URL` (`8000`) ในโหมด `dev`; 2) Backend `config.py` ตั้ง `env_file=None` จึงไม่อ่าน `.env` อัตโนมัติ ต้องกำหนด env vars ใน shell; 3) `alembic/versions/0001_initial_schema.py` เรียก `Base.metadata.create_all` โดยตรง ทำให้ migration 0002–0008 ต้องเขียน `sa.inspect()` guard เสมอหากเพิ่ม migration ใหม่; 4) Workspace ไม่มี `.git` repository ต้องสำรองหรือตรวจ diff อย่างระมัดระวังก่อนแก้โค้ด | `frontend/next.config.mjs`, `backend/app/config.py`, `backend/alembic/versions/0001_initial_schema.py`, `new-system/OPERATIONS_GUIDE_TH.md` |
+
+---
+
+## 6. สถานะการตรวจสอบ (2026-11-26) และส่วนที่ยังพิสูจน์ไม่ได้
+
+### 6.1 วิธีตรวจในรอบนี้
+
+ตรวจด้วยการอ่านซอร์สและนับจากไฟล์โดยตรง ไม่ได้รันแอปหรือฐานข้อมูล:
+
+| จำนวนที่เอกสารอ้าง | วิธีตรวจ | ผล |
+|---|---|---|
+| 37 endpoint | `grep -c '^@router\.' backend/app/api.py` | 37 (และมี `@api_app.get("/healthz")` แยกอีก 1) |
+| migration `0001`–`0008` | `ls backend/alembic/versions/*.py` + อ่าน `revision`/`down_revision` | 8 ไฟล์ ต่อลูกโซ่ถึง `0008_user_and_ward_names` |
+| 17 ตาราง | `grep '__tablename__' backend/app/models.py` | 17 (`alembic_version` ไม่อยู่ใน models) |
+| 15 ชนิดรายงาน | `ReportKind` 14 ค่า + `occupancy` แยกใน `occupancy.py` | ตรงกับ `reportCatalog` 15 รายการฝั่งจอ |
+
+การแก้ไขรอบนี้แตะเฉพาะเอกสารนี้ ไม่มีการแก้โค้ดแอป ฐานข้อมูล หรือการตั้งค่าใด ๆ
+
+### 6.2 สิ่งที่ยืนยันจากโค้ดได้แล้ว
+
+- จำนวนและเส้นทาง endpoint ทั้ง 37 รายการตามหัวข้อ 1.3 (แยกกลุ่ม 5/4/7/4/10/4/3)
+- ลำดับ migration ครบ 8 ไฟล์ และคอลัมน์ที่ `0008` เพิ่ม (`users.full_name`, `wards.short_name`) พร้อมค่า `short_name` 19 หอ
+- รายชื่อตาราง 17 ตาราง และ mapping ในหัวข้อ 1.4 ครบทุกตาราง
+- โครงสร้าง RBAC, CSRF, optimistic locking และสถานะธุรกรรมตามหัวข้อ 2–3 (อ่านจาก `permissions.py`, `api.py`, `models.py`)
+
+### 6.3 ส่วนที่ยังพิสูจน์ไม่ได้ในรอบนี้
+
+1. **สถานะจริงของฐานข้อมูล:** ไม่ได้รัน `alembic upgrade head` หรือต่อ PostgreSQL จึงไม่รู้ว่า DB เป้าหมายอยู่ที่ revision ใด และตารางจริงอาจมีของค้างที่ไม่อยู่ใน `models.py`
+2. **จำนวน path ใน OpenAPI จริง:** 37 คือจำนวน decorator ไม่ได้รับรองว่ามี 37 path ไม่ซ้ำ (เช่น `/reports/summary/{kind}` นับเป็น 1 path แต่ให้บริการ 14 `kind`) และไม่ได้ยืนยันรหัสตอบกลับจริง
+3. **พฤติกรรมเชิงรันไทม์:** ไม่ได้ยิงคำขอจริง จึงยังไม่ยืนยันใบรับรอง cookie/CSRF, การคืน `409` ตอน version ชน, หรือการกันสิทธิ์ข้ามหอด้วยคำขอจริง
+4. **Frontend:** ไม่ได้ `npm run build`/`npm run dev` จำนวนหน้าและเงื่อนไข gating (`/users` เฉพาะ `system_admin`, `/dev/ui-kit` เฉพาะ development, maintenance gate) ตรวจจากซอร์สเท่านั้น ยังไม่เห็นผลเรนเดอร์จริง
+5. **สูตรรายงานและ parity กับ PHP:** เอกสารนี้อธิบายโครง ไม่ได้รับรองตัวเลข รายงาน `daily`, `monthly`, `census-month`, `productivity` ที่แยกช่องทาง screen/print/excel ยังต้องใช้ชุดทดสอบ parity และใบพิมพ์เทียบ (ตามหัวข้อ 5.2)
+6. **ค่า environment จริง:** ไม่ได้อ่าน `.env*`; ข้อความในหัวข้อ 5.2 เรื่องพอร์ต `18763` และ `NEXT_PUBLIC_SATISFACTION_URL` เป็นข้อมูลจากรอบตรวจก่อน (24 พ.ย. 2569) ไม่ได้ยืนยันซ้ำในรอบนี้
+7. **Mapping ไฟล์ PHP เดิม (หัวข้อ 1.5):** ยืนยันจากการอ่านชื่อไฟล์/โค้ดเท่านั้น ไม่ได้รันหน้า PHP เดิมเทียบผลลัพธ์ทีละหน้า
+8. **ข้อค้าง F01 ยังอยู่:** `frontend/app/entries/page.js` ยัง import `todayISO`, `thaiDateLabel` จาก `@/components/DateField` แทน `lib/thai-date.mjs`
+9. **Seed ข้อมูล:** `0003_inpatient_catalog.py` seed หอ/เวรเฉพาะเมื่อตารางว่าง ไม่ได้ตรวจว่าฐานข้อมูลที่ใช้งานจริงมี 19 หอครบหรือไม่

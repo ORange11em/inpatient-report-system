@@ -1,17 +1,32 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { AppShell } from "@/components/AppShell";
 import { useAuth } from "@/components/AuthProvider";
-import { Button, Card, EmptyState, ErrorState, FilterBar, FiscalYearSelect, InfoCallout, PageHeader, Select, Skeleton, ThaiDatePicker, ThaiMonthPicker, Toast } from "@/components/ui";
+import { Button, Card, EmptyState, ErrorState, FilterBar, InfoCallout, PageHeader, Select, Skeleton, ThaiDatePicker, ThaiMonthPicker, Toast } from "@/components/ui";
 import { DailyReportOverview, OccupancyReport, ReportPrint, ReportTable } from "@/components/reports/ReportTables";
 import { apiRequest, getErrorMessage } from "@/lib/api";
 import { defaultReportFilters, hiddenStatusKinds, occupancyTable, dailyReportSummary, reportCatalog, reportFilename, reportForChannel, reportHasData, reportPeriod, reportTimestamp, spreadsheetXML, statusLabels } from "@/lib/report-view.mjs";
-import { parseISODate, monthStartISO } from "@/lib/thai-date.mjs";
+import { fiscalYearForDate, fiscalYearRange, formatThaiMonth, parseISODate, monthStartISO, todayISO } from "@/lib/thai-date.mjs";
 import "@/styles/reports.css";
 
-const fiscalYears = Array.from({ length: 1001 }, (_, i) => 3543 - i);
+const REPORT_GROUPS = [
+  { label: "รายงานประจำวันและประจำเดือน", kinds: ["daily", "daily-all", "monthly"] },
+  { label: "ยอดคงพยาบาล", kinds: ["census-day", "census-month"], adminOnly: true },
+  { label: "อัตราเตียงและกำลังคนทางการพยาบาล", kinds: ["occupancy", "turnover", "los", "productivity", "skill-mix", "nursing-hours", "specialty"] },
+  { label: "ตัวชี้วัดความปลอดภัย", kinds: ["pressure", "pressure-detail", "readmission"] },
+];
+
+const MIN_FISCAL_YEAR = 2553;
+
+function compactFiscalYearLabel(year) {
+  const range = fiscalYearRange(year);
+  return range
+    ? `ปีงบประมาณ ${year} (${formatThaiMonth(range.from, { short: true, shortYear: true })} – ${formatThaiMonth(range.to, { short: true, shortYear: true })})`
+    : `ปีงบประมาณ ${year}`;
+}
+
 const friendlyError = problem => getErrorMessage(problem, "แสดงรายงานไม่สำเร็จ กรุณาตรวจสอบการเชื่อมต่อแล้วลองใหม่").replace(/\bward\b/gi, "หอผู้ป่วย");
 
 export function ReportViewer({ initialKind = "daily" }) {
@@ -20,12 +35,25 @@ export function ReportViewer({ initialKind = "daily" }) {
   const [wards, setWards] = useState([]), [shifts, setShifts] = useState([]);
   const [catalogState, setCatalogState] = useState("loading"), [catalogError, setCatalogError] = useState(""), [catalogRetry, setCatalogRetry] = useState(0);
   const [result, setResult] = useState(null), [error, setError] = useState(""), [busy, setBusy] = useState(false);
-  const [exporting, setExporting] = useState(false), [exportError, setExportError] = useState("");
+  const [exporting, setExporting] = useState(false), [exportError, setExportError] = useState(""), [exportNotice, setExportNotice] = useState("");
   const exportLock = useRef(false);
   const [printedAt, setPrintedAt] = useState(() => new Date());
   const requestId = useRef(0), initialized = useRef(false);
   const mode = reportCatalog[filters.kind][1];
-  const kinds = Object.entries(reportCatalog).filter(([key]) => user?.is_admin || !key.startsWith("census-"));
+  const reportGroups = useMemo(() => REPORT_GROUPS
+    .filter(group => !group.adminOnly || user?.is_admin)
+    .map(group => ({
+      label: group.label,
+      options: group.kinds.filter(key => reportCatalog[key]).map(key => ({ value: key, label: reportCatalog[key][0] })),
+    })), [user?.is_admin]);
+  const fiscalYearOptions = useMemo(() => {
+    const currentYear = fiscalYearForDate(todayISO());
+    const startYear = Math.max(currentYear, MIN_FISCAL_YEAR);
+    const baseYears = Array.from({ length: startYear - MIN_FISCAL_YEAR + 1 }, (_, index) => startYear - index);
+    const selectedYear = Number(filters.year);
+    const allYears = [...new Set([...baseYears, ...(Number.isInteger(selectedYear) ? [selectedYear] : [])])].sort((a, b) => b - a);
+    return allYears.map(year => ({ value: year, label: compactFiscalYearLabel(year) }));
+  }, [filters.year]);
 
   useEffect(() => {
     let active = true; setCatalogState("loading"); setCatalogError("");
@@ -75,12 +103,26 @@ export function ReportViewer({ initialKind = "daily" }) {
   function change(key, value) {
     requestId.current++;
     setFilters(old => ({ ...old, [key]: value, ...(key === "month" && old.through < value ? { through: value } : {}) }));
-    setResult(null); setError(""); setExportError(""); setBusy(false);
+    setResult(null); setError(""); setExportError(""); setExportNotice(""); setBusy(false);
   }
   function reset() {
     requestId.current++;
     setFilters({ ...defaultReportFilters(filters.kind), shift: String(shifts[0]?.id ?? "") });
-    setResult(null); setError(""); setExportError(""); setBusy(false);
+    setResult(null); setError(""); setExportError(""); setExportNotice(""); setBusy(false);
+  }
+  function removeFilterChip(patch) {
+    if (busy) return;
+    const next = { ...filters, ...patch };
+    const nextMode = reportCatalog[next.kind][1];
+    const nextQuery = { kind: next.kind, date: nextMode === "day" ? next.date : "", month: ["month", "range"].includes(nextMode) ? next.month : "", through: nextMode === "range" ? next.through : "", year: nextMode === "year" ? next.year : "", ward: next.kind !== "occupancy" ? next.ward : "", shift: next.kind === "daily-all" ? next.shift : "", status: next.status };
+    const url = new URL(window.location.href);
+    for (const [key, value] of Object.entries(nextQuery)) {
+      if (value === "" || value === null || value === undefined) url.searchParams.delete(key);
+      else url.searchParams.set(key, String(value));
+    }
+    window.history.replaceState(window.history.state, "", url.pathname + url.search + url.hash);
+    setFilters(next);
+    search(next);
   }
   async function search(chosen = filters) {
     const { kind, date, month, through, year, status, ward, shift } = chosen;
@@ -88,7 +130,7 @@ export function ReportViewer({ initialKind = "daily" }) {
     if (mode === "range" && through < month) { setError("เดือนสิ้นสุดต้องไม่อยู่ก่อนเดือนเริ่มต้น กรุณาเลือกช่วงใหม่"); return; }
     if (kind === "daily-all" && !shift) { setError("ยังไม่มีเวรให้เลือก กรุณาติดต่อผู้ดูแลระบบ"); return; }
     const id = ++requestId.current;
-    setBusy(true); setError(""); setResult(null); setExportError("");
+    setBusy(true); setError(""); setResult(null); setExportError(""); setExportNotice("");
     try {
       const selected = mode === "day" ? date : mode === "year" ? String(year-543) + "-09-30" : month + "-01";
       const params = new URLSearchParams({ selected, status });
@@ -127,29 +169,35 @@ export function ReportViewer({ initialKind = "daily" }) {
   async function exportExcel() {
     if (!reportHasData(result) || exportLock.current) return;
     exportLock.current = true;
-    setExporting(true); setExportError("");
+    setExporting(true); setExportError(""); setExportNotice("");
     await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
     try {
       const xml = spreadsheetXML(reportForChannel(result, "excel"));
       const url = URL.createObjectURL(new Blob([xml], { type: "application/xml" }));
       const link = document.createElement("a"); link.href = url; link.download = reportFilename(result); link.click();
       setTimeout(() => URL.revokeObjectURL(url), 1000);
+      setExportNotice("ส่งออกไฟล์รายงานแล้ว");
     } catch { setExportError("ส่งออกไม่สำเร็จ กรุณาลองใหม่อีกครั้ง"); }
     finally { exportLock.current = false; setExporting(false); }
   }
   const noData = result && !reportHasData(result);
   const actionReason = busy ? "กำลังโหลดรายงาน กรุณารอสักครู่" : error ? "แสดงรายงานให้สำเร็จก่อนพิมพ์หรือส่งออก" : !result ? "เลือกเงื่อนไขแล้วกดแสดงรายงาน" : noData ? "ไม่มีข้อมูลสำหรับพิมพ์หรือส่งออก เลือกวันหรือช่วงอื่น" : "";
   const query = { kind: filters.kind, date: mode === "day" ? filters.date : "", month: ["month","range"].includes(mode) ? filters.month : "", through: mode === "range" ? filters.through : "", year: mode === "year" ? filters.year : "", ward: filters.kind !== "occupancy" ? filters.ward : "", shift: filters.kind === "daily-all" ? filters.shift : "", status: filters.status };
-  const chips = [{ label: reportPeriod(filters) }, ...(filters.kind !== "occupancy" ? [{ label: filters.ward ? wards.find(w=>w.id===filters.ward)?.name || "หอที่เลือก" : "ทุกหอที่มีสิทธิ์" }] : []), ...(!hiddenStatusKinds.includes(filters.kind) ? [{ label: "สถานะข้อมูล: " + statusLabels[filters.status] }] : [])];
+  const chips = [
+    { label: reportPeriod(filters) },
+    ...(filters.kind !== "occupancy" ? [{ label: filters.ward ? wards.find(w => w.id === filters.ward)?.name || "หอที่เลือก" : "ทุกหอที่มีสิทธิ์", onRemove: filters.ward ? () => removeFilterChip({ ward: "" }) : undefined }] : []),
+    ...(!hiddenStatusKinds.includes(filters.kind) ? [{ label: "สถานะข้อมูล: " + statusLabels[filters.status], onRemove: filters.status !== "all" ? () => removeFilterChip({ status: "all" }) : undefined }] : []),
+  ];
+  const printerName = user?.full_name?.trim() || user?.username || "—";
   return <AppShell><div className="reports-page">
     <PageHeader title={reportCatalog[filters.kind][0]} breadcrumbs={[{ label:"รายงาน" },{ label:reportCatalog[filters.kind][0] }]} description="เลือกเงื่อนไขเพื่อตรวจรายงาน พิมพ์ หรือส่งออกข้อมูล" />
     <Card className="reports-filters">{catalogState === "loading" ? <Skeleton label="กำลังโหลดตัวเลือกรายงาน" /> : catalogState === "error" ? <ErrorState title="โหลดตัวเลือกรายงานไม่สำเร็จ" description={catalogError} onRetry={()=>setCatalogRetry(n=>n+1)} /> :
       <FilterBar chips={chips} onApply={()=>search()} onReset={reset} loading={busy} applyLabel="แสดงรายงาน" query={query} syncToUrl>
-        <Select label="ประเภทรายงาน" value={filters.kind} disabled={busy} options={kinds.map(([value,[label]])=>({ value,label }))} onChange={e=>change("kind",e.target.value)} />
+        <Select label="ประเภทรายงาน" value={filters.kind} disabled={busy} groups={reportGroups} onChange={e=>change("kind",e.target.value)} />
         {mode === "day" && <ThaiDatePicker label="ประจำวันที่" value={filters.date} onChange={value=>change("date",value)} disabled={busy} required />}
         {["range","month"].includes(mode) && <ThaiMonthPicker label={mode==="range"?"ตั้งแต่เดือน":"เดือนรายงาน"} value={filters.month} onChange={value=>change("month",value)} disabled={busy} required />}
         {mode === "range" && <ThaiMonthPicker label="ถึงเดือน" value={filters.through} onChange={value=>change("through",value)} disabled={busy} error={filters.through<filters.month?"เดือนสิ้นสุดต้องไม่อยู่ก่อนเดือนเริ่มต้น":undefined} required />}
-        {mode === "year" && <FiscalYearSelect value={Number(filters.year)} years={fiscalYears} onChange={value=>change("year",value)} disabled={busy} required />}
+        {mode === "year" && <Select label="ปีงบประมาณ" value={Number(filters.year)} options={fiscalYearOptions} onChange={e=>change("year",Number(e.target.value))} disabled={busy} required />}
         {filters.kind !== "occupancy" && <Select label="หอผู้ป่วยในรายงาน" value={filters.ward} options={[{ value:"",label:"ทุกหอที่มีสิทธิ์" },...wards.map(w=>({ value:w.id,label:w.name }))]} disabled={busy} onChange={e=>change("ward",e.target.value)} />}
         {filters.kind === "daily-all" && <Select label="เวรในรายงาน" required value={filters.shift} options={shifts.map(s=>({ value:s.id,label:s.display_name }))} disabled={busy} onChange={e=>change("shift",e.target.value)} />}
         {!hiddenStatusKinds.includes(filters.kind) && <Select label="สถานะข้อมูล" value={filters.status} options={Object.entries(statusLabels).map(([value,label])=>({ value,label }))} disabled={busy} onChange={e=>change("status",e.target.value)} />}
@@ -169,8 +217,8 @@ export function ReportViewer({ initialKind = "daily" }) {
         </>}
         <p className="report-export-note ui-muted">ส่งออกเป็น Excel XML (.xml) เปิดด้วยโปรแกรม Excel ได้ ตัวเลขคงค่าจากรายงาน</p>
       </div>
-      {result && !noData && <ReportPrint result={reportForChannel(result, "print")} username={user?.username || "—"} printedAt={printedAt} />}
+      {result && !noData && <ReportPrint result={reportForChannel(result, "print")} username={printerName} printedAt={printedAt} />}
     </Card>
-    <Toast open={Boolean(exportError)} tone="danger" title={exportError} onClose={()=>setExportError("")} />
+    <div className="reports-toast"><Toast open={Boolean(exportError || exportNotice)} tone={exportError ? "danger" : "success"} title={exportError || exportNotice} onClose={() => { setExportError(""); setExportNotice(""); }} /></div>
   </div></AppShell>;
 }

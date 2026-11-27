@@ -55,15 +55,28 @@ dump SQL ที่ได้รับไม่มีแถวใช้งาน�
 
 หัวไฟล์ `data_confirm.csv`: `ward,idate,wage_type_id,cdate,cuser`. วันใช้ Gregorian ISO `YYYY-MM-DD`; timestamp ใช้ datetime ต้นทาง; ค่าว่างคงเป็นไม่มีข้อมูล รายการที่ยังไม่มี daily entry จะถูกเก็บไว้พร้อมข้อยกเว้น ไม่แต่งรายการเป้าหมายขึ้นมา การรันซ้ำกับไฟล์เดิมใช้ hash ของแถว/ลำดับ occurrence และไม่เพิ่ม event หรือข้อยกเว้นซ้ำ
 
+## บัญชีผู้ใช้จากตาราง account
+
+สคริปต์ `import_legacy_accounts.py` นำเข้าบัญชีจากไฟล์ CSV (`id,user_login,user_name,ward`) โดย **ปฏิเสธไฟล์ที่มีคอลัมน์รหัสผ่าน** (`pass_login`, `password`, `password_hash`) และสุ่มรหัสผ่านชั่วคราวแบบแฮชเท่านั้น (ผู้ดูแลระบบตั้งรหัสผ่านใหม่ให้ผู้ใช้ภายหลังผ่านหน้า `/users`)
+
+- `ward == "00"` ได้รับบทบาท `system_admin` (`user_global_roles`)
+- `ward != "00"` จับคู่ `wards.legacy_code` และได้รับบทบาท `ward_recorder` (`user_ward_roles`) หากไม่พบหอจะไม่สร้างผู้ใช้แถวนั้นและบันทึก `ward_mapping_missing` ลง `legacy_import_issues`
+- `--write-account-map <path>` สร้างไฟล์เชื่อม `legacy_account_id,target_username` (ใส่ทั้ง `user_login` และ `id`) สำหรับส่งต่อให้ `import_legacy.py`, `import_legacy_confirmations.py` และ `import_legacy_supplements.py`
+
+ตัวอย่างคำสั่ง dry-run และ apply:
+
+    .\.venv\Scripts\python.exe -m app.cli.import_legacy_accounts --source C:\path\to\copy\account.csv --write-account-map C:\path\to\copy\account-map.csv
+    .\.venv\Scripts\python.exe -m app.cli.import_legacy_accounts --source C:\path\to\copy\account.csv --write-account-map C:\path\to\copy\account-map.csv --apply --actor-username <admin-username>
+
 ## Commands
 
 From PowerShell in new-system/backend, set DATABASE_URL to a local development PostgreSQL database and APP_ENV=development. First run a dry-run:
 
     .\.venv\Scripts\python.exe -m app.cli.import_legacy --source C:\path\to\copy\data_all.csv
 
-Review the JSON summary. To write only to the local development database:
+Review the JSON summary. To write only to the local development database (optionally passing `--account-map` to map `user_update` to `created_by`/`updated_by` and preserve `last_date` as `updated_at`):
 
-    .\.venv\Scripts\python.exe -m app.cli.import_legacy --source C:\path\to\copy\data_all.csv --apply --actor-username <admin-username>
+    .\.venv\Scripts\python.exe -m app.cli.import_legacy --source C:\path\to\copy\data_all.csv --account-map C:\path\to\copy\account-map.csv --apply --actor-username <admin-username>
 
 The tool records an apply batch and imported source keys so later runs are idempotent. It does not provide automatic deletion/rollback of a committed batch; restore the development database snapshot or use a reviewed batch-specific recovery procedure.
 

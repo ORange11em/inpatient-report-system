@@ -1,5 +1,203 @@
 # ความคืบหน้า UX/UI
 
+## 27 พฤศจิกายน 2569 — รายงานผลการตรวจรับ QA UX/UI ทั้งระบบ (ตรวจอย่างเดียว ไม่แก้โค้ด)
+
+- **ขอบเขตการตรวจ:** ตรวจครบทั้ง **11 เส้นทางผู้ใช้** (`/login`, `/maintenance`, `/`, `/entries`, `/history`, `/history?status=unconfirmed`, `/indicators`, `/reports`, `/occupancy`, `/users`, `/admin/master` ครบทั้ง 3 แท็บ) ที่ความกว้าง **360 / 768 / 1024 / 1440px** ทั้งขนาดตัวอักษร **100% และ 125%** (รวมถึง `1920px` สำหรับ `/occupancy` และ `/reports`) บน Microsoft Edge headless พร้อมบริการจำลอง โดยไม่แก้ไขไฟล์โค้ดใด ๆ
+- **ผลการรันคำสั่งและตรวจข้อผิดพลาด:**
+  - `npm run test:ui`: **ผ่าน 50/50**
+  - `npm run build`: **ผ่านครบทั้ง 12 เส้นทาง**
+  - Console error / Hydration warning / Page error: **ผ่าน (0 รายการ)**
+  - `npm run lint` และ `npx --no-install tsc --noEmit`: **ยังไม่ได้รัน** (ไม่มี script `lint` และไม่มีแพ็กเกจ TypeScript compiler ติดตั้งในโปรเจกต์เดิม)
+- **สรุปผลการตรวจอัตโนมัติบนเบราว์เซอร์ (เทียบกับข้อบกพร่อง F01–F05 เดิมใน `ui-phase-7.md`):**
+  - **การเลื่อนแนวนอน (`scrollWidth <= clientWidth`)**: **ผ่าน** ทุกหน้า ทุกความกว้าง (`360 / 768 / 1024 / 1440px` ทั้ง `100%` และ `125%`) และตาราง `/occupancy` ที่ `1920px` แสดงครบ 16 คอลัมน์พอดี (`1500/1500px`)
+  - **วันที่ พ.ศ. และคำศัพท์มาตรฐาน A5**: **ผ่าน** ไม่พบวันที่ ISO/ค.ศ. หรือศัพท์เทคนิค (`API`, `payload`, `session cookie`, `INPATIENT DATA`, `ward`, `pressure`, `ระบบหลังบ้าน`) บนหน้าจอ งานพิมพ์ A4 แนวนอน และไฟล์ส่งออก Excel XML ทั้ง 15 ชนิด (F01 และ F02 เดิมแก้ไขครบแล้ว) ชื่อเมนูตรงกับ `h1` ครบทั้ง 8 หน้าคงที่ และ `/reports` เปลี่ยนหัวข้อตามประเภทรายงานตามสเปก C6
+  - **ขนาดปุ่ม/ช่องกรอก `≥ 44×44px`, `:focus-visible` และ Contrast WCAG AA**: **ผ่าน (ในขอบเขตที่วัดได้บนเบราว์เซอร์)** ทุกปุ่มและช่องกรอกที่แสดงผลมีขนาด `≥ 44×44px` (`smallTargets = 0`, F04 แก้แล้ว) มี `:focus-visible` เส้นทึบ `3px solid #246fbe` ชัดเจน (F03 แก้แล้ว) ข้อความปกติบนพื้นทึบ `≥ 4.5:1` (`lowTextContrast = 0`) และขอบช่องกรอก/ปุ่มรอง `≥ 3:1` (`lowBorderContrast = 0`)
+  - **`ConfirmDialog` และ `Toast`**: **ผ่าน** กักโฟกัส `Tab` ไว้ในหน้าต่าง ปิดด้วย `Esc` ได้ มี `aria-live="polite"` และบน `/entries` ที่ `360px` และ `1440px` ไม่บังปุ่มบันทึกหรือแถบเมนูมือถือ (F05 แก้แล้ว)
+  - **การกรอก `/entries` ด้วยคีย์บอร์ดล้วน และ `PasswordInput`**: **ผ่าน** เลื่อนโฟกัสด้วย `Enter`/`Tab` ครบทั้ง **59/59 ช่อง** ของเวรบ่ายจนถึงปุ่มบันทึก และกด `Ctrl+S` ยืนยันบันทึกสำเร็จทั้งที่ `1440px` และ `360px`; `PasswordInput` สลับแสดง/ซ่อนรหัสผ่านได้ครบทั้ง **8 ช่องใน 4 จุด** (`/login`, หน้าต่างเปลี่ยนรหัสผ่านใน `ShellFrame`, เพิ่มผู้ใช้ใหม่ และตั้งรหัสผ่านใหม่ใน `/users`)
+- **รายการที่รอตรวจบนอุปกรณ์และซอฟต์แวร์จริง (ยังไม่ได้รันในสภาพแวดล้อมนี้):**
+  - **Lighthouse Accessibility ≥ 95 ทุกหน้า**: ยังไม่ได้รัน CLI เนื่องจากไม่มีแพ็กเกจ `lighthouse` ในเครื่อง (`npx --no-install lighthouse --version` แจ้งไม่มีแพ็กเกจ) ต้องรันผ่าน Chrome DevTools บนเครื่องจริงตามขั้นตอน M04
+  - **มือถือจริง iOS Safari / Android Chrome + แป้นพิมพ์สัมผัสจริง** (M02), **โปรแกรมอ่านหน้าจอจริง NVDA / VoiceOver** (M03), **ซูมเบราว์เซอร์จริง 200%** (M01), **เครื่องพิมพ์จริง A4 แนวนอนขาวดำ** (M05) และ **การเปิดไฟล์ `.xml` ใน Microsoft Excel จริง** (M06)
+- **หมายเหตุไฟล์สคริปต์ทดสอบ/โค้ดเก่าที่คงค้าง (ไม่กระทบผู้ใช้จริง):**
+  - สคริปต์ทดสอบเบราว์เซอร์รุ่นเก่า 4 ไฟล์ยังมี selector ก่อนปรับ UX รอบล่าสุด: `tests/browser/entry-editing.cjs:63`, `tests/browser/history.cjs:48`, `tests/browser/indicators.cjs:37`, `tests/browser/text-size.cjs:127`
+  - ไฟล์โค้ดเก่าที่ไม่มีการเรียกใช้แล้ว: `components/DateField.jsx:1-32` และกฎสไตล์เดิมใน `app/globals.css:3-133`
+
+## 27 พฤศจิกายน 2569 — เพิ่มหน้าผู้ดูแลระบบ `/admin/master` สำหรับจัดการหอผู้ป่วย ประเภทเวร และความจุเตียงมาตรฐาน
+
+- **1) เส้นทางใหม่และเมนูตั้งค่าสำหรับผู้ดูแลระบบ:**
+  - `new-system/frontend/lib/workspace.mjs`, `new-system/frontend/components/ui/Icon.jsx` และ `new-system/frontend/components/shell/ShellFrame.jsx`: เพิ่มเมนู `"จัดการหอผู้ป่วยและเวร"` (ชื่อย่อ `"ตั้งค่า"`, ไอคอน `settings`, `adminOnly: true`) ในกลุ่ม `"การจัดการระบบ"` ชี้ไปยัง `/admin/master` พร้อมรองรับ active state บนปุ่ม `"เมนู"` ของมือถือ และเพิ่ม unit test `pageContext` ใน `new-system/frontend/tests/admin-master.test.mjs`
+  - `new-system/frontend/lib/api.js`: เพิ่มข้อความภาษาไทยสำหรับรหัสข้อผิดพลาดของข้อมูลพื้นฐาน (`ward_code_already_exists`, `shift_code_or_legacy_id_already_exists`, `shift_not_found`, `capacity_date_order_invalid`)
+- **2) หน้า `/admin/master` (`new-system/frontend/app/admin/master/page.js`, `new-system/frontend/styles/master.css`):**
+  - แสดง `EmptyState` ล็อกสิทธิ์เหมือนหน้า `/users` หากผู้ใช้ไม่ใช่ผู้ดูแลระบบ (`!user?.is_admin`)
+  - แบ่งเนื้อหาเป็น 3 แท็บ (`role="tablist"` / `role="tab"` / `role="tabpanel"` รองรับคีย์บอร์ดลูกศรซ้าย–ขวา `Home` / `End`) ด้วย shared components และ design tokens เดิมทั้งหมด:
+    1. **แท็บหอผู้ป่วย**: ตารางแสดงรหัส ชื่อเต็ม ชื่อย่อ และสถานะ พร้อมค้นหาและหน้าต่างเพิ่มหอผู้ป่วยใหม่ (`POST /wards` พร้อม `csrfToken`) ส่วนรายการเดิมแสดงแบบอ่านอย่างเดียวตามที่ระบบหลังบ้านรองรับ
+    2. **แท็บประเภทเวร**: โหลดรายการทั้งหมดรวมเวรที่ปิดใช้งาน (`GET /shifts?include_inactive=true`) เพิ่มเวรใหม่ (`POST /shifts`) และปรับชื่อเวร ลำดับแสดงผล หรือเปิด/ปิดการใช้งาน (`PATCH /shifts/{id}`) ส่วนรหัสเวรแสดงแบบอ่านอย่างเดียวหลังสร้างรายการ
+    3. **แท็บความจุเตียงมาตรฐาน**: เลือกหอผู้ป่วย โหลดประวัติช่วงความจุเตียง (`GET /wards/{ward_id}/capacity`) แสดงวันที่เริ่ม–สิ้นสุดเป็น พ.ศ. ผ่าน `formatThaiDate` และเพิ่มช่วงความจุเตียงใหม่ (`POST /wards/{ward_id}/capacity`) ด้วย `ThaiDatePicker` (ส่ง ISO `YYYY-MM-DD`) และ `NumberInput`
+- **การตรวจสอบและวิธีทดสอบ:**
+  - `npm run test:ui` ผ่าน **50/50** และ `npm run build` ผ่านครบ **12 เส้นทาง** (ส่วน `npm run lint` และ `npx tsc --noEmit` ยังไม่มีสคริปต์และ compiler ในโปรเจกต์ตามเดิม)
+  - ทดสอบบน Microsoft Edge headless ที่ความกว้าง **360 / 768 / 1024 / 1440px** ทั้งขนาดตัวอักษร **100% และ 125%** ครบทั้ง 3 แท็บ: ยืนยันการซ่อนเมนูและล็อกหน้าสำหรับผู้ใช้ทั่วไป การส่ง `X-CSRF-Token` และข้อมูลตาม schema จริงของ `POST /wards`, `POST /shifts`, `PATCH /shifts/{id}` และ `POST /wards/{ward_id}/capacity` การแจ้งเตือนรหัสซ้ำและช่วงวันที่ความจุเตียงซ้อนทับเป็นภาษาไทยสุภาพ และไม่เกิด horizontal scroll หรือ page error
+- **ไฟล์ที่สร้าง/แก้:** `new-system/frontend/app/admin/master/page.js`, `new-system/frontend/styles/master.css`, `new-system/frontend/lib/workspace.mjs`, `new-system/frontend/components/shell/ShellFrame.jsx`, `new-system/frontend/components/ui/Icon.jsx`, `new-system/frontend/lib/api.js`, `new-system/frontend/tests/admin-master.test.mjs`, `new-system/docs/ui-progress.md`
+- **คำถามที่ค้าง / ข้อจำกัดของระบบหลังบ้านปัจจุบัน:** ปัจจุบันฝั่งหลังบ้านยังไม่มีช่องทางสำหรับแก้ไขหรือปิดใช้งานหอผู้ป่วยเดิม (`PATCH /wards/{id}` และ `GET /wards` คืนเฉพาะหอที่เปิดใช้งาน) รวมถึงยังไม่มีช่องทางแก้ไขหรือลบประวัติช่วงความจุเตียงเดิม จึงแสดงรายการที่บันทึกไว้แล้วของทั้งสองส่วนแบบอ่านอย่างเดียวตามกติกา
+
+## 27 พฤศจิกายน 2569 — ป้าย “ประเภท 5 (วิกฤต)” สถานะรายเวรบน `ShiftSelector` ซ่อนตัวเลือกหอซ้ำบน Header และช่วงปีงบประมาณถึง พ.ศ. 2553
+
+- **1) ติดป้าย “ประเภท 5 (วิกฤต)” ตามหลักฐานระบบเก่า (`inpatient/edit_data.php` บรรทัด 364):**
+  - `new-system/frontend/app/entries/page.js`: ปรับป้ายและ `aria-label` ของช่อง `patient_type5` ในส่วนที่ 5 เป็น `"ประเภท 5 (วิกฤต)"` โดยคง `name="patient_type5"` ลำดับ 5 → 1 และป้าย `"ประเภท 4"` ถึง `"ประเภท 1"` เดิม
+  - `new-system/frontend/components/history/HistoryEntryDialog.jsx`: แสดง `<dt>` เป็น `"ประเภท 5 (วิกฤต)"` ให้ตรงกันในหน้าต่างตรวจสอบรายละเอียด
+- **2) แสดงสถานะจริงของแต่ละเวรบน `ShiftSelector` ในหน้า `/entries`:**
+  - `new-system/frontend/app/entries/page.js`, `new-system/frontend/components/entries/EntryContextBar.jsx`, `new-system/frontend/components/ui/primitives.jsx` และ `new-system/frontend/styles/entries.css`: อ่านสถานะรายเวรของหอและวันที่ที่เลือกผ่าน `GET /reports/daily?service_date=<วันที่ที่เลือก>&ward_id=<หอที่เลือก>` แล้วส่ง `status` (`"confirmed"` / `"unconfirmed"` / `"unrecorded"`) แสดงเป็น `StatusBadge` ในแต่ละตัวเลือกของ `ShiftSelector` (ไม่แสดงช่วงเวลาเวรและไม่แสดงสถานะเลยกำหนด) รีเฟรชอัตโนมัติเมื่อเกิด event `inpatient-entries-changed` ซ่อน badge เงียบ ๆ เมื่อโหลดไม่สำเร็จโดยไม่บล็อกการเลือกเวรหรือปุ่ม “เปิดแบบฟอร์ม” ผูก `aria-label` / `aria-describedby` บนปุ่มวิทยุของเวร และปรับกริด `.entry-context-fields` ไม่ให้ badge ล้นกรอบทุกขนาดจอและขนาดตัวอักษร
+- **3) ลดความซ้ำซ้อนของตัวเลือก “หอผู้ป่วยปัจจุบัน” บน Header:**
+  - `new-system/frontend/components/shell/ShellFrame.jsx` และ `new-system/frontend/styles/shell.css`: แสดง dropdown `"หอผู้ป่วยปัจจุบัน"` บน Header เฉพาะหน้า `/` และซ่อนบนหน้าอื่นที่มีตัวเลือกหอของตัวเองหรือแสดงทุกหอ (`/entries`, `/indicators`, `/history`, `/reports`, `/occupancy`, `/users`) โดยคงสถานะ `selectedWardId` ใน `WorkspaceContext` และจัดตำแหน่งเครื่องมือบน Header ให้ชิดขวาเรียบร้อยทุกขนาดจอ
+- **4) ปรับช่วงปีงบประมาณในหน้ารายงานตามระบบเก่า (`inpatient/bed_rate.php` บรรทัด 52):**
+  - `new-system/frontend/components/ReportViewer.jsx`: ปรับรายการปีงบประมาณเป็นช่วงตั้งแต่ปีงบประมาณปัจจุบันย้อนลงไปถึง พ.ศ. `2553` พร้อมคงการรองรับปีจาก URL query หากอยู่นอกช่วงดังกล่าว และคงพฤติกรรมการโหลดของ `/reports`, `/occupancy` และ `/history` เดิมทั้งหมด
+- **การตรวจสอบและวิธีทดสอบ:**
+  - `npm run test:ui` ผ่าน **49/49** และ `npm run build` ผ่านครบ **11 เส้นทาง** (ส่วน `npm run lint` และ `npx tsc --noEmit` ยังไม่มีสคริปต์และ compiler ในโปรเจกต์ตามเดิม)
+  - ทดสอบบน Microsoft Edge headless ที่ความกว้าง **360 / 768 / 1024 / 1440px** ทั้งขนาดตัวอักษร **100% และ 125%** (รวมถึงรัน `tests/browser/reports.cjs` ผ่านครบ 18 หัวข้อ): ยืนยันว่า `ShiftSelector` แสดงสถานะรายเวรจริง อัปเดตทันทีหลังบันทึก/ยืนยัน ซ่อนเงียบเมื่อโหลดไม่สำเร็จ และไม่ล้นกรอบการ์ดหรือ BottomSheet ทุกขนาดจอ; ช่อง `patient_type5` และหน้าต่างตรวจสอบแสดง `"ประเภท 5 (วิกฤต)"`; หน้า `/` เลือกหอผู้ป่วยบน Header ได้และส่งต่อค่าเริ่มต้นใน `WorkspaceContext` ส่วนหน้าอื่นไม่มีช่องเลือกหอซ้ำบน Header; และตัวเลือกปีงบประมาณแสดงปีปัจจุบันถึง พ.ศ. 2553 พร้อมรองรับปีจาก URL query นอกช่วงได้ปกติ
+- **ไฟล์ที่แก้:** `new-system/frontend/app/entries/page.js`, `new-system/frontend/components/entries/EntryContextBar.jsx`, `new-system/frontend/components/history/HistoryEntryDialog.jsx`, `new-system/frontend/components/shell/ShellFrame.jsx`, `new-system/frontend/styles/shell.css`, `new-system/frontend/components/ReportViewer.jsx`, `new-system/frontend/components/ui/primitives.jsx`, `new-system/frontend/styles/entries.css`, `new-system/docs/ui-progress.md`
+- **คำถามที่ค้าง:** สคริปต์ทดสอบเบราว์เซอร์เดิม `tests/browser/history.cjs` (บรรทัด 48) เคยตรวจ `getByLabel('หอผู้ป่วยปัจจุบัน')` บน Header หลังจากคลิกแก้ไขเข้ามาหน้า `/entries` ซึ่งปัจจุบันซ่อนตัวเลือกหอซ้ำบน Header ของ `/entries` ตามคำสั่งรอบนี้แล้ว หากต้องการให้ปรับ selector ในไฟล์ทดสอบดังกล่าวในรอบถัดไปสามารถแจ้งยืนยันได้
+
+## 27 พฤศจิกายน 2569 — ปรับปรุง UX หน้ารายงาน/อัตราการครองเตียง ตารางประวัติ แท็บตัวชี้วัดเสริม และหน้าแรก
+
+- **1) หน้ารายงานและอัตราการครองเตียง (`/reports`, `/occupancy`):**
+  - `new-system/frontend/components/ui/primitives.jsx`: ขยาย `Select` ให้รองรับ prop `groups` (`<optgroup>`) ทั้งโหมดปกติและโหมด `readOnly` โดยไม่กระทบการใช้งาน `options` เดิม
+  - `new-system/frontend/components/ReportViewer.jsx`: จัดกลุ่มรายงาน 15 ประเภทเป็น 4 หมวดด้วย `<optgroup>` (`รายงานประจำวันและประจำเดือน`, `ยอดคงพยาบาล` เฉพาะผู้ดูแลระบบ, `อัตราเตียงและกำลังคนทางการพยาบาล`, `ตัวชี้วัดความปลอดภัย`); ปรับตัวเลือกปีงบประมาณจาก 1,001 ปีเหลือช่วงที่ใช้งานจริง 17 ปี (ปีงบประมาณปัจจุบัน + ล่วงหน้า 1 ปี + ย้อนหลัง 15 ปี พร้อมรวมปีจาก URL query หากอยู่นอกช่วง) และใช้ป้ายเดือนย่อในตัวเลือก (`ปีงบประมาณ 2570 (ต.ค. 69 – ก.ย. 70)`) โดยไม่แก้ `formatFiscalYear`; เพิ่ม `onRemove` บนชิปหอผู้ป่วยและชิปสถานะข้อมูลเพื่อรีเซ็ตตัวกรอง ซิงก์ URL และโหลดรายงานใหม่ทันที; แสดงชื่อเต็มของผู้พิมพ์ (`user?.full_name?.trim() || user?.username || "—"`) บนหัวกระดาษพิมพ์; และแสดง `Toast` ยืนยัน `"ส่งออกไฟล์รายงานแล้ว"` เมื่อส่งออก Excel XML สำเร็จ
+  - `new-system/frontend/styles/reports.css`: เพิ่ม `.reports-toast` ลอยมุมขวาล่างมาตรฐานเดียวกับหน้าอื่น และขยายความกว้างคอลัมน์ชื่อหอผู้ป่วยแรกของ `.occupancy-table` บนจอ `≥ 1024px` เป็น `calc(var(--compact-column-width) + var(--space-12))` (`13rem`) โดยยังคงแสดงครบทั้ง 16 คอลัมน์พอดีบนจอ `1920px`
+- **2) หน้าประวัติการบันทึก (`/history`):**
+  - `new-system/frontend/components/history/HistoryResults.jsx`: เปิด `sortable: true` พร้อมฟังก์ชัน `compare` ตามค่าจริงในคอลัมน์ `service_date` (เรียงตามวันที่ ISO และลำดับเวร), `ward_id` (เรียงชื่อหอผู้ป่วยภาษาไทย), `amount_bed` (เรียงตามจำนวนตัวเลข รองรับค่าว่าง) และ `updated_at` (เรียงตามเวลา timestamp)
+- **3) หน้าตัวชี้วัดเสริม (`/indicators`):**
+  - `new-system/frontend/app/indicators/page.js` และ `new-system/frontend/styles/indicators.css`: เพิ่มแถบแท็บสลับ `"แผลกดทับ (รายวัน)"` และ `"การกลับมารักษาซ้ำ (รายเดือน)"` บนจอ `< 1024px` (`role="tablist"` / `role="tab"` / `role="tabpanel"`, รองรับปุ่มลูกศรซ้าย/ขวา `Home` และ `End`) โดยคงทั้งสองฟอร์มไว้ใน DOM เพื่อรักษาค่าที่แก้ไขค้างไว้เมื่อสลับแท็บ และคงเลย์เอาต์ 2 คอลัมน์ข้างกันบนจอ `≥ 1024px`
+- **4) หน้าแรก (`/`):**
+  - `new-system/frontend/components/home/Dashboard.jsx`: เพิ่มเส้นตารางอ้างอิงแนวนอน (`0%`, `50%`, `100%`) พร้อมป้ายแกน Y และเพิ่ม `<title>` ในจุด `<circle>` ของ `TrendCard` เพื่อแสดงวันที่ พ.ศ. แบบเดือนเต็มคู่กับค่าร้อยละเมื่อวางเมาส์
+  - `new-system/frontend/app/page.js` และ `new-system/frontend/styles/home.css`: เพิ่มช่องค้นหาข่าวประกาศฝั่ง client เมื่อมีข่าวมากกว่า 3 รายการ พร้อมข้อความกรณีไม่พบคำค้นและปุ่มล้างคำค้นหา และเพิ่มข้อความตัวอย่างเนื้อหาข่าว 2 บรรทัด (`.home-news-preview`) ใต้หัวข้อข่าวเมื่อพับอยู่
+- **การตรวจสอบและวิธีทดสอบ:**
+  - `npm run test:ui` ผ่าน **49/49** และ `npm run build` ผ่านครบ **11 เส้นทาง** (ส่วน `npm run lint` และ `npx tsc --noEmit` ยังไม่มีสคริปต์และ compiler ในโปรเจกต์ตามเดิม)
+  - รันสคริปต์ `tests/browser/reports.cjs` ผ่านครบทุกข้อ (พารามิเตอร์รายงานทั้ง 15 ประเภท การส่งออก Excel XML ทั้ง 15 ไฟล์ การจัดหน้า A4 แนวนอน สิทธิ์ผู้ใช้ทั่วไป 13 รายงาน และความกว้าง **360 / 768 / 1024 / 1440 / 1920px** ที่แสดงครบ 16 คอลัมน์บนจอ 1920px) และรันสคริปต์ตรวจสอบเพิ่มเติมบน Microsoft Edge headless ยืนยัน `<optgroup>`, ปีงบประมาณ 17 ปี + query นอกช่วง, การกดลบชิปตัวกรอง, ชื่อผู้พิมพ์ `full_name`, `Toast` ส่งออกไฟล์, การเรียงลำดับตาราง `/history` ทั้ง 4 คอลัมน์, แท็บ `/indicators` ที่ `< 1024px` และการคงค่าค้างเมื่อสลับแท็บ, รวมถึงเส้นแกนกราฟและช่องค้นหาข่าวหน้า `/` โดยไม่เกิด horizontal scroll หรือ page error
+- **ไฟล์ที่แก้:** `new-system/frontend/components/ui/primitives.jsx`, `new-system/frontend/components/ReportViewer.jsx`, `new-system/frontend/styles/reports.css`, `new-system/frontend/components/history/HistoryResults.jsx`, `new-system/frontend/app/indicators/page.js`, `new-system/frontend/styles/indicators.css`, `new-system/frontend/components/home/Dashboard.jsx`, `new-system/frontend/app/page.js`, `new-system/frontend/styles/home.css`, `new-system/docs/ui-progress.md`
+- **คำถามที่ค้าง:** สคริปต์ทดสอบเบราว์เซอร์เดิม `tests/browser/indicators.cjs` (บรรทัด 37) ยังตรวจตำแหน่งการ์ดซ้อนกันแนวตั้งบนจอ `< 1024px` ตามดีไซน์ก่อนมีแท็บ หากต้องการให้ปรับ assertion ในไฟล์ทดสอบดังกล่าวให้สอดคล้องกับแท็บใหม่ในรอบถัดไปสามารถแจ้งยืนยันได้
+
+## 27 พฤศจิกายน 2569 — เปลี่ยนช่องตัวเลขหน้า `/entries` เป็น `type="text" inputMode="numeric"` เพิ่มคำอธิบายปุ่มยืนยัน และลดความรกของฟอร์ม
+
+- **1) เปลี่ยนช่องกรอกตัวเลขใน `/entries` เป็น `type="text" inputMode="numeric"` ตามสเปก A3/D:**
+  - `new-system/frontend/app/entries/page.js`: สร้าง `EntryNumberInput` (`type="text" inputMode="numeric" pattern="[0-9]*" data-entry-number="true"`) ป้องกันอักขระที่ไม่ใช่ตัวเลข (`e`, `+`, `-`, `.`) แปลงเลขไทย `๐-๙` เป็นอารบิกอัตโนมัติ คงความต่างระหว่าง `""` กับ `0` และตั้ง `setCustomValidity(...)` ตามเงื่อนไข `required`, `min` (จำนวนเตียง ≥ 1, ช่องอื่น ≥ 0), `max` (`2147483647`) และจำนวนเต็ม เพื่อให้ browser validation, `revealInvalidField` และ `onInvalid` ทำงานเหมือนเดิมทุกประการ
+  - `new-system/frontend/components/entries/useEntryEditing.js` และ `new-system/frontend/styles/entries.css`: เปลี่ยนตัวตรวจจับจาก `type === "number"` / `input[type="number"]` เป็น `dataset.entryNumber === "true"` / `input[data-entry-number="true"]` ทั้งในตัวกัน scroll wheel, `moveField` (`Tab` / `Enter` / `Shift+Tab` / `Shift+Enter` ครบ 59 ช่อง) และกฎ CSS (`font-size`, `min-height`, `scroll-margin-block`)
+- **2) อธิบายเหตุผลเมื่อปุ่ม “ยืนยันการส่งข้อมูล” กดไม่ได้:**
+  - `new-system/frontend/app/entries/page.js` และ `new-system/frontend/styles/entries.css`: เมื่อมีรายการเดิมและ `dirty === true` แสดงข้อความช่วย `"บันทึกการแก้ไขก่อน จึงจะยืนยันการส่งข้อมูลได้"` ใน `StickyActionBar` พร้อมผูก `aria-describedby="entry-confirm-disabled-reason"` กับปุ่มยืนยัน
+- **3) ปรับสัดส่วนและลดความรกในหน้าฟอร์ม:**
+  - `new-system/frontend/styles/entries.css`: ลด `min-height` และ `padding` ของหัวกล่อง `.entry-flow-section > summary` และ `.entry-core-sections .entry-section > summary` บนจอกว้าง (`@container daily-entry (min-width: 1000px)`) พร้อมปรับสัดส่วนคอลัมน์ให้หัวตารางทั้งสองแถวสูงเสมอกัน (~68px จากเดิม 108px) โดยไม่เหลือพื้นที่ว่างสีเทาเกินจำเป็น
+  - `new-system/frontend/app/entries/page.js`: เพิ่ม `placeholder="ระบุจำนวน"` ในช่อง `amount_bed` และ `placeholder="เว้นว่างได้หากยังไม่บันทึก"` ในช่อง `readmit_count` และ `discharge_count`
+  - `new-system/frontend/components/entries/EntryReview.jsx` และ `new-system/frontend/app/entries/page.js`: แทนที่การ์ดใหญ่หลังบันทึกด้วยแถบกะทัดรัดบรรทัดเดียว `EntrySavedBanner` (`.entry-saved-bar` สูง ~62px) แสดงเวลาบันทึกล่าสุดพร้อมปุ่มทางลัด `บันทึกเวรถัดไป` / `เลือกวันและเวรถัดไป` และ `ไปหน้ารอยืนยัน` โดยไม่ซ้ำหัวข้อใหญ่กับ `Toast`
+- **การตรวจสอบและวิธีทดสอบ:**
+  - `npm run test:ui` ผ่าน **49/49** และ `npm run build` ผ่านครบ **11 เส้นทาง** (ส่วน `npm run lint` และ `npx tsc --noEmit` ยังไม่มีสคริปต์และ compiler ในโปรเจกต์ตามเดิม)
+  - ทดสอบบน Microsoft Edge headless ที่ความกว้าง **360 / 768 / 1024 / 1280 / 1440px**: เลื่อนช่องเวรบ่ายด้วยคีย์บอร์ดล้วน (`Tab` / `Enter` / `Shift+Tab`) ครบทั้ง **59 ช่อง** ทั้งจอกว้าง 1440px และมือถือ 360px จนถึงปุ่มบันทึก พิมพ์ `e`/`-`/`+`/`.` ไม่เข้า แปลงเลขไทย `๑๕` → `15` อัตโนมัติ กันค่า `amount_bed = ""` และ `amount_bed = "0"` ก่อนเปิด `ConfirmDialog` คงช่องรายเดือนว่างเป็น `""` โดยไม่ปลอมเป็น `0` และส่ง JSON body เดิมทุกฟิลด์
+- **ไฟล์ที่แก้:** `new-system/frontend/app/entries/page.js`, `new-system/frontend/components/entries/useEntryEditing.js`, `new-system/frontend/components/entries/EntryReview.jsx`, `new-system/frontend/styles/entries.css`, `new-system/docs/ui-progress.md`
+- **คำถามที่ค้าง:** สคริปต์ทดสอบเบราว์เซอร์เดิม 2 ไฟล์ (`tests/browser/entry-editing.cjs` บรรทัด 63 และ `tests/browser/history.cjs` บรรทัด 48) มี selector นับ `input[type=number][name]` ซึ่งยังไม่ได้แตะเนื่องจากอยู่นอกไฟล์เป้าหมายของรอบนี้ หากต้องการให้ปรับ selector เป็น `input[data-entry-number="true"][name]` ในรอบถัดไปสามารถแจ้งยืนยันได้
+
+## 27 พฤศจิกายน 2569 — ลดความซ้ำซ้อนของหัวข้อ/Breadcrumb ปรับ `TextSizeControl` บนมือถือ ปรับหน้าต่างโปรไฟล์ หน้า `/users` และใช้ `next/link`
+
+- **1) ลดความซ้ำซ้อนของหัวข้อหน้าและ Breadcrumb:**
+  - `new-system/frontend/components/shell/ShellFrame.jsx`, `new-system/frontend/styles/shell.css`, `new-system/frontend/components/ui/layout.jsx` และ `new-system/frontend/app/users/page.js`: ถอด `.shell-page-title` ที่ซ้ำกับ `h1` ของ `PageHeader` ออก ให้แถบหัวของ `ShellFrame` แสดงเฉพาะไอคอนหน้าปัจจุบัน เส้นทางหน้าปัจจุบัน (Breadcrumb) วันที่ พ.ศ. หอผู้ป่วยปัจจุบัน และสถานะการเชื่อมต่อ บนมือถือซ่อน `.shell-heading` เพื่อให้ Header กะทัดรัดเหลือแถวเดียว และป้องกันการแสดง Breadcrumb ซ้อน 2 ชุดบน `/reports`, `/occupancy` และ `/users`
+- **2) ลดความสูงของแถบปรับขนาดตัวอักษร (`TextSizeControl`) บนมือถือ:**
+  - `new-system/frontend/components/TextSizeControl.jsx` และ `new-system/frontend/styles/text-size.css`: ปรับการจัดวางบนจอ `< 768px` ให้เรียงบรรทัดเดียว (`flex-wrap: nowrap`) ลดระยะขอบแนวตั้งเป็น `--space-1` และแสดงข้อความสั้น `"ปกติ"` บนจอแคบ (คง `aria-label="ขนาดปกติ"` คงระดับ 100% / 112.5% / 125% การจำค่าใน `localStorage` และขนาดกดปุ่ม ≥ 44×44px ทุกขนาดจอ)
+- **3) ปรับหน้าต่าง “โปรไฟล์” ใน `ShellFrame.jsx`:**
+  - แสดงหัวข้อ “หอผู้ป่วยที่เข้าถึงได้” จากรายการ `wards` ที่มีอยู่ใน `ShellFrame`: หากเป็น `user.is_admin` แสดงข้อความ `"เข้าถึงและจัดการได้ทุกหอผู้ป่วย"` หากเป็นผู้ใช้ทั่วไปแสดงรายชื่อแต่ละหอผู้ป่วยพร้อมป้ายสิทธิ์ `"บันทึกและยืนยันได้"` (`can_write: true`) หรือ `"อ่านอย่างเดียว"` (`can_write: false`)
+- **4) ปรับ UX หน้าจัดการผู้ใช้และสิทธิ์ (`/users`):**
+  - `new-system/frontend/app/users/page.js` และ `new-system/frontend/styles/users.css`: เปลี่ยนป้าย `"บัญชีปัจจุบัน"` และป้ายขอบเขตสิทธิ์ใน `ROLE_GUIDE` จาก `StatusBadge` (ที่มีไอคอนนาฬิกา) เป็น `.ui-badge` โทน `ui-tone--info` / `ui-tone--neutral` ธรรมดา; เปลี่ยนส่วนคำอธิบายบทบาทเป็น `<details>` ที่พับเก็บไว้เป็นค่าเริ่มต้นพร้อมหัวข้อ `"ดูคำอธิบายบทบาทและขอบเขตสิทธิ์"`; เพิ่มตัวกรองฝั่ง client ตาม `"สถานะบัญชี"` (ทั้งหมด / ใช้งานอยู่ / ปิดใช้งาน) และ `"บทบาท"` (ทั้งหมด / ผู้ดูแลระบบ / ผู้ตรวจสอบ / ผู้บันทึกประจำหอ / ผู้ดูรายงาน) ควบคู่ช่องค้นหาเดิมพร้อมปุ่มล้างตัวกรอง; และเปลี่ยนปุ่ม `"กลับหน้าแรก"` กรณีไม่มีสิทธิ์เป็น `<Link href="/">`
+- **5) ปรับลิงก์ภายในเป็น `next/link` อย่างปลอดภัย:**
+  - เปลี่ยนลิงก์ภายในใน `ShellFrame.jsx` (ตราชื่อระบบ เมนูหลัก Breadcrumb เมนูมือถือ และ Drawer) และ `PageHeader` (`layout.jsx`) เป็น `<Link href>` ของ Next.js (คง `<a target="_blank">` สำหรับลิงก์ภายนอกความพึงพอใจ และ `<a href="#main-content">` สำหรับ skip link) พร้อมรองรับการสลับ query ภายใน `/history` ↔ `/history?status=unconfirmed`
+  - ยืนยันผลบนเบราว์เซอร์จริงว่าตัวดักข้อมูลค้าง `document.addEventListener("click", leave, true)` ใน `useEntryEditing.js` (`/entries`) และ `app/indicators/page.js` (`/indicators`) ทำงานใน capture phase ก่อน `<Link>` บล็อกการเปลี่ยนหน้าและเปิด `ConfirmDialog` เตือนข้อมูลที่ยังไม่บันทึกได้ครบถ้วน
+- **การตรวจสอบและวิธีทดสอบ:**
+  - `npm run test:ui` ผ่าน **49/49** และ `npm run build` ผ่านครบ **11 เส้นทาง** (ส่วน `npm run lint` และ `npx tsc --noEmit` ยังไม่มีสคริปต์และ compiler ในโปรเจกต์ตามเดิม)
+  - ทดสอบด้วย Microsoft Edge headless บนเซิร์ฟเวอร์บิลด์จริงครบ **56 กรณี** (`/login`, `/`, `/entries`, `/history`, `/reports`, `/occupancy`, `/users` × ความกว้าง **360 / 768 / 1024 / 1440px** × ขนาดตัวอักษร **100% และ 125%**) ไม่พบ horizontal scroll มี `h1` เดียวและไม่มี Breadcrumb ซ้อนทุกหน้า แถบ `TextSizeControl` บนจอ 360px ไม่ตัดขึ้นบรรทัดใหม่แม้ที่ 125% ปุ่มทุกปุ่ม ≥ 44×44px ตัวกรอง `/users` หน้าต่างโปรไฟล์ และตัวดักข้อมูลค้างของ `<Link>` ทำงานถูกต้อง ไม่มี page error
+- **ไฟล์ที่แก้:** `new-system/frontend/components/shell/ShellFrame.jsx`, `new-system/frontend/components/TextSizeControl.jsx`, `new-system/frontend/styles/shell.css`, `new-system/frontend/styles/text-size.css`, `new-system/frontend/app/users/page.js`, `new-system/frontend/styles/users.css`, `new-system/frontend/components/ui/layout.jsx`, `new-system/docs/ui-progress.md`
+- **คำถามที่ค้าง:** ไม่มีสำหรับงานชุดนี้
+
+## 27 พฤศจิกายน 2569 — แทน `window.confirm` ด้วย `ConfirmDialog` และปรับ `Toast` ให้ปิดอัตโนมัติและแสดงผลตำแหน่งเดียวกันทุกหน้า
+
+- **1) แทน `window.confirm` ด้วย shared `ConfirmDialog` ครบทั้ง 3 จุด:**
+  - `new-system/frontend/app/page.js`: เปลี่ยนการยืนยันลบข่าวจาก `window.confirm` เป็น `ConfirmDialog` แบบ `destructive` แสดงหัวข้อข่าวที่จะลบ ปุ่มยืนยัน `"ลบข่าวประกาศ"` พร้อม `loading={busy}` และปรับปุ่ม `"ลบข่าว"` ให้มีไอคอน `close` และโทนสี `danger` (`variant="ghost" className="ui-tone--danger"`) แยกจากปุ่ม `"แก้ไขข่าว"` ชัดเจน โดยคง `DELETE /news/{id}?version=...` เดิม
+  - `new-system/frontend/app/entries/page.js`: คงลำดับตรวจ HTML constraint validity และคู่ช่องการกลับมารักษาซ้ำให้ผ่านก่อน แล้วเปิด `ConfirmDialog` ตอนบันทึกข้อมูล (แสดงสรุป `หอผู้ป่วย · เวร · วันที่ พ.ศ.` และหาก `review.warnings.length > 0` แสดง `InfoCallout tone="warning"` ข้อความ `"พบข้อควรตรวจสอบ X จุด (ยังสามารถบันทึกได้)"`) และตอนยืนยันการส่งข้อมูล (แสดงสรุปบริบทพร้อมคำเตือนว่าเมื่อยืนยันแล้วจะไม่สามารถแก้ไขได้จนกว่าผู้ดูแลระบบจะส่งกลับ) รองรับ `loading={busy}` ปิดด้วย `Esc` และ focus trap โดยคง payload `POST/PATCH /entries` และ `POST /entries/{id}/confirm` เดิมทุกฟิลด์
+- **2) ปรับ shared `Toast` ให้ปิดอัตโนมัติและแสดงผลตำแหน่งลอยมาตรฐานเดียวกันทุกหน้า:**
+  - `new-system/frontend/components/ui/overlays.jsx` และ `new-system/frontend/styles/foundation.css`: เพิ่ม prop `duration = 4500` ให้ `Toast` ปิดอัตโนมัติเมื่อ `open === true` และ `tone !== "danger"` (กรณี `danger` ให้ผู้ใช้กดปิดเอง) หยุดนับเวลาเมื่อเมาส์วางทับ (`hover`) หรือมีโฟกัสอยู่ภายใน (`focus`) พร้อมล้าง timer ใน cleanup และตั้ง `pointer-events: none` บน `.ui-toast-region` เพื่อไม่ให้กรอบว่างบังการคลิก
+  - `new-system/frontend/app/users/page.js` และ `new-system/frontend/styles/users.css`: ย้าย `<Toast>` ออกจากกลางหน้าไปไว้ใน `.users-toast` ลอยมุมขวาล่าง (`position: fixed` และหลบ `--mobile-nav-height` บนจอ `< 768px`)
+  - `new-system/frontend/app/indicators/page.js` และ `new-system/frontend/styles/indicators.css`: เพิ่ม `<Toast>` แจ้งเตือนเมื่อบันทึกข้อมูลแผลกดทับหรือการกลับมารักษาซ้ำสำเร็จใน `.indicators-toast` ลอยมุมขวาล่างมาตรฐานเดียวกัน พร้อมเว้นระยะด้านล่างของ `.indicators-page` ไม่ให้บังปุ่มบันทึก และคงข้อความสถานะเดิมในการ์ดไว้
+- **3) ปรับ selector ของ `ConfirmDialog` ในสคริปต์ทดสอบเบราว์เซอร์:**
+  - `new-system/frontend/tests/browser/daily-workflow.cjs`, `daily-readback.cjs`, `entry-editing.cjs`, `text-size.cjs`: ปรับเฉพาะขั้นตอนกดปุ่มยืนยันใน `ConfirmDialog` แทนการพึ่ง `page.on('dialog')` ของ native confirm โดยไม่เปลี่ยน assertion ของข้อมูลหรือ API payload
+- **การตรวจสอบและวิธีทดสอบ:**
+  - `npm run test:ui` ผ่าน **49/49** และ `npm run build` ผ่านครบ **11 เส้นทาง** (ส่วน `npm run lint` และ `npx tsc --noEmit` ยังไม่มีสคริปต์และ compiler ในโปรเจกต์ตามเดิม)
+  - ตรวจ `git diff` ยืนยันว่าแก้เฉพาะ presentation layer และ selector ของ `ConfirmDialog` ในสคริปต์ทดสอบเบราว์เซอร์ ไม่แตะ backend สูตรคำนวณ หรือ payload API
+  - วิธีทดสอบที่ **360 / 768 / 1024 / 1440px**: เปิด `/` (ผู้ดูแล) ทดลองกด “ลบข่าว” ตรวจสีปุ่ม/ไอคอน กด `Esc` ปิด `ConfirmDialog` ทดสอบ Tab วน focus trap และกดยืนยันลบ; เปิด `/entries` ทดลองกรอกค่าให้เกิดคำเตือนแล้วกดบันทึก ตรวจสรุปหอ/เวร/วันที่ พ.ศ. และข้อความเตือน X จุด รวมถึงกด “ยืนยันการส่งข้อมูล” ตรวจข้อความล็อกการแก้ไขและสถานะ `busy` กันกดซ้ำ; เปิด `/indicators` และ `/users` บันทึกข้อมูลแล้วตรวจว่า `Toast` ลอยมุมขวาล่าง ไม่บังปุ่มบันทึกหรือ bottom nav หยุดเวลาเมื่อวางเมาส์หรือโฟกัส และปิดเองหลัง ~4.5 วินาที
+- **ไฟล์ที่แก้:** `new-system/frontend/components/ui/overlays.jsx`, `new-system/frontend/app/page.js`, `new-system/frontend/app/entries/page.js`, `new-system/frontend/app/indicators/page.js`, `new-system/frontend/app/users/page.js`, `new-system/frontend/styles/foundation.css`, `new-system/frontend/styles/users.css`, `new-system/frontend/styles/indicators.css`, `new-system/frontend/tests/browser/daily-workflow.cjs`, `new-system/frontend/tests/browser/daily-readback.cjs`, `new-system/frontend/tests/browser/entry-editing.cjs`, `new-system/frontend/tests/browser/text-size.cjs`, `new-system/docs/ui-progress.md`
+- **คำถามที่ค้าง:** ไม่มีสำหรับงานชุดนี้
+
+## 27 พฤศจิกายน 2569 — ปรับคำศัพท์มาตรฐาน A5 เลิกใช้สไตล์เก่า และเพิ่มปุ่มแสดง/ซ่อนรหัสผ่าน (`PasswordInput`)
+
+- **1) ปรับคำศัพท์ให้ตรงมาตรฐาน A5 และตัดศัพท์เทคนิค:**
+  - `new-system/frontend/lib/api.js`: เปลี่ยนข้อความแจ้งเตือน `"รีแอดมิต"` → `"การกลับมารักษาซ้ำ"`, `"อัตราครองเตียง"` → `"อัตราการครองเตียง"`, และ `"ระบบหลังบ้านขัดข้องชั่วคราว"` → `"ระบบขัดข้องชั่วคราว"` โดยคง key และ status code เดิมทั้งหมด
+  - `new-system/frontend/app/entries/page.js`: เปลี่ยนข้อความแจ้งเตือน `"ในส่วนรีแอดมิต"` → `"ในส่วนการกลับมารักษาซ้ำ"`
+  - `new-system/frontend/components/home/Dashboard.jsx`: เปลี่ยนข้อความหมายเหตุ `"อัตราครองเตียง"` → `"อัตราการครองเตียง"`
+  - `new-system/frontend/app/users/page.js`: เปลี่ยนข้อความเตือน `"เซสชันที่เปิดค้างอยู่"` → `"อุปกรณ์อื่นที่เข้าสู่ระบบค้างไว้"` ให้สอดคล้องกับหน้าต่างเปลี่ยนรหัสผ่าน
+  - `new-system/frontend/app/layout.js` และ `new-system/frontend/app/login/page.js`: ใช้ชื่อระบบตรงกันเป็น `"ระบบรายงานจำนวนผู้ป่วยใน"`
+- **2) เลิกใช้สไตล์และ helper เก่าในจุดที่ค้าง:**
+  - `new-system/frontend/app/login/page.js`: เปลี่ยนกล่องแจ้งข้อผิดพลาดจาก `<div className="alert error" role="alert">` เป็น `InfoCallout tone="danger" role="alert"` โดยไม่แตะ logic `submit`
+  - `new-system/frontend/app/entries/page.js`: ย้ายการ import `todayISO` และการจัดรูปแบบวันที่ไทยจาก `@/components/DateField` ไปใช้ `todayISO` และ `formatThaiDate(..., { month: "long" })` จาก `@/lib/thai-date.mjs` (คงไฟล์ `DateField.jsx` ไว้ยังไม่ได้ลบ)
+- **3) เพิ่มปุ่มแสดง/ซ่อนรหัสผ่าน (`PasswordInput`):**
+  - `new-system/frontend/components/ui/Icon.jsx`: เพิ่มไอคอน `eye` และ `eyeOff`
+  - `new-system/frontend/components/ui/primitives.jsx`, `new-system/frontend/components/ui/index.js`, `new-system/frontend/styles/foundation.css`: เพิ่มและ export `PasswordInput` บนโครงสร้าง `FormField` + `.ui-input-action` สลับ `type="password"` / `type="text"` ด้วยปุ่ม `type="button"` พร้อม `aria-label` (“แสดงรหัสผ่าน” / “ซ่อนรหัสผ่าน”), `aria-pressed`, touch target ≥ 44×44px (ผ่าน `--control-height`), เชื่อม `aria-describedby` ร่วมกับข้อความ error/hint และซ่อน `::-ms-reveal` ซ้ำของเบราว์เซอร์
+  - นำ `PasswordInput` ไปใช้แทน `TextInput type="password"` ครบทั้ง 8 ช่องใน `app/login/page.js` (1 ช่อง), `components/shell/ShellFrame.jsx` (เปลี่ยนรหัสผ่าน 3 ช่อง) และ `app/users/page.js` (เพิ่มผู้ใช้ใหม่ 2 ช่อง และตั้งรหัสผ่านใหม่ 2 ช่อง)
+- **การตรวจสอบและวิธีทดสอบ:**
+  - `npm run test:ui` ผ่าน **49/49** และ `npm run build` ผ่านครบ **11 เส้นทาง** (ส่วน `npm run lint` และ `npx tsc --noEmit` ยังไม่มีสคริปต์และ compiler ในโปรเจกต์ตามข้อจำกัดเดิม โดยไม่เพิ่ม dependency)
+  - ตรวจ `git diff` ยืนยันว่าแก้เฉพาะ presentation layer ไม่แตะ backend, สูตรคำนวณ, API contract หรือ routing
+  - วิธีทดสอบ Responsive ที่ **360 / 768 / 1024 / 1440px**: เปิด `/login` ตรวจชื่อหัวเรื่อง กล่อง `InfoCallout` เมื่อกรอกผิด และปุ่มแสดง/ซ่อนรหัสผ่าน (ขนาดกด ≥ 44×44px ไม่ส่งฟอร์มเอง); เข้าสู่ระบบตรวจหน้าต่าง “เปลี่ยนรหัสผ่าน” จากเมนูผู้ใช้/Drawer ทั้ง 3 ช่อง; เปิด `/users` (บัญชีผู้ดูแลระบบ) ตรวจหน้าต่าง “เพิ่มผู้ใช้ใหม่” และ “ตั้งรหัสผ่านใหม่” พร้อมข้อความเตือนอุปกรณ์อื่น; เปิด `/` และ `/entries` ตรวจข้อความอัตราการครองเตียง การกลับมารักษาซ้ำ และกล่องยืนยันวันที่ พ.ศ. แบบเดือนเต็ม
+- **ไฟล์ที่แก้:** `new-system/frontend/lib/api.js`, `new-system/frontend/app/layout.js`, `new-system/frontend/app/login/page.js`, `new-system/frontend/app/entries/page.js`, `new-system/frontend/app/users/page.js`, `new-system/frontend/components/home/Dashboard.jsx`, `new-system/frontend/components/shell/ShellFrame.jsx`, `new-system/frontend/components/ui/Icon.jsx`, `new-system/frontend/components/ui/primitives.jsx`, `new-system/frontend/components/ui/index.js`, `new-system/frontend/styles/foundation.css`, `new-system/docs/ui-progress.md`
+- **คำถามที่ค้าง:** ปัจจุบันไม่มีไฟล์หรือชุดทดสอบใน `new-system/frontend` ที่ import `@/components/DateField` แล้ว คงไฟล์ `DateField.jsx` ไว้ก่อนตามคำสั่ง หากต้องการให้ลบไฟล์ออกในรอบถัดไปสามารถแจ้งยืนยันได้
+
+## 27 พฤศจิกายน 2569 — สถานะหลังตรวจทั้งสี่เฟส
+
+- ผลเทียบรายงานเตียงทั้งสามช่องทางมีแล้ว รอหัวหน้าหอรับรองเกณฑ์เตียงเวรล่าสุดรายหอสำหรับแถวรวม ส่วน Productivity หน้าจอตรง 124 ช่อง รอตัวอย่างใบพิมพ์หรือ Excel เดิมที่สร้างจบเพื่อยืนยันตัวเลขและแถวรวมท้ายตาราง
+- ทางเข้าความพึงพอใจผ่านตัวรับทดสอบในเครื่อง รอปลายทางทดสอบ วิธีระบุตัวผู้ใช้ และบัญชีที่ทราบหอ พร้อมยืนยันว่าบนหน้าบันทึกเวรเมนูหลักควรอิงหอในแถบหัวหรือหอในฟอร์ม
+- ซ้อมย้ายครบหกตารางและกู้คืนบนฐานแยกผ่าน รอสำเนาที่ได้รับอนุญาต ตารางจับคู่บัญชี หอผู้ป่วยตรวจรับ และการซ้อมกู้คืนบนเครื่องเป้าหมายพร้อมแผนรองรับรายการที่กรอกหลังสลับระบบ
+- รอบนี้แก้เฉพาะบันทึกนี้และตรวจผลของสี่เฟส Build ผ่าน ส่วน lint และ typecheck แยกยังขาดเครื่องมือเดิม ใช้หลักฐานเบราว์เซอร์เดิมที่ 360/768/1024/1440px ไม่ได้ทดสอบหน้าจอซ้ำ
+
+## 26 พฤศจิกายน 2569 — ตรวจความพร้อมข้อมูลย้อนหลังและกู้คืน
+
+- ตรวจ SHA-256 และส่วนข้อมูลใน `inpatient/db/db_inpatient.sql` ซ้ำ พบ 0 แถวทั้งหกตารางและไม่มีช่วงวันที่ พบเพียงไฟล์ SQL นี้กับแม่แบบ ยังรอสำเนาที่โรงพยาบาลอนุญาต ผลสำรวจจำนวนและช่วงวันที่จริง ไฟล์ CSV หกตาราง ตารางบัญชี `legacy_account_id,target_username` และรหัสหอ/เวรอ้างอิง [รายการขอจากฝ่ายไอทีและตารางผลกระทบยอด](rollout/readiness-2026-11-26.md)
+- ซ้อม dry-run → apply → กระทบยอด → รันซ้ำด้วยตัวนำเข้าเดิมบน PostgreSQL แยก ข้อมูลสมมติผ่าน `data_all` 13, `data_confirm` 3, `data_split_patient` 5 (เป็น 130 ช่องปลายทาง), `pressure` 4, `readmit` 4, `tb_news` 2 รันซ้ำเพิ่ม 0 ทั้งหกตาราง คงสถานะยืนยัน 8/รอยืนยัน 5 และตรวจประวัติครบ 3 เหตุการณ์ แยกเตียง NULL และแถวแผลกดทับ 0/0 จากช่องว่างที่ถูกปฏิเสธ
+- กู้สำเนาหลังนำเข้าลงฐานใหม่แล้วจำนวนและเนื้อหา 10 ตารางตรง เปิดรายงานและอ่านประวัติได้ตรงเดิม กู้สำเนาก่อนนำเข้าลงอีกฐานแล้วทั้ง 10 ตารางกลับเป็น 0 ตรวจ `/reports?kind=daily-all` ที่ 360/768/1024/1440px ทั้งฐานนำเข้าและฐานกู้คืน ยอด 12/18 ตรงที่จอและ Excel XML รวม 16 กรณี [ผลรันและกู้คืน](rollout/readiness-evidence-2026-11-26.json)
+- หอผู้ป่วยมีตัวอย่างรายเวร ประวัติ สาขา แผลกดทับ กลับมารักษาซ้ำ และข่าวสำหรับตรวจตามแล้ว ยังไม่มีผลตรวจรับโดยพยาบาลหรือหัวหน้าหอจากสำเนาจริง ให้ลงชื่อผู้ตรวจและบันทึกผลต่างหลังเลือกวันและเดือนจากสำเนาเดียวกัน การสลับใช้งานจริงรออนุมัติแยก
+- แก้เฉพาะ `docs/ui-progress.md` และเพิ่ม `docs/rollout/readiness-2026-11-26.md`, `docs/rollout/readiness-evidence-2026-11-26.json` ชุดทดสอบหน้าบ้านผ่าน 48/48 หลังบ้านผ่าน 34/34 และ build ผ่าน 11 เส้นทาง โครงการไม่มีสคริปต์ lint และ TypeScript compiler สำหรับรันแยก
+
+## 26 พฤศจิกายน 2569 — ตรวจทางเข้าอัตราความพึงพอใจ
+
+- PHP เปิด `../contentment/index.php?ward=…&id=…` โดยใช้รหัสหอจากเซสชันและ `account.id` จากคุกกี้ ของใหม่คำนวณลิงก์ผ่าน `satisfactionLink` ทั้งเมนูหลักและ `/entries` เมื่อ URL เป็น HTTP/HTTPS หอมีรหัสเดิม และบัญชีมีสิทธิ์บันทึก ฟังก์ชันกำหนด `ward` และคงพารามิเตอร์ที่ตั้งไว้ใน URL ปลายทาง [เมนู PHP](../../inpatient/menu.php#L21) · [ที่มารหัสบัญชี PHP](../../inpatient/login_check.php#L34) · [สร้างลิงก์ใหม่](../frontend/lib/satisfaction.mjs) · [เมนูใหม่](../frontend/components/shell/ShellFrame.jsx#L47) · [หน้าบันทึกเวร](../frontend/app/entries/page.js#L49)
+- **เปิดลิงก์จากระบบใหม่ได้** ทดสอบ Edge ที่ 360/768/1024/1440px บน Next.js และ FastAPI กับ PostgreSQL แยก ใช้บัญชีสมมติสามแบบ ผู้บันทึกสองหอ ผู้ใช้อ่านอย่างเดียว และผู้บันทึกหอ 10 แต่อ่านอย่างเดียวในหอ 11 เมื่อกำหนด URL ตรวจ 56 กรณีในสองทางเข้า เปิดแท็บไปยังตัวรับทดสอบในเครื่องจริง 32 ครั้ง ตัวรับแสดงรหัสหอตามตัวเลือกของทางเข้านั้นและได้รับเฉพาะพารามิเตอร์ทดสอบที่ตั้งไว้กับ `ward` บัญชีอ่านอย่างเดียวและหอที่อ่านได้อย่างเดียวซ่อนลิงก์ เมื่อไม่กำหนด URL ทั้งสองทางเข้าซ่อนลิงก์ครบ 16 กรณี
+- **ตัวเลือกหอทั้งสองจุดเป็นคนละตัว** เมนูใช้ “หอผู้ป่วยปัจจุบัน” ในแถบหัวหน้า ส่วน `/entries` ใช้ “หอผู้ป่วย” ในแบบเลือกวันและเวร ในหน้าเดียวกันเมื่อเปลี่ยนเฉพาะหอในฟอร์มจาก 10 เป็น 11 ลิงก์ฟอร์มเปิดหอ 11 และลิงก์เมนูยังเปิดหอ 10 เมื่อเปลี่ยนเฉพาะตัวเลือกแถบหัวหน้า ลิงก์เมนูเปลี่ยนตามและลิงก์ฟอร์มยังอิงหอในฟอร์ม หากต้องการให้ลิงก์เมนูบน `/entries` อิงหอในฟอร์มด้วย ต้องยืนยันก่อนปรับ เพราะเปลี่ยนทั้งรหัสหอที่ส่งและการแสดงลิงก์เมื่อสิทธิ์ของสองหอต่างกัน
+- **ตรวจผู้ใช้และหอที่ปลายทางจริงยังรอผู้ดูแล** พบเพียงตัวแปร `NEXT_PUBLIC_SATISFACTION_URL` ในเอกสารและไฟล์ตัวอย่าง ยังไม่พบโปรแกรมปลายทาง URL ทดสอบที่ได้รับอนุญาต หรือข้อกำหนดระบุตัวผู้ใช้ ขอ URL ทดสอบ วิธีเข้าสู่ระบบหรือส่งต่อการยืนยันตัวตนที่โปรแกรมรองรับ และบัญชีทดสอบพร้อมรหัสหอที่อนุญาตและผลคาดหวังเมื่อสลับหอ ตัวรับในเครื่องสะท้อนค่า `ward` เพื่อยืนยันการส่งเท่านั้น [ตัวอย่างการตั้งค่า](../frontend/.env.example) · [รายการตรวจรับ W11](../INPATIENT_PARITY_TH.md#L63)
+- แก้เฉพาะ `docs/ui-progress.md` ชุดทดสอบหน้าบ้านผ่าน 48/48 รวมทดสอบลิงก์ 5 กรณี หลังบ้านผ่าน 34/34 และ build ผ่าน 11 เส้นทางทั้งสองแบบ โครงการไม่มีสคริปต์ lint และ TypeScript compiler สำหรับรันแยก
+
+## 26 พฤศจิกายน 2569 — ตรวจรายงานผลผลิตทางการพยาบาล (Productivity)
+
+- ตรวจเฉพาะรายงาน Productivity ตามปุ่มพิมพ์และ Excel ใน `inpatient/productivity.php` ไปที่ `inpatient/report/productivity_r.php` ทั้งสองโหมด ใช้ข้อมูลสมมติชุดเดียวกันสำหรับหอทั่วไป 10 และหอ 12, 13, 28 [ตารางผลรายวัน รวมเดือน และเทียบช่องทาง](productivity-report-parity.md)
+- หน้าจอ PHP และระบบใหม่ตรงกันครบ 124 ช่องตัวเลข PHP โหมดพิมพ์และ Excel สร้างหัวตาราง 32 คอลัมน์ได้และหยุดก่อนตัวเลขวันแรกที่บรรทัด 81 เพราะอ่าน `$result` แทน `$result5` ผลนิพจน์ที่แยกรันตรงกับ PDF และ XML ของใหม่ หอ 28 รวมเดือนบนหน้าจอ 76.72% และใบพิมพ์/Excel ใหม่ 52.91% ตามน้ำหนักของแต่ละช่องทาง
+- ตรวจแถวรวมทุกหอแยกจากคอลัมน์รวมเดือน หน้าจอ PHP รอบปกติและระบบใหม่แสดงเฉพาะแถวรายหอ โหมดพิมพ์/Excel PHP มีเงื่อนไขสำหรับแถวรวมในซอร์สและรันไปไม่ถึง รอตัวอย่างตารางใบพิมพ์หรือ Excel เดิมที่ลบข้อมูลระบุตัวบุคคล เพื่อยืนยันค่ารายหอและช่วงท้ายตาราง
+- ตรวจ `/reports?kind=productivity&month=2026-11&status=all` ที่ 360/390/768/1024/1280/1440/1920px รวมมุมมองการ์ดและเลื่อนตาราง ตรวจ PDF A4 แนวนอน 4 หน้าและ Excel XML ที่ดาวน์โหลดจริง ชุดทดสอบหน้าบ้าน 48/48 หลังบ้าน 34/34 และ build ผ่าน 11 เส้นทาง โครงการไม่มีสคริปต์ lint และ TypeScript compiler สำหรับรันแยก
+- รอบนี้แก้สองไฟล์คือ `docs/productivity-report-parity.md` และ `docs/ui-progress.md` หากเอกสารจากโรงพยาบาลแสดงสูตรหรือแถวรวมต่างจากผลที่ตรวจ ให้สรุปผลกระทบและขออนุมัติก่อนเปลี่ยนการคำนวณ
+
+## 26 พฤศจิกายน 2569 — ตรวจอัตราครองเตียงและอัตราหมุนเวียนเตียง
+
+- รันหน้าจอ ใบพิมพ์ และ Excel ของ PHP และระบบใหม่บนฐานทดสอบแยก ใช้หอสมมติ A/B ชุด P1 และอีกสี่เดือนที่ครอบคลุมเตียงคงที่/เพิ่มกลางเดือน × เวรครบ/ขาดหนึ่งเวร [ตารางตัวตั้ง เตียง และผลรายหอ/รวม](bed-report-parity.md) · [ค่าที่อ่านได้แยกช่องทาง](bed-report-evidence.json)
+- เดือนมิถุนายนครบ 180/180 เวร รวม 480 วันนอน PHP รอบแรกใช้ 30 เตียง ได้ 53.33% ระบบใหม่ใช้ 35 เตียง ได้ 45.71% เดือนกันยายนขาดเวรดึกของ A หนึ่งเวร PHP เว้นว่างที่ A และรวม ระบบใหม่แสดง 89/90 และ 179/180 ส่วน B ครบและได้ 60.00% ทั้งคู่
+- ตัวอย่างหมุนเวียน P1 รวม 7 ราย PHP รอบแรกได้ 7 ÷ (20 + 10) = 0.23 ระบบใหม่ได้ 7 ÷ (25 + 10) = 0.20 เมื่อนำเข้ารายการเดิมย้อนลำดับ PHP เปลี่ยนเป็น 0.20 ทั้งจอ ใบพิมพ์ และ Excel คำค้นแถวรวมไม่ได้ผูกเตียงกับเวรใดแน่นอน
+- เปิด `/occupancy?year=2570` และ `/reports?kind=turnover&year=2570` ที่ 360/768/1024/1440px ตรวจตัวเลขในตารางทั้งสองหน้า ใบพิมพ์ PDF และ Excel XML ที่ส่งออกจริง ชุดทดสอบหน้าบ้านผ่าน 48/48 หลังบ้านผ่าน 34/34 และ build ผ่าน 11 เส้นทาง คำสั่ง lint ขาดสคริปต์ใน package.json และ typecheck แยกขาด TypeScript compiler ในโปรเจกต์
+- ไฟล์ที่แก้คือ `docs/ui-progress.md`, `docs/bed-report-parity.md` และ `docs/bed-report-evidence.json` รออนุมัติว่าจะรับรองฐานเตียงท้ายงวดของแต่ละหอสำหรับแถวรวมทั้งสองรายงานหรือไม่ สูตรและวิธีเลือกเตียงในระบบยังเป็นรุ่นที่ตรวจ
+
+## 26 พฤศจิกายน 2569 — ตรวจว่าระบบใหม่ยังขาดอะไรเมื่อเทียบกับระบบเก่า
+
+- เทียบเมนูของระบบเก่าใน `inpatient/` กับ [ตารางเทียบงานและรายงาน](../INPATIENT_PARITY_TH.md) และโค้ดปัจจุบัน งานบันทึกสามเวร แก้ไข ยืนยัน ส่งกลับ ตรวจรายการค้าง และประกาศข่าวมีในระบบใหม่ รายงานมีครบ 15 แบบ
+- เมนูอัตราความพึงพอใจมีทั้งในแถบนำทางและหน้าบันทึกเวร ของเดิมส่งรหัสหอและรหัสบัญชีไปยังโปรแกรมภายนอก ของใหม่ส่งเฉพาะรหัสหอเมื่อกำหนดปลายทางและมีสิทธิ์บันทึก ยังขาดการทดสอบว่าผู้ใช้เข้าถึงหอที่ถูกต้องที่ปลายทางจริง
+- [รายงานที่ยังรอตรวจรับ](parity-phase-6-acceptance.md) มี 3 กรณี ได้แก่ ยอดรวมอัตราหมุนเวียนเตียง (ตัวอย่างเดิม 0.23 ใหม่ 0.20 เพราะใช้ฐาน 30 และ 35 เตียงตามลำดับ) อัตราครองเตียงรวมเมื่อจำนวนเตียงเปลี่ยนระหว่างเดือน และใบพิมพ์/Excel ของ Productivity ซึ่งใช้ไฟล์ PHP เดียวกันที่สร้างผลไม่จบ
+- [เครื่องมือนำเข้า](../backend/docs/legacy_import.md) รองรับข้อมูลเวร ประวัติยืนยัน สาขาผู้ป่วย แผลกดทับ การกลับมารักษาซ้ำ และข่าวครบ 6 ตาราง มีผลซ้อมด้วยข้อมูลสมมติแล้ว ตรวจค่า SHA-256 ของไฟล์ SQL ตรงกับ [ผลสำรวจต้นทาง](rollout/source-inventory.json) ซึ่งพบ 0 แถวในตารางงานทั้งหก ยังรอสำเนาที่โรงพยาบาลอนุญาตและการจับคู่บัญชีเพื่อยืนยันยอดและผู้ทำรายการย้อนหลัง
+- ตรวจรอบนี้ด้วย unit tests หน้าบ้าน 48/48 หลังบ้าน 34/34 และ build ผ่าน ลินต์และ typecheck แยกรันไม่ได้เพราะโปรเจกต์ไม่มีคำสั่ง lint และไม่มี TypeScript compiler รอบนี้ตรวจซอร์สและหลักฐานเดิม ไม่ได้เทียบสดกับระบบโรงพยาบาลหรือทดสอบหน้าจอซ้ำ ผลเดิมครอบคลุมหน้าบันทึก ประวัติ และรายงานที่ 360/768/1024/1440px
+- ไฟล์ที่แก้ในรอบนี้มีเฉพาะบันทึกนี้ เรื่องรอตรวจรับคือปลายทางความพึงพอใจ ตัวอย่างรายงานสามกรณี ข้อมูลย้อนหลัง และการทดลองงานโดยหอผู้ป่วยก่อนสลับระบบ
+
 ## 25 พฤศจิกายน 2569 — แก้บัคแถบเลือกบริบท (`EntryContextBar`) กระพริบและเด้งย่อ–ขยายเวลาเลื่อนหน้า `/entries`
 
 - **สาเหตุ:** เดิม `EntryContextBar` ใช้ `IntersectionObserver` จับ `.entry-context-marker` แล้วใส่คลาส `.is-condensed` เพื่อซ่อน `.entry-context-expanded` ด้วย `display: none` ใน container ที่เป็น `position: sticky` ทำให้ `scrollHeight` ของเอกสารหดตัวทันทีและเบราว์เซอร์ดึงตำแหน่ง scroll กลับจน marker เข้าหน้าจอ เกิดลูปย่อ–ขยายสลับไปมา (โดยเฉพาะหน้าสั้นอย่างเวรดึก/เวรเช้า)

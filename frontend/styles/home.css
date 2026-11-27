@@ -31,15 +31,20 @@
 .home-missing-wards { columns: 2; padding-left: var(--space-5); color: var(--color-muted); font-size: var(--text-sm); }
 .home-missing-wards li { break-inside: avoid; }
 .home-primary-column details > summary { cursor: pointer; min-height: var(--control-height); color: var(--color-primary); }
-.home-trend { width: 100%; height: var(--space-16); color: var(--color-primary); margin-block: var(--space-4); overflow: visible; }
+.home-trend { width: 100%; height: calc(var(--space-16) + var(--space-8)); color: var(--color-primary); margin-block: var(--space-4); overflow: visible; }
+.home-trend-grid { stroke: var(--color-border); stroke-width: var(--border-width); }
+.home-trend-axis { fill: var(--color-muted); font-size: var(--text-tiny); font-variant-numeric: tabular-nums; }
 .home-trend-values { display: grid; grid-template-columns: repeat(auto-fit, minmax(var(--rail-width), 1fr)); gap: var(--space-3); font-size: var(--text-sm); margin: 0; }
 .home-trend-values dt { color: var(--color-muted); }
 .home-trend-values dd { margin: var(--space-1) 0 0; font-variant-numeric: tabular-nums; font-weight: var(--weight-semibold); }
+.home-news-search { margin-bottom: var(--space-4); }
 .home-news-item { padding-block: var(--space-4); border-bottom: var(--border-width) solid var(--color-border); }
 .home-news-item:first-child { padding-top: 0; }
 .home-news-item:last-child { border-bottom: 0; padding-bottom: 0; }
 .home-news-item summary { min-height: var(--control-height); cursor: pointer; }
-.home-news-title { font-weight: var(--weight-semibold); overflow-wrap: anywhere; }
+.home-news-title { display: block; font-weight: var(--weight-semibold); overflow-wrap: anywhere; }
+.home-news-preview { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin-top: var(--space-1); color: var(--color-muted); font-size: var(--text-sm); overflow-wrap: anywhere; }
+.home-news-item details[open] .home-news-preview { display: none; }
 .home-news-date { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-2); color: var(--color-muted); font-size: var(--text-sm); }
 .home-news-body { white-space: pre-wrap; overflow-wrap: anywhere; margin-block: var(--space-4); }
 .home-news-item .ui-actions { margin-top: var(--space-2); }

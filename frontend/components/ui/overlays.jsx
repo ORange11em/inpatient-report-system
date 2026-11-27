@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { Button } from "./primitives";
 
 let locks = 0;
@@ -55,9 +55,26 @@ export function ConfirmDialog({ open, onClose, onConfirm, title = "ยืนย�
 export function Drawer(props) { return <Dialog {...props} variant="drawer" />; }
 export function BottomSheet(props) { return <Dialog {...props} variant="sheet" />; }
 
-export function Toast({ open = true, tone = "success", title, description, onClose }) {
+export function Toast({ open = true, tone = "success", title, description, onClose, duration = 4500 }) {
+  const [hovered, setHovered] = useState(false);
+  const [focused, setFocused] = useState(false);
+  const onCloseRef = useRef(onClose);
+  onCloseRef.current = onClose;
+  const paused = hovered || focused;
+  useEffect(() => {
+    if (!open) { setHovered(false); setFocused(false); }
+  }, [open]);
+  useEffect(() => {
+    if (!open || tone === "danger" || paused || !onCloseRef.current || !(duration > 0)) return;
+    const timer = setTimeout(() => { onCloseRef.current?.(); }, duration);
+    return () => clearTimeout(timer);
+  }, [open, tone, paused, duration, title, description]);
   // The live region remains mounted so a newly inserted notification is announced.
-  return <div className="ui-toast-region" aria-live={tone === "danger" ? "assertive" : "polite"} aria-atomic="true">{open && <div className={`ui-toast ui-tone--${tone}`}>
+  return <div className="ui-toast-region" aria-live={tone === "danger" ? "assertive" : "polite"} aria-atomic="true">{open && <div className={`ui-toast ui-tone--${tone}`}
+    onMouseEnter={() => setHovered(true)}
+    onMouseLeave={() => setHovered(false)}
+    onFocusCapture={() => setFocused(true)}
+    onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false); }}>
     <div><strong>{title}</strong>{description && <p>{description}</p>}</div>{onClose && <Button variant="ghost" icon="close" aria-label="ปิดข้อความแจ้งเตือน" onClick={onClose} />}
   </div>}</div>;
 }

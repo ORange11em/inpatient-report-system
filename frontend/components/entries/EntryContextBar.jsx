@@ -5,7 +5,7 @@ import { BottomSheet, Button, Card, Select, ShiftSelector, ThaiDatePicker } from
 import { useMobile } from "@/components/ui/primitives";
 import { formatThaiDate } from "@/lib/thai-date.mjs";
 
-export function EntryContextBar({ wards, shifts, selection, select, open, busy, satisfactionHref, hasContext, resetToken = 0, requestToken = 0 }) {
+export function EntryContextBar({ wards, shifts, selection, select, open, busy, satisfactionHref, shiftStatuses = null, hasContext, resetToken = 0, requestToken = 0 }) {
   const mobile = useMobile();
   const [sheet, setSheet] = useState(false);
   const [condensed, setCondensed] = useState(false);
@@ -40,7 +40,7 @@ export function EntryContextBar({ wards, shifts, selection, select, open, busy, 
   const form = <form onSubmit={event => { open(event); setSheet(false); }} className="entry-context-form"><fieldset className="plain-fields" disabled={busy}><div className="entry-context-fields">
     <Select required label="หอผู้ป่วย" value={selection.ward_id} placeholder="เลือกหอผู้ป่วย" options={wards.map(item => ({ value: item.id, label: `${item.name} (${item.code})` }))} onChange={event => select("ward_id", event.target.value)} />
     <ThaiDatePicker resetToken={resetToken} required label="วันที่" hint="" value={selection.service_date} onChange={value => select("service_date", value)} disabled={busy} />
-    <ShiftSelector required label="เวร" value={selection.shift_type_id} onChange={value => select("shift_type_id", String(value))} disabled={busy} options={shifts.filter(item => item.is_active || String(item.id) === selection.shift_type_id).map(item => ({ value: item.id, label: item.display_name }))} />
+    <ShiftSelector required label="เวร" value={selection.shift_type_id} onChange={value => select("shift_type_id", String(value))} disabled={busy} options={shifts.filter(item => item.is_active || String(item.id) === selection.shift_type_id).map(item => ({ value: item.id, label: item.display_name, status: shiftStatuses ? shiftStatuses[String(item.id)] || "unrecorded" : undefined }))} />
   </div><div className="entry-context-actions"><Button type="submit" icon="edit" loading={busy}>เปิดแบบฟอร์ม</Button><p className="ui-field-hint">เลือกหอผู้ป่วย วันที่ และเวรก่อนเปิดแบบฟอร์ม</p>{satisfactionHref && <a className="ui-button ui-button--ghost" href={satisfactionHref} target="_blank" rel="noreferrer">อัตราความพึงพอใจ</a>}</div></fieldset></form>;
   const renderCompact = (interactive = true) => <div className="entry-context-compact"><div><strong>{ward?.name || "เลือกหอผู้ป่วย"} · {shift ? `เวร${shift.display_name}` : "เลือกเวร"}</strong><p>{selection.service_date ? formatThaiDate(selection.service_date) : "เลือกวันที่"}</p></div><Button variant="secondary" icon="calendar" disabled={busy} tabIndex={interactive ? undefined : -1} onClick={() => mobile ? setSheet(true) : scrollToExpanded()}>{hasContext ? "เปลี่ยน" : "เลือกและเปิด"}</Button></div>;
   return <>

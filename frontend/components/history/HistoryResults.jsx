@@ -9,11 +9,50 @@ import { formatThaiDate, formatThaiNumber, formatThaiTime, todayISO } from "@/li
 export function HistoryResults({ rows, wards, shifts, user, pendingView, busy, onInspect, view, setView }) {
   const mobile = useMobile();
   const columns = [
-    { key: "service_date", label: "วันที่ / เวร / สถานะ", render: (_, row) => <span className="history-record-title"><strong>{formatThaiDate(row.service_date)}</strong><span>เวร{shifts.find(shift => shift.id === row.shift_type_id)?.display_name || "ที่ปิดใช้งาน"}</span><StatusBadge status={row.status} /></span> },
-    { key: "ward_id", label: "หอผู้ป่วย", render: id => wards.find(ward => ward.id === id)?.name || "ไม่พบชื่อหอผู้ป่วย" },
+    {
+      key: "service_date",
+      label: "วันที่ / เวร / สถานะ",
+      sortable: true,
+      compare: (a, b) => {
+        const byDate = String(a.service_date || "").localeCompare(String(b.service_date || ""));
+        if (byDate !== 0) return byDate;
+        const orderA = shifts.find(shift => shift.id === a.shift_type_id)?.display_order ?? 0;
+        const orderB = shifts.find(shift => shift.id === b.shift_type_id)?.display_order ?? 0;
+        return orderA - orderB;
+      },
+      render: (_, row) => <span className="history-record-title"><strong>{formatThaiDate(row.service_date)}</strong><span>เวร{shifts.find(shift => shift.id === row.shift_type_id)?.display_name || "ที่ปิดใช้งาน"}</span><StatusBadge status={row.status} /></span>,
+    },
+    {
+      key: "ward_id",
+      label: "หอผู้ป่วย",
+      sortable: true,
+      compare: (a, b) => {
+        const nameA = (wards.find(ward => ward.id === a.ward_id)?.name || "").trim();
+        const nameB = (wards.find(ward => ward.id === b.ward_id)?.name || "").trim();
+        return nameA.localeCompare(nameB, "th");
+      },
+      render: id => wards.find(ward => ward.id === id)?.name || "ไม่พบชื่อหอผู้ป่วย",
+    },
     { key: "closing", label: "คงเหลือ PT / NB", render: (_, row) => <span className="history-count-pair"><span>PT <strong>{formatThaiNumber(closingCount(row, "pt"))}</strong></span><span>NB <strong>{formatThaiNumber(closingCount(row, "nb"))}</strong></span></span> },
-    { key: "amount_bed", label: "เตียง", numeric: true, render: value => formatThaiNumber(value) },
-    { key: "updated_at", label: "แก้ไขล่าสุด", render: value => value && Number.isFinite(new Date(value).getTime()) ? <span className="history-updated"><span>{formatThaiDate(todayISO(new Date(value)))}</span><span>{formatThaiTime(value)}</span></span> : "—" },
+    {
+      key: "amount_bed",
+      label: "เตียง",
+      numeric: true,
+      sortable: true,
+      compare: (a, b) => (a.amount_bed ?? -1) - (b.amount_bed ?? -1),
+      render: value => formatThaiNumber(value),
+    },
+    {
+      key: "updated_at",
+      label: "แก้ไขล่าสุด",
+      sortable: true,
+      compare: (a, b) => {
+        const timeA = a.updated_at ? new Date(a.updated_at).getTime() : NaN;
+        const timeB = b.updated_at ? new Date(b.updated_at).getTime() : NaN;
+        return (Number.isFinite(timeA) ? timeA : -Infinity) - (Number.isFinite(timeB) ? timeB : -Infinity);
+      },
+      render: value => value && Number.isFinite(new Date(value).getTime()) ? <span className="history-updated"><span>{formatThaiDate(todayISO(new Date(value)))}</span><span>{formatThaiTime(value)}</span></span> : "—",
+    },
     { key: "actions", label: "ดำเนินการ", render: (_, row) => {
       const ward = wards.find(item => item.id === row.ward_id);
       const access = entryAccess(row, ward, user);

@@ -8,7 +8,7 @@ import json
 import re
 import sys
 from collections import Counter
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -38,6 +38,8 @@ class LegacyEntryInput(DailyEntryCreate):
 SOURCE_SYSTEM = "legacy_inpatient"
 SOURCE_TABLE = "data_all"
 REQUIRED_HEADERS = {"ward", "idate", "wage_type_id", "amount_bed", *COUNTER_FIELDS}
+BANGKOK_TZ = timezone(timedelta(hours=7))
+FORBIDDEN_ACCOUNT_MAP_HEADERS = {"pass_login", "password", "password_hash"}
 
 
 def parse_args():
@@ -45,6 +47,7 @@ def parse_args():
     parser.add_argument("--source", required=True, type=Path, help="Path to a read-only normalized data_all.csv copy")
     parser.add_argument("--apply", action="store_true", help="Write valid rows to the development database")
     parser.add_argument("--actor-username", help="Existing system-admin username; required with --apply")
+    parser.add_argument("--account-map", type=Path, help="Optional CSV columns: legacy_account_id,target_username")
     return parser.parse_args()
 
 
@@ -121,6 +124,53 @@ def parse_source_row(row: dict[str, str]) -> tuple[str, date, int, dict]:
     return ward_code, service_date, legacy_shift_id, values
 
 
+def load_account_map(map_path: Path | None) -> dict[str, str]:
+    if not map_path:
+        return {}
+    if not map_path.is_file():
+        raise RuntimeError("account map CSV file was not found")
+    with map_path.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        headers = set(reader.fieldnames or [])
+        if FORBIDDEN_ACCOUNT_MAP_HEADERS & {h.strip().lower() for h in headers}:
+            raise RuntimeError("account_map_must_not_contain_credentials")
+        missing = sorted({"legacy_account_id", "target_username"} - headers)
+        if missing:
+            raise RuntimeError("account map CSV is missing required columns: " + ", ".join(missing))
+        mappings = list(reader)
+    actor_map: dict[str, str] = {}
+    for item in mappings:
+        legacy_id = (item.get("legacy_account_id") or "").strip()
+        username = (item.get("target_username") or "").strip().casefold()
+        if legacy_id and username:
+            if legacy_id in actor_map:
+                raise RuntimeError("account map contains duplicate legacy_account_id")
+            actor_map[legacy_id] = username
+    return actor_map
+
+
+def parse_last_date(raw: str | None) -> datetime | None:
+    value = (raw or "").strip()
+    if not value or value in {r"\N", "NULL", "null", "0000-00-00", "0000-00-00 00:00:00"}:
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        return parsed.replace(tzinfo=BANGKOK_TZ)
+    return parsed
+
+
+def resolve_entry_actor_id(row: dict[str, str], resolved_actor: dict[str, User | None], fallback_actor_id):
+    raw_user = (row.get("user_update") or "").strip()
+    if raw_user:
+        mapped = resolved_actor.get(raw_user)
+        if mapped is not None:
+            return mapped.id
+    return fallback_actor_id
+
+
 async def find_actor(db, username: str | None):
     if not username:
         return None
@@ -133,9 +183,10 @@ async def find_actor(db, username: str | None):
     return await db.scalar(query)
 
 
-async def perform(source_path: Path, apply_changes: bool, actor_username: str | None):
+async def perform(source_path: Path, apply_changes: bool, actor_username: str | None, account_map_path: Path | None = None):
     settings = check_local_development_target()
     checksum, rows = load_source(source_path)
+    actor_map = load_account_map(account_map_path)
     source_dates = []
     for candidate in rows:
         try:
@@ -152,6 +203,12 @@ async def perform(source_path: Path, apply_changes: bool, actor_username: str | 
         actor = await find_actor(db, actor_username)
         if apply_changes and not actor:
             raise RuntimeError("--apply requires an active system admin selected by --actor-username")
+
+        resolved_actor: dict[str, User | None] = {}
+        if actor_map:
+            users = (await db.scalars(select(User).where(User.is_active.is_(True)))).all()
+            users_by_name = {u.username_normalized: u for u in users}
+            resolved_actor = {legacy: users_by_name.get(name) for legacy, name in actor_map.items()}
 
         # Batch metadata is written only in apply mode; this transaction also owns imported rows.
         async with db.begin_nested() if db.in_transaction() else _transaction(db):
@@ -265,12 +322,17 @@ async def perform(source_path: Path, apply_changes: bool, actor_username: str | 
                     result["rows_would_import"] += 1
                     continue
 
-                entry = DailyEntry(
+                entry_user_id = resolve_entry_actor_id(row, resolved_actor, actor.id)
+                entry_kwargs = dict(
                     **payload.model_dump(include={"ward_id", "service_date", "shift_type_id", "amount_bed", *COUNTER_FIELDS}),
-                    created_by=actor.id,
-                    updated_by=actor.id,
+                    created_by=entry_user_id,
+                    updated_by=entry_user_id,
                     status="confirmed" if (row.get("i_status") or "").strip() == "1" else "unconfirmed",
                 )
+                updated_at = parse_last_date(row.get("last_date"))
+                if updated_at is not None:
+                    entry_kwargs["updated_at"] = updated_at
+                entry = DailyEntry(**entry_kwargs)
                 db.add(entry)
                 await db.flush()
                 db.add(LegacyKeyMap(
@@ -327,7 +389,7 @@ class _transaction:
 async def main():
     args = parse_args()
     try:
-        result = await perform(args.source, args.apply, args.actor_username)
+        result = await perform(args.source, args.apply, args.actor_username, args.account_map)
     except RuntimeError as exc:
         # RuntimeError messages above are hand-authored safe reasons; never echo driver exceptions.
         print(json.dumps({"status": "aborted", "reason": str(exc)}, ensure_ascii=False), file=sys.stderr)

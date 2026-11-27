@@ -1,0 +1,563 @@
+{
+  "date": "2026-11-26",
+  "synthetic_only": true,
+  "source_dump": {
+    "source": "inpatient/db/db_inpatient.sql",
+    "sha256": "6178c0fbeefdffc02dc3d00b5b7bb457900d9f1c5308945cedee9106ba1da78c",
+    "method": "read-only inspection of this SQL dump; no SQL executed; operational record sections empty",
+    "hospital_server_checked": false,
+    "tables": {
+      "data_all": {
+        "rows": 0,
+        "first_date": null,
+        "last_date": null
+      },
+      "data_confirm": {
+        "rows": 0,
+        "first_date": null,
+        "last_date": null
+      },
+      "data_split_patient": {
+        "rows": 0,
+        "first_date": null,
+        "last_date": null
+      },
+      "pressure": {
+        "rows": 0,
+        "first_date": null,
+        "last_date": null
+      },
+      "readmit": {
+        "rows": 0,
+        "first_date": null,
+        "last_date": null
+      },
+      "tb_news": {
+        "rows": 0,
+        "first_date": null,
+        "last_date": null
+      }
+    },
+    "reference_rows": {
+      "ward": 19,
+      "wage_type": 3,
+      "tb_month": 12
+    },
+    "shifts": {
+      "1": "ดึก",
+      "2": "เช้า",
+      "3": "บ่าย"
+    }
+  },
+  "tables": {
+    "data_all": {
+      "dry_run": {
+        "rows_seen": 13,
+        "rows_would_import": 13,
+        "rows_imported": 0,
+        "rows_skipped": 0,
+        "rows_failed": 0
+      },
+      "apply": {
+        "rows_seen": 13,
+        "rows_would_import": 0,
+        "rows_imported": 13,
+        "rows_skipped": 0,
+        "rows_failed": 0
+      },
+      "rerun": {
+        "rows_seen": 13,
+        "rows_would_import": 0,
+        "rows_imported": 0,
+        "rows_skipped": 13,
+        "rows_failed": 0
+      },
+      "reconciliation": "match"
+    },
+    "data_confirm": {
+      "dry_run": {
+        "rows_seen": 3,
+        "rows_imported": 0,
+        "rows_skipped": 0,
+        "rows_failed": 0,
+        "rows_would_import": 3
+      },
+      "apply": {
+        "rows_seen": 3,
+        "rows_imported": 3,
+        "rows_skipped": 0,
+        "rows_failed": 0
+      },
+      "rerun": {
+        "rows_seen": 3,
+        "rows_imported": 0,
+        "rows_skipped": 3,
+        "rows_failed": 0
+      },
+      "reconciliation": "history and status checked against synthetic input"
+    },
+    "data_split_patient": {
+      "dry_run": {
+        "rows_seen": 5,
+        "rows_would_import": 5,
+        "rows_imported": 0,
+        "rows_skipped": 0,
+        "rows_failed": 0
+      },
+      "apply": {
+        "rows_seen": 5,
+        "rows_would_import": 0,
+        "rows_imported": 5,
+        "rows_skipped": 0,
+        "rows_failed": 0
+      },
+      "rerun": {
+        "rows_seen": 5,
+        "rows_would_import": 0,
+        "rows_imported": 0,
+        "rows_skipped": 5,
+        "rows_failed": 0
+      },
+      "reconciliation": "match",
+      "reconciled_totals": {
+        "obs_n": 0,
+        "nb_n": 0,
+        "gyn_n": 1,
+        "surg_n": 0,
+        "med_n": 8,
+        "psych_n": 0,
+        "skin_n": 1,
+        "ped_n": 0,
+        "ortho_n": 0,
+        "eye_n": 0,
+        "ent_n": 0,
+        "dent_n": 0,
+        "neuro_surg_n": 1,
+        "obs_s": 0,
+        "nb_s": 0,
+        "gyn_s": 1,
+        "surg_s": 1,
+        "med_s": 0,
+        "psych_s": 0,
+        "skin_s": 2,
+        "ped_s": 0,
+        "ortho_s": 0,
+        "eye_s": 0,
+        "ent_s": 0,
+        "dent_s": 0,
+        "neuro_surg_s": 0,
+        "normal_total": 11,
+        "special_total": 4
+      }
+    },
+    "pressure": {
+      "dry_run": {
+        "rows_seen": 4,
+        "rows_would_import": 4,
+        "rows_imported": 0,
+        "rows_skipped": 0,
+        "rows_failed": 0
+      },
+      "apply": {
+        "rows_seen": 4,
+        "rows_would_import": 0,
+        "rows_imported": 4,
+        "rows_skipped": 0,
+        "rows_failed": 0
+      },
+      "rerun": {
+        "rows_seen": 4,
+        "rows_would_import": 0,
+        "rows_imported": 0,
+        "rows_skipped": 4,
+        "rows_failed": 0
+      },
+      "reconciliation": "match",
+      "reconciled_totals": {
+        "stage2_4_cases": 3,
+        "at_risk_patient_days": 65,
+        "zero_risk_rows": 1
+      }
+    },
+    "readmit": {
+      "dry_run": {
+        "rows_seen": 4,
+        "rows_would_import": 4,
+        "rows_imported": 0,
+        "rows_skipped": 0,
+        "rows_failed": 0
+      },
+      "apply": {
+        "rows_seen": 4,
+        "rows_would_import": 0,
+        "rows_imported": 4,
+        "rows_skipped": 0,
+        "rows_failed": 0
+      },
+      "rerun": {
+        "rows_seen": 4,
+        "rows_would_import": 0,
+        "rows_imported": 0,
+        "rows_skipped": 4,
+        "rows_failed": 0
+      },
+      "reconciliation": "match",
+      "reconciled_totals": {
+        "readmit_count": 4,
+        "discharge_count": 80,
+        "provenance_idate_rows": 4
+      }
+    },
+    "tb_news": {
+      "dry_run": {
+        "rows_seen": 2,
+        "rows_would_import": 2,
+        "rows_imported": 0,
+        "rows_skipped": 0,
+        "rows_failed": 0
+      },
+      "apply": {
+        "rows_seen": 2,
+        "rows_would_import": 0,
+        "rows_imported": 2,
+        "rows_skipped": 0,
+        "rows_failed": 0
+      },
+      "rerun": {
+        "rows_seen": 2,
+        "rows_would_import": 0,
+        "rows_imported": 0,
+        "rows_skipped": 2,
+        "rows_failed": 0
+      },
+      "reconciliation": "match",
+      "reconciled_totals": {
+        "published_rows": 1,
+        "draft_rows": 1,
+        "mapped_publisher_rows": 1,
+        "unmapped_or_missing_publisher_rows": 1
+      }
+    }
+  },
+  "before": {
+    "daily_entries": 0,
+    "specialty_counts": 0,
+    "pressure_daily": 0,
+    "readmission_monthly": 0,
+    "announcements": 0,
+    "legacy_key_map": 0,
+    "submission_events": 0,
+    "legacy_confirmation_records": 0,
+    "legacy_import_issues": 0,
+    "migration_batches": 0
+  },
+  "after_first": {
+    "daily_entries": 13,
+    "specialty_counts": 130,
+    "pressure_daily": 4,
+    "readmission_monthly": 4,
+    "announcements": 2,
+    "legacy_key_map": 28,
+    "submission_events": 13,
+    "legacy_confirmation_records": 3,
+    "legacy_import_issues": 3,
+    "migration_batches": 6
+  },
+  "after_repeat": {
+    "daily_entries": 13,
+    "specialty_counts": 130,
+    "pressure_daily": 4,
+    "readmission_monthly": 4,
+    "announcements": 2,
+    "legacy_key_map": 28,
+    "submission_events": 13,
+    "legacy_confirmation_records": 3,
+    "legacy_import_issues": 3,
+    "migration_batches": 12
+  },
+  "unmatched_confirmation_and_time": {
+    "confirmation_time_missing": 1,
+    "legacy_account_unmapped": 1
+  },
+  "unmatched_news": {
+    "legacy_account_unmapped": 1
+  },
+  "edge_rejections": {
+    "data_all": {
+      "blank_count_field": 1,
+      "ward_mapping_missing_or_inactive": 1,
+      "shift_mapping_missing_or_inactive": 1
+    },
+    "pressure": {
+      "blank_pressure_field": 1,
+      "ward_mapping_missing_or_inactive": 1
+    }
+  },
+  "grouped_comparison": {
+    "ward": {
+      "groups": 2,
+      "mismatches": 0
+    },
+    "day": {
+      "groups": 5,
+      "mismatches": 0
+    },
+    "shift": {
+      "groups": 13,
+      "mismatches": 0
+    },
+    "month": {
+      "groups": 4,
+      "mismatches": 0
+    }
+  },
+  "report_samples": {
+    "ward_A": {
+      "breakdown": 12,
+      "grand_total": 12,
+      "old_sum_all_rows": 24
+    },
+    "all_wards": {
+      "breakdown": 18,
+      "grand_total": 18,
+      "old_sum_all_rows": 36
+    },
+    "supplemental_reports": {
+      "specialty_nov_normal_med": 6,
+      "specialty_nov_normal_total": 9,
+      "specialty_nov_special_total": 3,
+      "pressure_a_nov": 50.0,
+      "pressure_a_year": 46.15,
+      "pressure_b_nov_null": null,
+      "pressure_detail_a_nov_summary": [
+        3,
+        60,
+        50.0
+      ],
+      "pressure_detail_b_day1_zero": [
+        0,
+        0,
+        null,
+        "บันทึกแล้ว"
+      ],
+      "readmission_nov_a_b_total": [
+        5.0,
+        10.0,
+        6.0
+      ],
+      "readmission_year_total": 5.0,
+      "news_admin_count": 2,
+      "news_reader_count": 1,
+      "published_news_publisher_matched": true,
+      "draft_news_publisher_missing": true
+    }
+  },
+  "history_samples": [
+    {
+      "ward": "10",
+      "legacy_shift": 1,
+      "confirmed_clock_bangkok": "08:15",
+      "actor_matched": true,
+      "current_status": "confirmed"
+    },
+    {
+      "ward": "10",
+      "legacy_shift": 2,
+      "confirmed_clock_bangkok": null,
+      "actor_matched": false,
+      "current_status": "unconfirmed"
+    },
+    {
+      "ward": "11",
+      "legacy_shift": 3,
+      "confirmed_clock_bangkok": "16:00",
+      "actor_matched": false,
+      "current_status": "unconfirmed"
+    }
+  ],
+  "repeat_full_row_content_matched": [
+    "daily_entries",
+    "legacy_confirmation_records",
+    "specialty_counts",
+    "pressure_daily",
+    "readmission_monthly",
+    "announcements",
+    "legacy_key_map",
+    "submission_events",
+    "legacy_import_issues"
+  ],
+  "recovery": {
+    "passed": true,
+    "seconds": 6.16,
+    "counts": {
+      "daily_entries": 14,
+      "specialty_counts": 130,
+      "pressure_daily": 4,
+      "readmission_monthly": 4,
+      "announcements": 2,
+      "legacy_key_map": 29,
+      "submission_events": 14,
+      "legacy_confirmation_records": 3,
+      "legacy_import_issues": 5,
+      "migration_batches": 15
+    },
+    "backup_sha256": "6d80028712ca396d2146a6a3fd24ae289fd1d6ae586ca39528c1609298738293"
+  },
+  "restore_full_row_content_matched": [
+    "daily_entries",
+    "legacy_confirmation_records",
+    "specialty_counts",
+    "pressure_daily",
+    "readmission_monthly",
+    "announcements",
+    "legacy_key_map",
+    "submission_events",
+    "legacy_import_issues",
+    "migration_batches"
+  ],
+  "rollback": {
+    "passed": true,
+    "counts": {
+      "daily_entries": 0,
+      "specialty_counts": 0,
+      "pressure_daily": 0,
+      "readmission_monthly": 0,
+      "announcements": 0,
+      "legacy_key_map": 0,
+      "submission_events": 0,
+      "legacy_confirmation_records": 0,
+      "legacy_import_issues": 0,
+      "migration_batches": 0
+    },
+    "backup_sha256": "d4bc7307d59491960f38c3bd838b8e85b565a9b1c2cb15315111ffdf5ad126c9",
+    "scope": "restore before-import snapshot to a new database; no post-cutover writes replayed"
+  },
+  "browser": {
+    "import": [
+      {
+        "actor": "reader",
+        "width": 360,
+        "totalPT": 12,
+        "pageOverflow": false
+      },
+      {
+        "actor": "reader",
+        "width": 768,
+        "totalPT": 12,
+        "pageOverflow": false
+      },
+      {
+        "actor": "reader",
+        "width": 1024,
+        "totalPT": 12,
+        "pageOverflow": false
+      },
+      {
+        "actor": "reader",
+        "width": 1440,
+        "totalPT": 12,
+        "pageOverflow": false
+      },
+      {
+        "actor": "reader",
+        "xmlTotalPT": 12,
+        "xmlNumeric": true,
+        "printScopeCorrect": true
+      },
+      {
+        "actor": "admin",
+        "width": 360,
+        "totalPT": 18,
+        "pageOverflow": false
+      },
+      {
+        "actor": "admin",
+        "width": 768,
+        "totalPT": 18,
+        "pageOverflow": false
+      },
+      {
+        "actor": "admin",
+        "width": 1024,
+        "totalPT": 18,
+        "pageOverflow": false
+      },
+      {
+        "actor": "admin",
+        "width": 1440,
+        "totalPT": 18,
+        "pageOverflow": false
+      },
+      {
+        "actor": "admin",
+        "xmlTotalPT": 18,
+        "xmlNumeric": true,
+        "printScopeCorrect": true
+      }
+    ],
+    "recovery": [
+      {
+        "actor": "reader",
+        "width": 360,
+        "totalPT": 12,
+        "pageOverflow": false
+      },
+      {
+        "actor": "reader",
+        "width": 768,
+        "totalPT": 12,
+        "pageOverflow": false
+      },
+      {
+        "actor": "reader",
+        "width": 1024,
+        "totalPT": 12,
+        "pageOverflow": false
+      },
+      {
+        "actor": "reader",
+        "width": 1440,
+        "totalPT": 12,
+        "pageOverflow": false
+      },
+      {
+        "actor": "reader",
+        "xmlTotalPT": 12,
+        "xmlNumeric": true,
+        "printScopeCorrect": true
+      },
+      {
+        "actor": "admin",
+        "width": 360,
+        "totalPT": 18,
+        "pageOverflow": false
+      },
+      {
+        "actor": "admin",
+        "width": 768,
+        "totalPT": 18,
+        "pageOverflow": false
+      },
+      {
+        "actor": "admin",
+        "width": 1024,
+        "totalPT": 18,
+        "pageOverflow": false
+      },
+      {
+        "actor": "admin",
+        "width": 1440,
+        "totalPT": 18,
+        "pageOverflow": false
+      },
+      {
+        "actor": "admin",
+        "xmlTotalPT": 18,
+        "xmlNumeric": true,
+        "printScopeCorrect": true
+      }
+    ]
+  },
+  "approved_hospital_export_available": false,
+  "hospital_ward_signoff_obtained": false
+}

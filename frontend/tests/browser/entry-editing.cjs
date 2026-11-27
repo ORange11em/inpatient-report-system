@@ -74,9 +74,9 @@ Object.assign(counts,{pt_on:10,nb_on:1,amount_bed:20,patient_type1:10,...Object.
   await page.screenshot({path:path.join(out,'review-'+width+'.png')});
  }
  checks.push('warnings/totals/four widths retain values');
- fail=true;await page.keyboard.press('Control+s');await page.getByRole('alert').filter({hasText:'รายการถูกเปลี่ยน'}).waitFor();
+ fail=true;await page.keyboard.press('Control+s');const saveDialog=page.getByRole('dialog',{name:'ยืนยันการบันทึกข้อมูล',exact:true});await saveDialog.waitFor();await saveDialog.getByRole('button',{name:'บันทึกข้อมูล',exact:true}).click();await page.getByRole('alert').filter({hasText:'รายการถูกเปลี่ยน'}).waitFor();
  assert.equal(writes.length,1);assert.equal(await field('pt_on').inputValue(),'25');assert.ok((await savedDrafts()).length>0);checks.push('Ctrl+S uses original request; conflict keeps input and draft');
- fail=false;await page.keyboard.press('Meta+s');await page.getByText('บันทึกข้อมูลเวรบ่าย แล้ว',{exact:true}).waitFor();
+ fail=false;await page.keyboard.press('Meta+s');await saveDialog.waitFor();await saveDialog.getByRole('button',{name:'บันทึกข้อมูล',exact:true}).click();await page.getByText('บันทึกข้อมูลเวรบ่าย แล้ว',{exact:true}).waitFor();
  assert.equal((await savedDrafts()).length,0);assert.equal(await page.getByRole('link',{name:'ไปหน้ารอยืนยัน',exact:true}).count(),1);checks.push('Cmd+S success clears drafts and shows shortcuts/toast');
  await openField('pt_on');await field('pt_on').fill('26');await page.waitForTimeout(60);
  entry={...entry,version:entry.version+1};await page.reload();await field('amount_bed').waitFor({state:'attached'});
@@ -100,7 +100,7 @@ Object.assign(counts,{pt_on:10,nb_on:1,amount_bed:20,patient_type1:10,...Object.
  await drawer.getByRole('button',{name:'ออกจากระบบ',exact:true}).click();await guard.getByRole('button',{name:'ดำเนินการต่อ',exact:true}).click();await page.waitForURL('**/login');assert.equal(writes.at(-1).path,'/auth/logout');checks.push('logout guarded and original request resumes');
  await page.addInitScript(()=>Object.defineProperty(window,'localStorage',{get(){throw new Error('synthetic storage unavailable');}}));
  await load();await openField('pt_on');await field('pt_on').fill('33');
- await page.getByRole('alert').filter({hasText:'เก็บค่าค้างในเครื่องไม่ได้'}).waitFor();await page.keyboard.press('Control+s');await page.getByText('บันทึกข้อมูลเวรบ่าย แล้ว',{exact:true}).waitFor();checks.push('storage unavailable warns but does not block saving');
+ await page.getByRole('alert').filter({hasText:'เก็บค่าค้างในเครื่องไม่ได้'}).waitFor();await page.keyboard.press('Control+s');await saveDialog.waitFor();await saveDialog.getByRole('button',{name:'บันทึกการแก้ไข',exact:true}).click();await page.getByText('บันทึกข้อมูลเวรบ่าย แล้ว',{exact:true}).waitFor();checks.push('storage unavailable warns but does not block saving');
  assert.equal(errors.length,0,errors.join('\n'));
  fs.writeFileSync(path.join(out,'editing-qa.json'),JSON.stringify({passed:true,checks,windows,dialogs,reads:[...new Set(reads)],writes,errors},null,2));
  console.log(JSON.stringify({passed:true,checks,windows,errors}));await context.close();

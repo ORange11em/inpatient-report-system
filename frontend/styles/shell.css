@@ -33,12 +33,14 @@
 .shell-main { margin-left: var(--shell-width); min-width: 0; min-height: 100dvh; }
 .shell-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-5); padding: var(--space-4) var(--space-6); min-height: var(--header-height); border-bottom: var(--border-width) solid var(--color-border); background: var(--color-surface); }
 .shell-heading { display: flex; align-items: center; gap: var(--space-3); min-width: 0; }
+.shell-heading > div { min-width: 0; }
 .shell-header-icon { color: var(--color-primary); background: var(--color-primary-soft); border-radius: var(--radius-control); display: grid; place-items: center; width: var(--control-height); height: var(--control-height); flex-shrink: 0; }
-.shell-page-title { margin: 0; font-weight: var(--weight-semibold); font-size: var(--text-lg); }
-.shell-breadcrumb { display: flex; flex-wrap: wrap; gap: var(--space-2); font-size: var(--text-sm); color: var(--color-muted); }
+.shell-breadcrumb { display: flex; flex-wrap: wrap; gap: var(--space-2); font-size: var(--text-sm); color: var(--color-muted); margin-bottom: var(--space-1); }
 .shell-breadcrumb a { color: var(--color-primary); text-decoration: underline; }
+.shell-breadcrumb [aria-current="page"] { color: var(--color-text); font-weight: var(--weight-medium); }
+.shell-frame:has(.ui-breadcrumbs) .shell-breadcrumb { display: none; }
 .shell-date { margin: 0; color: var(--color-muted); font-size: var(--text-sm); }
-.shell-header-tools { display: flex; gap: var(--space-3); align-items: center; min-width: 0; }
+.shell-header-tools { display: flex; justify-content: flex-end; gap: var(--space-3); align-items: center; min-width: 0; margin-left: auto; }
 .shell-ward { width: var(--drawer-width); max-width: min(30vw, var(--drawer-width)); min-width: 0; }
 .shell-ward .ui-field { gap: var(--space-1); }
 .shell-connection-wrap { display: flex; align-items: center; gap: var(--space-1); }
@@ -58,9 +60,11 @@
 .shell-drawer-nav .shell-link-short { display: none; }
 .shell-drawer-user { padding-top: var(--space-5); margin-top: var(--space-5); border-top: var(--border-width) solid var(--color-border); display: grid; gap: var(--space-2); }
 .shell-drawer-user p { margin: 0; color: var(--color-muted); }
-.shell-profile { display: grid; gap: var(--space-4); }
+.shell-profile { display: grid; gap: var(--space-4); margin: 0; }
 .shell-profile dt { color: var(--color-muted); font-size: var(--text-sm); }
 .shell-profile dd { margin: var(--space-1) 0 0; overflow-wrap: anywhere; }
+.shell-profile-wards { display: grid; gap: var(--space-2); list-style: none; margin: var(--space-1) 0 0; padding: 0; }
+.shell-profile-ward { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2); padding: var(--space-2) var(--space-3); border: var(--border-width) solid var(--color-border); border-radius: var(--radius-control); background: var(--color-canvas); }
 .shell-password-form { display: grid; gap: var(--space-4); }
 .pw-checklist-wrap { padding: var(--space-3) var(--space-4); border: var(--border-width) solid var(--color-border); border-radius: var(--radius-control); background: var(--color-canvas); }
 .pw-checklist-title { margin: 0 0 var(--space-2); font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--color-text); }
@@ -97,10 +101,10 @@
   .shell-sidebar { display: none; }
   .shell-main { margin-left: 0; }
   .shell-header { padding: var(--space-3) var(--space-4); gap: var(--space-2); flex-wrap: wrap; }
-  .shell-header-icon, .shell-date, .shell-breadcrumb { display: none; }
-  .shell-heading { width: 100%; }
-  .shell-page-title { font-size: var(--text-base); }
-  .shell-header-tools { width: 100%; gap: var(--space-2); }
+  .shell-header:has(.shell-ward) .shell-heading { display: none; }
+  .shell-header:not(:has(.shell-ward)) .shell-heading { flex: 1; }
+  .shell-header-tools { gap: var(--space-2); }
+  .shell-header:has(.shell-ward) .shell-header-tools { width: 100%; }
   .shell-ward { flex: 1; width: auto; max-width: none; }
   .shell-ward label { font-size: var(--text-sm); }
   .shell-connection { padding: var(--space-2); min-width: var(--control-height); }

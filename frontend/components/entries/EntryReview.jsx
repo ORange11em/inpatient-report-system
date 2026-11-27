@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Card, InfoCallout } from "@/components/ui";
+import { Button, Card, Icon, InfoCallout } from "@/components/ui";
 import { formatThaiNumber, formatThaiTime } from "@/lib/thai-date.mjs";
 import { focusEntryField } from "./useEntryEditing";
 
@@ -14,4 +14,22 @@ export function EntryDraftNotice({ editing }) {
 
 export function EntrySaveSummary({ review, editing }) {
   return <div className="entry-save-summary"><p className="entry-save-totals"><strong>คงเหลือ PT {formatThaiNumber(review.closing.pt)}</strong><strong>NB {formatThaiNumber(review.closing.nb)}</strong><span className={review.warnings.length ? "entry-warning-count" : "ui-muted"}>{review.warnings.length} ข้อควรตรวจสอบ</span></p><p className="ui-field-hint">{editing.isDirty ? "มีการแก้ไขที่ยังไม่บันทึก" : editing.lastSavedAt ? `บันทึกล่าสุดในหน้านี้ ${formatThaiTime(editing.lastSavedAt)}` : "ตรวจสอบข้อมูลก่อนบันทึก"}</p>{editing.isDirty && editing.storedAt && !editing.storageError && <p className="ui-field-hint entry-save-secondary">เก็บค่าค้างในเครื่อง {formatThaiTime(new Date(editing.storedAt))}</p>}</div>;
+}
+
+export function EntrySavedBanner({ lastSavedAt, isDirty, nextEntryHref, onSelectNext }) {
+  if (!lastSavedAt || isDirty) return null;
+  return (
+    <div className="ui-callout ui-tone--success entry-saved-bar">
+      <Icon name="check" />
+      <span className="entry-saved-bar-text">บันทึกล่าสุด {formatThaiTime(lastSavedAt)} · เลือกขั้นตอนถัดไปได้ทันที</span>
+      <div className="ui-actions">
+        {nextEntryHref ? (
+          <a className="ui-button ui-button--secondary" href={nextEntryHref}>บันทึกเวรถัดไป</a>
+        ) : (
+          <Button variant="secondary" onClick={onSelectNext}>เลือกวันและเวรถัดไป</Button>
+        )}
+        <a className="ui-button ui-button--ghost" href="/history?status=unconfirmed">ไปหน้ารอยืนยัน</a>
+      </div>
+    </div>
+  );
 }

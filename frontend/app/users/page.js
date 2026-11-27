@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { AppShell } from "@/components/AppShell";
 import { useAuth } from "@/components/AuthProvider";
 import { useWorkspace } from "@/components/shell/WorkspaceContext";
@@ -11,8 +12,10 @@ import {
   DataTable,
   Dialog,
   EmptyState,
+  Icon,
   InfoCallout,
   PageHeader,
+  PasswordInput,
   Select,
   StatusBadge,
   TextInput,
@@ -114,6 +117,8 @@ function UsersContent() {
   const [users, setUsers] = useState([]);
   const [tableState, setTableState] = useState("loading");
   const [search, setSearch] = useState("");
+  const [statusFilter, setStatusFilter] = useState("");
+  const [roleFilter, setRoleFilter] = useState("");
   const [toast, setToast] = useState(null);
 
   const [createOpen, setCreateOpen] = useState(false);
@@ -156,10 +161,18 @@ function UsersContent() {
     loadUsers();
   }, [loadUsers]);
 
+  const hasActiveFilter = Boolean(search.trim() || statusFilter || roleFilter);
+
   const filteredUsers = useMemo(() => {
     const keyword = search.trim().toLowerCase();
-    if (!keyword) return users;
     return users.filter(item => {
+      if (statusFilter === "active" && !item.is_active) return false;
+      if (statusFilter === "inactive" && item.is_active) return false;
+      if (roleFilter === "system_admin" && item.global_role !== "system_admin") return false;
+      if (roleFilter === "auditor" && item.global_role !== "auditor") return false;
+      if (roleFilter === "ward_recorder" && !(item.ward_roles || []).some(role => role.role_code === "ward_recorder")) return false;
+      if (roleFilter === "report_reader" && !(item.ward_roles || []).some(role => role.role_code === "report_reader")) return false;
+      if (!keyword) return true;
       const summary = summarizeUserRoles(item, wardMap);
       return (
         item.username.toLowerCase().includes(keyword) ||
@@ -168,7 +181,7 @@ function UsersContent() {
         summary.wardSummary.toLowerCase().includes(keyword)
       );
     });
-  }, [users, search, wardMap]);
+  }, [users, search, statusFilter, roleFilter, wardMap]);
 
   function openCreateDialog() {
     setCreateUsername("");
@@ -300,14 +313,13 @@ function UsersContent() {
         <PageHeader
           title="จัดการผู้ใช้และสิทธิ์"
           description="จัดการบัญชีผู้ใช้งาน บทบาท และสิทธิ์เข้าถึงแต่ละหอผู้ป่วย"
-          breadcrumbs={[{ label: "หน้าแรก", href: "/" }, { label: "จัดการผู้ใช้และสิทธิ์" }]}
         />
         <Card>
           <EmptyState
             icon="lock"
             title="หน้านี้สำหรับผู้ดูแลระบบเท่านั้น"
             description="บัญชีของคุณไม่มีสิทธิ์จัดการผู้ใช้งาน กรุณาติดต่อผู้ดูแลระบบหากต้องการขอปรับสิทธิ์หรือตั้งรหัสผ่านใหม่"
-            action={<Button variant="secondary" onClick={() => { window.location.href = "/"; }}>กลับหน้าแรก</Button>}
+            action={<Link className="ui-button ui-button--secondary" href="/">กลับหน้าแรก</Link>}
           />
         </Card>
       </div>
@@ -322,7 +334,7 @@ function UsersContent() {
       render: (value, row) => (
         <div className="users-name-cell">
           <strong>{value}</strong>
-          {row.id === user.id && <StatusBadge status="unconfirmed" label="บัญชีปัจจุบัน" />}
+          {row.id === user.id && <span className="ui-badge ui-tone--info">บัญชีปัจจุบัน</span>}
         </div>
       ),
     },
@@ -399,7 +411,6 @@ function UsersContent() {
       <PageHeader
         title="จัดการผู้ใช้และสิทธิ์"
         description="สร้างบัญชีผู้ใช้ กำหนดบทบาทและหอผู้ป่วย และตั้งรหัสผ่านตามเงื่อนไขความปลอดภัย"
-        breadcrumbs={[{ label: "หน้าแรก", href: "/" }, { label: "จัดการผู้ใช้และสิทธิ์" }]}
         actions={
           <Button icon="plus" onClick={openCreateDialog}>
             เพิ่มผู้ใช้ใหม่
@@ -407,33 +418,30 @@ function UsersContent() {
         }
       />
 
-      {toast && (
-        <Toast
-          open
-          tone={toast.tone}
-          title={toast.title}
-          description={toast.description}
-          onClose={() => setToast(null)}
-        />
-      )}
-
-      <Card title="บทบาทและขอบเขตสิทธิ์ในระบบ" description="เลือกกำหนดบทบาทให้เหมาะกับหน้าที่ของแต่ละผู้ใช้งาน">
+      <details className="ui-card users-role-details">
+        <summary className="users-role-summary">
+          <div>
+            <h2>ดูคำอธิบายบทบาทและขอบเขตสิทธิ์</h2>
+            <p className="ui-muted">บทบาทและขอบเขตสิทธิ์ในระบบสำหรับเลือกกำหนดให้เหมาะกับหน้าที่ของแต่ละผู้ใช้งาน</p>
+          </div>
+          <Icon name="chevron" />
+        </summary>
         <div className="users-role-grid">
           {ROLE_GUIDE.map(role => (
             <article key={role.code} className="users-role-card">
               <div className="users-role-head">
                 <h3>{role.title}</h3>
-                <StatusBadge status={role.code === "system_admin" ? "confirmed" : "unconfirmed"} label={role.scope} />
+                <span className={`ui-badge ${role.code === "system_admin" ? "ui-tone--info" : "ui-tone--neutral"}`}>{role.scope}</span>
               </div>
               <p>{role.description}</p>
             </article>
           ))}
         </div>
-      </Card>
+      </details>
 
       <Card title="รายชื่อบัญชีผู้ใช้" description="ค้นหาและปรับปรุงบทบาท หอผู้ป่วย สถานะการใช้งาน หรือตั้งรหัสผ่านใหม่">
         <div className="users-toolbar">
-          <div className="users-search">
+          <div className="users-filters">
             <TextInput
               label="ค้นหาบัญชีหรือหอผู้ป่วย"
               type="search"
@@ -441,8 +449,37 @@ function UsersContent() {
               value={search}
               onChange={event => setSearch(event.target.value)}
             />
+            <Select
+              label="สถานะบัญชี"
+              value={statusFilter}
+              onChange={event => setStatusFilter(event.target.value)}
+              options={[
+                { value: "", label: "ทั้งหมด" },
+                { value: "active", label: "ใช้งานอยู่" },
+                { value: "inactive", label: "ปิดใช้งาน" },
+              ]}
+            />
+            <Select
+              label="บทบาท"
+              value={roleFilter}
+              onChange={event => setRoleFilter(event.target.value)}
+              options={[
+                { value: "", label: "ทั้งหมด" },
+                { value: "system_admin", label: "ผู้ดูแลระบบ" },
+                { value: "auditor", label: "ผู้ตรวจสอบ" },
+                { value: "ward_recorder", label: "ผู้บันทึกประจำหอ" },
+                { value: "report_reader", label: "ผู้ดูรายงาน" },
+              ]}
+            />
           </div>
-          <p className="users-count">แสดง {filteredUsers.length} จาก {users.length} บัญชี</p>
+          <div className="users-toolbar-meta">
+            <p className="users-count">แสดง {filteredUsers.length} จาก {users.length} บัญชี</p>
+            {hasActiveFilter && (
+              <Button variant="ghost" onClick={() => { setSearch(""); setStatusFilter(""); setRoleFilter(""); }}>
+                ล้างตัวกรอง
+              </Button>
+            )}
+          </div>
         </div>
 
         <DataTable
@@ -451,8 +488,8 @@ function UsersContent() {
           rows={filteredUsers}
           state={tableState === "ready" && !filteredUsers.length ? "empty" : tableState}
           onRetry={loadUsers}
-          emptyTitle={search ? "ไม่พบบัญชีที่ตรงกับคำค้นหา" : "ยังไม่มีบัญชีผู้ใช้"}
-          emptyDescription={search ? "ลองเปลี่ยนคำค้นหาหรือล้างช่องค้นหา" : "กดปุ่ม “เพิ่มผู้ใช้ใหม่” เพื่อสร้างบัญชีแรก"}
+          emptyTitle={hasActiveFilter ? "ไม่พบบัญชีที่ตรงกับเงื่อนไขที่เลือก" : "ยังไม่มีบัญชีผู้ใช้"}
+          emptyDescription={hasActiveFilter ? "ลองเปลี่ยนคำค้นหาหรือตัวกรองสถานะบัญชีและบทบาท" : "กดปุ่ม “เพิ่มผู้ใช้ใหม่” เพื่อสร้างบัญชีแรก"}
         />
       </Card>
 
@@ -489,9 +526,8 @@ function UsersContent() {
             onChange={event => setCreateFullName(event.target.value)}
             maxLength={160}
           />
-          <TextInput
+          <PasswordInput
             label="รหัสผ่าน"
-            type="password"
             autoComplete="new-password"
             value={createPassword}
             onChange={event => setCreatePassword(event.target.value)}
@@ -499,9 +535,8 @@ function UsersContent() {
             aria-describedby="create-pw-rules"
           />
           <PasswordChecklist id="create-pw-rules" password={createPassword} />
-          <TextInput
+          <PasswordInput
             label="ยืนยันรหัสผ่าน"
-            type="password"
             autoComplete="new-password"
             value={createConfirm}
             onChange={event => setCreateConfirm(event.target.value)}
@@ -597,11 +632,10 @@ function UsersContent() {
       >
         <form id="reset-user-password-form" className="users-dialog-form" onSubmit={submitReset}>
           <InfoCallout tone="warning">
-            หลังตั้งรหัสผ่านใหม่ เซสชันที่เปิดค้างอยู่ของบัญชีนี้จะถูกออกจากระบบทันที
+            หลังตั้งรหัสผ่านใหม่ อุปกรณ์อื่นที่เข้าสู่ระบบค้างไว้ของบัญชีนี้จะถูกออกจากระบบทันที
           </InfoCallout>
-          <TextInput
+          <PasswordInput
             label="รหัสผ่านใหม่"
-            type="password"
             autoComplete="new-password"
             value={resetPassword}
             onChange={event => setResetPassword(event.target.value)}
@@ -609,9 +643,8 @@ function UsersContent() {
             aria-describedby="reset-pw-rules"
           />
           <PasswordChecklist id="reset-pw-rules" password={resetPassword} />
-          <TextInput
+          <PasswordInput
             label="ยืนยันรหัสผ่านใหม่"
-            type="password"
             autoComplete="new-password"
             value={resetConfirm}
             onChange={event => setResetConfirm(event.target.value)}
@@ -621,6 +654,16 @@ function UsersContent() {
           {resetError && <InfoCallout tone="danger" title="ตั้งรหัสผ่านไม่สำเร็จ">{resetError}</InfoCallout>}
         </form>
       </Dialog>
+
+      <div className="users-toast">
+        <Toast
+          open={Boolean(toast)}
+          tone={toast?.tone || "success"}
+          title={toast?.title}
+          description={toast?.description}
+          onClose={() => setToast(null)}
+        />
+      </div>
     </div>
   );
 }

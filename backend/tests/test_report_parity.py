@@ -21,32 +21,32 @@ class ReportParityTests(unittest.TestCase):
         entries=[self.entry(71,nb_on=10),self.entry(72,nb_on=10,nb_in=5,nb_send=2,nb_dead=1),self.entry(73,nb_on=12)]
         for kind in ('daily','monthly'):
             start=date(2027,3,1);end=start if kind=='daily' else date(2027,3,31)
-            for channel,paid,remaining in [('screen',3,12),('print',0,15),('excel',0,15)]:
+            for channel in ('screen','print','excel'):
                 result=census_report(kind,entries,self.shifts,self.wards,start,end,channel)
                 row=next(r for r in result['rows'] if r[2]=='รวมวัน')
-                self.assertEqual(row[result['columns'].index('รวมจำหน่าย NB')],paid)
-                self.assertEqual(row[result['columns'].index('คงเหลือ NB')],remaining)
+                self.assertEqual(row[result['columns'].index('รวมจำหน่าย NB')],3)
+                self.assertEqual(row[result['columns'].index('คงเหลือ NB')],12)
                 if kind=='monthly':
                     row=result['rows'][-1]
-                    self.assertEqual(row[result['columns'].index('รับใหม่ NB')],5 if channel=='screen' else 0)
-                    self.assertEqual(row[result['columns'].index('คงเหลือ NB')],12 if channel=='screen' else 7)
-                    self.assertEqual(row[result['columns'].index('ส่งต่อ NB')],0)
-                    self.assertEqual(row[result['columns'].index('ตาย NB')],0)
+                    self.assertEqual(row[result['columns'].index('รับใหม่ NB')],5)
+                    self.assertEqual(row[result['columns'].index('ส่งต่อ NB')],2)
+                    self.assertEqual(row[result['columns'].index('ตาย NB')],1)
+                    self.assertEqual(row[result['columns'].index('คงเหลือ NB')],12)
 
     def test_census_nb_transfer_out_typo_does_not_change_daily_entry_counts(self):
         entries=[self.entry(71,nb_on=4),self.entry(73,nb_on=4,nb_move_b=1)]
         result=census_report('census-day',entries,self.shifts,self.wards,date(2027,3,1),date(2027,3,1))
         row=result['rows'][0]
         self.assertEqual(row[result['columns'].index('ย้ายตึก NB')],1)
-        self.assertEqual(row[result['columns'].index('รวมจำหน่าย NB')],0)
-        self.assertEqual(row[result['columns'].index('คงเหลือ NB')],4)
+        self.assertEqual(row[result['columns'].index('รวมจำหน่าย NB')],1)
+        self.assertEqual(row[result['columns'].index('คงเหลือ NB')],3)
         self.assertEqual(entries[-1].nb_move_b,1)
 
     def test_month_census_print_nb_average_and_group2_opening_follow_their_source_rows(self):
         entries=[self.entry(71,pt_on=10,nb_on=4),self.entry(73,pt_on=10,nb_on=4)]
-        for channel,expected in [('screen',.13),('print',0),('excel',0)]:
+        for channel in ('screen','print','excel'):
             result=census_report('census-month',entries,self.shifts,self.wards,date(2027,3,1),date(2027,3,31),channel)
-            self.assertEqual(result['rows'][0][result['columns'].index('เฉลี่ยนอน NB')],expected)
+            self.assertEqual(result['rows'][0][result['columns'].index('เฉลี่ยนอน NB')],.13)
             self.assertEqual(result['rows'][-1][result['columns'].index('ยกมา PT')],0)
             self.assertEqual(result['rows'][-2][result['columns'].index('ยกมา PT')],10)
 

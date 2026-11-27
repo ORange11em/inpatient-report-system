@@ -85,7 +85,7 @@ export function DailyReportOverview({ summary, error }) {
   </div>;
 }
 export function PrintHeader({ result, username, printedAt, part }) {
-  return <div className="report-print-header"><strong>{REPORT_ORGANIZATION}</strong><h2>{result.title}{part && <span> · {part}</span>}</h2><p>{result.period} · {result.scope} · {result.statusText}</p><p>ผู้พิมพ์: {username} · พิมพ์เมื่อ {reportTimestamp(printedAt)} · เรียกดูข้อมูล ณ {reportTimestamp(result.loadedAt)}</p>{result.kind === "occupancy" && <p>สูตรรายเดือนชั่วคราว · ตัวเลขที่มี / = เวรที่บันทึก / เวรที่ต้องมี · — = ไม่มีค่าร้อยละ</p>}</div>;
+  return <div className="report-print-header"><strong>{REPORT_ORGANIZATION}</strong><h2>{result.title}{part && <span> · {part}</span>}</h2><p>{result.period} · {result.scope} · {result.statusText}</p><p>ผู้พิมพ์: {username} · พิมพ์เมื่อ {reportTimestamp(printedAt)} · เรียกดูข้อมูล ณ {reportTimestamp(result.loadedAt)}</p>{result.kind === "daily-all" && <><p>แพทย์เวร ..............................................................</p><p>พยาบาลเวรตรวจการ ..................................................</p></>}{result.kind === "occupancy" && <p>สูตรรายเดือนชั่วคราว · ตัวเลขที่มี / = เวรที่บันทึก / เวรที่ต้องมี · — = ไม่มีค่าร้อยละ</p>}</div>;
 }
 export function ReportPrint({ result, username, printedAt }) {
   const occupancyRows = result.occupancy && [...result.occupancy.wards, result.occupancy.total];
@@ -96,5 +96,6 @@ export function ReportPrint({ result, username, printedAt }) {
   const groups = printColumnGroups(model);
   return <div className="report-print-only" aria-hidden="true">{groups.map((indices, part) => <section className="report-print-panel" key={part}>
     <table><colgroup>{indices.map((i,n)=><col key={i} className={n===0?"report-print-ward-col":undefined} />)}</colgroup><thead><tr><th colSpan={indices.length}><PrintHeader {...{ result, username, printedAt }} part={groups.length>1?"ส่วน "+(part+1)+"/"+groups.length:null} /></th></tr><tr>{indices.map(i=><th scope="col" key={i}>{reportColumnLabel(model.columns[i])}</th>)}</tr></thead><tbody>{model.rows.map((row,r)=><tr key={r}>{indices.map((i,n)=>{const Tag=n===0?"th":"td";return <Tag scope={n===0?"row":undefined} key={i}>{displayedReportCell(row[i],model.columns[i],result.kind)}</Tag>})}</tr>)}</tbody></table>
+    {result.kind === "daily-all" && part === groups.length - 1 && <p className="report-print-note">หากไม่มีรายชื่อตึก แสดงว่าในวันดังกล่าว ตึกยังไม่มีการบันทึกข้อมูล</p>}
   </section>)}</div>;
 }

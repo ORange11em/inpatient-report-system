@@ -94,39 +94,16 @@ def census_report(kind, entries, shifts, wards, start, end, channel="screen", ca
     census_days = calendar_days if calendar_days is not None else (end-start).days + 1
     def append(name, period, label, group, days=1, opening="night", per_shift=False, status="", occupancy_beds=None, bed_basis=None, ward_row=False):
         c = summarize(group, shifts, opening)
-        if census:
-            # on_pt[_day].php uses move_b_bn (unset), so NB transfer-out is absent from its paid subtotal.
-            c["nb_paid"] -= c["nb_move_b"]
-            c["nb_closing"] += c["nb_move_b"]
-            c["nb_days"] += c["nb_move_b"]
-        if channel != "screen" and kind in {"daily", "monthly"} and label == "รวมวัน":
-            # PHP5 arithmetic `$total-sub_paid_nb` adds zero, unlike the screen's NB subtotal.
-            c["nb_paid"] = 0
-            c["nb_closing"] = c["nb_on"] + c["nb_received"]
-            c["nb_days"] = c["nb_closing"] + c["nb_ad"]
-        if kind == "monthly" and label == "รวมเดือน":
-            if channel != "screen":
-                # report_month_r.php's `$total-in_nb2_m` omits morning NB admissions.
-                c["nb_in"] -= sum(e.nb_in for e in group if shifts[e.shift_type_id].legacy_shift_id == 2)
-                c["nb_received"] = c["nb_in"] + c["nb_move"]
-                c["nb_closing"] = c["nb_on"] + c["nb_received"] - c["nb_paid"]
-                c["nb_days"] = c["nb_closing"] + c["nb_ad"]
-            # Both source month totals echo `$total-send_nb_all` / `$total-dead_nb_all` (PHP5 numeric zero).
-            c["nb_send"] = c["nb_dead"] = 0
         pd = c["pt_days"]
         avg = rate(pd, days)
         numerator = c["pt_closing"] if per_shift else avg
         beds = c["beds"] if bed_basis is None else bed_basis
         nb_average = rate(c["nb_days"], days)
-        if kind == "census-month":
-            if channel != "screen" and ward_row:
-                # on_pt_r.php initializes avg_nb=0 but does not assign it on each ward row.
-                nb_average = 0
-            if name == "รวมทุกหอที่เลือก":
-                # Source resets only the opening/ending accumulators before its group-2 loop.
-                group2 = [e for e in group if wards[e.ward_id].report_group == 2]
-                extra = summarize(group2, shifts)
-                c["first"], c["last"] = extra["first"], extra["last"]
+        if kind == "census-month" and name == "รวมทุกหอที่เลือก":
+            # Source resets only the opening/ending accumulators before its group-2 loop.
+            group2 = [e for e in group if wards[e.ward_id].report_group == 2]
+            extra = summarize(group2, shifts)
+            c["first"], c["last"] = extra["first"], extra["last"]
         row = [name, period, label] + [c[k] for k in common] + [
             beds or None, avg, nb_average, rate(numerator * 100, beds if occupancy_beds is None else occupancy_beds),
             rate(c["pt_paid"], beds), rate(beds * days - pd, c["pt_paid"]) if beds else None, status]
@@ -240,11 +217,10 @@ def fiscal_report(kind, records, shifts, wards, year):
 
 
 def productivity_report(entries, shifts, wards, start, channel="screen"):
-    def value(group, code, monthly=False):
+    def value(group, code):
         c = summarize(group, shifts)
-        exceptions = {"12", "13", "28"} if channel == "screen" else {"12", "13"}
-        top = 12 if code in exceptions else 7.5
-        weights = (top, top, 5.5, 3.5, 1.5) if monthly or channel != "screen" else (12, 7.5, 5.5, 3.5, 1.5)
+        top = 12 if code in {"12", "13"} else 7.5
+        weights = (top, top, 5.5, 3.5, 1.5)
         workload = sum(c[key] * weight for key, weight in zip(TYPES, weights)) / 3
         return rate(workload * 100, 7 * sum(c[k] for k in STAFF)) or 0
     days = range(1, month_end(start).day + 1)
@@ -257,7 +233,7 @@ def productivity_report(entries, shifts, wards, start, channel="screen"):
         per_day = defaultdict(list)
         for e in group:
             per_day[e.service_date.day].append(e)
-        rows.append([w.name, *[value(per_day[d], w.legacy_code) for d in days], value(group, w.legacy_code, True)])
+        rows.append([w.name, *[value(per_day[d], w.legacy_code) for d in days], value(group, w.legacy_code)])
     return table(["หอผู้ป่วย", *map(str, days), "รวมเดือน (%)"], rows)
 
 

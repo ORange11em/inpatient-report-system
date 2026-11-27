@@ -35,12 +35,16 @@ async function field(page,name,value) {
 async function save(page,label) {
  const wait=page.waitForResponse(r=>r.url().includes('/api/v1/entries')&&['POST','PATCH'].includes(r.request().method()));
  await page.getByRole('button',{name:label,exact:true}).click();
+ const dialog=page.getByRole('dialog',{name:'ยืนยันการบันทึกข้อมูล',exact:true});await dialog.waitFor();
+ await dialog.getByRole('button',{name:label,exact:true}).click();
  const response=await wait;assert.ok(response.ok(),String(response.status()));
  await page.locator('.entry-toast .ui-toast').waitFor();return response.json();
 }
 async function confirm(page) {
  const wait=page.waitForResponse(r=>r.url().endsWith('/confirm')&&r.request().method()==='POST');
  await page.getByRole('button',{name:'ยืนยันการส่งข้อมูล',exact:true}).click();
+ const dialog=page.getByRole('dialog',{name:'ยืนยันการส่งข้อมูล',exact:true});await dialog.waitFor();
+ await dialog.getByRole('button',{name:'ยืนยันและล็อกข้อมูล',exact:true}).click();
  const response=await wait;assert.equal(response.status(),200);return response.json();
 }
 async function fonts(page,level) {
@@ -137,7 +141,7 @@ async function fonts(page,level) {
    const m=await reader.evaluate(()=>({client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth}));assert.equal(m.client,m.scroll);responsive.push({route:'/',width,level:n,...m});
    await reader.screenshot({path:path.join(out,`news-${width}-${n}.png`)});
   }
-  await open(admin,'/');article=admin.locator('.home-news-item').filter({hasText:'ข่าวทดสอบผ่านหน้าจอ'});await article.getByRole('button',{name:'ลบข่าว',exact:true}).click();await article.waitFor({state:'detached'});
+  await open(admin,'/');article=admin.locator('.home-news-item').filter({hasText:'ข่าวทดสอบผ่านหน้าจอ'});await article.getByRole('button',{name:'ลบข่าว',exact:true}).click();const deleteDialog=admin.getByRole('dialog',{name:'ลบข่าวประกาศ',exact:true});await deleteDialog.waitFor();await deleteDialog.getByRole('button',{name:'ลบข่าวประกาศ',exact:true}).click();await article.waitFor({state:'detached'});
   await open(reader,'/');assert.equal(await reader.locator('.home-news-item').filter({hasText:'ข่าวทดสอบผ่านหน้าจอ'}).count(),0);
   const legacy=reader.locator('.home-news-item').filter({hasText:'ข่าวจำลองก่อนเพิ่มผู้ประกาศ'});await legacy.locator('summary').click();assert.match(await legacy.locator('.home-news-publisher').innerText(),/ไม่พบข้อมูลผู้ประกาศเดิม/);
   checks.push('UI news create/draft/publish/edit/delete with second writer; reader sees actual author; unknown legacy author is not fabricated');
